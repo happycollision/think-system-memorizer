@@ -22,7 +22,12 @@ class FlipCard extends Component {
     this.setState({flipped: !this.state.flipped});
   }
   
+  sidesDefinedInProps() {
+    return this.props.front !== undefined && this.props.back !== undefined
+  }
+  
   checkValidity(props) {
+    if (this.sidesDefinedInProps()) return;
     if (props.children === undefined) return;
     if (props.children.length === undefined) {
       throw new Error('FlipCard takes exactly two children. Only 1 was given.');
@@ -32,9 +37,17 @@ class FlipCard extends Component {
     }
   }
   
+  getFaces() {
+    if (this.sidesDefinedInProps()) {
+      return [this.props.front, this.props.back];
+    }
+    if ( ! this.props.children ) return [null, null];
+    return this.props.children;
+  }
+  
   render() {
-    if ( ! this.props.children ) return null;
-    let [front, back] = this.props.children;
+    let [front, back] = this.getFaces();
+    if (front === null) return null;
     return (
       <div className={cx('thinkSystem-FlipCard', {flipped: this.state.flipped})}>
         

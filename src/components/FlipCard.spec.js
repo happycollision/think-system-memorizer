@@ -24,3 +24,12 @@ it('throws if three or more children are present', () => {
     mount(<FlipCard><div>1</div><div>2</div><div>3</div></FlipCard>);
   }).toThrow('FlipCard takes exactly two children. 3 were given.');
 });
+
+it('front and back props override children', () => {
+  const component = mount(<FlipCard front="this" back="works">
+    <div>hello</div><div>there</div></FlipCard>);
+  
+  expect(component.text()).toContain('this');
+  expect(component.text()).toContain('works');
+  expect();
+});
