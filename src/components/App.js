@@ -6,13 +6,17 @@ import {getLibretto} from '../utils/ajax';
 //styles
 import './App.scss';
 
-
 function makeParts (text) {
   const regex = /^(?:(?!HH:)[\s\S])+HH:.*$/gm;
   let m;
   let a = [];
   let split;
-  
+  function addSplitsToArray (match) {
+    split = match.split('HH:');
+    a.push([split[0], split[1]]);
+  }
+
+  // eslint-disable-next-line
   while ((m = regex.exec(text)) !== null) {
     // This is necessary to avoid infinite loops with zero-width matches
     if (m.index === regex.lastIndex) {
@@ -20,27 +24,24 @@ function makeParts (text) {
     }
     
     // The result can be accessed through the `m`-variable.
-    m.forEach((match, groupIndex) => {
-      split = match.split('HH:');
-      a.push([split[0], split[1]]);
-    });
+    m.forEach(addSplitsToArray);
   }
   return a;
 }
 
-const swipeOptions = {
-  // startSlide: startSlide < paneNodes.length && startSlide >= 0 ? startSlide : 0,
-  // auto: parseInt(query.auto, 10) || 0,
-  // speed: parseInt(query.speed, 10) || 300,
-  // disableScroll: query.disableScroll === 'true',
-  // continuous: query.continuous === 'true',
-  // callback() {
-  //   console.log('slide changed');
-  // },
-  // transitionEnd() {
-  //   console.log('ended transition');
-  // }
-};
+// const swipeOptions = {
+//   startSlide: startSlide < paneNodes.length && startSlide >= 0 ? startSlide : 0,
+//   auto: parseInt(query.auto, 10) || 0,
+//   speed: parseInt(query.speed, 10) || 300,
+//   disableScroll: query.disableScroll === 'true',
+//   continuous: query.continuous === 'true',
+//   callback() {
+//     console.log('slide changed');
+//   },
+//   transitionEnd() {
+//     console.log('ended transition');
+//   }
+// };
 
 class App extends Component {
   constructor(props) {
