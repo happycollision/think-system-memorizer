@@ -29,7 +29,7 @@ class Swiper extends Component {
   nextCard() {
     this.refs.swiper.next();
   }
-  
+
   prevCard() {
     this.refs.swiper.prev();
   }

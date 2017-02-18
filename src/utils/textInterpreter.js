@@ -8,7 +8,7 @@ export function makeParts (text) {
   function addSplitsToArray (match) {
     split = match.split('HH:');
     a.push([
-      markdown.toHTML(split[0]), 
+      markdown.toHTML(split[0]),
       markdown.toHTML(split[1])
     ]);
   }
@@ -19,10 +19,9 @@ export function makeParts (text) {
     if (m.index === regex.lastIndex) {
       regex.lastIndex++;
     }
-    
+
     // The result can be accessed through the `m`-variable.
     m.forEach(addSplitsToArray);
   }
   return a;
 }
-

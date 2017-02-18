@@ -8,7 +8,7 @@ it('renders without crashing with no children', () => {
 
 it('displays the first two children', () => {
   const component = mount(<FlipCard><div>hello</div><div>there</div></FlipCard>);
-  
+
   expect(component.text()).toContain('hello');
   expect(component.text()).toContain('there');
 });
@@ -28,7 +28,7 @@ it('throws if three or more children are present', () => {
 it('front and back props override children', () => {
   const component = mount(<FlipCard front="this" back="works">
     <div>hello</div><div>there</div></FlipCard>);
-  
+
   expect(component.text()).toContain('this');
   expect(component.text()).toContain('works');
   expect();

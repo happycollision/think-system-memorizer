@@ -41,7 +41,7 @@ class App extends Component {
     const height = 600;
     const width = 300;
     if (array.length === 0) return null;
-    
+
     let cards = array.map(([front, back], i) => {
       return (
         <div style={{width:`${width}px`, height:`${height}px`}} key={i}>
