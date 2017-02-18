@@ -22,15 +22,15 @@ const swipeOptions = {
 class Swiper extends Component {
   constructor(props) {
     super(props)
-    this.next = this.next.bind(this);
-    this.prev = this.prev.bind(this);
+    this.nextCard = this.nextCard.bind(this);
+    this.prevCard = this.prevCard.bind(this);
   }
 
-  next() {
+  nextCard() {
     this.refs.swiper.next();
   }
   
-  prev() {
+  prevCard() {
     this.refs.swiper.prev();
   }
 
@@ -41,8 +41,8 @@ class Swiper extends Component {
           { this.props.cards }
         </ReactSwipe>
         <div>
-          <button type="button" onClick={this.prev}>Prev</button>
-          <button type="button" onClick={this.next}>Next</button>
+          <button type="button" onClick={this.prevCard}>Prev</button>
+          <button type="button" onClick={this.nextCard}>Next</button>
         </div>
       </div>
     )

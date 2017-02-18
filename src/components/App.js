@@ -28,17 +28,22 @@ class App extends Component {
       librettoParts: []
     }
     getLibretto('MusicManAct1').then(text => {
-      this.setState({librettoParts: text})
+      this.setState({
+        libretto: text,
+        librettoParts: makeParts(text)
+      })
     });
   }
 
   renderCards() {
-    const array = makeParts(this.state.librettoParts);
+    const array = this.state.librettoParts;
+    const height = 600;
+    const width = 300;
     if (array.length === 0) return null;
     
     let cards = array.map(([front, back], i) => {
       return (
-        <div style={{width:'300px', height:'600px'}} key={i}>
+        <div style={{width:`${width}px`, height:`${height}px`}} key={i}>
           <FlipCard front={ front } back={ back }/>
         </div>
       )
