@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import FlipCard from './FlipCard';
 import ReactSwipe from 'react-swipe';
 import {getLibretto} from '../utils/ajax';
-import mm from '../MM1.js';
 
 //styles
 import './App.scss';
@@ -66,7 +65,6 @@ class App extends Component {
   
   renderCards() {
     const array = this.state.librettoParts;
-    // const array = makeParts(mm);
     if (array.length === 0) return null;
     
     let cards = array.map(([front, back]) => {
