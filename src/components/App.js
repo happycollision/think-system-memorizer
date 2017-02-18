@@ -1,33 +1,11 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
-import ReactSwipe from 'react-swipe';
+import Swiper from './Swiper';
 import {getLibretto} from '../utils/ajax';
+import {makeParts} from '../utils/textInterpreter';
 
 //styles
 import './App.scss';
-
-function makeParts (text) {
-  const regex = /^(?:(?!HH:)[\s\S])+HH:.*$/gm;
-  let m;
-  let a = [];
-  let split;
-  function addSplitsToArray (match) {
-    split = match.split('HH:');
-    a.push([split[0], split[1]]);
-  }
-
-  // eslint-disable-next-line
-  while ((m = regex.exec(text)) !== null) {
-    // This is necessary to avoid infinite loops with zero-width matches
-    if (m.index === regex.lastIndex) {
-      regex.lastIndex++;
-    }
-    
-    // The result can be accessed through the `m`-variable.
-    m.forEach(addSplitsToArray);
-  }
-  return a;
-}
 
 // const swipeOptions = {
 //   startSlide: startSlide < paneNodes.length && startSlide >= 0 ? startSlide : 0,
@@ -46,58 +24,33 @@ function makeParts (text) {
 class App extends Component {
   constructor(props) {
     super(props)
-    this.next = this.next.bind(this);
-    this.prev = this.prev.bind(this);
     this.state = {
       librettoParts: []
     }
     getLibretto('MusicManAct1').then(text => {
-      this.setState({librettoParts: makeParts(text)})
+      this.setState({librettoParts: text})
     });
   }
-  
-  next() {
-    this.refs.reactSwipe.next();
-  }
 
-  prev() {
-    this.refs.reactSwipe.prev();
-  }
-  
   renderCards() {
-    const array = this.state.librettoParts;
+    const array = makeParts(this.state.librettoParts);
     if (array.length === 0) return null;
     
-    let cards = array.map(([front, back]) => {
+    let cards = array.map(([front, back], i) => {
       return (
-        <div className="App" style={{width:'300px', height:'600px'}}>
-          <FlipCard>
-            <div>
-              {front}
-            </div>
-            <div>
-              {back}
-            </div>
-          </FlipCard>
+        <div style={{width:'300px', height:'600px'}} key={i}>
+          <FlipCard front={ front } back={ back }/>
         </div>
       )
     });
-    return (
-      <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
-        { cards }
-      </ReactSwipe>
-    )
+    return <Swiper cards={ cards }/>;
   }
 
   render() {
-    let cards = this.renderCards();
+    let swiper = this.renderCards();
     return (
-      <div>
-        {cards}
-        <div>
-          <button type="button" onClick={this.prev}>Prev</button>
-          <button type="button" onClick={this.next}>Next</button>
-        </div>
+      <div className="thinkSystem-App">
+        { swiper }
       </div>
     )
   }
