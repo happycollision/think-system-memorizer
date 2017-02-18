@@ -28,12 +28,15 @@ class App extends Component {
     this.state = {
       librettoParts: []
     }
-    getLibretto('MusicManAct1').then(text => {
+  }
+
+  getLibretto (libName) {
+    getLibretto(libName).then(text => {
       this.setState({
         libretto: text,
         librettoParts: makeParts(text)
-      })
-    });
+      });
+    })
   }
 
   renderCards() {
@@ -52,7 +55,17 @@ class App extends Component {
     return <Swiper cards={ cards }/>;
   }
 
+  renderChooser() {
+    return (
+      <div className="thinkSystem-App">
+        <button type="button" onClick={ () => this.getLibretto('MusicManAct1') }>MM Act 1</button>
+        <button type="button" onClick={ () => this.getLibretto('MusicManAct2') }>MM Act 2</button>
+      </div>
+    );
+  }
+
   render() {
+    if (!this.state.libretto) return this.renderChooser();
     let swiper = this.renderCards();
     let libretto = this.state.libretto ? markdown.toHTML(this.state.libretto) : null ;
     return (
