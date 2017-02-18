@@ -4,18 +4,19 @@
   height: 100%;
   width: 100%;
 
-  .back, .front {
+  &-back, &-front {
     background: white;
     height: 90%;
     width: 90%;
     box-shadow: 6px 6px 12px rgba(0,0,0,0.3);
     margin: 5%;
     padding: 12px;
-    border-radius: 12px; 
+    border-radius: 12px;
+    overflow: auto;
   }
 
   /* For Internet Explorer */
-  &.flipped .back  {
+  &.flipped &-back  {
       -webkit-transform:rotateY(0deg);
       -moz-transform:rotateY(0deg);
       -ms-transform:rotateY(0deg);
@@ -24,7 +25,7 @@
   }
 
   /* For Internet Explorer */
-  &.flipped .front  {
+  &.flipped &-front  {
       -webkit-transform:rotateY(180deg);
       -moz-transform:rotateY(180deg);
       -ms-transform:rotateY(180deg);
@@ -41,7 +42,7 @@
     position: relative;
   }
 
-  .front, .back {
+  &-front, &-back {
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
@@ -63,7 +64,7 @@
     left: 0;
   }
 
-  .front {
+  &-front {
     background-color: lighten(blue, 40);
     z-index:2;
     -webkit-transform: rotateY(0deg);
@@ -73,7 +74,7 @@
     transform: rotateY(0deg);
   }
 
-  .back {
+  &-back {
     background-color: desaturate(lighten(green, 60), 40);
     z-index:1;
     -webkit-transform: rotateY(-180deg);

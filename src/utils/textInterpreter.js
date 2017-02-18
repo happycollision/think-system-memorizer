@@ -1,3 +1,5 @@
+import {markdown} from 'markdown';
+
 export function makeParts (text) {
   const regex = /^(?:(?!HH:)[\s\S])+HH:.*$/gm;
   let m;
@@ -5,7 +7,10 @@ export function makeParts (text) {
   let split;
   function addSplitsToArray (match) {
     split = match.split('HH:');
-    a.push([split[0], split[1]]);
+    a.push([
+      markdown.toHTML(split[0]), 
+      markdown.toHTML(split[1])
+    ]);
   }
 
   // eslint-disable-next-line

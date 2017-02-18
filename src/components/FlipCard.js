@@ -51,8 +51,8 @@ class FlipCard extends Component {
     return (
       <div className={cx('thinkSystem-FlipCard', {flipped: this.state.flipped})}>
         
-        <div className="front" onClick={this.flip}>{front}</div>
-        <div className="back" onClick={this.flip}>{back}</div>
+        <div className="thinkSystem-FlipCard-front" onClick={this.flip} dangerouslySetInnerHTML={{__html:front}}/>
+        <div className="thinkSystem-FlipCard-back" onClick={this.flip} dangerouslySetInnerHTML={{__html:back}}/>
       </div>
     )
   }

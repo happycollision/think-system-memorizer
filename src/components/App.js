@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
 import Swiper from './Swiper';
+import {markdown} from 'markdown';
 import {getLibretto} from '../utils/ajax';
 import {makeParts} from '../utils/textInterpreter';
 
@@ -53,9 +54,11 @@ class App extends Component {
 
   render() {
     let swiper = this.renderCards();
+    let libretto = this.state.libretto ? markdown.toHTML(this.state.libretto) : null ;
     return (
       <div className="thinkSystem-App">
         { swiper }
+        <div dangerouslySetInnerHTML={{__html: libretto}} />
       </div>
     )
   }
