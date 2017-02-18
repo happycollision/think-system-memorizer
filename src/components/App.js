@@ -1,9 +1,33 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
 import ReactSwipe from 'react-swipe';
+import {getLibretto} from '../utils/ajax';
+import mm from '../MM1.js';
 
 //styles
 import './App.scss';
+
+
+function makeParts (text) {
+  const regex = /^(?:(?!HH:)[\s\S])+HH:.*$/gm;
+  let m;
+  let a = [];
+  let split;
+  
+  while ((m = regex.exec(text)) !== null) {
+    // This is necessary to avoid infinite loops with zero-width matches
+    if (m.index === regex.lastIndex) {
+      regex.lastIndex++;
+    }
+    
+    // The result can be accessed through the `m`-variable.
+    m.forEach((match, groupIndex) => {
+      split = match.split('HH:');
+      a.push([split[0], split[1]]);
+    });
+  }
+  return a;
+}
 
 const swipeOptions = {
   // startSlide: startSlide < paneNodes.length && startSlide >= 0 ? startSlide : 0,
@@ -24,6 +48,12 @@ class App extends Component {
     super(props)
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+    this.state = {
+      librettoParts: []
+    }
+    getLibretto('MusicManAct1').then(text => {
+      this.setState({librettoParts: makeParts(text)})
+    });
   }
   
   next() {
@@ -33,42 +63,38 @@ class App extends Component {
   prev() {
     this.refs.reactSwipe.prev();
   }
+  
+  renderCards() {
+    const array = this.state.librettoParts;
+    // const array = makeParts(mm);
+    if (array.length === 0) return null;
+    
+    let cards = array.map(([front, back]) => {
+      return (
+        <div className="App" style={{width:'300px', height:'600px'}}>
+          <FlipCard>
+            <div>
+              {front}
+            </div>
+            <div>
+              {back}
+            </div>
+          </FlipCard>
+        </div>
+      )
+    });
+    return (
+      <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
+        { cards }
+      </ReactSwipe>
+    )
+  }
 
   render() {
+    let cards = this.renderCards();
     return (
       <div>
-        <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
-          <div className="App" style={{width:'300px', height:'300px'}}>
-            <FlipCard>
-              <div>
-                #1 Cue lines here
-              </div>
-              <div>
-                #1 Either you are closing your eyes to a situation
-              </div>
-            </FlipCard>
-          </div>
-          <div className="App" style={{width:'300px', height:'300px'}}>
-            <FlipCard>
-              <div>
-                #2 Cue lines here
-              </div>
-              <div>
-                #2 Either you are closing your eyes to a situation
-              </div>
-            </FlipCard>
-          </div>
-          <div className="App" style={{width:'300px', height:'300px'}}>
-            <FlipCard>
-              <div>
-                #3 Cue lines here
-              </div>
-              <div>
-                #3 Either you are closing your eyes to a situation
-              </div>
-            </FlipCard>
-          </div>
-        </ReactSwipe>
+        {cards}
         <div>
           <button type="button" onClick={this.prev}>Prev</button>
           <button type="button" onClick={this.next}>Next</button>
