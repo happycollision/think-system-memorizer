@@ -12,8 +12,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      librettoParts: []
-    }
+      librettoParts: [],
+      position: 0
+    };
   }
 
   getLibretto (libName) {
@@ -38,7 +39,7 @@ class App extends Component {
         </div>
       )
     });
-    return <Swiper cards={ cards }/>;
+    return <Swiper cards={ cards } position={ this.state.position }/>;
   }
 
   renderChooser() {

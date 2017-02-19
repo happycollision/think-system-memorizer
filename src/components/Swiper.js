@@ -4,26 +4,35 @@ import ReactSwipe from 'react-swipe';
 //styles
 import './Swiper.scss';
 
-const swipeOptions = {
-  // startSlide: startSlide < paneNodes.length && startSlide >= 0 ? startSlide : 0,
-  // auto: parseInt(query.auto, 10) || 0,
-  // speed: parseInt(query.speed, 10) || 300,
-  // disableScroll: query.disableScroll === 'true',
-  // continuous: query.continuous === 'true',
-  continuous: false
-  // callback() {
-  //   console.log('slide changed');
-  // },
-  // transitionEnd() {
-  //   console.log('ended transition');
-  // }
-};
-
 class Swiper extends Component {
   constructor(props) {
     super(props)
     this.nextCard = this.nextCard.bind(this);
     this.prevCard = this.prevCard.bind(this);
+    this.goToSlide = this.goToSlide.bind(this);
+
+    this.state = {
+      swipeOptions: {
+        startSlide: this.props.position || 0,
+        // auto: parseInt(query.auto, 10) || 0,
+        // speed: parseInt(query.speed, 10) || 300,
+        // disableScroll: query.disableScroll === 'true',
+        // continuous: query.continuous === 'true',
+        continuous: false
+        // callback() {
+        //   console.log('slide changed');
+        // },
+        // transitionEnd() {
+        //   console.log('ended transition');
+        // }
+      }
+    }
+  }
+
+  componentWillReceiveProps(newProps) {
+    if (newProps.position !== this.props.position) {
+      this.goToSlide(newProps.position);
+    }
   }
 
   nextCard() {
@@ -34,10 +43,14 @@ class Swiper extends Component {
     this.refs.swiper.prev();
   }
 
+  goToSlide(slideIndex) {
+    this.refs.swiper.slide(slideIndex, 500);
+  }
+
   render() {
     return (
       <div className="thinkSystem-Swiper">
-        <ReactSwipe ref="swiper" swipeOptions={swipeOptions}>
+        <ReactSwipe ref="swiper" swipeOptions={this.state.swipeOptions}>
           { this.props.cards }
         </ReactSwipe>
         <div>
