@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactSwipe from 'react-swipe';
-
+import CardStore from '../stores/CardStore';
+import * as CardActions from '../actions/CardActions';
 //styles
 import './Swiper.scss';
 
@@ -13,7 +14,7 @@ class Swiper extends Component {
 
     this.state = {
       swipeOptions: {
-        startSlide: this.props.position || 0,
+        startSlide: CardStore.getCardPosition(),
         // auto: parseInt(query.auto, 10) || 0,
         // speed: parseInt(query.speed, 10) || 300,
         // disableScroll: query.disableScroll === 'true',
@@ -27,20 +28,24 @@ class Swiper extends Component {
         // }
       }
     }
+
+    CardStore.on('POSITION_CHANGE', this.updateSlidePosition.bind(this))
   }
 
-  componentWillReceiveProps(newProps) {
-    if (newProps.position !== this.props.position) {
-      this.goToSlide(newProps.position);
-    }
+  updateSlidePosition() {
+    this.goToSlide(CardStore.getCardPosition());
+  }
+
+  componentWillUnmount() {
+    CardStore.removeEventListener('POSITION_CHANGE')
   }
 
   nextCard() {
-    this.refs.swiper.next();
+    CardActions.incrementCard();
   }
 
   prevCard() {
-    this.refs.swiper.prev();
+    CardActions.decrementCard();
   }
 
   goToSlide(slideIndex) {
