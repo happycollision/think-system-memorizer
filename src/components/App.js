@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
 import Swiper from './Swiper';
+import * as CardActions from '../actions/CardActions';
+import CardStore from '../stores/CardStore';
 import {markdown} from 'markdown';
 import {getLibretto} from '../utils/ajax';
-import {makeParts} from '../utils/textInterpreter';
 
 //styles
 import './App.scss';
@@ -15,31 +16,32 @@ class App extends Component {
       librettoParts: [],
       position: 0
     };
+    CardStore.on('NEW_DECK', this.renderCards.bind(this));
   }
 
   getLibretto (libName) {
     getLibretto(libName).then(text => {
+      CardActions.makeDeck(text);
       this.setState({
-        libretto: text,
-        librettoParts: makeParts(text)
+        libretto: text
       });
     })
   }
 
   renderCards() {
-    const array = this.state.librettoParts;
+    let cards = CardStore.getCards();
+    if (cards.length === 0) return null;
     const height = 600;
     const width = 300;
-    if (array.length === 0) return null;
 
-    let cards = array.map(([front, back], i) => {
+    let renderedCards = cards.map(([front, back], i) => {
       return (
         <div style={{width:`${width}px`, height:`${height}px`}} key={i}>
           <FlipCard front={ front } back={ back }/>
         </div>
       )
     });
-    return <Swiper cards={ cards } position={ this.state.position }/>;
+    this.setState({renderedCards})
   }
 
   renderChooser() {
@@ -52,12 +54,11 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.libretto) return this.renderChooser();
-    let swiper = this.renderCards();
+    if (!this.state.renderedCards) return this.renderChooser();
     let libretto = this.state.libretto ? markdown.toHTML(this.state.libretto) : null ;
     return (
       <div className="thinkSystem-App">
-        { swiper }
+        <Swiper cards={ this.state.renderedCards }/>
         <div dangerouslySetInnerHTML={{__html: libretto}} />
       </div>
     )

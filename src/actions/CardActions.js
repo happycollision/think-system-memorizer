@@ -7,3 +7,7 @@ export function incrementCard () {
 export function decrementCard () {
   dispatcher.dispatch({type: 'DECREMENT_CARD'})
 }
+
+export function makeDeck (librettoText) {
+  dispatcher.dispatch({type: 'MAKE_DECK', librettoText})
+}

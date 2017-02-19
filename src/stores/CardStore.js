@@ -1,6 +1,7 @@
 import { EventEmitter } from 'events';
-import { clone } from '../utils/helper-functions';
+import { clone, isEmpty } from '../utils/helper-functions';
 import dispatcher from '../utils/dispatcher';
+import {makeParts} from '../utils/textInterpreter';
 
 class CardStore extends EventEmitter {
   constructor () {
@@ -18,12 +19,18 @@ class CardStore extends EventEmitter {
     this.emit('POSITION_CHANGE')
   }
 
-  getAllCards() {
-    return this.cards ? clone(this.cards) : {};
+  getCards() {
+    return this.cards ? clone(this.cards) : [];
   }
 
   getCardPosition() {
     return this.cardPosition;
+  }
+
+  makeDeck(librettoText) {
+    if (isEmpty(librettoText)) return;
+    this.cards = makeParts(librettoText);
+    this.emit('NEW_DECK');
   }
 
   handleActions(action) {
@@ -33,6 +40,9 @@ class CardStore extends EventEmitter {
       break;
       case 'DECREMENT_CARD':
         this.decrementCard();
+      break;
+      case 'MAKE_DECK':
+        this.makeDeck(action.librettoText);
       break;
       default:
         // nothing
