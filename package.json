@@ -2,9 +2,11 @@
   "name": "think-system-memorizer",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://happycollision.github.io/think-system-memorizer",
   "devDependencies": {
     "custom-react-scripts": "0.0.23",
     "enzyme": "^2.7.1",
+    "gh-pages": "^0.12.0",
     "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {
@@ -21,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   }
 }

@@ -1,7 +1,8 @@
 import axios from 'axios';
+import {baseurl} from '../config';
 
 const axiosInstance = axios.create({
-  baseURL: '/librettos',
+  baseURL: baseurl + '/librettos',
   method: 'get',
   responseType: 'text'
 })
