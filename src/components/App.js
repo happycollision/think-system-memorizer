@@ -30,9 +30,11 @@ class App extends Component {
       a += exchange.reduce((a, side, i) => {
         if (i === 1) {
           let matches = side.match(/(<p>.*?:)(.*?)(<\/p>)/)
-          a += `${matches[1]}<span class="highlighted">${matches[2]}</span>${matches[3]}`;
+          let line = matches[2];
+          line = line.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`)
+          a += `${matches[1]}<span class="highlighted">${line}</span>${matches[3]}`;
         } else {
-          a += side;
+          a += side.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
         }
         return a;
       }, '')
