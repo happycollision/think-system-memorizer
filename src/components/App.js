@@ -47,6 +47,11 @@ class App extends Component {
     this.setState({renderedCards})
   }
 
+  submitTextArea() {
+    console.log(this.refs.textArea.value)
+    this.makeDeckAndDisplayText(this.refs.textArea.value);
+  }
+
   handleChangeFile (e) {
     e.preventDefault();
 
@@ -70,6 +75,12 @@ class App extends Component {
         <br/>
         <br/>
         <input type="file" onChange={this.handleChangeFile.bind(this)}/>
+        <br/>
+        <br/>
+
+        <textarea ref="textArea" defaultValue={'You can try it out inside here. Anything above a line that starts with a ">" and then contains a ":" will be the front.\n\n>Charater Name: The back will be anything on the line with the greater than symbol which followed by a colon.'}/>
+
+        <input type="button" onClick={this.submitTextArea.bind(this)} value="Submit Text"/>
       </div>
     );
   }
