@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import ReactSwipe from 'react-swipe';
 import CardStore from '../stores/CardStore';
-import * as CardActions from '../actions/CardActions';
 //styles
 import './Swiper.scss';
 

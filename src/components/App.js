@@ -48,7 +48,6 @@ class App extends Component {
   }
 
   submitTextArea() {
-    console.log(this.refs.textArea.value)
     this.makeDeckAndDisplayText(this.refs.textArea.value);
   }
 
