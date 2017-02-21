@@ -1,12 +1,12 @@
 import {markdown} from 'markdown';
 
 export function makeParts (text) {
-  const regex = /^(?:(?!>.*?:)[\s\S])+>.*?:.*$/gm;
+  const regex = /^(?:(?!^>.*?:)[\s\S])+>.*?:.*$/gm;
   let m;
   let a = [];
   let split;
   function addSplitsToArray (match) {
-    split = match.split('>');
+    split = match.split(/^>/m);
     a.push([
       markdown.toHTML(split[0]),
       markdown.toHTML(split[1])
