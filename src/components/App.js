@@ -21,15 +21,17 @@ class App extends Component {
   }
 
   getLibretto (libName) {
-    getLibretto(libName).then(text => {
-      CardActions.makeDeck(text);
-      this.setState({
-        libretto: text
-      });
-    })
+    getLibretto(libName).then(text => this.makeDeckAndDisplayText(text))
   }
 
-  renderCards() {
+  makeDeckAndDisplayText(text){
+    CardActions.makeDeck(text);
+    this.setState({
+      libretto: text
+    });
+  }
+
+  renderCards () {
     let cards = CardStore.getCards();
     if (cards.length === 0) return null;
     const height = mediaHeight() - 40;
@@ -45,11 +47,29 @@ class App extends Component {
     this.setState({renderedCards})
   }
 
+  handleChangeFile (e) {
+    e.preventDefault();
+
+    let reader = new FileReader();
+    let file = e.target.files[0];
+
+    reader.onloadend = () => {
+      console.log(reader.result)
+      this.makeDeckAndDisplayText(reader.result);
+    }
+
+    reader.readAsText(file)
+  }
+
   renderChooser() {
     return (
       <div className="thinkSystem-App">
         <button type="button" onClick={ () => this.getLibretto('MusicManHaroldHill') }>Music Man: Harold's Lines</button>
+        <br/>
         <button type="button" onClick={ () => this.getLibretto('MusicManMarian') }>Music Man: Marian's Lines</button>
+        <br/>
+        <br/>
+        <input type="file" onChange={this.handleChangeFile.bind(this)}/>
       </div>
     );
   }
