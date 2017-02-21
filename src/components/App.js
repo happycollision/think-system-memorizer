@@ -6,6 +6,7 @@ import CardStore from '../stores/CardStore';
 import {markdown} from 'markdown';
 import {getLibretto} from '../utils/ajax';
 import {mediaHeight} from '../utils/helper-functions';
+import {makeParts} from '../utils/textInterpreter';
 
 //styles
 import './App.scss';
@@ -22,6 +23,21 @@ class App extends Component {
 
   getLibretto (libName) {
     getLibretto(libName).then(text => this.makeDeckAndDisplayText(text))
+  }
+
+  highlightText (text) {
+    return makeParts(text).reduce((a,exchange) => {
+      a += exchange.reduce((a, side, i) => {
+        if (i === 1) {
+          let matches = side.match(/(<p>.*?:)(.*?)(<\/p>)/)
+          a += `${matches[1]}<span class="highlighted">${matches[2]}</span>${matches[3]}`;
+        } else {
+          a += side;
+        }
+        return a;
+      }, '')
+      return a;
+    }, '');
   }
 
   makeDeckAndDisplayText(text){
@@ -86,7 +102,7 @@ class App extends Component {
 
   render() {
     if (!this.state.renderedCards) return this.renderChooser();
-    let libretto = this.state.libretto ? markdown.toHTML(this.state.libretto) : null ;
+    let libretto = this.state.libretto ? this.highlightText(this.state.libretto) : null ;
     return (
       <div className="thinkSystem-App">
         <SwiperContainer cards={ this.state.renderedCards }/>
