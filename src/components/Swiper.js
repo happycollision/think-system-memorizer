@@ -8,8 +8,6 @@ import './Swiper.scss';
 class Swiper extends Component {
   constructor(props) {
     super(props)
-    this.nextCard = this.nextCard.bind(this);
-    this.prevCard = this.prevCard.bind(this);
     this.goToSlide = this.goToSlide.bind(this);
 
     this.state = {
@@ -29,7 +27,7 @@ class Swiper extends Component {
       }
     }
 
-    CardStore.on('POSITION_CHANGE', this.updateSlidePosition.bind(this))
+    CardStore.on('POSITION_CHANGE', this.updateSlidePosition.bind(this));
   }
 
   updateSlidePosition() {
@@ -37,15 +35,7 @@ class Swiper extends Component {
   }
 
   componentWillUnmount() {
-    CardStore.removeEventListener('POSITION_CHANGE')
-  }
-
-  nextCard() {
-    CardActions.incrementCard();
-  }
-
-  prevCard() {
-    CardActions.decrementCard();
+    CardStore.removeListener('POSITION_CHANGE', this.updateSlidePosition);
   }
 
   goToSlide(slideIndex) {
@@ -58,10 +48,6 @@ class Swiper extends Component {
         <ReactSwipe ref="swiper" swipeOptions={this.state.swipeOptions}>
           { this.props.cards }
         </ReactSwipe>
-        <div>
-          <button type="button" onClick={this.prevCard}>Prev</button>
-          <button type="button" onClick={this.nextCard}>Next</button>
-        </div>
       </div>
     )
   }

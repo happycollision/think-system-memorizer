@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
-import Swiper from './Swiper';
+import SwiperContainer from './SwiperContainer';
 import * as CardActions from '../actions/CardActions';
 import CardStore from '../stores/CardStore';
 import {markdown} from 'markdown';
 import {getLibretto} from '../utils/ajax';
+import {mediaHeight} from '../utils/helper-functions';
 
 //styles
 import './App.scss';
@@ -31,7 +32,7 @@ class App extends Component {
   renderCards() {
     let cards = CardStore.getCards();
     if (cards.length === 0) return null;
-    const height = 600;
+    const height = mediaHeight() - 40;
     const width = 300;
 
     let renderedCards = cards.map(([front, back], i) => {
@@ -58,7 +59,7 @@ class App extends Component {
     let libretto = this.state.libretto ? markdown.toHTML(this.state.libretto) : null ;
     return (
       <div className="thinkSystem-App">
-        <Swiper cards={ this.state.renderedCards }/>
+        <SwiperContainer cards={ this.state.renderedCards }/>
         <div dangerouslySetInnerHTML={{__html: libretto}} />
       </div>
     )
