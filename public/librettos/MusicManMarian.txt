@@ -13,6 +13,82 @@ Harold: I will only be in town a short while —
 
 >Marian: Good!
 
+##Scene 4
+
+Mrs. Mrs. Paroo: That you, Daughter?
+
+>Marian: Yes, Mama. Keep on, Amaryllis. I'll be there in a minute. (business) Hello, Mama. Fine, dear. Now your exercises.
+
+Amaryllis: Yes, Mom.
+
+Mrs. Mrs. Paroo: I don't remember the liberry bein' open last Fourth a' July.
+
+>Marian: It was, Mama, all evening. Mama, a man with a suitcase has been following me all over town.
+
+Mrs. Mrs. Paroo: Oh — who?
+
+>Marian: I never saw him before.
+
+Mrs. Mrs. Paroo: Did he say anything?
+
+>Marian: He tried.
+
+Mrs. Mrs. Paroo: Did you say anything?
+
+>Marian: Mama, of course not. Now don't dawdle, Amaryllis. (sing... "possibly can") Don't get faster dear.
+
+Mrs. Mrs. Paroo: If you don't mind my saying so, it wouldn't have hurt you to find out what the gentleman wanted.
+
+>Marian: I know what the gentleman wanted.
+
+Mrs. Mrs. Paroo: What, dear?
+
+>Marian: You'll find it in Balzac.
+
+(Sing "If You Don't Mind My Saying So")
+
+>Marian: Well, if that isn't the best I've ever heard!
+
+Amaryllis: Thank you. Can I have a drink, please?
+
+>Marian: May I have a —
+
+Amaryllis: May I have a drink, please?
+
+>Marian: Yes, dear.
+
+Amaryllis: Amaryllith (...) Why does he get so mad at people- just because he lisps?
+
+>Marian: It's not only because he lisps. That's just part of it, Amaryllis.
+
+Amaryllis: What's the other part?
+
+>Marian: Never mind, dear. It's just that he never talks very much.
+
+Amaryllis: Not even to you and your mother?
+
+>Marian: No, dear. We all have to be a little patient.
+
+Amaryllis: I'm patient. Even though he doesn't (...) "Goodnight, my Winthrop, goodnight. Sleep tight." (Starts to cry)
+
+>Marian: There, darling, don't cry, you have lots of time. If not Winthrop, there'll be someone else.
+
+Amaryllis: Never! I'll end up an old maid like you. I'm sorry, Miss Marian. Can I play my cross-hand piece?
+
+>Marian: May I play my —
+
+Amaryllis: May I play my cross-hand piece?
+
+>Marian: You may.
+
+Amaryllis: See, without a sweetheart you have no one to say goodnight to on the evening star.
+
+>Marian: I know, Amaryllis. For the time being just say goodnight my — someone. You can put the name in when the right someone comes along.
+
+Amaryllis: All right. It's better than nothing.
+
+>Marian: Yes it is... now you can play your cross-hand piece.
+
 ## Top of Scene 6
 
 Harold: I don't suppose you live alone, or anything?
@@ -29,8 +105,7 @@ Harold: Professor Hill.
 
 Harold: Oh I wouldn't know about that. I'm a conservatory man myself. Gary, Indiana Gold medal Class of '05.
 
->Marian: [...] which may very well give me some interesting information about you.
-
+>Marian: Even should that happen to be true does that give you the right to follow me around wherever I go? Another thing, Mister Hill, I'm not as easily mesmerized or hoodwinked as some people in this town and I think it only fiar to warn you that I have a shelf full of reference books in there which may very well give me some interesting information about you.
 
 ## Scene 7: Song 18: Marian the Librarian
 
@@ -42,7 +117,7 @@ Harold: You were probably very young — any one can make a mistake —
 
 >Marian: What —
 
-Harold: No apologies — no explanations, please. I'll only be in town a short time and — (Chuckles) — the sadder, but wiser girl for me.
+Harold: No apologies — no explanations, please. I'll only be in town a short time and — (Chuckles) — the sadder, but wiser girl for me.
 
 >Marian: Will you please make your selection and leave.
 
@@ -62,25 +137,25 @@ Harold: (Whispering) The librarian. You're not listening, Marian. (Takes a paper
 
 Harold: Gary, Indiana. In fact Gary Conservatory was my Alma Mater.
 
-Mrs. Paroo: Was she now?
+Mrs. Mrs. Paroo: Was she now?
 
-Harold: (Aware of Marian's approach) Why yes — Gold Medal Class of '05. Hodado, Miss Paroo.
+Harold: (Aware of Marian's approach) Why yes — Gold Medal Class of '05. Hodado, Miss Mrs. Paroo.
 
 >Marian: Hodado, Mr. Hill.
 
-Harold: Of course! Paroo. I thought the name sounded familiar. (Sotto) I've tried to see you since the other night, but —
+Harold: Of course! Mrs. Paroo. I thought the name sounded familiar. (Sotto) I've tried to see you since the other night, but —
 
-Mrs. Paroo: He wants to put Winthrop in the band!
+Mrs. Mrs. Paroo: He wants to put Winthrop in the band!
 
 >Marian: We're not interested, mama.
 
-Mrs. Paroo: But Marian, the boy might have his father's musical gift. He does have my jaw, you know.
+Mrs. Mrs. Paroo: But Marian, the boy might have his father's musical gift. He does have my jaw, you know.
 
 Harold: Oh — your husband musical? Well I'd like to have a talk with him. I'm sure we —
 
 >Marian: Do you burst in on everyone's home like this? Prying into personal affairs? We're not interested.
 
-Mrs. Paroo: Marian!
+Mrs. Mrs. Paroo: Marian!
 
 Harold: Well, that's one for and one against. Now why not let the boy's father decide?
 
@@ -88,13 +163,58 @@ Harold: Well, that's one for and one against. Now why not let the boy's father d
 
 Harold: Oh, I'm sorry. But that's all the more reason why your brother should have something like this —
 
->Marian: My brother is a ten year old [...] As to your musical tricks, why don't you go into business with a nice carnival man who sells gold painted watches and glass diamond rings?
+>Marian: My brother is a ten year old problem child who can't understand why his father was taken away. Would you care to explain it to him? He's been brooding about it for two years. As to your musical tricks, why don't you go into business with a nice carnival man who sells gold painted watches and glass diamond rings?
+
+(Dialogue then) Harold: (...) Good day to ya, Widda Mrs. Paroo.
+
+>Marian: Has he gone?
+
+Mrs. Paroo: He has. And I hope not forever. Darlin' don't you ever think of your future? Gary Indiana Conservation Class of '05 — Now darlin' —
+
+>Marian: Now mama. Surely a girl's future doesn't depend on encouraging every fast-talking, self-centered, woman-chasing traveling man who comes to town. And the fact that he claims his commodity is music does not, in this particular case, impress me.
+
+Mrs. Paroo: All right, darlin', all right. Only it's a well-known principle that if you keep the flint in one drawer and the steel in another, you'll never strike much of a fire.
+
+>Marian: Mama! (calling) Winthrop! Winthrop, I know you're there. (he comes to the porch) Please go to the library and ask Miss Grubb to give you the book I set aside. It's the Indiana State Educational Journal 1890-1910. It's a large brown volume with black corners.
+
+Winthrop: Do I hafta?
+
+>Marian: You won't have to talk to anyone. I've written it all down. (She gives him paper. He goes) Thank you, dear.
+
+Mrs. Paroo: Now what are you up to? Why do you need books at this hour of the night?
+
+>Marian: I have a feeling the Indiana Journal may help me poke some large holes in the Professor's claims.
+
+Mrs. Paroo: Well, I give up. At your age if you don't mind my askin' what kinda white knight do you expect to come ridin' along?
+
+>Marian: Well I'm not waiting for Luther Greiner who backs me into the Ancient History shelf every time he comes into the Library.
+
+Mrs. Paroo: He does?
+
+>Marian: Or Ed Gammidge and that buggy of his with the removable back seat. But I'm not waiting for a man in shining white armor either. (SONG)
+
+## Scene 11
+
+Shinn: —the School Board is singin' up street and down alley... and my business has fallen off so far I can't find the balance sheet.
+
+>Marian: (entering with brown book) Mayor Shinn, I've found something very interesting in this book about Professor Hill's Alma Mater.
+
+Shinn: His who?
+
+>Marian: His university.
+
+Shinn: I know all about that (...) Gary Conservatory, class of aught-five.
+
+>Marian: If you'll just take the time to read a little bit about the Conservatory I don't think you'll have to look further. It's on page...
 
 # Act 2
-##  scene 2
+##  scene 1
 
-Harold: All right but meantime I want you to know I'm vouching for Tommy Djilas. That boy's got the confidence of every kid in town — you'll be standing in line waiting to shake his hand by time our Band plays its first concert.
+Shinn: I'll handle Zaneeta. Takin' up with wild kids from the wrong side a'town —
 
+>Marian: Mr. Mayor, if I could just make you understand —
+
+Shinn: (after some dialogue) Get his papers or get him in jail! Couldn't make myself any clearer if I'se a button hook in the well-water. (exits)
 
 >Marian: Professor Hill, I think Mayor Shinn has behaved abominably and I think it was wonderful of you coming to Tommy's defense.
 
@@ -108,11 +228,11 @@ Harold: Oh, no. A man can't doge the issue every time a little personal risk is 
 
 Harold: You would?
 
->Marian: I'd be glad to. I just wish I was a little more informed — I'be been wanting to talk to you about Winthrop's Cornet.
+>Marian: I'd be glad to. I just wish I was a little more informed — I've been wanting to talk to you about Winthrop's Cornet.
 
 Harold: His Cornet? Mother-of-pearl keys.
 
->Marian: I'm sure it's fine. [...] he made a few — ah — experimental — blats? I guess you'd say?
+>Marian: I'm sure it's fine. But you see he never touches it. Oh, the first week or so, he made a few — ah — experimental — blats? I guess you'd say?
 
 H: Yes — yes, blats.
 
@@ -132,14 +252,103 @@ Harold: Well.
 
 Harold: Miss Marian. The Think System is a revolutionary method, I'll admit. So was Gallileo's conception of the Heavens, Columbus' conception of the egg — ah — globe. Bach's conception of the Well-Tempered CLavicord. Hmm? Now I cannot discuss these things here in public. But if you'll allow me to call — (Spotting the ladies who are entering hastily) When may I call?
 
->Marian: [...]
+>Marian: Why any night this week —
 
 
 ## Scene 3
 
->Marian: [missing lines]
+Mrs. Paroo: Will you ever stop arguin' (...) Just open your mouth and let it come out.
 
-Mrs. Paroo: Well, I'll put some on.
+>Marian: Now Mama —
+
+Mrs. Paroo: Now nothin'. If he ever comes to call again, you see him alone, and if you haven't the gumption to tell him how you feel —
+
+>Marian: Tell him?
+
+(Dialogue between Mrs. Mrs. Paroo and Winthrop)
+Winthrop: With Harold.
+
+>Marian: You mean Professor Hill?
+
+Winthrop: Mm hm. And look I thtill have thum wormth left.
+
+>Marian: Did you have a good time?
+
+(song)
+Winthrop: I'll be back in a minute. I have to show Amaryllith my live frog. La de da de da de da de da. La de da. La de da.
+
+>Marian: Leave the dishes — I'll do them, Mama.
+
+Mrs. Paroo: Don't you have to change for the Sociable?
+
+>Marian: There's time later.
+
+Charlie: Shinns live around here somewhere?
+
+>Marian: The Shinn homeis on East Elm. This is West Elm.
+
+Charlie: Aw Criminee! (...) You must know about this fellow Hill formin' a Boys' Band here.
+
+>Marian: Yes...
+
+Charlie: Well, don't let it worry you no more... Would sure like to concentrate five minutes on you, girly-girl.
+
+>Marian: Who are you?
+
+Charlie: Name's Charlie Cowell — anvil salesman. But just now I'm out to protect the good name of the travellin' fraternity from this swindler.
+
+>Marian: Mr. Cowell, you're making a big mistake.
+
+Charlie: Mistake my old lady's corset-cover (...) He's no more professor —
+
+>Marian: I know all about that. Band leaders are always called Professor. It's a harmless deception. He's a fine director and his scholastic —
+
+Charlie: Now wait a minute. Fine director? Have you heard one note a' music from any band?
+
+>Marian: No, but —
+
+Chrarlie: But nothin', girly-girl! He never formed a band in his life! And he never will! (waves paper)
+
+>Marian: If you'll just listen to me for a minute —
+
+Charlie: I'd like to — I'd like to do more than that (...) I got to leave this dynamite... with somebody on the way't the deppo. 'Bye, girly-girl. See you next time through. (train whistle heard)
+
+>Marian: You'll never make that train at the depot. You'll have to catch it at the crossing. (gestures left)
+
+Charlie: No sir. I've got to leave word. And I can see you ain't the one to leave it with.
+
+>Marian: Just a minute — Mr. Cowell — you — don't know me yet.
+
+Charlie: Is that an invitation?
+
+>Marian: No — I meant I don't know you, and —
+
+Charlie: Yes — I'd need more time anyway —
+
+>Marian: I mean as well as I'd like to —
+
+Charlie: No trouble there, girly-girl. (he moves in)
+
+>Marian: (drawing back) I never met a man who sells anvils. That's someting — well — quite different.
+
+Charlie: Takes a real salesman (...) And I got to leave word about that fellow Hill!
+
+>Marian: Leave word with me.
+
+Charlie: Not on your tintype. HOw do I know you'd deliver these letters.
+
+>Marian: Try me.
+
+(she kisses him, the Quartet sings Lida Rose)
+Quartet: (singing)
+
+>Marian: (Simultaneous with singing) There's your train! Now run for it!
+
+Mrs. Paroo: You and Marian come up and set. I — I've — I've got some jelly on the stove.
+
+>Marian: There's no jelly on the stove, Mama.
+
+Mrs. Mrs. Paroo: Well, I'll put some on.
 
 Harold: Shall we "set" as your mother said?
 
@@ -149,11 +358,11 @@ Harold: You did ask me to call...?
 
 >Marian: Did I?... I didn't mean anything...
 
-Harold: Now Miss Marian, I'm not suggesting your invitation inferred anything but Academic enlightenment. (Marian looks at him quizzically) The Think System? I've been by your house to try to explain it to you a time of two this week but there always seemed to be people around — mostly ladies I thought.
+Harold: Now Miss Marian, I'm not suggesting your invitation inferred anything but Academic enlightenment. (Marian looks at him quizzically) The Think System? I've been by your house to try to explain it to you a time of two this week but there always seemed to be people around — mostly ladies I thought.
 
 >Marian: Yes, Mrs. Squires and several of the ladies.
 
-Harold: I''m glad — wouldn't want anybody beating my time. (Laughs) You wouldn't? No ma'am... Well... it's evidently not the convenient night. See you at the Sociable later. (Starts to leave)
+Harold: I'm glad — wouldn't want anybody beating my time. (Laughs) You wouldn't? No ma'am... Well... it's evidently not the convenient night. See you at the Sociable later. (Starts to leave)
 
 >Marian: Professor Hill... Is it true that you've — had a hundred... what I'm trying to say is...
 
@@ -203,15 +412,15 @@ H: Uncle Maddy?
 
 Harold: Of course not! That's exactly what I'm saying. But why do you think people start those rumors?
 
->Marian: Narrow-mindedness, jealousy — jealousy mostly, I guess.
+>Marian: Narrow-mindedness, jealousy — jealousy mostly, I guess.
 
 Harold: Exactly. And jealousy mostly starts rumors about traveling salesmen. (Catching her off guard. Quietly) What have you heard?
 
->Marian: Oh — oh nothing about you personally — just generally —
+>Marian: Oh — oh nothing about you personally — just generally —
 
 Harold: What have you heard generally?
 
->Marian: Just that — (Harold is very close to her) but of course [...] I mean, now honestly — mightn't they?
+>Marian: Just that — (Harold is very close to her) but of course, it stands to reason that — that disappointment and jealousy can lead to — I mean — take you for instance — your attentions to — to — customers and — and well, teachers might easily be misinterpreted mightn't they... I mean, now honestly — mightn't they?
 
 Harold: Why?
 
@@ -245,10 +454,19 @@ Harold: My dear little librarian —Pile up enough tomorrows and you'll find you
 
 >Marian: Oh — so would I.
 
-Harold: The footbridge — fifteen minutes.
+Harold: The footbridge — fifteen minutes.
+
+>Marian: Fifteen minutes. (he exits quickly. Marian's voice is suddenly loud and desperate) Mama!
+
+Mrs. Paroo: What?
+
+>Marian: I just told Professor Hill I'd meet him at the footbridge in fifteen minutes.
+
+Mrs. Paroo: Glory be and the saints be praised — it works!
+
+>Marian: What does?
 
 ## Scene 4 the Footbridge
-
 
 Harold: Don't worry, Marce. I'll meet you at the Hotel in plenty a' time. (Marce exits as Marian enters) Miss Marian! (They rush toward each other and meet on the bridge) You're late.
 
@@ -264,17 +482,16 @@ Harold: Oh?
 
 Harold: Now Miss Marian — surely you don't think I've been selling you anything.
 
->Marian: No — you've given me something. That's why I deceived to come.
+>Marian: No — you've given me something. That's why I decided to come.
 
 Harold: (Bewildered) I don't recall giving —
 
->Marian: Oh yes, you have! [...] But that's no reason for me not to be grateful for what you will have left behind for me!
+>Marian: Oh yes, you have! Something beautiful. That's why I came — and I'm glad! Oh, please don't be afraid that I expect too much more. One can't expect a traveling salesman to stay put. I know there have been many ports of call — and there will be many more. But that's no reason for me not to be grateful for what you will have left behind for me!
 
 Harold: (Beginning to protest) Marian — I —
 
 ### Till there was you
 >Marian: (sings Till There Was You)
-
 
 Harold: There's a place over't Madison Park near the Sociable makes this footbridge look like the old ladies home. Now beat it. Go get the rig. (Marcellus exist as Harold returns to Marian) Never a peaceful moment in the music business. (Preparing for the kill) Now then, where were we?
 
@@ -282,11 +499,11 @@ Harold: There's a place over't Madison Park near the Sociable makes this footbri
 
 Harold: (Trying to retract) Yeah — well we really don't have to go into that just now — do we —
 
->Marian: No, we don't — or ever for that matter, Harold. The librarian hasn't felt much like doing research lately — but she did plenty when you first came here.
+>Marian: No, we don't — or ever for that matter, Harold. The librarian hasn't felt much like doing research lately — but she did plenty when you first came here.
 
-Harold: (Slightly apprehensive) Oh — about what?
+Harold: (Slightly apprehensive) Oh — about what?
 
->Marian: About Professor Harold Hill, Gary Conservatory of Music — Gold Medal Class of '05. Harold, there wasn't any Gary Conservatory in '05.
+>Marian: About Professor Harold Hill, Gary Conservatory of Music — Gold Medal Class of '05. Harold, there wasn't any Gary Conservatory in '05.
 
 Harold: Why there certainly —
 
@@ -294,22 +511,46 @@ Harold: Why there certainly —
 
 Harold: (Calling after her) You knew all the time?!
 
->Marian: (Taking a paper from her bosom) Since July 7th — three days after you came. I tore this page out of the Indaiana Journal. (Handing him the paper) It was originally intended to use against you but now I give it to you with all my heart.
-
+>Marian: (Taking a paper from her bosom) Since July 7th — three days after you came. I tore this page out of the Indaiana Journal. (Handing him the paper) It was originally intended to use against you but now I give it to you with all my heart.
 
 ## Scene 6
-
 
 ### Chase
 
 Harold: Marian! I've been looking all over for you! Where've you been?
 
->Marian: (Rushing to him) Harold! I've been looking for Winthrop — he's run away! Please go! Please, Harold, they're even talking about tar and feathers!
+>Marian: (Rushing to him) Harold! I've been looking for Winthrop — he's run away! Please go! Please, Harold, they're even talking about tar and feathers!
 
 Harold: I had to see you, Marian —
 
->Marian: It's all right! Don't you know that? You don't owe me a word — not a word — Please, hurry, please —
+>Marian: It's all right! Don't you know that? You don't owe me a word — not a word — Please, hurry, please —
 
 Marcellus: [...] Let's try down by the crick!
 
 >Marian: Winthrop! (Grabbing him. Winthrop breaks away but Harold grabs him)
+
+Winthrop: I with you'd never come to River Thity!
+
+>Marian: No you don't, Winthrop.
+
+Winthrop: Thithter! You believe him?
+
+>Marian: I believe everything he ever said.
+
+Winthrop: But he promithed uth —
+
+>Marian: I know what he promised us and it all happened just like he said. The lights. And the flags and colors. And the cymbals.
+
+Winthrop: Where wath all that?
+
+>Marian: In the way every kid in this town walked around here all summer, and looked and acted. Especially you! And the parents, too. Does Mama wish he'd never come to River City?
+
+Winthop: Well you do, don't you?
+
+>Marian: No, Winthop. Now go, Harold — please.
+
+##Scene 7
+
+Shinn: Four score — (...) And if there are those, as I have heard, who are melting tar and collecting feathers, I will not say them nay!
+
+>Marian: (rushing up to the rostrum) Well I should think there ought to be some of you who could forget our everlasting Iowa chip-on-the-shoulder arrogance long enough to remember River City before Harold Hill arrived. Do you remember? Well, do you? Surely some of you ought to be grateful to him for what he's brought to River City and if so I should think you'd want to admit it.
