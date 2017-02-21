@@ -34,7 +34,7 @@ class App extends Component {
   renderCards () {
     let cards = CardStore.getCards();
     if (cards.length === 0) return null;
-    const height = mediaHeight() - 40;
+    const height = mediaHeight() - 80;
     const width = 300;
 
     let renderedCards = cards.map(([front, back], i) => {
