@@ -3,7 +3,6 @@ import FlipCard from './FlipCard';
 import SwiperContainer from './SwiperContainer';
 import * as CardActions from '../actions/CardActions';
 import CardStore from '../stores/CardStore';
-import {markdown} from 'markdown';
 import {getLibretto} from '../utils/ajax';
 import {mediaHeight} from '../utils/helper-functions';
 import {makeParts} from '../utils/textInterpreter';
@@ -16,7 +15,6 @@ class App extends Component {
     super(props)
     this.state = {
       librettoParts: [],
-      position: 0,
       cardsAreOpen: false
     };
     CardStore.on('NEW_DECK', this.renderCards.bind(this));

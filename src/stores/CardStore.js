@@ -2,21 +2,33 @@ import { EventEmitter } from 'events';
 import { clone, isEmpty } from '../utils/helper-functions';
 import dispatcher from '../utils/dispatcher';
 import {makeParts} from '../utils/textInterpreter';
+import Persistence from '../utils/Persistence';
+
+const persistence = new Persistence('CardStore');
 
 class CardStore extends EventEmitter {
   constructor () {
     super();
-    this.cardPosition = 0;
+    let cardPosition = persistence.getItem('cardPosition') || 0;
+    this.state = {cardPosition};
   }
 
   incrementCard() {
-    this.cardPosition++;
-    this.emit('POSITION_CHANGE')
+    this.state.cardPosition++;
+    this.emit('POSITION_CHANGE');
+    persistence.setItem('cardPosition', this.state.cardPosition)
   }
 
   decrementCard() {
-    this.cardPosition--;
-    this.emit('POSITION_CHANGE')
+    this.state.cardPosition--;
+    this.emit('POSITION_CHANGE');
+    persistence.setItem('cardPosition', this.state.cardPosition)
+  }
+
+  reportCardPosition(position) {
+    this.state.cardPosition = position;
+    this.emit('POSITION_CHANGE_REPORTED');
+    persistence.setItem('cardPosition', this.state.cardPosition)
   }
 
   getCards() {
@@ -24,7 +36,7 @@ class CardStore extends EventEmitter {
   }
 
   getCardPosition() {
-    return this.cardPosition;
+    return this.state.cardPosition;
   }
 
   makeDeck(librettoText) {
@@ -43,6 +55,9 @@ class CardStore extends EventEmitter {
       break;
       case 'MAKE_DECK':
         this.makeDeck(action.librettoText);
+      break;
+      case 'REPORT_CARD_POSITION':
+        this.reportCardPosition(action.cardPosition);
       break;
       default:
         // nothing

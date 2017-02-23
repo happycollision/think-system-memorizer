@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactSwipe from 'react-swipe';
 import CardStore from '../stores/CardStore';
+import * as CardActions from '../actions/CardActions';
 //styles
 import './Swiper.scss';
 
@@ -16,13 +17,14 @@ class Swiper extends Component {
         // speed: parseInt(query.speed, 10) || 300,
         // disableScroll: query.disableScroll === 'true',
         // continuous: query.continuous === 'true',
-        continuous: false
-        // callback() {
-        //   console.log('slide changed');
+        continuous: false,
+        // callback(position) {
+        //
         // },
-        // transitionEnd() {
-        //   console.log('ended transition');
-        // }
+        transitionEnd(position) {
+          console.log(position)
+          CardActions.reportCardPosition(position);
+        }
       }
 
     }

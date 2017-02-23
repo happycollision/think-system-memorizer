@@ -11,3 +11,7 @@ export function decrementCard () {
 export function makeDeck (librettoText) {
   dispatcher.dispatch({type: 'MAKE_DECK', librettoText})
 }
+
+export function reportCardPosition (cardPosition) {
+  dispatcher.dispatch({type: 'REPORT_CARD_POSITION', cardPosition})
+}
