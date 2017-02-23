@@ -1,6 +1,6 @@
 ## Scene 1
 
-Charlie: ... Event the great professor Harold Hill wouldn't try to sell them neck bowed Hawkeyes out here.
+Charlie: ... Even the great professor Harold Hill wouldn't try to sell them neck bowed Hawkeyes out here.
 
 Conductor: Boart!
 
@@ -34,7 +34,11 @@ Marcellus: Too many close shaves the way you work. Besides I got me a nice comfo
 
 >Harold: Gone legitimate huh? I knew you'd come to no good.
 
-Marcellus: What's the new pitch? (HH Pantomimes conducting) You're not back in the band business! I heard you was in steam automobiles.
+Marcellus: What's the new pitch?
+
+>Harold: (Pantomimes conducting)
+
+Marcellus: You're not back in the band business! I heard you was in steam automobiles.
 
 >Harold: I was.
 
