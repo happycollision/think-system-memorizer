@@ -24,9 +24,12 @@ class Swiper extends Component {
         //   console.log('ended transition');
         // }
       }
-    }
 
-    CardStore.on('POSITION_CHANGE', this.updateSlidePosition.bind(this));
+    }
+    this.updateSlidePosition = this.updateSlidePosition.bind(this);
+    this.goToSlide = this.goToSlide.bind(this);
+
+    CardStore.on('POSITION_CHANGE', this.updateSlidePosition);
   }
 
   updateSlidePosition() {
@@ -38,13 +41,13 @@ class Swiper extends Component {
   }
 
   goToSlide(slideIndex) {
-    this.refs.swiper.slide(slideIndex, 500);
+    this.swiperRef.slide(slideIndex, 500);
   }
 
   render() {
     return (
       <div className="thinkSystem-Swiper">
-        <ReactSwipe ref="swiper" swipeOptions={this.state.swipeOptions}>
+        <ReactSwipe ref={el => {this.swiperRef = el}} swipeOptions={this.state.swipeOptions}>
           { this.props.cards }
         </ReactSwipe>
       </div>
