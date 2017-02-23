@@ -16,13 +16,19 @@ class App extends Component {
     super(props)
     this.state = {
       librettoParts: [],
-      position: 0
+      position: 0,
+      cardsAreOpen: false
     };
     CardStore.on('NEW_DECK', this.renderCards.bind(this));
+    this.handleToggleCardsOpen = this.handleToggleCardsOpen.bind(this);
   }
 
   getLibretto (libName) {
     getLibretto(libName).then(text => this.makeDeckAndDisplayText(text))
+  }
+
+  handleToggleCardsOpen() {
+    this.setState({cardsAreOpen: !this.state.cardsAreOpen})
   }
 
   highlightText (text) {
@@ -46,7 +52,7 @@ class App extends Component {
     CardActions.makeDeck(text);
     this.setState({
       libretto: text
-    });
+    }, this.handleToggleCardsOpen);
   }
 
   renderCards () {
@@ -105,10 +111,17 @@ class App extends Component {
   render() {
     if (!this.state.renderedCards) return this.renderChooser();
     let libretto = this.state.libretto ? this.highlightText(this.state.libretto) : null ;
+    let librettoStyle = {display: 'block'};
+    if (this.state.cardsAreOpen) {
+      librettoStyle.display = 'none';
+    }
     return (
       <div className="thinkSystem-App">
-        <SwiperContainer cards={ this.state.renderedCards }/>
-        <div dangerouslySetInnerHTML={{__html: libretto}} />
+        <SwiperContainer
+          cards={ this.state.renderedCards }
+          onToggleCardsOpen={ this.handleToggleCardsOpen }
+          isOpen={ this.state.cardsAreOpen }/>
+        <div dangerouslySetInnerHTML={{__html: libretto}} style={ librettoStyle } />
       </div>
     )
   }
