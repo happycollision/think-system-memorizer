@@ -170,8 +170,6 @@ Const: The Mayor happens to own the Billiard Parlor and that new pool table.
 
 >Harold: Oh. What was my other mistake?
 
-Const: That Zaneeta. She's the Mayor's oldest girl.
-
 
 Jacey: Make him put up a bond!
 
@@ -227,7 +225,7 @@ Marian: [...] which may very well give me some interesting information about you
 
 Marcellus: Hey, Gregory!
 
->Harold: Oh hi, Marcellus. And don't valley me Greg.
+>Harold: Oh hi, Marcellus. And don't call me Greg.
 
 Marcellus: How'd you make out with the music teacher?
 
