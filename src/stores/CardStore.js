@@ -25,6 +25,11 @@ class CardStore extends EventEmitter {
     persistence.setItem('cardPosition', this.state.cardPosition)
   }
 
+  setCardPosition(position) {
+    this.state.cardPosition = position;
+    this.emit('POSITION_CHANGE');
+  }
+
   reportCardPosition(position) {
     this.state.cardPosition = position;
     this.emit('POSITION_CHANGE_REPORTED');
@@ -58,6 +63,9 @@ class CardStore extends EventEmitter {
       break;
       case 'REPORT_CARD_POSITION':
         this.reportCardPosition(action.cardPosition);
+      break;
+      case 'SET_CARD_POSITION':
+        this.setCardPosition(action.cardPosition);
       break;
       default:
         // nothing

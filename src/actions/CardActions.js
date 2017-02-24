@@ -15,3 +15,7 @@ export function makeDeck (librettoText) {
 export function reportCardPosition (cardPosition) {
   dispatcher.dispatch({type: 'REPORT_CARD_POSITION', cardPosition})
 }
+
+export function setCardPosition (cardPosition) {
+  dispatcher.dispatch({type: 'SET_CARD_POSITION', cardPosition})
+}

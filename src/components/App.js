@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import FlipCard from './FlipCard';
 import SwiperContainer from './SwiperContainer';
+import Libretto from './Libretto';
 import * as CardActions from '../actions/CardActions';
+import * as StateActions from '../actions/StateActions';
 import CardStore from '../stores/CardStore';
+import StateStore from '../stores/StateStore';
 import {getLibretto} from '../utils/ajax';
 import {mediaHeight} from '../utils/helper-functions';
 import {makeParts} from '../utils/textInterpreter';
@@ -14,11 +17,25 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      librettoParts: [],
-      cardsAreOpen: false
+      librettoParts: []
     };
-    CardStore.on('NEW_DECK', this.renderCards.bind(this));
     this.handleToggleCardsOpen = this.handleToggleCardsOpen.bind(this);
+    this.setStateViaStore = this.setStateViaStore.bind(this);
+    this.renderCards = this.renderCards.bind(this);
+  }
+
+  setStateViaStore() {
+    this.setState(StateStore.getState(['cardsAreOpen']));
+  }
+
+  componentDidMount() {
+    CardStore.on('NEW_DECK', this.renderCards);
+    StateStore.on('STATE_UPDATED', this.setStateViaStore);
+  }
+
+  componentWillUnmount() {
+    CardStore.removeListener('NEW_DECK', this.renderCards);
+    StateStore.removeListener('STATE_UPDATED', this.setStateViaStore);
   }
 
   getLibretto (libName) {
@@ -26,7 +43,7 @@ class App extends Component {
   }
 
   handleToggleCardsOpen() {
-    this.setState({cardsAreOpen: !this.state.cardsAreOpen})
+    StateActions.setState({cardsAreOpen: !this.state.cardsAreOpen})
   }
 
   highlightText (text) {
@@ -119,7 +136,7 @@ class App extends Component {
           cards={ this.state.renderedCards }
           onToggleCardsOpen={ this.handleToggleCardsOpen }
           isOpen={ this.state.cardsAreOpen }/>
-        <div dangerouslySetInnerHTML={{__html: libretto}} style={ librettoStyle } />
+        <Libretto />
       </div>
     )
   }
