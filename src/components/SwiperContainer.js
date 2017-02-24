@@ -21,24 +21,17 @@ class SwiperContainer extends Component {
   }
 
   render() {
-    if (!this.props.isOpen) {
-      return (
-        <div className="thinkSystem-SwiperContainer-openButton">
-          <button type="button" onClick={ this.props.onToggleCardsOpen }>Open cards</button>
+    if (!this.props.isOpen) return null;
+    return (
+      <div className="thinkSystem-SwiperContainer">
+        <Swiper cards={ this.props.cards }/>
+        <button type="button" onClick={ this.props.onToggleCardsOpen }>Close cards</button>
+        <div>
+          <button type="button" onClick={this.prevCard}>Prev</button>
+          <button type="button" onClick={this.nextCard}>Next</button>
         </div>
-      );
-    } else {
-      return (
-        <div className="thinkSystem-SwiperContainer">
-          <Swiper cards={ this.props.cards }/>
-          <button type="button" onClick={ this.props.onToggleCardsOpen }>Close cards</button>
-          <div>
-            <button type="button" onClick={this.prevCard}>Prev</button>
-            <button type="button" onClick={this.nextCard}>Next</button>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }
 
