@@ -253,7 +253,7 @@ Marcellus: But you don't know one note from another.
 
 Marcellus: But in four weeks the people will want to hear the music! You'll have to lead a band.
 
->Harold: When the uniforms arrive they forget everything else — at least long enough for me to collect and leave. Oh this is a refined operation, son, and I've got it timed right down to the last wave of the brakeman' hands on the last train out'a town. And now, Mr. Washburn, if you'll excuse me —
+>Harold: When the uniforms arrive they forget everything else — at least long enough for me to collect and leave. Oh this is a refined operation, son, and I've got it timed right down to the last wave of the brakeman's hands on the last train out'a town. And now, Mr. Washburn, if you'll excuse me —
 
 Marcellus: Gonna line yourself up a little canoodlin' huh? Say, I could fix you up with Ethel's sister — lovely girl — teaches Sunday school —
 
@@ -330,7 +330,7 @@ Marian: Well? What do you want to take out?
 
 Marian: Quiet please.
 
->Harold: (Whispering) The librarian. You're not listening, Marian. (Takes a paper bag out of pocket) Look! (Sings) MAAAAAARIAN. (Speaks) Marbles. Six Steele's, eight aggies, a dozen peewees and one big glassine with an American flag in the middle. I think I'll drop 'em.
+>Harold: (Whispering) The librarian. You're not listening, Marian. (Takes a paper bag out of pocket) Look! (Sings) MAAAAAARIAN. (Speaks) Marbles. Six Steele's, eight aggies, a dozen peewees and one big glassie with an American flag in the middle. I think I'll drop 'em.
 
 Marian: No!
 
@@ -364,7 +364,7 @@ Mayor Shinn: What, what —
 
 Mayor Shinn: Oh it is — what does that mean?
 
-It means that your son's little finger is perfectly situated to operate the spit valve on a B-flat Flugel Horn!
+>Harold: It means that your son's little finger is perfectly situated to operate the spit valve on a B-flat Flugel Horn!
 
 Mayor Shinn: Is that good?
 
@@ -460,12 +460,12 @@ Winthrop: It'th the band inthtrumenth!
 
 Winthrop: My Cornet! Gee thankth, Profethor!
 
->Harold: Men! You will each receive individual instruction in due corse. In the meantimes stay off the streets — get acquainted with your instruments and think about the Minuet in G. La de da de da de da de da —
+>Harold: Men! You will each receive individual instruction in due corse. In the meantime stay off the streets — get acquainted with your instruments and think about the Minuet in G. La de da de da de da de da —
 
 
 Mayor Shinn: About that book — (Marian hands him the book. Harold catches Marian's look, which is changing from gratitude to adoration)
 
->Harold: The Ladies's Dance Committee meets Tuesday nights at the High School.
+>Harold: The Ladies' Dance Committee meets Tuesday nights at the High School.
 
 
 # Act 2
@@ -499,7 +499,7 @@ Marian: I'd be glad to. I just wish I was a little more informed — I'be been w
 
 Marian: I'm sure it's fine. [...] he made a few — ah — experimental — blats? I guess you'd say?
 
-H: Yes — yes, blats.
+>Harold: Yes — yes, blats.
 
 Marian: And he sings the "Minuet in G de da" almost constantly.
 
@@ -515,7 +515,7 @@ Marian: He says you told him it wasn't necessary.
 
 Marian: He tells me about some "Think System." If he thinks the "Minuet in G", he won't have to bother with the notes. Now, Professor —
 
->Harold: Miss Marian. The Think System is a revolutionary method, I'll admit. So was Gallileo's conception of the Heavens, Columbus' conception of the egg — ah — globe. Bach's conception of the Well-Tempered CLavicord. Hmm? Now I cannot discuss these things here in public. But if you'll allow me to call — (Spotting the ladies who are entering hastily) When may I call?
+>Harold: Miss Marian. The Think System is a revolutionary method, I'll admit. So was Gallileo's conception of the Heavens, Columbus' conception of the egg — ah — globe. Bach's conception of the Well-Tempered Clavicord. Hmm? Now I cannot discuss these things here in public. But if you'll allow me to call — (Spotting the ladies who are entering hastily) When may I call?
 
 
 # Scene 2
@@ -524,11 +524,11 @@ Ewart: Sorry, Professor, but we got our orders.
 
 Oliver: We all been deputized.
 
->Harold: Yes — congratulations. Let's see now — you know all week I've tried to get you fellow my references and credentials, but every time you seem to get off the subject somehow. Now I have just what you want up in my hotel room — take me a second.
+>Harold: Yes — congratulations. Let's see now — you know all week I've tried to get you fellows my references and credentials, but every time you seem to get off the subject somehow. Now I have just what you want up in my hotel room — take me a second.
 
 Ewart: Sorry. 'Fraid I'll have to go along with you.
 
-Yes — well, let's see if I have my key — (Finds paper in pocket) What's this? — Oh — a testimonial from Madame Rini, the only female bassoon player ever to appear on the Redpath Circuit. Her stage name, of course. Actually she was from Moline. Lida Rose Quackenbush.
+>Harold: Yes — well, let's see if I have my key — (Finds paper in pocket) What's this? — Oh — a testimonial from Madame Rini, the only female bassoon player ever to appear on the Redpath Circuit. Her stage name, of course. Actually she was from Moline. Lida Rose Quackenbush.
 
 Ewart: Could I see that for a minute?
 
@@ -552,11 +552,11 @@ Marian: Well, I...
 
 Marian: Did I?... I didn't mean anything...
 
->Harold: Now Miss Marian, I'm not suggesting your invitation inferred anything but Academic enlightenment. (Marian looks at him quizzically) The Think System? I've been by your house to try to explain it to you a time of two this week but there always seemed to be people around — mostly ladies I thought.
+>Harold: Now Miss Marian, I'm not suggesting your invitation inferred anything but Academic enlightenment. (Marian looks at him quizzically) The Think System? I've been by your house to try to explain it to you a time or two this week but there always seemed to be people around — mostly ladies I thought.
 
 Marian: Yes, Mrs. Squires and several of the ladies.
 
->Harold: I''m glad — wouldn't want anybody beating my time. (Laughs) You wouldn't? No ma'am... Well... it's evidently not the convenient night. See you at the Sociable later. (Starts to leave)
+>Harold: I'm glad — wouldn't want anybody beating my time. (Laughs) You wouldn't? No ma'am... Well... it's evidently not the convenient night. See you at the Sociable later. (Starts to leave)
 
 Marian: Professor Hill... Is it true that you've — had a hundred... what I'm trying to say is...
 
@@ -600,7 +600,7 @@ Marian: One hears rumors of traveling salesmen.
 
 Marian: I suppose you're referring to Uncle Maddy?
 
-H: Uncle Maddy?
+>Harold: Uncle Maddy?
 
 Marian: Mr. Madison — my father's best friend. No matter what they say he left me an assured job so Mother and Winthrop and I would have some security. Surely you don't believe...
 
