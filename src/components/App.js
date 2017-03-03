@@ -8,7 +8,7 @@ import CardStore from '../stores/CardStore';
 import StateStore from '../stores/StateStore';
 import {getLibretto} from '../utils/ajax';
 import {mediaHeight} from '../utils/helper-functions';
-import {makeParts} from '../utils/textInterpreter';
+import { highlightText } from '../utils/textInterpreter';
 
 //styles
 import './App.scss';
@@ -44,23 +44,6 @@ class App extends Component {
 
   handleToggleCardsOpen() {
     StateActions.setState({cardsAreOpen: !this.state.cardsAreOpen})
-  }
-
-  highlightText (text) {
-    return makeParts(text).reduce((a,exchange) => {
-      a += exchange.reduce((a, side, i) => {
-        if (i === 1) {
-          let matches = side.match(/(<p>.*?:)(.*?)(<\/p>)/)
-          let line = matches[2];
-          line = line.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`)
-          a += `${matches[1]}<span class="highlighted">${line}</span>${matches[3]}`;
-        } else {
-          a += side.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
-        }
-        return a;
-      }, '')
-      return a;
-    }, '');
   }
 
   makeDeckAndDisplayText(text){
