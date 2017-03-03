@@ -108,7 +108,7 @@ class App extends Component {
 
   render() {
     if (!this.state.renderedCards) return this.renderChooser();
-    let libretto = this.state.libretto ? this.highlightText(this.state.libretto) : null ;
+    let libretto = this.state.libretto ? highlightText(this.state.libretto) : null ;
     let librettoStyle = {display: 'block'};
     if (this.state.cardsAreOpen) {
       librettoStyle.display = 'none';
