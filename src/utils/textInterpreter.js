@@ -46,7 +46,7 @@ export function highlightText (text) {
 export function hashCode (s) {
   var hash = 0,
     i, l, character;
-  if (s.length == 0) return hash;
+  if (s.length === 0) return hash;
   for (i = 0, l = s.length; i < l; i++) {
     character = s.charCodeAt(i);
     hash = ((hash << 5) - hash) + character;

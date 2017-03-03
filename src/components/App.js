@@ -8,7 +8,6 @@ import CardStore from '../stores/CardStore';
 import StateStore from '../stores/StateStore';
 import {getLibretto} from '../utils/ajax';
 import {mediaHeight} from '../utils/helper-functions';
-import { highlightText } from '../utils/textInterpreter';
 
 //styles
 import './App.scss';
@@ -108,7 +107,6 @@ class App extends Component {
 
   render() {
     if (!this.state.renderedCards) return this.renderChooser();
-    let libretto = this.state.libretto ? highlightText(this.state.libretto) : null ;
     let librettoStyle = {display: 'block'};
     if (this.state.cardsAreOpen) {
       librettoStyle.display = 'none';
