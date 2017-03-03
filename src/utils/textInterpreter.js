@@ -42,3 +42,20 @@ export function highlightText (text) {
     return a;
   }, '');
 }
+
+export function hashCode (s) {
+  var hash = 0,
+    i, l, character;
+  if (s.length == 0) return hash;
+  for (i = 0, l = s.length; i < l; i++) {
+    character = s.charCodeAt(i);
+    hash = ((hash << 5) - hash) + character;
+    hash |= 0; // Convert to 32bit integer
+  }
+  return hash;
+};
+
+export function truncatedHash (s, numChars) {
+  numChars = numChars === undefined ? 5 : numChars;
+  return Math.abs(hashCode(s)).toString().substring(0, numChars);
+}
