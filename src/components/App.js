@@ -91,6 +91,8 @@ class App extends Component {
       <div className="thinkSystem-App">
         <button type="button" onClick={ () => this.getLibretto('MusicManHaroldHill') }>Music Man: Harold's Lines</button>
         <br/>
+        <button type="button" onClick={ () => this.getLibretto('ZombieProm') }>Zombie Prom</button>
+        <br/>
         <button type="button" onClick={ () => this.getLibretto('MusicManMarian') }>Music Man: Marian's Lines</button>
         <br/>
         <br/>
