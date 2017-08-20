@@ -9,6 +9,7 @@ class SwiperContainer extends Component {
   constructor(props) {
     super(props);
 
+    this.closeCards = this.closeCards.bind(this);
     this.nextCard = this.nextCard.bind(this);
     this.prevCard = this.prevCard.bind(this);
     this.backTwo = this.backTwo.bind(this);
@@ -63,7 +64,7 @@ class SwiperContainer extends Component {
   sequenceStepAdvance() {
     const oldStep = this.state.sequenceStep;
     if (oldStep === this.state.sequenceActions.length - 1) {
-      this.setState({sequenceStep: 0})
+      this.setState({sequenceStep: 0});
     } else {
       this.setState({sequenceStep: oldStep + 1});
     }
@@ -75,6 +76,11 @@ class SwiperContainer extends Component {
     return currentStep;
   }
 
+  closeCards() {
+    this.setState({sequenceStep: 0});
+    this.props.onToggleCardsOpen();
+  }
+
   sequencePlay() {
     const actionToPerform = this.state.sequenceActions[this.getAndAdvanceStep()];
     this[actionToPerform]();
@@ -84,16 +90,17 @@ class SwiperContainer extends Component {
     if (!this.props.isOpen) return null;
     return (
       <div className="thinkSystem-SwiperContainer">
+        <div className="thinkSystem-SwiperContainer-closeCards"
+          onClick={ this.closeCards }>
+          see script
+        </div>
         <Swiper cards={ this.props.cards }/>
         <div className="thinkSystem-SwiperContainer-actions">
           <div>
-            <button type="button" onClick={ this.props.onToggleCardsOpen }>Close cards</button>
-            <div>
-              <button type="button" onClick={this.prevCard}>Prev</button>
-              <button type="button" onClick={this.nextCard}>Next</button>
-            </div>
+            <div className="thinkSystem-SwiperContainer-actionButton" onClick={this.prevCard}>Prev</div>
+            <div className="thinkSystem-SwiperContainer-actionButton" onClick={this.nextCard}>Next</div>
           </div>
-          <button type="button" onClick={this.sequencePlay}>Sequntial memorize</button>
+          <div className="thinkSystem-SwiperContainer-actionButton" onClick={this.sequencePlay}>Sequential memorize</div>
         </div>
       </div>
     );
