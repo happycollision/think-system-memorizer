@@ -34,8 +34,8 @@ class CardStore extends EventEmitter {
 
   reportCardPosition(position) {
     this.state.cardPosition = position;
-    this.emit('POSITION_CHANGE_REPORTED');
     persistence.setItem(this.getId('cardPosition'), this.state.cardPosition)
+    this.emit('POSITION_CHANGE_REPORTED');
   }
 
   getCards() {
@@ -45,15 +45,15 @@ class CardStore extends EventEmitter {
   getCardPosition() {
     return this.state.cardPosition;
   }
-  
+
   makeIdentifierForText (text) {
     this.textId = truncatedHash(text);
   }
-  
+
   getId (str) {
     return str ? str + this.textId : this.textId;
   }
-  
+
   setInitialCardPosition() {
     this.state.cardPosition = persistence.getItem(this.getId('cardPosition')) || 0;
   }

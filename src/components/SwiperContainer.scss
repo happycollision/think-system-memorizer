@@ -7,4 +7,12 @@
     left: 0;
     background-color: #222;
   }
+
+  &-SwiperContainer-actions {
+    display: flex;
+
+    > :last-child {
+      flex-grow: 1;
+    }
+  }
 }

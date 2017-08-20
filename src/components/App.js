@@ -61,7 +61,7 @@ class App extends Component {
     let renderedCards = cards.map(([front, back], i) => {
       return (
         <div style={{width:`${width}px`, height:`${height}px`}} key={i}>
-          <FlipCard front={ front } back={ back }/>
+          <FlipCard front={ front } back={ back } index={ i }/>
         </div>
       )
     });
