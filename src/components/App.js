@@ -24,12 +24,13 @@ class App extends Component {
   }
 
   setStateViaStore() {
-    this.setState(StateStore.getState(['cardsAreOpen']));
+    this.setState(StateStore.getState(['cardsAreOpen', 'chooseScript']));
   }
 
   componentDidMount() {
     CardStore.on('NEW_DECK', this.renderCards);
     StateStore.on('STATE_UPDATED', this.setStateViaStore);
+    this.setStateViaStore();
   }
 
   componentWillUnmount() {
@@ -49,7 +50,9 @@ class App extends Component {
     CardActions.makeDeck(text);
     this.setState({
       libretto: text
-    }, this.handleToggleCardsOpen);
+    }, () => {
+      StateActions.setState({chooseScript: false, cardsAreOpen: true});
+    });
   }
 
   renderCards () {
@@ -65,7 +68,8 @@ class App extends Component {
         </div>
       )
     });
-    this.setState({renderedCards})
+
+    this.setState({renderedCards});
   }
 
   submitTextArea() {
@@ -110,7 +114,7 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.renderedCards) return this.renderChooser();
+    if (this.state.chooseScript) return this.renderChooser();
     let librettoStyle = {display: 'block'};
     if (this.state.cardsAreOpen) {
       librettoStyle.display = 'none';

@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Swiper from './Swiper';
 import * as CardActions from '../actions/CardActions';
 import CardStore from '../stores/CardStore';
-//styles
+import * as StateActions from '../actions/StateActions';
+
 import './SwiperContainer.scss';
 
 class SwiperContainer extends Component {
@@ -81,6 +82,10 @@ class SwiperContainer extends Component {
     this.props.onToggleCardsOpen();
   }
 
+  chooseScript() {
+    StateActions.setState({chooseScript: true});
+  }
+
   sequencePlay() {
     const actionToPerform = this.state.sequenceActions[this.getAndAdvanceStep()];
     this[actionToPerform]();
@@ -93,6 +98,10 @@ class SwiperContainer extends Component {
         <div className="thinkSystem-SwiperContainer-closeCards"
           onClick={ this.closeCards }>
           see script
+        </div>
+        <div className="thinkSystem-SwiperContainer-chooseScript"
+          onClick={ this.chooseScript }>
+          choose script
         </div>
         <Swiper cards={ this.props.cards }/>
         <div className="thinkSystem-SwiperContainer-actions">

@@ -3,14 +3,16 @@ import dispatcher from '../utils/dispatcher';
 import { clone, traverseObject, toType } from '../utils/helper-functions';
 
 const ALLOWED_STATES = {
-  cardsAreOpen: 'boolean'
+  cardsAreOpen: 'boolean',
+  chooseScript: 'boolean'
 }
 
 class StateStore extends EventEmitter {
   constructor () {
     super();
     this.state = {
-      cardsAreOpen: false
+      cardsAreOpen: false,
+      chooseScript: true
     }
   }
 
