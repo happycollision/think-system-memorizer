@@ -1,5 +1,17 @@
 import {markdown} from 'markdown';
 
+function replaceDashes(string) {
+  const FIND_DOUBLE_DASH = /--/g;
+  const FIND_TRIPLE_DASH = /---/g;
+  return string
+    .replace(FIND_TRIPLE_DASH, '&mdash;')
+    .replace(FIND_DOUBLE_DASH, '&ndash;');
+}
+
+function markdownify(string) {
+  return replaceDashes(markdown.toHTML(string));
+}
+
 export function makeParts (text) {
   const regex = /^(?:(?!^>.*?:)[\s\S])+>.*?:.*$/gm;
   let m;
@@ -8,8 +20,8 @@ export function makeParts (text) {
   function addSplitsToArray (match) {
     split = match.split(/^>/m);
     a.push([
-      markdown.toHTML(split[0]),
-      markdown.toHTML(split[1])
+      markdownify(split[0]),
+      markdownify(split[1])
     ]);
   }
 
