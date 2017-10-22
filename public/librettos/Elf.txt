@@ -106,13 +106,13 @@ Buddy: I know! It's the night before the night before Christmas. Let's do someth
 
 Buddy: Oh! Let's go skating!
 
-> Jovie: I'm not a very good skater.
+> Jovie: I don't skate.
 
-Buddy: That's ok, neither am I. Santa says I'm a hazard. He calls me "Edward Scissor feet."
+Buddy: I can teach you. I'm a real good skater. You have to be when you grow up at the North Pole.
 
-> Jovie: Stop. Let's make a pact. If you try to be less elf-y, I'll try to be less bitchy.
+> Jovie: Stop. Let's make a pact. If you try to be less elf-y, I'll try to be less snarky.
 
-Buddy: Okay. I'd like it if you'd be less bitchy.
+Buddy: Okay. I'd like it if you'd be less snarky.
 
 > Jovie: I came here last year too, my first Christmas in New York.
 
@@ -124,17 +124,9 @@ Buddy: L.A.? Never heard of that place. I don't think Santa goes there.
 
 > Jovie: He doesn't. Christmases there are surreal. No snow.
 
-Buddy: No snow?!?
+Buddy: No snow?!? That's the saddest thing I've ever heard.
 
-> Jovie: I've never even seen snow. I've always wanted to.
-
-Buddy: That's the saddest thing I've ever heard.
-
-> Jovie: Yeah, I've been here for almost two years and it hasn't snowed once. You know, when I was a kid I dreamed of having a snowy Christmas Eve dinner at Tavern on the Green with Billy Crystal. That sounds so stupid.
-
-Buddy: No it doesn't! Who's Billy Crystal? He sounds magical.
-
-> Jovie: He's an actor. He was in my favorite movie of all time: "City Slickers." Anyway, last year I spent Christmas Eve in a 400 square foot studio apartment with no heat watching a "Law and Order" marathon on TNT. Sad, huh?
+> Jovie: You know, when I was a kid I dreamed of having a snowy Christmas Eve dinner at Tavern on the Green.
 
 Buddy: You know what? We are going to have Christmas Eve Dinner at Tavern on the Green!
 
