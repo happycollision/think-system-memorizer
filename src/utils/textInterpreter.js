@@ -13,7 +13,8 @@ function markdownify(string) {
 }
 
 export function makeParts (text) {
-  const regex = /^(?:(?!^>.*?:)[\s\S])+>.*?:.*$/gm;
+  // const regex = /^(?:(?!^>.*?:)[\s\S])+>.*?:.*$/gm;
+  const regex = /[\S\s]*?^\s?>[A-z. ]{1,20}:[\s\S]*?(?:(?!^[A-z. ]{1,20}:)[\S\s])+/gm // switched to this for bridges
   let m;
   let a = [];
   let split;
