@@ -21,8 +21,8 @@ export function makeParts (text) {
   function addSplitsToArray (match) {
     split = match.split(/^>/m);
     a.push([
-      markdownify(split[0]),
-      markdownify(split[1])
+      htmlForMarkdownifiedCue(markdownify(split[0])),
+      htmlForMarkdownifiedLine(markdownify(split[1]))
     ]);
   }
 
@@ -44,21 +44,22 @@ function wrapStageDirections(str) {
 }
 
 function htmlForMarkdownifiedCue(str) {
-  return wrapStageDirections(str);
+  return htmlForMarkdownifiedLine(str, false);
 }
 
-function htmlForMarkdownifiedLine(str) {
-  const paragraphs = str.match(/<p>.*?<\/p>/g)
+function htmlForMarkdownifiedLine(str, highlightDialogue = true) {
+  const paragraphs = str.match(/<p>.*?<\/p>/g);
+  if (!paragraphs) { return wrapStageDirections(str); }
   const htmlParagraphs = paragraphs.map(paragraph => {
-    const [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
-    const dialogueWithDirections = wrapStageDirections(dialogue);
-    return `${open}${character || ''}<span class="highlighted">${dialogueWithDirections}</span>${close}`;
+    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
+    dialogue = wrapStageDirections(dialogue);
+    character = character ? `<span class="character">${character}</span>` : '';
+    if (highlightDialogue) {
+      dialogue = `<span class="highlighted">${dialogue}</span>`;
+    }
+    return `${open}${character}${dialogue}${close}`;
   })
   return htmlParagraphs.join('');
-}
-
-export function turnExchangeIntoHighlightedHTML(exchange) {
-  return htmlForMarkdownifiedCue(exchange[0]) + htmlForMarkdownifiedLine(exchange[1]);
 }
 
 export function hashCode (s) {

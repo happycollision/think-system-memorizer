@@ -3,7 +3,6 @@ import * as StateActions from '../actions/StateActions';
 import * as CardActions from '../actions/CardActions';
 import CardStore from '../stores/CardStore';
 import StateStore from '../stores/StateStore';
-import { turnExchangeIntoHighlightedHTML } from '../utils/textInterpreter';
 
 //styles
 import './Libretto.scss';
@@ -39,7 +38,7 @@ class Libretto extends Component {
 
   getHighlightedExchanges() {
     return CardStore.getCards().map((exchange) => {
-      return turnExchangeIntoHighlightedHTML(exchange)
+      return exchange[0] + exchange[1];
     });
   }
 
