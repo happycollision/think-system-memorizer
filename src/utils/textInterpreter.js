@@ -39,13 +39,6 @@ export function makeParts (text) {
   return a;
 }
 
-export function highlightText (text) {
-  return makeParts(text).reduce((a,exchange) => {
-    a += turnExchangeIntoHighlightedHTML(exchange);
-    return a;
-  }, '');
-}
-
 function wrapStageDirections(str) {
   return str.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
 }
