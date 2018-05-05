@@ -46,16 +46,21 @@ export function highlightText (text) {
   }, '');
 }
 
+function wrapStageDirections(str) {
+  return str.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
+}
+
 export function turnExchangeIntoHighlightedHTML(exchange) {
   return exchange.reduce((a, side, i) => {
-    if (side.match('At least,')) { debugger; }
     if (i === 1) {
-      let matches = side.match(/(<p>.*?:)(.*?)(<\/p>)/)
-      let line = matches[2];
-      line = line.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`)
-      a += `${matches[1]}<span class="highlighted">${line}</span>${matches[3]}`;
+      const paragraphs = side.match(/<p>.*?<\/p>/g)
+      paragraphs.forEach(paragraph => {
+        const [fullString, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
+        const dialogueWithDirections = wrapStageDirections(dialogue);
+        a += `${open}${character || ''}<span class="highlighted">${dialogueWithDirections}</span>${close}`;
+      })
     } else {
-      a += side.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
+      a += wrapStageDirections(side)
     }
     return a;
   }, '')
