@@ -85,4 +85,8 @@
     transform: rotateY(-180deg);
   }
 
+  & .stage-directions, & .highlighted {
+    background-color: transparent;
+  }
+
 }
