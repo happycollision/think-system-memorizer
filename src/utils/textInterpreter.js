@@ -50,20 +50,22 @@ function wrapStageDirections(str) {
   return str.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
 }
 
+function htmlForMarkdownifiedCue(str) {
+  return wrapStageDirections(str);
+}
+
+function htmlForMarkdownifiedLine(str) {
+  const paragraphs = str.match(/<p>.*?<\/p>/g)
+  const htmlParagraphs = paragraphs.map(paragraph => {
+    const [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
+    const dialogueWithDirections = wrapStageDirections(dialogue);
+    return `${open}${character || ''}<span class="highlighted">${dialogueWithDirections}</span>${close}`;
+  })
+  return htmlParagraphs.join('');
+}
+
 export function turnExchangeIntoHighlightedHTML(exchange) {
-  return exchange.reduce((a, side, i) => {
-    if (i === 1) {
-      const paragraphs = side.match(/<p>.*?<\/p>/g)
-      paragraphs.forEach(paragraph => {
-        const [fullString, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
-        const dialogueWithDirections = wrapStageDirections(dialogue);
-        a += `${open}${character || ''}<span class="highlighted">${dialogueWithDirections}</span>${close}`;
-      })
-    } else {
-      a += wrapStageDirections(side)
-    }
-    return a;
-  }, '')
+  return htmlForMarkdownifiedCue(exchange[0]) + htmlForMarkdownifiedLine(exchange[1]);
 }
 
 export function hashCode (s) {
