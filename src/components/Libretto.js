@@ -3,6 +3,7 @@ import * as StateActions from '../actions/StateActions';
 import * as CardActions from '../actions/CardActions';
 import CardStore from '../stores/CardStore';
 import StateStore from '../stores/StateStore';
+import { turnExchangeIntoHighlightedHTML } from '../utils/textInterpreter';
 
 //styles
 import './Libretto.scss';
@@ -38,17 +39,7 @@ class Libretto extends Component {
 
   getHighlightedExchanges() {
     return CardStore.getCards().map((exchange) => {
-      return exchange.reduce((a, side, i) => {
-        if (i === 1) {
-          let matches = side.match(/(<p>.*?:)(.*?)(<\/p>)/)
-          let line = matches[2];
-          line = line.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`)
-          a += `${matches[1]}<span class="highlighted">${line}</span>${matches[3]}`;
-        } else {
-          a += side.replace(/\(.*?\)/g, (substr) => `<span class="stage-directions">${substr}</span>`);
-        }
-        return a;
-      }, '')
+      return turnExchangeIntoHighlightedHTML(exchange)
     });
   }
 
