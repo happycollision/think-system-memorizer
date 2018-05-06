@@ -17,12 +17,11 @@ export function makeParts (text) {
   const regex = /[\S\s]*?^\s?>[\w\s.&]{1,22}:[\s\S]*?(?:(?!^(?:[\w\s.&]{1,22}:|#))[\S\s])+/gm // switched to this for bridges
   let m;
   let a = [];
-  let split;
   function addSplitsToArray (match) {
-    split = match.split(/^>/m);
+    const [cue, ...lines] = match.split(/^>/m);
     a.push([
-      htmlForMarkdownifiedCue(markdownify(split[0])),
-      htmlForMarkdownifiedLine(markdownify(split[1]))
+      htmlForMarkdownifiedCue(markdownify(cue)),
+      htmlForMarkdownifiedLine(markdownify(lines.join('')))
     ]);
   }
 
