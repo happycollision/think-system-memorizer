@@ -51,7 +51,7 @@ function htmlForMarkdownifiedLine(str, highlightDialogue = true) {
   const paragraphs = str.match(/<p>.*?<\/p>/g);
   if (!paragraphs) { return wrapStageDirections(str); }
   const htmlParagraphs = paragraphs.map(paragraph => {
-    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.&]{1,22}:)?(.*?)(<\/p>)/)
+    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.&;]{1,26}:)?(.*?)(<\/p>)/)
     dialogue = wrapStageDirections(dialogue);
     character = character ? `<span class="character">${character}</span>` : '';
     if (highlightDialogue) {
