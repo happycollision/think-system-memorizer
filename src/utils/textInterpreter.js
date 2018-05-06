@@ -14,7 +14,7 @@ function markdownify(string) {
 
 export function makeParts (text) {
   // const regex = /^(?:(?!^>.*?:)[\s\S])+>.*?:.*$/gm;
-  const regex = /[\S\s]*?^\s?>[A-z. ]{1,20}:[\s\S]*?(?:(?!^(?:[A-z. ]{1,20}:|#))[\S\s])+/gm // switched to this for bridges
+  const regex = /[\S\s]*?^\s?>[\w\s.&]{1,22}:[\s\S]*?(?:(?!^(?:[\w\s.&]{1,22}:|#))[\S\s])+/gm // switched to this for bridges
   let m;
   let a = [];
   let split;
@@ -51,7 +51,7 @@ function htmlForMarkdownifiedLine(str, highlightDialogue = true) {
   const paragraphs = str.match(/<p>.*?<\/p>/g);
   if (!paragraphs) { return wrapStageDirections(str); }
   const htmlParagraphs = paragraphs.map(paragraph => {
-    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.]{1,22}:)?(.*?)(<\/p>)/)
+    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.&]{1,22}:)?(.*?)(<\/p>)/)
     dialogue = wrapStageDirections(dialogue);
     character = character ? `<span class="character">${character}</span>` : '';
     if (highlightDialogue) {
