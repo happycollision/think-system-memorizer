@@ -46,11 +46,33 @@ function htmlForMarkdownifiedCue(str) {
   return htmlForMarkdownifiedLine(str, false);
 }
 
+function splitIntoNodes(str) {
+  const nodes = [];
+  const firstTagMatcher = /<(\w+?\d?).*?>/;
+  while (str.length > 0) {
+    str = str.trim();
+    const firstTag = str.match(firstTagMatcher);
+    if (!firstTag) {debugger}
+    const fullTagMatcher = new RegExp(`<${firstTag[1]}>[\\s\\S]*?<\\/${firstTag[1]}>`);
+    const match = str.match(fullTagMatcher);
+    if (!match) {
+      debugger
+      console.warn('unexpectedly did not match an outer node...');
+      return nodes;
+    }
+    str = str.slice(match[0].length);
+    nodes.push(match[0]);
+  }
+  return nodes;
+}
+
 function htmlForMarkdownifiedLine(str, highlightDialogue = true) {
-  const paragraphs = str.match(/<p>[\s\S]*?<\/p>/gm);
-  if (!paragraphs) { return wrapStageDirections(str); }
-  const htmlParagraphs = paragraphs.map(paragraph => {
-    let [_, open, character, dialogue, close] = paragraph.match(/(<p>)([\w\s.&;]{1,26}:)?([\s\S]*?)(<\/p>)/)
+  const outerNodes = splitIntoNodes(str);
+  const htmlAddedNodes = outerNodes.map(node => {
+    const isParagraph = node.match(/^<p/);
+    if (!isParagraph) { return wrapStageDirections(node); }
+
+    let [_, open, character, dialogue, close] = node.match(/(<p>)([\w\s.&;]{1,26}:)?([\s\S]*?)(<\/p>)/)
     dialogue = wrapStageDirections(dialogue);
     character = character ? `<span class="character">${character}</span>` : '';
     if (highlightDialogue) {
@@ -58,7 +80,7 @@ function htmlForMarkdownifiedLine(str, highlightDialogue = true) {
     }
     return `${open}${character}${dialogue}${close}`;
   })
-  return htmlParagraphs.join('');
+  return htmlAddedNodes.join('');
 }
 
 export function hashCode (s) {
