@@ -1,3 +1,6 @@
+# Act 1
+## Scene 2: Robert arrives
+
 Francesca: Good afternoon.
 
 (He hands her a business card)
@@ -141,7 +144,7 @@ Without a name.
 
 Francesca: No, no. Grocery list.
 
-### At francesca's house
+### At Francesca's house
 
 Francesca: Just drive around to the back.
 
@@ -163,7 +166,7 @@ Francesca: You can put your film in the fridge if you want. I read that photogra
 
 Francesca: Okay. Come on in.
 
-### inside the house
+### Inside the house
 
 (He sets down his cooler, not quite knowing what to expect. Then he watches as she takes her boots off, and pours them each a glass of tea.)
 
@@ -193,7 +196,7 @@ Francesca: Oh the ice! (Opening the freezer section) I was so thirsty I forgot a
 
 > Robert: Wait. Let me help. These ice trays stick to your fingers worse than the ice. (And sure enough, he has some kind of trick that makes the ice cubes come out perfectly. She stands back and watches as he feels his cooler, picks the whole thing up and heads outside.) That should do it. I'll just go get my film.
 
-...
+----------
 
 Michael: Is that what you're going to do? Call mom for the rest of your life?
 
@@ -277,7 +280,7 @@ Francesca: Just go out to the garden and pick whatever looks good. Will make a v
 
 > Robert: Sounds good.
 
-...
+----------
 
 ### Back in Francesca's kitchen
 
@@ -361,7 +364,7 @@ Francesca: Skin these carrots. Was your ex-wife a photographer to?
 
 > Robert: No, she was a waitress... Who wanted to be a singer, or some kind of something else. She was young though, so... Who knows what she is now.
 
-...
+----------
 
 Francesca: I think it needs a little more pepper, what do you think.
 
@@ -375,7 +378,7 @@ Francesca: I did. And a box of mamas recipes. I could make real mozzarella if an
 
 > Robert: With tomatoes and basil, you bet I would.
 
-...
+----------
 
 Marian:  
 Another life.  
@@ -383,7 +386,7 @@ Another life.
 
 > Robert: That was a great supper. Let me clear the table.
 
-...
+----------
 
 Francesca: Everything's fine. I love you. (She hangs up the phone and Robert takes a sip from the stew) That was my husband.
 
@@ -622,7 +625,7 @@ Francesca: Robert, thank you for this.
 
 > Robert: This is what we hope for, that someday, one picture will make a difference to somebody.
 
-## Scene 5 the second evening at Francesca's house
+## Scene 5: The second evening at Francesca's house
 
 (They walk into the house Robert carrying the cooler)
 
@@ -632,7 +635,7 @@ Francesca: Shower is just down the hall there, and I'll take my bath upstairs.
 
 Francesca: Thank you. (She takes the beer in the phone rings. He heads for the shower.)
 
-...
+----------
 
 ### In the kitchen
 
@@ -682,7 +685,7 @@ Francesca: No. I don't.
 
 (The phone rings. She starts not to answer it, but he motions to her to take it. She moves across the kitchen to the phone on the wall behind him)
 
-...
+----------
 
 Francesca: Bye, Marge. Say hi to Charlie for me.
 
@@ -710,7 +713,7 @@ Francesca: Okay.
 
 (He smiles, puts his beer on the counter and takes her hand.)
 
-...
+----------
 
 Marge:  
 'Cause I'm ready and I'm waiting  
@@ -777,7 +780,7 @@ Into you.
 
 # Act 2
 
-### after State Fair song
+### After State Fair song
 
 > Robert:  
 Maybe you sleep so peaceful  
@@ -885,7 +888,7 @@ Don't stop.
 
 > Robert: (Falling back into the bed) I adore you.
 
-## Scene 2: The Kitchen/Des Moines
+## Scene 2: The kitchen/Des Moines
 
 (They have coffee in the kitchen)
 
@@ -925,7 +928,7 @@ Francesca: No it wasn't.
 
 (They drive to Des Moines)
 
-...
+----------
 
 Francesca: (Ending the song:)  
 Far enough that I could feel  
@@ -983,7 +986,7 @@ Francesca: Felt like what?
 
 > Robert: Dizzy. And happy. I don't feel like we are in Iowa. I feel like we've been picked up in a tornado and we're on our way to... (The phone rings)
 
-...
+----------
 
 Bud: Goodnight.
 
@@ -993,7 +996,7 @@ Bud: Goodnight.
 
 Francesca: No, please.
 
-...
+----------
 
 -Torn in half:  
 Before and after you.
@@ -1170,15 +1173,15 @@ Francesca: Robert!
 
 > Robert: Six o'clock.
 
-...
+----------
 
 Francesca: Oh Robert. I love you. Take me with you.
 
 > Robert: OK. Let's go.
 
-## Scene 5 - years go by
+## Scene 5 - Years go by
 
-...
+----------
 
 Francesca: Johnson's. Is someone there?
 
@@ -1255,9 +1258,9 @@ But you.
 But you.  
 You.
 
-## Scene 6 The Bridge
+## Scene 6: The Bridge
 
-...
+----------
 
 > Robert:  
 You and I  
