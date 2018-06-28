@@ -93,6 +93,8 @@ class App extends Component {
   renderChooser() {
     return (
       <div className="thinkSystem-App">
+        <button type="button" onClick={ () => this.getLibretto('Hairspray') }>Hairspray</button>
+        <br />
         <button type="button" onClick={ () => this.getLibretto('Bridges') }>Bridges</button>
         <br />
         <button type="button" onClick={ () => this.getLibretto('Elf') }>Elf</button>
