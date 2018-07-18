@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('librettos', function() {
+    this.route('show', {path: '/:dasherized_name'});
+  });
 });
 
 export default Router;
