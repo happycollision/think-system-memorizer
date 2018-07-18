@@ -8,10 +8,10 @@ module('Integration | Helper | slugify', function(hooks) {
 
   // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', 'hi there: people');
+    this.set('inputValue', 'hi there 2: people');
 
     await render(hbs`{{slugify inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), 'hi-there-people');
+    assert.equal(this.element.textContent.trim(), 'hi-there-2-people');
   });
 });
