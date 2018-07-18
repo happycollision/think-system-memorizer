@@ -15,11 +15,12 @@ module('Integration | Component | libretto-list', function(hooks) {
       {label: 'Anything Goes', file: '/files/boat.txt'},
     ])
 
+    this.owner.lookup('router:main').setupRouter();
+
     await render(hbs`<LibrettoList @librettos={{librettos}} />`);
 
-    assert.dom('a').exists({ count: 3 });
-    assert.dom('a[href$="some-show"]').exists();
-    assert.dom('a[href$="some-show-2-electric-boogaloo"]').exists();
-    assert.dom('a[href$="anything-goes"]').exists();
+    assert.dom('a[href$="some-show"]').containsText('Some Show');
+    assert.dom('a[href$="some-show-2-electric-boogaloo"]').containsText('Some Show 2: Electric Boogaloo');
+    assert.dom('a[href$="anything-goes"]').containsText('Anything Goes');
   });
 });

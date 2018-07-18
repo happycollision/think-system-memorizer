@@ -1,1 +1,3 @@
-{{yield}}
+{{#each @librettos as |libretto|}}
+  {{#link-to 'librettos.show' (slugify libretto.label)}}{{libretto.label}}{{/link-to}}
+{{/each}}
