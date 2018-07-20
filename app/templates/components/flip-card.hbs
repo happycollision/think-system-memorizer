@@ -1,4 +1,4 @@
 {{yield (hash 
-  front=(component 'flip-card/front' isHidden=@flipped) 
-  back=(component 'flip-card/back' isHidden=(not @flipped))
+  front=(component 'flip-card/side' class="card-front" isHidden=@flipped) 
+  back=(component 'flip-card/side' class="card-back" isHidden=(not @flipped))
 )}}
