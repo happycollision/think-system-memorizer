@@ -1,3 +1,25 @@
 @import 'tailwind.css';
 @import 'pod-styles.css';
 
+body {
+  font-size: 1.5em;
+  font-family: Helvetica, Arial;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.stage-directions {
+  background-color: #fff;
+  display: block;
+  padding: 0.25em 1em;
+  color: rgba(0,0,0,0.4);
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.character {
+  color: rgba(0,0,0,0.6);
+  font-weight: bold;
+}
