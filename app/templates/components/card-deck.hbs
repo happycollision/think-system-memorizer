@@ -1,0 +1,10 @@
+<SwiperLoop @items={{@cards}} as |cardContent|>
+  <FlipCard @flipped={{ cardContent.isFlipped }}  onclick={{action (mut cardContent.isFlipped) (not cardContent.isFlipped)}} as |card|>
+    <card.front>
+      {{cardContent.front}}
+    </card.front>
+    <card.back>
+      {{cardContent.back}}
+    </card.back>
+  </FlipCard>
+</SwiperLoop>
