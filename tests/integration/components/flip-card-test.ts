@@ -12,8 +12,8 @@ module('Integration | Component | flip-card', function(hooks) {
 
     await render(hbs`<FlipCard as |card|><card.front>Hello</card.front><card.back>There</card.back></FlipCard>`);
 
-    assert.dom('.card-front[data-test-card-side]').hasText('Hello')
-    assert.dom('.card-back[data-test-card-side]').hasText('There')
+    assert.dom('[data-test-card-side]:first-child').hasText('Hello')
+    assert.dom('[data-test-card-side]:last-child').hasText('There')
   });
 
   test('it renders the back of a card only when flipped', async function(assert) {
@@ -22,10 +22,10 @@ module('Integration | Component | flip-card', function(hooks) {
     this.set('flipped', false);
     
     await render(hbs`<FlipCard @flipped={{flipped}} as |card|><card.back>Hello</card.back></FlipCard>`);
-    assert.dom('[data-test-card-side]').hasClass('hidden', 'Back starts hidden');
+    assert.dom(this.element.firstChild).hasNoClass('flipped', 'Back starts hidden');
 
     this.set('flipped', true);
      
-    assert.dom('[data-test-card-side]').hasNoClass('hidden', 'Back becomes visible');
+    assert.dom(this.element.firstChild).hasClass('flipped', 'Back becomes visible');
   })
 });
