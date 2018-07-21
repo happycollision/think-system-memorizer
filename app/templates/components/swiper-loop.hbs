@@ -1,0 +1,7 @@
+<SwiperContainer as |container|>
+  {{#each @items as |item|}}
+    <container.slide>
+      {{yield item}}
+    </container.slide>
+  {{/each}}
+</SwiperContainer>
