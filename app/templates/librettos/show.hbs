@@ -1,1 +1,20 @@
 {{model.label}}
+
+<FlipCard @flipped={{ isFlipped }}  onclick={{action (mut isFlipped) (not isFlipped)}} as |card|>
+  <card.front>
+    <p>
+      Front of card
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, perferendis itaque. Adipisci quibusdam facilis fugit maxime amet modi voluptatum quis nulla architecto alias animi, minus rem, deleniti magni placeat corrupti!
+    </p>
+  </card.front>
+  <card.back>
+    <p>
+      Back of Card
+    </p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam inventore dolore necessitatibus doloremque architecto consectetur aperiam voluptatem asperiores magnam dolorum, impedit magni autem soluta ducimus, alias enim porro quibusdam error!
+    </p>
+  </card.back>
+</FlipCard>
