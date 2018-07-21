@@ -7,7 +7,7 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('librettos', function() {
+  this.route('librettos', {path: '/librettos'}, function() {
     this.route('show', {path: '/:dasherized_name'});
   });
 });
