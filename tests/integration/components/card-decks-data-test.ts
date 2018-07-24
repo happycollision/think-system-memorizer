@@ -2,25 +2,30 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import { create, createList } from 'think-system-memorizer/tests/factories';
 
 module('Integration | Component | card-decks-data', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it supplies the cards for a given deck', async function(assert) {
+    const winningDeck = create('cardDeck', {
+      name: 'Winner',
+      cards: createList('card', 2, {front: 'winner', back: 'winner'})
+    });
+    const cardDecks = create('cardDecks', {Winner: winningDeck})
+    this.set('deckName', 'Winner');
 
-    await render(hbs`{{card-decks-data}}`);
+    const redux = this.owner.lookup('service:redux');
+    redux.getState = () => ({cardDecks});
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
     await render(hbs`
-      {{#card-decks-data}}
-        template block text
-      {{/card-decks-data}}
+      <CardDecksData @name={{deckName}} as |decks|>
+        {{#each decks.single as |card|}}
+          {{card.front}} {{card.back}}
+        {{/each}}
+      </CardDecksData>
     `);
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.dom().hasTextContaining('winner');
   });
 });
