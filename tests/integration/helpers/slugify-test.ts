@@ -12,6 +12,6 @@ module('Integration | Helper | slugify', function(hooks) {
 
     await render(hbs`{{slugify inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), 'hi-there-2-people');
+    assert.dom().containsText('hi-there-2-people');
   });
 });
