@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
-import { ICardDecks, ICardDeck, ICard, IActionType } from 'think-system-memorizer/reducers';
+import { ICardDecks, ICard, IActionType } from 'think-system-memorizer/reducers';
 import { connect } from 'ember-redux';
 
 const stateToComputed = (state: { cardDecks: ICardDecks}) => {
@@ -9,16 +9,19 @@ const stateToComputed = (state: { cardDecks: ICardDecks}) => {
   };
 };
 
-const dispatchToActions = (dispatch) => {
+const dispatchToActions = (dispatch: any) => {
   return {
     flipCard: (card: ICard) => dispatch({type: IActionType.FlipCard, card})
   };
 };
 
 class CardDecksDataComponent extends Component {
-  @computed('cardDecks', 'name') get singleDeck(): ICardDeck {
+  @computed('cardDecks', 'name') get singleDeck(this: CardDecksDataComponent): ICard[] {
+    // @ts-ignore (cardDecks is set during connect)
     const decks: ICardDecks = this.get('cardDecks');
-    return decks[this.get('name')].cards;
+    // @ts-ignore (name is set by caller)
+    const deckName: string = this.get('name');
+    return decks[deckName].cards;
   }
 }
 

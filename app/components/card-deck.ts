@@ -3,7 +3,8 @@ import { action } from '@ember-decorators/object';
 import { ICard } from 'think-system-memorizer/reducers';
 
 export default class CardDeckComponent extends Component.extend({
-  onCardClick(cardcontent: ICard) {},
+  // @ts-ignore (by default it *should* do nothing, but the args need to be right)
+  onCardClick(cardcontent: ICard) {}, // pass in to override
 }) {
   
   @action cardClick(cardContent: ICard, ev: Event) {
