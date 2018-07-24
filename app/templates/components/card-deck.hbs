@@ -1,4 +1,4 @@
-<SwiperLoop @items={{@cards}} as |cardContent|>
+<SwiperLoop @items={{@cards}} @currentIndex={{currentIndex}} as |cardContent|>
   <FlipCard @flipped={{ cardContent.isFlipped }}  onclick={{action 'cardClick' cardContent}} as |card|>
     <card.front>
       {{cardContent.front}}

@@ -6,7 +6,14 @@ import { service } from '@ember-decorators/service'
 import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/reducers';
 import { action } from '@ember-decorators/object';
 
-export default class LibrettosShowRoute extends Route {
+export default class LibrettosShowRoute extends Route.extend({
+  queryParams: {
+    card: {
+      replace: true
+    }
+  }
+
+}) {
   @service('redux') redux!: ReduxService;
 
   model({dasherized_name}: {dasherized_name: string}) {

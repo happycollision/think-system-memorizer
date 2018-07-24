@@ -1,4 +1,4 @@
 {{#link-to 'librettos' class="bg-blue text-white rounded hover:bg-blue-dark no-underline py-1 px-2 m-2 inline-block"}}Choose Script{{/link-to}}
 <CardDecksData @name={{model.name}} as |decks|>
-  <CardDeck @cards={{decks.single}} @onCardClick={{action decks.actions.flipCard}} />
+  <CardDeck @cards={{decks.single}} @onCardClick={{action decks.actions.flipCard}} @currentIndex={{cardIndex}} />
 </CardDecksData>

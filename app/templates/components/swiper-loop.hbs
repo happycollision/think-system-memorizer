@@ -1,4 +1,4 @@
-<SwiperContainer class="h-screen" as |container|>
+<SwiperContainer class="h-screen" @currentSlide={{currentIndex}} @keyboard={{true}} as |container|>
   {{#each @items key="id" as |item|}}
     <container.slide>
       {{yield item}}
