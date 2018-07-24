@@ -30,8 +30,8 @@ export declare namespace IRegisteredAction {
 
 export interface ICard {
   id: string | number;
-  front: HTMLElement;
-  back: HTMLElement;
+  front: HTMLElement | string;
+  back: HTMLElement | string;
   isFlipped: boolean;
 }
 
