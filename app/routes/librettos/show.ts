@@ -3,7 +3,8 @@ import { slugify } from '../../helpers/slugify';
 import { ILibrettoListing } from 'think-system-memorizer/routes/librettos';
 import { hash } from 'rsvp';
 import { service } from '@ember-decorators/service'
-import { IRegisteredAction, IActionType } from 'think-system-memorizer/reducers';
+import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/reducers';
+import { action } from '@ember-decorators/object';
 
 export default class LibrettosShowRoute extends Route {
   @service('redux') redux!: ReduxSerivce;
@@ -20,5 +21,9 @@ export default class LibrettosShowRoute extends Route {
       noOp: fetch(metadata.file).then(response => response.text())
         .then(text => redux.dispatch({type: IActionType.RegisterText, name: metadata.label, text} as IRegisteredAction.RegisterTest))
     })
+  }
+
+  @action handleCardClick(cardContent: ICard) {
+    this.get('redux').dispatch({type: IActionType.FlipCard, card: cardContent})
   }
 }

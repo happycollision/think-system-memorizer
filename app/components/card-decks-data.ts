@@ -1,6 +1,6 @@
 import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
-import { ICardDecks, ICardDeck } from 'think-system-memorizer/reducers';
+import { ICardDecks, ICardDeck, ICard, IActionType } from 'think-system-memorizer/reducers';
 import { connect } from 'ember-redux';
 
 const stateToComputed = (state: { cardDecks: ICardDecks}) => {
@@ -11,7 +11,7 @@ const stateToComputed = (state: { cardDecks: ICardDecks}) => {
 
 const dispatchToActions = (dispatch) => {
   return {
-    // add: () => dispatch({type: 'ADD'})
+    flipCard: (card: ICard) => dispatch({type: IActionType.FlipCard, card})
   };
 };
 

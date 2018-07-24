@@ -1,5 +1,5 @@
 <SwiperContainer class="h-screen" as |container|>
-  {{#each @items as |item|}}
+  {{#each @items key="id" as |item|}}
     <container.slide>
       {{yield item}}
     </container.slide>
