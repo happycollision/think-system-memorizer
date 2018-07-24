@@ -7,7 +7,7 @@ import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/re
 import { action } from '@ember-decorators/object';
 
 export default class LibrettosShowRoute extends Route {
-  @service('redux') redux!: ReduxSerivce;
+  @service('redux') redux!: ReduxService;
 
   model({dasherized_name}: {dasherized_name: string}) {
     const redux = this.get('redux');

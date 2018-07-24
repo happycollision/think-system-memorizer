@@ -3,13 +3,13 @@ declare interface IAction {
   [x: string]: any;
 }
 
-declare interface ReduxSerivce {
+declare interface ReduxService {
   dispatch(input: IAction): void;
 }
 
 declare module '@ember/service' {
   interface Registry {
-    'redux': ReduxSerivce;
+    'redux': ReduxService;
   }
 }
 
