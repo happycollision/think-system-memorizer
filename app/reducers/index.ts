@@ -8,15 +8,23 @@ export enum IActionType {
   FlipCard = 'FLIP_CARD',
 }
 
-export interface IRegisteredAction extends IAction {
-  type: IActionType;
-}
+export type IRegisteredAction =
+  IRegisteredAction.FlipCard
+  | IRegisteredAction.RegisterTest
 
 export declare namespace IRegisteredAction {
-  interface RegisterTest extends IRegisteredAction {
+  interface BaseAction {
+    type: IActionType;
+  }
+  interface RegisterTest extends BaseAction {
     type: IActionType.RegisterText;
     name: string;
     text: string;
+  }
+
+  interface FlipCard extends BaseAction {
+    type: IActionType.FlipCard;
+    card: ICard;
   }
 }
 
