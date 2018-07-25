@@ -11,4 +11,12 @@ export default class LibrettosShowController extends Controller.extend({
   set cardIndex(num: number) {
     this.set('card', num + 1)
   }
+
+  @computed('card') get nextCard(): number {
+    return this.get('card') + 1;
+  }
+
+  @computed('card') get previousCard(): number {
+    return this.get('card') - 1;
+  }
 }
