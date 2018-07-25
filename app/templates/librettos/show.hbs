@@ -9,5 +9,13 @@
   {{link-to 'Previous Card' (query-params card=previousCard) class="btn-blue"}}
   {{link-to 'Next Card' (query-params card=nextCard) class="btn-blue"}}
 {{ else }}
-  Hi
+  
+  <CardDecksData @name={{model.name}} as |decks|>
+    {{#each decks.single as |card index|}}
+      <div onclick={{action 'goToCardWithIndex' index}}>
+        {{card.front}}
+        {{card.back}}
+      </div>
+    {{/each}}
+  </CardDecksData>
 {{/if}}

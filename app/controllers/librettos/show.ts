@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import { computed } from '@ember-decorators/object';
+import { computed, action } from '@ember-decorators/object';
 
 export default class LibrettosShowController extends Controller.extend({
   queryParams: ['card', 'view'],
@@ -24,5 +24,11 @@ export default class LibrettosShowController extends Controller.extend({
 
   @computed('card') get previousCard(): number {
     return this.get('card') - 1;
+  }
+
+  @action goToCardWithIndex(index: number, ev: Event) {
+    ev.preventDefault();
+    // @ts-ignore (improperly typed. first param is optional)
+    this.transitionToRoute({queryParams: {card: index + 1, view: 'cards'}});
   }
 }
