@@ -10,3 +10,7 @@
 /* .skew-45 {
   transform: skewY(45deg);
 } */
+
+.border-box {
+  box-sizing: border-box;
+}
