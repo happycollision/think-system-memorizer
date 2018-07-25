@@ -1,8 +1,13 @@
-{{#link-to 'librettos' class="btn-blue"}}Choose Script{{/link-to}}
+{{#if isCardView}}
+  {{#link-to 'librettos' class="btn-blue"}}Choose Script{{/link-to}}
+  {{link-to 'See Script' (query-params view="script") class="btn-blue"}}
 
-{{link-to 'Previous Card' (query-params card=previousCard) class="btn-blue"}}
-{{link-to 'Next Card' (query-params card=nextCard) class="btn-blue"}}
+  <CardDecksData @name={{model.name}} as |decks|>
+    <CardDeck @cards={{decks.single}} @onCardClick={{action decks.actions.flipCard}} @currentIndex={{cardIndex}} />
+  </CardDecksData>
 
-<CardDecksData @name={{model.name}} as |decks|>
-  <CardDeck @cards={{decks.single}} @onCardClick={{action decks.actions.flipCard}} @currentIndex={{cardIndex}} />
-</CardDecksData>
+  {{link-to 'Previous Card' (query-params card=previousCard) class="btn-blue"}}
+  {{link-to 'Next Card' (query-params card=nextCard) class="btn-blue"}}
+{{ else }}
+  Hi
+{{/if}}

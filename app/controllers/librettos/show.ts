@@ -2,14 +2,20 @@ import Controller from '@ember/controller';
 import { computed } from '@ember-decorators/object';
 
 export default class LibrettosShowController extends Controller.extend({
-  queryParams: ['card'],
+  queryParams: ['card', 'view'],
 }) {
   card = 1;
+  view: 'cards' | 'script' = 'cards'
+
   @computed('card') get cardIndex(): number {
     return this.get('card') - 1;
   }
   set cardIndex(num: number) {
     this.set('card', num + 1)
+  }
+
+  @computed('view') get isCardView(): boolean {
+    return this.get('view') !== 'script';
   }
 
   @computed('card') get nextCard(): number {
