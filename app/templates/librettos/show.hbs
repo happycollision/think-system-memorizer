@@ -12,7 +12,7 @@
   
   <CardDecksData @name={{model.name}} as |decks|>
     {{#each decks.single as |card index|}}
-      <div onclick={{action 'goToCardWithIndex' index}}>
+      <div class="script-section" onclick={{action 'goToCardWithIndex' index}}>
         {{card.front}}
         {{card.back}}
       </div>
