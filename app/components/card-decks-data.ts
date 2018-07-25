@@ -15,7 +15,9 @@ const dispatchToActions = (dispatch: (x: IRegisteredAction) => void) => {
   };
 };
 
-class CardDecksDataComponent extends Component {
+class CardDecksDataComponent extends Component.extend({
+  tagName: '',
+}) {
   @computed('cardDecks', 'name') get singleDeck(this: CardDecksDataComponent): ICard[] {
     // @ts-ignore (cardDecks is set during connect)
     const decks: ICardDecks = this.get('cardDecks');
