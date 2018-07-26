@@ -31,4 +31,35 @@ export default class LibrettosShowController extends Controller.extend({
     // @ts-ignore (improperly typed. first param is optional)
     this.transitionToRoute({queryParams: {card: index + 1, view: 'cards'}});
   }
+
+  sequenceStep = 0;
+
+  next() {
+    console.log('next')
+  }
+
+  flip() {
+    console.log('flip')
+  }
+
+  reset() {
+    console.log('reset')
+  }
+
+  @action sequencialMemorize() {
+    this.sequenceStep++;
+    if (this.sequenceStep === 8) {
+      this.reset()
+      this.sequenceStep = 0;
+      return;
+    }
+    switch (this.sequenceStep % 2 === 1) {
+      case true:
+        this.flip()
+      break;
+      case false:
+        this.next()
+      break;
+    }
+  }
 }

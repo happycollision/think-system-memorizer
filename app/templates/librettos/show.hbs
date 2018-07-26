@@ -14,6 +14,7 @@
     <div>
       {{link-to 'Previous Card' (query-params card=previousCard) class="btn-blue"}}
       {{link-to 'Next Card' (query-params card=nextCard) class="btn-blue"}}
+      <button type="button" class="btn-blue" onclick={{action 'sequencialMemorize'}}>Re-memorize</button>
     </div>
   </div>
 {{ else }}
