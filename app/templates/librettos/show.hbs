@@ -20,6 +20,9 @@
   
   <CardDecksData @name={{model.name}} as |decks|>
     {{#each decks.single as |card index|}}
+      {{#if (eq index cardIndex)}}
+        <ScrollOnInit />
+      {{/if}}
       <div class="script-section" onclick={{action 'goToCardWithIndex' index}}>
         {{card.front}}
         {{card.back}}
