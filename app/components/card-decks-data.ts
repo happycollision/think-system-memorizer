@@ -11,7 +11,7 @@ const stateToComputed = (state: { cardDecks: ICardDecks}) => {
 
 const dispatchToActions = (dispatch: (x: IRegisteredAction) => void) => {
   return {
-    flipCard: (card: ICard) => dispatch({type: IActionType.FlipCard, card})
+    flipCard: (id: number|string) => dispatch({type: IActionType.FlipCard, id})
   };
 };
 

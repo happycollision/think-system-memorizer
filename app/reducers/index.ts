@@ -24,7 +24,7 @@ export declare namespace IRegisteredAction {
 
   interface FlipCard extends BaseAction {
     type: IActionType.FlipCard;
-    card: ICard;
+    id: number | string;
   }
 }
 
@@ -65,7 +65,7 @@ function cardDecks(state: ICardDecks, action: IRegisteredAction): ICardDecks {
   if (action.type === IActionType.FlipCard) {
     const newState = traverseObject(state, (key, value: ICardDeck) => {
       const newValue: ICardDeck = {...value, cards: value.cards.map(card => {
-        if (card === action.card) {
+        if (card.id === action.id) {
           return {...card, isFlipped: !card.isFlipped};
         }
         return card;
