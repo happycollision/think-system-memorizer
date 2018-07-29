@@ -5,6 +5,7 @@ declare interface IAction {
 
 declare interface ReduxService {
   dispatch(input: IAction): void;
+  getState(): any;
 }
 
 declare module '@ember/service' {
