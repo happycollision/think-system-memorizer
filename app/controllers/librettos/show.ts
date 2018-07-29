@@ -8,7 +8,7 @@ export default class LibrettosShowController extends Controller.extend({
   queryParams: ['card', 'view'],
   
   updateCard: observer('card', 'model', function(this: LibrettosShowController) {
-    const newIndex = this.get('cardIndex');
+    const newIndex = this.get('card') - 1;
     // @ts-ignore (path property get)
     const name = this.get('model.name');
     if (!name) return;
@@ -21,8 +21,11 @@ export default class LibrettosShowController extends Controller.extend({
 
   @service('redux') redux!: ReduxService;
 
-  @computed('card') get cardIndex(): number {
-    return this.get('card') - 1;
+  @computed('card', 'model') get cardIndex(): number {
+    // @ts-ignore (path property get)
+    const name = this.get('model.name');
+    if (!name) return this.get('card') - 1;
+    return this.get('redux').getState().cardDecks[name].currentIndex;
   }
   set cardIndex(num: number) {
     this.set('card', num + 1)
