@@ -1,11 +1,25 @@
 import Controller from '@ember/controller';
 import { computed, action } from '@ember-decorators/object';
+import { service } from '@ember-decorators/service';
+import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
+import { observer } from '@ember/object';
 
 export default class LibrettosShowController extends Controller.extend({
   queryParams: ['card', 'view'],
+  
+  updateCard: observer('card', 'model', function(this: LibrettosShowController) {
+    const newIndex = this.get('cardIndex');
+    // @ts-ignore (path property get)
+    const name = this.get('model.name');
+    if (!name) return;
+    const action: IRegisteredAction.SetCardIndex = {type: IActionType.SetCardIndex, name, newIndex}
+    this.get('redux').dispatch(action)
+  })
 }) {
   card = 1;
   view: 'cards' | 'script' = 'cards'
+
+  @service('redux') redux!: ReduxService;
 
   @computed('card') get cardIndex(): number {
     return this.get('card') - 1;
