@@ -43,8 +43,8 @@ export default class LibrettosShowController extends Controller.extend({
     return this.get('card') - 1;
   }
 
-  @action goToCardWithIndex(index: number, ev: Event) {
-    ev.preventDefault();
+  @action goToCardWithIndex(index: number, ev?: Event) {
+    if (ev) ev.preventDefault();
     // @ts-ignore (improperly typed. first param is optional)
     this.transitionToRoute({queryParams: {card: index + 1, view: 'cards'}});
   }
@@ -52,15 +52,28 @@ export default class LibrettosShowController extends Controller.extend({
   sequenceStep = 0;
 
   next() {
-    console.log('next')
+    const currentIndex = this.get('cardIndex');
+    this.goToCardWithIndex(currentIndex + 1)
   }
 
   flip() {
-    console.log('flip')
+    const redux = this.get('redux')
+    const currentIndex = this.get('cardIndex');
+    // @ts-ignore (path property get)
+    const name = this.get('model.name')
+    const id = redux.getState().cardDecks[name].cards[currentIndex].id;
+    const action: IRegisteredAction.FlipCard = {type: IActionType.FlipCard, id}
+    redux.dispatch(action)
   }
 
   reset() {
-    console.log('reset')
+    const redux = this.get('redux');
+    // @ts-ignore (path property get)
+    const name = this.get('model.name');
+    const action: IRegisteredAction.UnflipAllInDeck = {type: IActionType.UnflipAllInDeck, name};
+    redux.dispatch(action);
+    const currentIndex = this.get('cardIndex');
+    this.goToCardWithIndex(currentIndex - 2);
   }
 
   @action sequencialMemorize() {
