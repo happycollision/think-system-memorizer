@@ -46,6 +46,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     // here you can enable a production-specific feature
     ENV.locationType = 'hash'; // for GhPages
+    ENV.rootURL = '/think-system-memorizer/';
   }
 
   return ENV;
