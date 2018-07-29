@@ -23,6 +23,18 @@ module('Acceptance | card interactions', function(hooks) {
     assert.notOk(currentURL().match('card=2'))
   });
 
+  test('data store card index matches url', async function(assert) {
+    await visit('/librettos/elf-jovie?view=cards&card=3');
+    const redux = this.owner.lookup('service:redux');
+    const currentState = () => redux.getState();
+
+    assert.equal(currentState().cardDecks['Elf: Jovie'].currentIndex, 2, 'First card showing is card 3 (index 2)')
+
+    await click('[data-test-next-card]')
+    assert.equal(currentState().cardDecks['Elf: Jovie'].currentIndex, 3, 'Card showing is card 4 (index 3)')
+  });
+
+
   test('re-memorize sequencially steps through cards', async function(assert) {
     await visit('/librettos/elf-jovie?view=cards');
     const redux = this.owner.lookup('service:redux');
