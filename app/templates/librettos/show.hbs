@@ -1,0 +1,33 @@
+{{#if isCardView}}
+  <div class="flex flex-col h-screen">
+    <div class="flex flex-no-shrink justify-between">
+      {{#link-to 'librettos' class="btn-blue"}}&lt; Scripts{{/link-to}}
+      {{link-to 'See Script' (query-params view="script") class="btn-blue"}}
+    </div>
+
+    <div class="flex-grow">
+      <CardDecksData @name={{model.name}} as |decks|>
+        <CardDeck @cards={{decks.single}} @onCardClick={{action decks.actions.flipCard}} @currentIndex={{cardIndex}} />
+      </CardDecksData>
+    </div>
+
+    <div class="flex flex-no-shrink justify-between">
+      {{link-to 'Prev' (query-params card=previousCard) class="btn-blue" data-test-previous-card=true}}
+      {{link-to 'Next' (query-params card=nextCard) class="btn-blue" data-test-next-card=true}}
+      <button type="button" class="btn-blue" onclick={{action 'sequencialMemorize'}} data-test-sequencial-memorize>Memorize</button>
+    </div>
+  </div>
+{{ else }}
+  
+  <CardDecksData @name={{model.name}} as |decks|>
+    {{#each decks.single as |card index|}}
+      {{#if (eq index cardIndex)}}
+        <ScrollOnInit />
+      {{/if}}
+      <div class="script-section" onclick={{action 'goToCardWithIndex' index}}>
+        {{card.front}}
+        {{card.back}}
+      </div>
+    {{/each}}
+  </CardDecksData>
+{{/if}}

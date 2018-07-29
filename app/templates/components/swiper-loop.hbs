@@ -1,0 +1,7 @@
+<SwiperContainer class="swiper-height" @currentSlide={{currentIndex}} @keyboard={{true}} as |container|>
+  {{#each @items key="id" as |item|}}
+    <container.slide class="border-box">
+      {{yield item}}
+    </container.slide>
+  {{/each}}
+</SwiperContainer>
