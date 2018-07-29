@@ -6,16 +6,25 @@ import { traverseObject } from 'happy-helpers';
 export enum IActionType {
   RegisterText = 'REGISTER_LIBRETTO_TEXT',
   FlipCard = 'FLIP_CARD',
+  SetCardIndex = 'SET_CARD_INDEX',
 }
 
 export type IRegisteredAction =
   IRegisteredAction.FlipCard
   | IRegisteredAction.RegisterTest
+  | IRegisteredAction.SetCardIndex
 
 export declare namespace IRegisteredAction {
   interface BaseAction {
     type: IActionType;
   }
+  
+  interface SetCardIndex extends BaseAction {
+    type: IActionType.SetCardIndex;
+    name: string;
+    newIndex: number;
+  }
+  
   interface RegisterTest extends BaseAction {
     type: IActionType.RegisterText;
     name: string;
@@ -71,6 +80,17 @@ function cardDecks(state: ICardDecks, action: IRegisteredAction): ICardDecks {
         }
         return card;
       })};
+      return [key, newValue]
+    }, false, false);
+    return newState;
+  }
+
+  if (action.type === IActionType.SetCardIndex) {
+    const newState = traverseObject(state, (key, value: ICardDeck) => {
+      const newValue: ICardDeck = {...value};
+      if (action.name === newValue.name) {
+        newValue.currentIndex = action.newIndex;
+      }
       return [key, newValue]
     }, false, false);
     return newState;
