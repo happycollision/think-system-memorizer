@@ -5,6 +5,9 @@ import { hash } from 'rsvp';
 import { service } from '@ember-decorators/service'
 import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/reducers';
 import { action } from '@ember-decorators/object';
+import ENV from 'think-system-memorizer/config/environment';
+import { join } from 'think-system-memorizer/utils/url';
+
 
 export default class LibrettosShowRoute extends Route.extend({
   queryParams: {
@@ -23,9 +26,11 @@ export default class LibrettosShowRoute extends Route.extend({
 
     if (!metadata) { throw new Error('no metadata found for libretto route ' + dasherized_name)}
 
+    console.log(ENV.rootURL)
+
     return hash({
       name: metadata.label,
-      noOp: fetch(metadata.file).then(response => response.text())
+      noOp: fetch(join(ENV.rootURL, metadata.file)).then(response => response.text())
         .then(text => redux.dispatch({type: IActionType.RegisterText, name: metadata.label, text} as IRegisteredAction.RegisterTest))
     })
   }
