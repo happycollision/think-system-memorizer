@@ -7,12 +7,14 @@ export enum IActionType {
   RegisterText = 'REGISTER_LIBRETTO_TEXT',
   FlipCard = 'FLIP_CARD',
   SetCardIndex = 'SET_CARD_INDEX',
+  UnflipAllInDeck = 'UNFLIP_ALL_IN_DECK',
 }
 
 export type IRegisteredAction =
   IRegisteredAction.FlipCard
   | IRegisteredAction.RegisterTest
   | IRegisteredAction.SetCardIndex
+  | IRegisteredAction.UnflipAllInDeck
 
 export declare namespace IRegisteredAction {
   interface BaseAction {
@@ -23,6 +25,11 @@ export declare namespace IRegisteredAction {
     type: IActionType.SetCardIndex;
     name: string;
     newIndex: number;
+  }
+  
+  interface UnflipAllInDeck extends BaseAction {
+    type: IActionType.UnflipAllInDeck;
+    name: string;
   }
   
   interface RegisterTest extends BaseAction {
@@ -90,6 +97,17 @@ function cardDecks(state: ICardDecks, action: IRegisteredAction): ICardDecks {
       const newValue: ICardDeck = {...value};
       if (action.name === newValue.name) {
         newValue.currentIndex = action.newIndex;
+      }
+      return [key, newValue]
+    }, false, false);
+    return newState;
+  }
+
+  if (action.type === IActionType.UnflipAllInDeck) {
+    const newState = traverseObject(state, (key, value: ICardDeck) => {
+      const newValue: ICardDeck = {...value};
+      if (action.name === newValue.name) {
+        newValue.cards = newValue.cards.map(card => ({...card, isFlipped: false}))
       }
       return [key, newValue]
     }, false, false);

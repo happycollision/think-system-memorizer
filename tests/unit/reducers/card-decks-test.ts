@@ -23,6 +23,26 @@ module('Unit | Reducers | card-decks', function(hooks) {
     });
   });
 
+  test('reset all cards to unflipped', function(assert) {
+    const cardList1 = createList('card', 3, {isFlipped: true})
+    const cardList2 = createList('card', 3, {isFlipped: true})
+    const cardDecks: ICardDecks = {
+      'changeDeck': create('cardDeck', {name: 'changeDeck', cards: cardList1}),
+      'untouchedDeck': create('cardDeck', {name: 'untouchedDeck', cards: cardList2})
+    };
+
+    deepFreeze(cardDecks);
+
+    const result = reducer({cardDecks}, {type: IActionType.UnflipAllInDeck, name: 'changeDeck'});
+
+    assert.deepEqual(result, {
+      cardDecks: {
+        'changeDeck': {...cardDecks['changeDeck'], cards: cardList1.map(card => ({...card, isFlipped: false}))},
+        'untouchedDeck': {...cardDecks['untouchedDeck'], cards: cardList2}
+      }
+    });
+  });
+
   test('flip a card, and flip it back', function(assert) {
     const cardList = createList('card', 3, {isFlipped: false});
     const firstId = cardList[0].id;
