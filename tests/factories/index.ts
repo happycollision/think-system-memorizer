@@ -11,7 +11,8 @@ class Definitions {
 
   cardDeck = (): ICardDeck => ({
     name: `Deck #${getNewId()}`,
-    cards: createList('card', 2)
+    cards: createList('card', 2),
+    currentIndex: 0,
   })
 
   cardDecks = (): ICardDecks => {

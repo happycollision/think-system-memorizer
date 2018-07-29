@@ -37,7 +37,8 @@ export interface ICard {
 
 export interface ICardDeck {
   name: string;
-  cards: Array<ICard>
+  cards: Array<ICard>;
+  currentIndex: number;
 }
 
 export interface ICardDecks {
@@ -56,7 +57,7 @@ function cardDecks(state: ICardDecks, action: IRegisteredAction): ICardDecks {
       const [front, back] = tuple.map(htmlString => createElWithInnerHTML(htmlString))
       return {front, back, isFlipped: false, id: createId()};
     });
-    const newCardDeck: ICardDeck = {name: action.name, cards};
+    const newCardDeck: ICardDeck = {name: action.name, cards, currentIndex: 0};
     const newState = Object.assign({}, state);
     newState[action.name] = newCardDeck;
     return newState;
