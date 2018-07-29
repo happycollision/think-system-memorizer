@@ -2,7 +2,7 @@ import { test, module } from 'qunit';
 import { setupTest } from 'ember-qunit';
 import { deepFreeze } from 'ember-redux-freeze';
 import reducer, { ICardDecks, IActionType } from 'think-system-memorizer/reducers';
-import { createList } from 'think-system-memorizer/tests/factories';
+import { createList, create } from 'think-system-memorizer/tests/factories';
 
 module('Unit | Reducers | card-decks', function(hooks) {
   setupTest(hooks);
@@ -12,10 +12,7 @@ module('Unit | Reducers | card-decks', function(hooks) {
     const firstId = cardList[0].id;
     const [, ...tail] = cardList;
     const cardDecks: ICardDecks = {
-      'anyDeck': {
-        cards: cardList,
-        name: 'anyDeck',
-      }
+      'anyDeck': create('cardDeck', {name: 'anyDeck', cards: cardList})
     };
 
     deepFreeze(cardDecks);
@@ -24,10 +21,10 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(result, {
       cardDecks: {
-        'anyDeck': {
-          cards: [{...cardDecks['anyDeck'].cards[0], isFlipped: true}, ...tail],
+        'anyDeck': create('cardDeck', {
           name: 'anyDeck',
-        }
+          cards: [{...cardList[0], isFlipped: true}, ...tail]
+        })
       }
     });
 
@@ -35,10 +32,10 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(nextResult, {
       cardDecks: {
-        'anyDeck': {
-          cards: [{...cardDecks['anyDeck'].cards[0], isFlipped: false}, ...tail],
+        'anyDeck': create('cardDeck', {
           name: 'anyDeck',
-        }
+          cards: [{...cardList[0], isFlipped: false}, ...tail]
+        })
       }
     });
   });
