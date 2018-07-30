@@ -6,13 +6,14 @@ module.exports = function(/* environment, appConfig */) {
   // supported properties
 
   return {
-    name: "think-system-memorizer",
-    short_name: "think-system-memorizer",
-    description: "",
-    start_url: "/",
-    display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    name: 'Think System Memorizer',
+    short_name: 'TS Memorizer',
+    description: 'Card style memorization for your lines',
+    lang: 'en-US',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#fff',
+    theme_color: '#fff',
     icons: [
     ],
     ms: {
