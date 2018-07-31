@@ -10,7 +10,7 @@ module.exports = function(/* environment, appConfig */) {
     short_name: 'TS Memorizer',
     description: 'Card style memorization for your lines',
     lang: 'en-US',
-    start_url: '/',
+    start_url: '/think-system-memorizer/',
     display: 'standalone',
     background_color: '#fff',
     theme_color: '#fff',
