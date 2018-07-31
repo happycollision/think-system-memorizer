@@ -1,4 +1,4 @@
-<SwiperContainer class="swiper-height" @currentSlide={{currentIndex}} @keyboard={{true}} as |container|>
+<SwiperContainer class="swiper-height overflow-visible" @currentSlide={{currentIndex}} @keyboard={{true}} as |container|>
   {{#each @items key="id" as |item|}}
     <container.slide class="border-box">
       {{yield item}}

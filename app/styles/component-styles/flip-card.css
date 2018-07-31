@@ -9,7 +9,7 @@
 &-front {
   height: 100%;
   width: 100%;
-  box-shadow: 6px 6px 12px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
   margin: auto;
   padding: 12px;
   border-radius: 12px;
