@@ -15,26 +15,10 @@ module.exports = function(/* environment, appConfig */) {
     background_color: '#fff',
     theme_color: '#fff',
     icons: [
-      {
-        src: '/iconset/icon_16x16.png',
-        sizes: '16x16', 
-      },
-      {
-        src: '/iconset/icon_32x32.png',
-        sizes: '32x32', 
-      },
-      {
-        src: '/iconset/icon_128x128.png',
-        sizes: '128x128', 
-      },
-      {
-        src: '/iconset/icon_256x256.png',
-        sizes: '256x256', 
-      },
-      {
-        src: '/iconset/icon_512x512.png',
-        sizes: '512x512', 
-      },
+      ...[16, 32, 128, 256, 512].map((size) => ({
+        src: `/iconset/icon_${size}.png`,
+        sizes: `${size}x${size}`
+      }))
     ],
     ms: {
       tileColor: '#fff'
