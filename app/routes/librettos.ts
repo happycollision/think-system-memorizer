@@ -8,6 +8,7 @@ export interface ILibrettoListing {
 export default class LibrettosRoute extends Route {
   model(): ILibrettoListing[] {
     return [
+      {label: 'Diamonds & Divas: Jimmy', file: '/files/Diamonds.txt'},
       {label: 'Hairspray: Corny', file: '/files/Hairspray.txt'},
       {label: 'Bridges: Robert', file: '/files/Bridges.txt'},
       {label: 'Elf: Jovie', file: '/files/Elf.txt'},
