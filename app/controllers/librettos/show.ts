@@ -1,6 +1,6 @@
 import Controller from '@ember/controller';
 import { computed, action } from '@ember-decorators/object';
-import { service } from '@ember-decorators/service';
+import { inject as service } from '@ember-decorators/service';
 import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
 import { observer } from '@ember/object';
 
