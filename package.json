@@ -50,6 +50,7 @@
     "ember-cli-tailwind": "^0.6.0",
     "ember-cli-typescript": "^1.3.2",
     "ember-cli-uglify": "^2.0.0",
+    "ember-cli-update": "^0.27.18",
     "ember-component-css": "^0.6.4",
     "ember-concurrency": "^0.8.19",
     "ember-data": "~3.2.0",
