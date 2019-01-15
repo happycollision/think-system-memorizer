@@ -18,7 +18,8 @@ const dispatchToActions = (dispatch: (x: IRegisteredAction) => void) => {
 class CardDecksDataComponent extends Component.extend({
   tagName: '',
 }) {
-  @computed('cardDecks', 'name') get singleDeck(this: CardDecksDataComponent): ICard[] {
+  // TODO add back a this context after babel bug is fixed
+  @computed('cardDecks', 'name') get singleDeck(): ICard[] {
     // @ts-ignore (cardDecks is set during connect)
     const decks: ICardDecks = this.get('cardDecks');
     // @ts-ignore (name is set by caller)
