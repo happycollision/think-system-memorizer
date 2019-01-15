@@ -1,7 +1,14 @@
-<SwiperContainer class="swiper-height overflow-visible" @currentSlide={{currentIndex}} @keyboard={{true}} as |container|>
-  {{#each @items key="id" as |item|}}
-    <container.slide class="border-box">
-      {{yield item}}
-    </container.slide>
+<SwiperContainer class="swiper-height overflow-visible" @currentSlide={{currentIndex}} @keyboard={{true}} as
+  |container|>
+  {{#each @items key="id" as |item index|}}
+    {{#if (and (gt index (sub currentIndex 5)) (lt index (add currentIndex 5)))}}
+      <container.slide class="border-box">
+        {{yield item}}
+      </container.slide>
+    {{else}}
+      <container.slide class="border-box">
+        {{!-- blank render --}}
+      </container.slide>
+    {{/if}}
   {{/each}}
 </SwiperContainer>
