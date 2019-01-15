@@ -1,8 +1,8 @@
 import Route from '@ember/routing/route';
 import { slugify } from '../../helpers/slugify';
-import { ILibrettoListing } from 'think-system-memorizer/routes/librettos';
+import { ILibrettoListing } from '../librettos';
 import { hash } from 'rsvp';
-import { service } from '@ember-decorators/service'
+import { inject as service } from '@ember-decorators/service'
 import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/reducers';
 import { action } from '@ember-decorators/object';
 import ENV from 'think-system-memorizer/config/environment';
