@@ -19,7 +19,6 @@
   },
   "devDependencies": {
     "@ember-decorators/babel-transforms": "^3.1.5",
-    "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.3",
     "@types/ember": "^3.0.26",
     "@types/ember-data": "^3.1.3",
