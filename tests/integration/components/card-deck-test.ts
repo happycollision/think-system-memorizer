@@ -13,7 +13,7 @@ module('Integration | Component | card-deck', function(hooks) {
       {front: 'hi', back: 'there', isFlipped: true}
     ])
     // Template block usage:
-    await render(hbs`<CardDeck @cards={{cards}} />`);
+    await render(hbs`<CardDeck @cards={{cards}} @currentIndex={{0}} />`);
 
     assert.dom('[data-test-flip-card] [data-test-card-front]').matchesText('hi')
     assert.dom('[data-test-flip-card] [data-test-card-back]').matchesText('there')

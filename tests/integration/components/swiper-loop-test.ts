@@ -11,7 +11,7 @@ module('Integration | Component | swiper-loop', function(hooks) {
 
     // Template block usage:
     await render(hbs`
-      <SwiperLoop @items={{things}} as |item|>
+      <SwiperLoop @items={{things}} @currentIndex={{0}} as |item|>
         {{ item }}
       </SwiperLoop>
     `);
