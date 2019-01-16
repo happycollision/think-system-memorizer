@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import { makeParts } from '../utils/textInterpreter';
 import { createElWithInnerHTML } from '../utils/createElement';
-import { clone } from 'happy-helpers';
 import { CardDecksState } from 'state';
 
 export enum IActionType {
@@ -50,6 +49,13 @@ function createId() {
   return ++id;
 }
 
+function cloneState(state: CardDecksState): CardDecksState {
+  return {...state, decks: state.decks.map(d => ({
+    ...d,
+    cards: d.cards.map(c => ({...c}))
+  })) }
+}
+
 function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredAction): CardDecksState {
   if (action.type === IActionType.RegisterText) {
     const cards = makeParts(action.text).map(tuple => {
@@ -57,13 +63,13 @@ function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredActio
       return {front, back, isFlipped: false, id: createId()};
     });
     const newCardDeck = {name: action.name, cards, currentIndex: 0};
-    const newState = clone(state)
+    const newState = cloneState(state)
     newState.decks.push(newCardDeck);
     return newState;
   }
 
   if (action.type === IActionType.FlipCard) {
-    const newState = clone(state);
+    const newState = cloneState(state);
     newState.decks =  newState.decks.map((deck) => {
       const newDeck = {...deck, cards: deck.cards.map(card => {
         if (card.id === action.id) {
@@ -77,7 +83,7 @@ function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredActio
   }
 
   if (action.type === IActionType.SetCardIndex) {
-    const newState = clone(state);
+    const newState = cloneState(state);
     newState.decks.forEach(deck => {
       if (action.name === deck.name) {
         deck.currentIndex = action.newIndex;
@@ -87,7 +93,7 @@ function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredActio
   }
 
   if (action.type === IActionType.UnflipAllInDeck) {
-    const newState = clone(state);
+    const newState = cloneState(state);
     newState.decks.forEach(deck => {
       if (action.name === deck.name) {
         deck.cards.forEach(card => card.isFlipped = false)
