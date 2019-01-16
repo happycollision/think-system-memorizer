@@ -1,7 +1,7 @@
 <SwiperContainer class="swiper-height overflow-visible" @currentSlide={{currentIndex}} @keyboard={{true}} as
   |container|>
   {{#each @items key="id" as |item index|}}
-    {{#if (and (gt index (sub currentIndex 5)) (lt index (add currentIndex 5)))}}
+    {{#if (and (gt index (sub currentIndex 2)) (lt index (add currentIndex 2)))}}
       <container.slide class="border-box">
         {{yield item}}
       </container.slide>
