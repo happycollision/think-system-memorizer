@@ -3,6 +3,7 @@ import { computed, action } from '@ember-decorators/object';
 import { inject as service } from '@ember-decorators/service';
 import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
 import { observer } from '@ember/object';
+import { StoreState } from 'state';
 
 export default class LibrettosShowController extends Controller.extend({
   queryParams: ['card', 'view'],
@@ -25,7 +26,7 @@ export default class LibrettosShowController extends Controller.extend({
     // @ts-ignore (path property get)
     const name = this.get('model.name');
     if (!name) return this.get('card') - 1;
-    return this.get('redux').getState().cardDecks[name].currentIndex;
+    return (this.get('redux').getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.currentIndex;
   }
   set cardIndex(num: number) {
     this.set('card', num + 1)

@@ -3,10 +3,11 @@ import { slugify } from '../../helpers/slugify';
 import { ILibrettoListing } from '../librettos';
 import { hash } from 'rsvp';
 import { inject as service } from '@ember-decorators/service'
-import { IRegisteredAction, IActionType, ICard } from 'think-system-memorizer/reducers';
+import { IRegisteredAction, IActionType } from 'think-system-memorizer/reducers';
 import { action } from '@ember-decorators/object';
 import ENV from 'think-system-memorizer/config/environment';
 import { join } from 'think-system-memorizer/utils/url';
+import { ICard } from 'state';
 
 
 export default class LibrettosShowRoute extends Route.extend({

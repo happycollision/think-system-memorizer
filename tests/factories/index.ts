@@ -1,5 +1,4 @@
-import { ICard, ICardDeck, ICardDecks } from 'think-system-memorizer/reducers';
-import { keyBy } from 'lodash-es';
+import { ICard, ICardDeck, CardDecksState } from 'state';
 
 class Definitions {
   card = (): ICard => ({
@@ -15,9 +14,9 @@ class Definitions {
     currentIndex: 0,
   })
 
-  cardDecks = (): ICardDecks => {
+  cardDecks = (): CardDecksState => {
     const decks = createList('cardDeck', 2);
-    return keyBy(decks, 'name');
+    return {decks};
   }
 }
 const definitions = new Definitions();

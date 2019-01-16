@@ -12,7 +12,7 @@ module('Integration | Component | card-decks-data', function(hooks) {
       name: 'Winner',
       cards: createList('card', 2, {front: 'winner', back: 'winner'})
     });
-    const cardDecks = create('cardDecks', {Winner: winningDeck})
+    const cardDecks = create('cardDecks', {decks: [winningDeck]})
     this.set('deckName', 'Winner');
 
     const redux = this.owner.lookup('service:redux');
