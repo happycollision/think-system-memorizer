@@ -62,7 +62,7 @@ export default class LibrettosShowController extends Controller.extend({
     const currentIndex = this.get('cardIndex');
     // @ts-ignore (path property get)
     const name = this.get('model.name')
-    const id = redux.getState().cardDecks[name].cards[currentIndex].id;
+    const id = (redux.getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.cards[currentIndex].id;
     const action: IRegisteredAction.FlipCard = {type: IActionType.FlipCard, id}
     redux.dispatch(action)
   }
