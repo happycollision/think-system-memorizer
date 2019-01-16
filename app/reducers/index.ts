@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { makeParts } from '../utils/textInterpreter';
 import { createElWithInnerHTML } from '../utils/createElement';
 import { clone } from 'happy-helpers';
-import { CardDecksState, ICardDeck } from 'state';
+import { CardDecksState } from 'state';
 
 export enum IActionType {
   RegisterText = 'REGISTER_LIBRETTO_TEXT',
@@ -52,12 +52,11 @@ function createId() {
 
 function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredAction): CardDecksState {
   if (action.type === IActionType.RegisterText) {
-    action as IRegisteredAction.RegisterTest;
     const cards = makeParts(action.text).map(tuple => {
       const [front, back] = tuple.map(htmlString => createElWithInnerHTML(htmlString))
       return {front, back, isFlipped: false, id: createId()};
     });
-    const newCardDeck: ICardDeck = {name: action.name, cards, currentIndex: 0};
+    const newCardDeck = {name: action.name, cards, currentIndex: 0};
     const newState = clone(state)
     newState.decks.push(newCardDeck);
     return newState;
@@ -66,7 +65,7 @@ function cardDecks(state: CardDecksState = {decks: []}, action: IRegisteredActio
   if (action.type === IActionType.FlipCard) {
     const newState = clone(state);
     newState.decks =  newState.decks.map((deck) => {
-      const newDeck: ICardDeck = {...deck, cards: deck.cards.map(card => {
+      const newDeck = {...deck, cards: deck.cards.map(card => {
         if (card.id === action.id) {
           return {...card, isFlipped: !card.isFlipped};
         }

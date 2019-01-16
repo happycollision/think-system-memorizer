@@ -27,8 +27,6 @@ export default class LibrettosShowRoute extends Route.extend({
 
     if (!metadata) { throw new Error('no metadata found for libretto route ' + dasherized_name)}
 
-    console.log(ENV.rootURL)
-
     return hash({
       name: metadata.label,
       noOp: fetch(join(ENV.rootURL, metadata.file)).then(response => response.text())
