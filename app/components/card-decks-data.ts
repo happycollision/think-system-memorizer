@@ -1,11 +1,12 @@
 import Component from '@ember/component';
 import { computed } from '@ember-decorators/object';
-import { ICardDecks, ICard, IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
+import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
 import { connect } from 'ember-redux';
+import { ICard, StoreState } from 'state';
 
-const stateToComputed = (state: { cardDecks: ICardDecks}) => {
+const stateToComputed = (state: StoreState) => {
   return {
-    cardDecks: state.cardDecks
+    cardDecks: state.cardDecks.decks
   };
 };
 
@@ -21,10 +22,10 @@ class CardDecksDataComponent extends Component.extend({
   // TODO add back a this context after babel bug is fixed
   @computed('cardDecks', 'name') get singleDeck(): ICard[] {
     // @ts-ignore (cardDecks is set during connect)
-    const decks: ICardDecks = this.get('cardDecks');
+    const decks: StoreState['cardDecks']['decks'] = this.get('cardDecks');
     // @ts-ignore (name is set by caller)
     const deckName: string = this.get('name');
-    return decks[deckName].cards;
+    return decks.find(deck => deck.name === deckName)!.cards;
   }
 }
 

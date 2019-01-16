@@ -14,6 +14,3 @@ declare module '@ember/service' {
   }
 }
 
-declare module 'ember-redux' {
-  export function connect(...things: any[]): (component: any) => any
-}

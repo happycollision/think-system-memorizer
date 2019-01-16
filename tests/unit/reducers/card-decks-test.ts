@@ -1,15 +1,17 @@
 import { test, module } from 'qunit';
 import { setupTest } from 'ember-qunit';
+// @ts-ignore
 import { deepFreeze } from 'ember-redux-freeze';
-import reducer, { ICardDecks, IActionType } from 'think-system-memorizer/reducers';
+import reducer, { IActionType } from 'think-system-memorizer/reducers';
 import { createList, create } from 'think-system-memorizer/tests/factories';
+import { CardDecksState } from 'state';
 
 module('Unit | Reducers | card-decks', function(hooks) {
   setupTest(hooks);
 
   test('set a new current index', function(assert) {
-    const cardDecks: ICardDecks = {
-      'anyDeck': create('cardDeck', {name: 'anyDeck', currentIndex: 0})
+    const cardDecks: CardDecksState = {
+      decks: [create('cardDeck', {name: 'anyDeck', currentIndex: 0})]
     };
 
     deepFreeze(cardDecks);
@@ -18,7 +20,7 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(result, {
       cardDecks: {
-        'anyDeck': {...cardDecks['anyDeck'], currentIndex: 1}
+        decks: [{...cardDecks.decks[0], currentIndex: 1}]
       }
     });
   });
@@ -26,9 +28,9 @@ module('Unit | Reducers | card-decks', function(hooks) {
   test('reset all cards to unflipped', function(assert) {
     const cardList1 = createList('card', 3, {isFlipped: true})
     const cardList2 = createList('card', 3, {isFlipped: true})
-    const cardDecks: ICardDecks = {
-      'changeDeck': create('cardDeck', {name: 'changeDeck', cards: cardList1}),
-      'untouchedDeck': create('cardDeck', {name: 'untouchedDeck', cards: cardList2})
+    const cardDecks: CardDecksState = {
+      decks: [create('cardDeck', {name: 'changeDeck', cards: cardList1}),
+      create('cardDeck', {name: 'untouchedDeck', cards: cardList2})]
     };
 
     deepFreeze(cardDecks);
@@ -37,8 +39,8 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(result, {
       cardDecks: {
-        'changeDeck': {...cardDecks['changeDeck'], cards: cardList1.map(card => ({...card, isFlipped: false}))},
-        'untouchedDeck': {...cardDecks['untouchedDeck'], cards: cardList2}
+        decks: [{...cardDecks.decks[0], cards: cardList1.map(card => ({...card, isFlipped: false}))},
+        {...cardDecks.decks[1], cards: cardList2}]
       }
     });
   });
@@ -47,8 +49,8 @@ module('Unit | Reducers | card-decks', function(hooks) {
     const cardList = createList('card', 3, {isFlipped: false});
     const firstId = cardList[0].id;
     const [, ...tail] = cardList;
-    const cardDecks: ICardDecks = {
-      'anyDeck': create('cardDeck', {name: 'anyDeck', cards: cardList})
+    const cardDecks: CardDecksState = {
+      decks: [create('cardDeck', {name: 'anyDeck', cards: cardList})]
     };
 
     deepFreeze(cardDecks);
@@ -57,10 +59,10 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(result, {
       cardDecks: {
-        'anyDeck': create('cardDeck', {
+        decks: [create('cardDeck', {
           name: 'anyDeck',
           cards: [{...cardList[0], isFlipped: true}, ...tail]
-        })
+        })]
       }
     });
 
@@ -68,10 +70,10 @@ module('Unit | Reducers | card-decks', function(hooks) {
 
     assert.deepEqual(nextResult, {
       cardDecks: {
-        'anyDeck': create('cardDeck', {
+        decks: [create('cardDeck', {
           name: 'anyDeck',
           cards: [{...cardList[0], isFlipped: false}, ...tail]
-        })
+        })]
       }
     });
   });
