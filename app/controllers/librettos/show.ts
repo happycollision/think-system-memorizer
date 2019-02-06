@@ -5,6 +5,14 @@ import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers'
 import { observer } from '@ember/object';
 import { StoreState } from 'state';
 
+function getLSCardByScript(name: string) {
+  return parseInt(window.localStorage.getItem(`${name}-card`) || '0', 10)
+}
+
+function setLSCardByScript(name: string, card: number) {
+  window.localStorage.setItem(`${name}-card`, card.toString());
+}
+
 export default class LibrettosShowController extends Controller.extend({
   queryParams: ['card', 'view'],
   
@@ -17,7 +25,28 @@ export default class LibrettosShowController extends Controller.extend({
     this.get('redux').dispatch(action)
   })
 }) {
-  card = 1;
+
+  @computed('model')
+  get card() {
+    // @ts-ignore (path property get)
+    const name = this.get('model.name');
+    if (!name) { return 1 }
+    
+    const localCard = getLSCardByScript(name);
+    if (localCard > 0) {
+      return localCard;
+    } else {
+      setLSCardByScript(name, 1);
+      return 1;
+    }
+  }
+  set card(n: number) {
+    // @ts-ignore (path property get)
+    const name = this.get('model.name');
+    if (!name) {return}
+    setLSCardByScript(name, n)
+  }
+  
   view: 'cards' | 'script' = 'cards'
 
   @service('redux') redux!: ReduxService;
