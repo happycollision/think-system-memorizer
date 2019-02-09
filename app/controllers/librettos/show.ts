@@ -56,6 +56,10 @@ export default class LibrettosShowController extends Controller.extend({
     return this.get('model.name');
   }
 
+  @computed('deckName') get numCards(): number {
+    return (this.redux.getState() as StoreState).cardDecks.decks.find(d => d.name === this.deckName)!.cards.length;
+  }
+
   @computed('card', 'deckName') get cardIndex(): number {
     if (!this.deckName) return this.get('card') - 1;
     return (this.get('redux').getState() as StoreState).cardDecks.decks.find(d => d.name === this.deckName)!.currentIndex;
@@ -85,13 +89,11 @@ export default class LibrettosShowController extends Controller.extend({
   sequenceStep = 0;
 
   next() {
-    const currentIndex = this.get('cardIndex');
-    this.goToCardWithIndex(currentIndex + 1)
+    this.goToCardWithIndex(Math.min(this.cardIndex + 1, this.numCards - 1))
   }
 
   prev() {
-    const currentIndex = this.get('cardIndex');
-    this.goToCardWithIndex(currentIndex - 1)
+    this.goToCardWithIndex(Math.max(this.cardIndex - 1, 0))
   }
 
   flip() {
