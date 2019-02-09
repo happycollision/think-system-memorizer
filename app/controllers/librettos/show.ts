@@ -51,33 +51,29 @@ export default class LibrettosShowController extends Controller.extend({
 
   @service('redux') redux!: ReduxService;
 
-  @computed('card', 'model') get cardIndex(): number {
+  @computed('model.name') get deckName(): string {
     // @ts-ignore (path property get)
-    const name = this.get('model.name');
-    if (!name) return this.get('card') - 1;
-    return (this.get('redux').getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.currentIndex;
+    return this.get('model.name');
+  }
+
+  @computed('card', 'deckName') get cardIndex(): number {
+    if (!this.deckName) return this.get('card') - 1;
+    return (this.get('redux').getState() as StoreState).cardDecks.decks.find(d => d.name === this.deckName)!.currentIndex;
   }
   set cardIndex(num: number) {
     this.set('card', num + 1)
   }
 
-  @computed('cardIndex', 'model.name') get currentCard(): ICard {
-    // @ts-ignore (path property get)
-    const name = this.get('model.name')
-    const currentIndex = this.get('cardIndex');
-    return (this.redux.getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.cards[currentIndex];
+  @computed('cardIndex', 'deckName') get currentCard(): ICard {
+    return (this.redux.getState() as StoreState).cardDecks.decks.find(d => d.name === this.deckName)!.cards[this.cardIndex];
+  }
+
+  get currentCardIsFlipped(): boolean {
+    return (this.redux.getState() as StoreState).cardDecks.decks.find(d => d.name === this.deckName)!.cards[this.cardIndex].isFlipped;
   }
 
   @computed('view') get isCardView(): boolean {
     return this.get('view') !== 'script';
-  }
-
-  @computed('card') get nextCard(): number {
-    return this.get('card') + 1;
-  }
-
-  @computed('card') get previousCard(): number {
-    return this.get('card') - 1;
   }
 
   @action goToCardWithIndex(index: number, ev?: Event) {
@@ -115,10 +111,18 @@ export default class LibrettosShowController extends Controller.extend({
   }
 
   @action prevBtn() {
-    this.prev()
+    if (this.currentCardIsFlipped) {
+      this.flip();
+    } else {
+      this.prev();
+    }
   }
-  @action nextBtn() { 
-    this.next()
+  @action nextBtn() {
+    if (this.currentCardIsFlipped) {
+      this.next();
+    } else {
+      this.flip();
+    }
   }
 
   @action sequencialMemorize() {
