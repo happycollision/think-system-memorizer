@@ -1,0 +1,39 @@
+@import 'tailwind.css';
+@import 'pod-styles.css';
+
+body {
+  font-size: 1.5em;
+  font-family: Helvetica, Arial;
+}
+
+div, a, button, span, input {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+}
+
+.highlighted {
+  background-color: yellow;
+}
+
+.stage-directions {
+  background-color: #fff;
+  display: block;
+  padding: 0.25em 1em;
+  color: rgba(0,0,0,0.4);
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.character {
+  color: rgba(0,0,0,0.6);
+  font-weight: bold;
+}
+
+.script-section p {
+  margin: 1em auto;
+}
+
+.script-section {
+  line-height: 1.3em;
+  padding: 0.25em;
+}

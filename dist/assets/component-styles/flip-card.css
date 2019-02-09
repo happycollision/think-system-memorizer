@@ -1,0 +1,81 @@
+& {
+  margin: auto;
+  position: relative;
+  height: 100%;
+  width: 90%;
+}
+
+&-back,
+&-front {
+  height: 100%;
+  width: 100%;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.2);
+  margin: auto;
+  padding: 12px;
+  border-radius: 12px;
+  overflow: auto;
+}
+
+/* For Internet Explorer */
+&.flipped &-back  {
+  z-index: 1;
+  -webkit-transform:rotateY(0deg);
+  -moz-transform:rotateY(0deg);
+  -ms-transform:rotateY(0deg);
+  -o-transform:rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* For Internet Explorer */
+&.flipped &-front  {
+  z-index: 0;
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  -o-transform:rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+&-front, &-back {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+&-front {
+  z-index: 1;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+&-back {
+  z-index: 0;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+& .stage-directions, & .highlighted {
+  background-color: transparent;
+}
