@@ -12,9 +12,11 @@
     </div>
 
     <div class="flex flex-no-shrink justify-between">
-      {{link-to "Prev" (query-params card=previousCard) class="btn-blue" data-test-previous-card=true}}
-      {{link-to "Next" (query-params card=nextCard) class="btn-blue" data-test-next-card=true}}
-      <button type="button" class="btn-blue" onclick={{action "sequencialMemorize"}} data-test-sequencial-memorize>Memorize</button>
+      <button type="button" class="btn-blue" onclick={{action "prevBtn"}}>Prev</button>
+      <button type="button" class="btn-blue" onclick={{action "nextBtn"}}>Next</button>
+      <button type="button" class="btn-blue" onclick={{action "sequencialMemorize"}} data-test-sequencial-memorize>
+        Memorize
+      </button>
     </div>
   </div>
 {{ else }}

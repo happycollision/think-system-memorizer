@@ -3,7 +3,7 @@ import { computed, action } from '@ember-decorators/object';
 import { inject as service } from '@ember-decorators/service';
 import { IActionType, IRegisteredAction } from 'think-system-memorizer/reducers';
 import { observer } from '@ember/object';
-import { StoreState } from 'state';
+import { StoreState, ICard } from 'state';
 
 function getLSCardByScript(name: string) {
   return parseInt(window.localStorage.getItem(`${name}-card`) || '0', 10)
@@ -61,6 +61,13 @@ export default class LibrettosShowController extends Controller.extend({
     this.set('card', num + 1)
   }
 
+  @computed('cardIndex', 'model.name') get currentCard(): ICard {
+    // @ts-ignore (path property get)
+    const name = this.get('model.name')
+    const currentIndex = this.get('cardIndex');
+    return (this.redux.getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.cards[currentIndex];
+  }
+
   @computed('view') get isCardView(): boolean {
     return this.get('view') !== 'script';
   }
@@ -86,14 +93,15 @@ export default class LibrettosShowController extends Controller.extend({
     this.goToCardWithIndex(currentIndex + 1)
   }
 
-  flip() {
-    const redux = this.get('redux')
+  prev() {
     const currentIndex = this.get('cardIndex');
-    // @ts-ignore (path property get)
-    const name = this.get('model.name')
-    const id = (redux.getState() as StoreState).cardDecks.decks.find(d => d.name === name)!.cards[currentIndex].id;
+    this.goToCardWithIndex(currentIndex - 1)
+  }
+
+  flip() {
+    const id = this.get('currentCard').id;
     const action: IRegisteredAction.FlipCard = {type: IActionType.FlipCard, id}
-    redux.dispatch(action)
+    this.redux.dispatch(action)
   }
 
   reset() {
@@ -104,6 +112,13 @@ export default class LibrettosShowController extends Controller.extend({
     redux.dispatch(action);
     const currentIndex = this.get('cardIndex');
     this.goToCardWithIndex(currentIndex - 2);
+  }
+
+  @action prevBtn() {
+    this.prev()
+  }
+  @action nextBtn() { 
+    this.next()
   }
 
   @action sequencialMemorize() {
