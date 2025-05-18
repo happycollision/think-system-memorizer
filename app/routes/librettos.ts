@@ -17,6 +17,7 @@ export default class LibrettosRoute extends Route {
       {label: 'Zombie Prom: Jonny', file: '/files/ZombieProm.txt'},
       {label: 'Music Man: Harold', file: '/files/MusicManHaroldHill.txt'},
       {label: 'Music Man: Marian', file: '/files/MusicManMarian.txt'},
+      {label: 'Darkness', file: '/files/DarknessFalls.txt'},
     ]
   }
 }
