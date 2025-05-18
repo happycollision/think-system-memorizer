@@ -7,11 +7,23 @@
 
 		<!-- Manifest -->
 		<link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_16.png" sizes="16x16" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_32.png" sizes="32x32" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_128.png" sizes="128x128" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_256.png" sizes="256x256" />
-		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_512.png" sizes="512x512" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_16x16.png" sizes="16x16" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/iconset/icon_32x32.png" sizes="32x32" />
+		<link
+			rel="apple-touch-icon"
+			href="%sveltekit.assets%/iconset/icon_128x128.png"
+			sizes="128x128"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="%sveltekit.assets%/iconset/icon_256x256.png"
+			sizes="256x256"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="%sveltekit.assets%/iconset/icon_512x512.png"
+			sizes="512x512"
+		/>
 		<meta name="theme-color" content="#fff" />
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-title" content="Think System Memorizer" />
@@ -20,7 +32,7 @@
 
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body class="dark:bg-black dark:text-blue-200" data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
