@@ -1,0 +1,15 @@
+/**
+ * You can create Tailwind components using @apply here.
+ *
+ * Feel free to rename this file, define multiple components here, or make
+ * any other files in this directory.
+
+ * Here's an example:
+**/
+
+.__95bb6 .btn-blue {
+  @apply .bg-blue .text-white .rounded .no-underline .py-1 .px-2 .m-2 .inline-block;
+}
+.__95bb6 .btn-blue:hover {
+  @apply .bg-blue-dark;
+}
