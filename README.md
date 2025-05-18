@@ -1,5 +1,30 @@
 # think-system-memorizer
 
+https://happycollision.github.io/think-system-memorizer/#/librettos
+
+## Running with Docker
+
+To build and run your project in a Node.js 10 environment using Docker Compose:
+
+```sh
+docker-compose up
+```
+
+This ensures compatibility with Node.js 10 even on modern systems.
+
+Need to run something other than `start`?
+
+```sh
+docker compose run --service-ports app bash
+```
+
+## Deployment
+
+Ember deploy is out.
+
+Run the `./deploy-gh-pages.sh` script directly. It will manage entering the VM
+to build and then uploading and everything from in the host environment again.
+
 ## notes
 
 Importing Happy Helpers is strangely challenging. You have to add a space after `//` in the last line.
