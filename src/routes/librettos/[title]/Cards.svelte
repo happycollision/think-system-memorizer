@@ -46,20 +46,22 @@
 </script>
 
 <div class="flex h-[calc(100dvh-100px)] flex-col">
-	<Swiper
-		slideIndex={cardStore.currentCardIndex}
-		onSlideChange={(idx) => {
-			cardStore.goToCard(idx);
-		}}
-	>
-		{#each cardStore.cards as { front, back, isFlipped }, i (i)}
-			<SwiperSlide>
-				<div class="h-full p-4">
-					<Card {front} {back} {isFlipped} flipCard={() => cardStore.flipCard(i)} />
-				</div>
-			</SwiperSlide>
-		{/each}
-	</Swiper>
+	<div class="-mx-4 h-full">
+		<Swiper
+			slideIndex={cardStore.currentCardIndex}
+			onSlideChange={(idx) => {
+				cardStore.goToCard(idx);
+			}}
+		>
+			{#each cardStore.cards as { front, back, isFlipped }, i (i)}
+				<SwiperSlide>
+					<div class="h-full p-4">
+						<Card {front} {back} {isFlipped} flipCard={() => cardStore.flipCard(i)} />
+					</div>
+				</SwiperSlide>
+			{/each}
+		</Swiper>
+	</div>
 
 	<div class="flex justify-between gap-4 *:touch-manipulation">
 		<button
