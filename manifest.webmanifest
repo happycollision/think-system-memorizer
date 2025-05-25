@@ -1,1 +1,17 @@
-{"name":"Think System Memorizer","short_name":"TS Memorizer","description":"Card style memorization for your lines","lang":"en-US","start_url":"/think-system-memorizer/","display":"standalone","background_color":"#fff","theme_color":"#fff","icons":[{"src":"/iconset/icon_16.png","sizes":"16x16"},{"src":"/iconset/icon_32.png","sizes":"32x32"},{"src":"/iconset/icon_128.png","sizes":"128x128"},{"src":"/iconset/icon_256.png","sizes":"256x256"},{"src":"/iconset/icon_512.png","sizes":"512x512"}]}
+{
+	"name": "Think System Memorizer",
+	"short_name": "TS Memorizer",
+	"description": "Card style memorization for your lines",
+	"lang": "en-US",
+	"start_url": "/think-system-memorizer/",
+	"display": "standalone",
+	"background_color": "#fff",
+	"theme_color": "#fff",
+	"icons": [
+		{ "src": "/think-system-memorizer/iconset/icon_16x16.png", "sizes": "16x16" },
+		{ "src": "/think-system-memorizer/iconset/icon_32x32.png", "sizes": "32x32" },
+		{ "src": "/think-system-memorizer/iconset/icon_128x128.png", "sizes": "128x128" },
+		{ "src": "/think-system-memorizer/iconset/icon_256x256.png", "sizes": "256x256" },
+		{ "src": "/think-system-memorizer/iconset/icon_512x512.png", "sizes": "512x512" }
+	]
+}
