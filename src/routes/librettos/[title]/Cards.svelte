@@ -61,7 +61,7 @@
 		{/each}
 	</Swiper>
 
-	<div class="flex justify-between gap-4">
+	<div class="flex justify-between gap-4 *:touch-manipulation">
 		<button
 			type="button"
 			class="btn"

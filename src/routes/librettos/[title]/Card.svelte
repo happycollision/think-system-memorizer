@@ -14,7 +14,7 @@
 	onclick={flipCard}
 	style="--flip-duration: 0.25s"
 	class={[
-		'flip-card relative isolate m-auto block h-full w-full max-w-md text-left text-2xl',
+		'flip-card relative isolate m-auto block h-full w-full max-w-md touch-manipulation text-left text-2xl',
 		{ flipped: isFlipped }
 	]}
 >
