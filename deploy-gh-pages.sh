@@ -5,9 +5,9 @@
 directory=deploy.ignore
 branch=gh-pages
 build_command() {
-  docker compose run --rm app npm run build
+  pnpm run build
   # at this point in the script, we will be inside the $directory
-  cp -R ../dist/* .
+  rsync -a ../build/ .
 }
 
 echo -e "\033[0;32mDeleting old content...\033[0m"

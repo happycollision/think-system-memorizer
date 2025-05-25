@@ -1,84 +1,38 @@
-# think-system-memorizer
+# sv
 
-https://happycollision.github.io/think-system-memorizer/#/librettos
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Running with Docker
+## Creating a project
 
-To build and run your project in a Node.js 10 environment using Docker Compose:
+If you're seeing this, you've probably already done this step. Congrats!
 
-```sh
-docker-compose up
+```bash
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
 ```
 
-This ensures compatibility with Node.js 10 even on modern systems.
+## Developing
 
-Need to run something other than `start`?
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```sh
-docker compose run --service-ports app bash
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-## Deployment
+## Building
 
-Ember deploy is out.
+To create a production version of your app:
 
-Run the `./deploy-gh-pages.sh` script directly. It will manage entering the VM
-to build and then uploading and everything from in the host environment again.
-
-## notes
-
-Importing Happy Helpers is strangely challenging. You have to add a space after `//` in the last line.
-
-```
-CHange this:
-//# sourceURL
-
-to this:
-// # sourceURL
+```bash
+npm run build
 ```
 
-Or remove the line completely.
+You can preview the production build with `npm run preview`.
 
-## Installation
-
-* `git clone <repository-url>` this repository
-* `cd my-app`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.

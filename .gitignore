@@ -1,26 +1,23 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+node_modules
 
-# compiled output
-/dist/
-/tmp/
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
 
-# dependencies
-/bower_components/
-/node_modules/
+# OS
+.DS_Store
+Thumbs.db
 
-# misc
-/.env*
-/.sass-cache
-/connect.lock
-/coverage/
-/libpeerconnection.log
-/npm-debug.log*
-/testem.log
-/yarn-error.log
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
 
-# ember-try
-/.node_modules.ember-try/
-/bower.json.ember-try
-/package.json.ember-try
-
-*.ignore
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
