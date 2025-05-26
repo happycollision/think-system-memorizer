@@ -24,6 +24,14 @@
 			swiperEl.swiper.slideTo(slideIndex);
 		}
 	});
+
+	$effect(function styleContainerToAllowCardsBreakthrough() {
+		if (!swiperEl) return;
+		swiperEl.shadowRoot?.styleSheets[0].insertRule(
+			'.swiper {overflow-x:clip;overflow-y:visible}',
+			swiperEl.shadowRoot?.styleSheets[0].cssRules.length
+		);
+	});
 </script>
 
 <swiper-container
