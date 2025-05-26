@@ -6,13 +6,13 @@
 	import Cards from './Cards.svelte';
 	import Libretto from './Libretto.svelte';
 
-	let title = $derived(page.params.title);
+	const { data } = $props();
 
-	let text = $derived(await fetch(`${base}/files/${title}.txt`).then((res) => res.text()));
+	let title = $derived(page.params.title);
 
 	let cards = $state(true);
 
-	const textParts = $derived(makeParts(text));
+	const textParts = $derived(makeParts(data.text));
 	const cardStore = $derived(
 		new CardStore(textParts.map(([front, back]) => ({ front, back, isFlipped: false })))
 	);
@@ -40,7 +40,7 @@
 	<Cards {cardStore} />
 {:else}
 	<div class="m-auto mt-8 max-w-[70ch] text-lg">
-		<Libretto text={text} startingIndex={cardStore.currentCardIndex} {changeViewAtIndex} />
+		<Libretto text={data.text} startingIndex={cardStore.currentCardIndex} {changeViewAtIndex} />
 	</div>
 {/if}
 

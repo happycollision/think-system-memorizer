@@ -7,12 +7,6 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 
-	compilerOptions: {
-		experimental: {
-			async: true
-		}
-	},
-
 	kit: {
 		adapter: adapter({
 			fallback: '404.html'
