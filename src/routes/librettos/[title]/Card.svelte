@@ -12,7 +12,7 @@
 <button
 	type="button"
 	onclick={flipCard}
-	style="--flip-duration: 0.25s"
+	style="--flip-duration: 0.35s"
 	class={[
 		'flip-card relative isolate m-auto block h-full w-full max-w-md touch-manipulation text-left text-2xl',
 		{ flipped: isFlipped }
@@ -32,7 +32,7 @@
 <style>
 	.flip-card {
 		& {
-			perspective: 1100px;
+			perspective: 1800px;
 		}
 		.back,
 		.front {
