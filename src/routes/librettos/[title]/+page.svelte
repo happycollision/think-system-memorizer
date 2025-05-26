@@ -4,7 +4,7 @@
 	import { CardStore } from '$lib/cardStore.svelte';
 	import { makeParts } from '$lib/textInterpreter';
 	import Cards from './Cards.svelte';
-	import Script from './Script.svelte';
+	import Libretto from './Libretto.svelte';
 
 	let title = $derived(page.params.title);
 
@@ -40,7 +40,7 @@
 	<Cards {cardStore} />
 {:else}
 	<div class="m-auto mt-8 max-w-[70ch] text-lg">
-		<Script {text} startingIndex={cardStore.currentCardIndex} {changeViewAtIndex} />
+		<Libretto text={text} startingIndex={cardStore.currentCardIndex} {changeViewAtIndex} />
 	</div>
 {/if}
 
