@@ -4,6 +4,7 @@
 
 <script lang="ts">
 	import { register, type SwiperContainer } from 'swiper/element/bundle';
+	import { browser } from '$app/environment';
 	import type { Snippet } from 'svelte';
 	register();
 
@@ -34,19 +35,21 @@
 	});
 </script>
 
-<swiper-container
-	class="h-full"
-	bind:this={swiperEl}
-	initial-slide={slideIndex}
-	slides-per-view={1}
-	space-between={10}
-	centered-slides={true}
-	virtual={true}
-	onswiperslidechange={() => {
-		const index = swiperEl?.swiper.activeIndex;
-		if (index === undefined) return;
-		onSlideChange?.(index);
-	}}
->
-	{@render children()}
-</swiper-container>
+{#if browser}
+	<swiper-container
+		class="h-full"
+		bind:this={swiperEl}
+		initial-slide={slideIndex}
+		slides-per-view={1}
+		space-between={10}
+		centered-slides={true}
+		virtual={true}
+		onswiperslidechange={() => {
+			const index = swiperEl?.swiper.activeIndex;
+			if (index === undefined) return;
+			onSlideChange?.(index);
+		}}
+	>
+		{@render children()}
+	</swiper-container>
+{/if}
