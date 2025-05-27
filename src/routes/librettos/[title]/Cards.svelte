@@ -46,7 +46,7 @@
 </script>
 
 <div class="flex h-[calc(100dvh-100px)] flex-col">
-	<div class="-mx-4 h-full">
+	<div class="h-full">
 		<Swiper
 			slideIndex={cardStore.currentCardIndex}
 			onSlideChange={(idx) => {
@@ -55,7 +55,7 @@
 		>
 			{#each cardStore.cards as { front, back, isFlipped }, i (i)}
 				<SwiperSlide>
-					<div class="h-full p-4">
+					<div class="h-full px-2">
 						<Card {front} {back} {isFlipped} flipCard={() => cardStore.flipCard(i)} />
 					</div>
 				</SwiperSlide>
@@ -63,7 +63,7 @@
 		</Swiper>
 	</div>
 
-	<div class="flex justify-between gap-4 *:touch-manipulation">
+	<div class="flex justify-between gap-2 p-2 *:touch-manipulation">
 		<button
 			type="button"
 			class="btn"

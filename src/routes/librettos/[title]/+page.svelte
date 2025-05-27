@@ -24,7 +24,7 @@
 	}
 </script>
 
-<div class="flex justify-between">
+<div class="flex justify-between gap-2 p-2">
 	<a class="btn" href="{base}/">Back <span class="sr-only sm:not-sr-only">to libretto list</span></a
 	>
 	<header class="flex flex-wrap items-center justify-center gap-x-4">
