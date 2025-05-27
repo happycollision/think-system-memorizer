@@ -1,12 +1,14 @@
 <script module lang="ts">
+	import { register, type SwiperContainer } from 'swiper/element/bundle';
+
+	register();
+
 	export { default as SwiperSlide } from './SwiperSlide.svelte';
 </script>
 
 <script lang="ts">
-	import { register, type SwiperContainer } from 'swiper/element/bundle';
 	import { browser } from '$app/environment';
 	import type { Snippet } from 'svelte';
-	register();
 
 	type Props = {
 		slideIndex: number;
@@ -17,7 +19,7 @@
 
 	let { children, onSlideChange, slideIndex }: Props = $props();
 
-	let swiperEl: SwiperContainer | undefined;
+	let swiperEl: SwiperContainer | undefined = $state();
 
 	$effect(function syncOutsideChanges() {
 		if (!swiperEl) return;
