@@ -1,0 +1,1 @@
+import{R as o}from"../chunks/CYgJF_JY.js";function r(e,t){throw new o(e,t.toString())}new TextEncoder;async function n(){r(303,"/librettos")}const c=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{c as universal};
