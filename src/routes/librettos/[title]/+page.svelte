@@ -25,8 +25,9 @@
 </script>
 
 <div class="flex justify-between gap-2 p-2">
-	<a class="btn" href="{base}/">Back <span class="sr-only sm:not-sr-only">to libretto list</span></a
-	>
+	<a class="btn" href="{base}/">
+		<span>Back <span class="sr-only sm:not-sr-only">to libretto list</span></span>
+	</a>
 	<header class="flex flex-wrap items-center justify-center gap-x-4">
 		<h1 class="text-xl">
 			{title}
