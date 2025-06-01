@@ -14,10 +14,11 @@
 	];
 </script>
 
-<div>List of all librettos:</div>
-
-{#each libFilesNames as lib (lib)}
-	<div>
-		<a class="btn" href="{base}/librettos/{lib.file}">{lib.label}</a>
-	</div>
-{/each}
+<div class="mx-auto my-12 max-w-3xl text-2xl">Librettos</div>
+<nav class="mx-auto grid max-w-3xl grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+	{#each libFilesNames as lib (lib)}
+		<a class="btn flex h-12 items-center justify-center" href="{base}/librettos/{lib.file}"
+			>{lib.label}</a
+		>
+	{/each}
+</nav>
