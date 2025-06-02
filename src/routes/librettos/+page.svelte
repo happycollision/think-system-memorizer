@@ -54,7 +54,7 @@
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each data.librettos as libretto (libretto.title)}
 				<div
-					class="relative isolate rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-gray-600 dark:bg-gray-800"
+					class="relative isolate rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:bg-gray-200 hover:shadow-md dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700"
 				>
 					<h3 class="mb-2 text-xl font-semibold text-gray-800 dark:text-gray-200">
 						<a href="{base}/librettos/{libretto.id}">
@@ -62,7 +62,7 @@
 							<span class="absolute inset-0"></span>
 						</a>
 					</h3>
-					<div class="flex gap-2">
+					<div class="flex justify-end gap-2">
 						<button
 							onclick={(e) => {
 								e.preventDefault();
