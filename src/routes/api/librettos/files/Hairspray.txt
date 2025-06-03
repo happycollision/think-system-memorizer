@@ -1,423 +1,554 @@
-# Act 1
-## Scene 1
+> ACT 1 <
 
-> Corny: Hey there, Teenage Baltimore! Don't change the channel! 'Cause it's time for the Corny Collins Show! Brought to you by Ultra Clutch Hairspray! For hair that holds up even in a NASA wind tunnel!
+.SCENE 1
 
-Every afternoon  
-When the clock strikes four  
-A crazy bunch of kids  
-Crash through that door  
-  
-They throw off their coats  
-And leave the squares behind  
-And then they shake it,  
-Shake it, shake it  
-Like they're losing their mind  
-You'll never see them frown  
-'Cause they're  
-The nicest kids in town  
-  
-Every afternoon  
-You turn your TV on  
-  
-And we know you  
-Turn the sound up  
-When your parents are gone  
-  
-And then you  
-Twist and shout  
-For your favorite star  
-  
-And once you've  
-Practiced every step  
-That's in your repertoire  
-You better come on down  
-And meet the  
-Nicest kids in town  
+CORNY
+Hey there, Teenage Baltimore! Don't change the channel! 'Cause it's time for the Corny Collins Show! Brought to you by Ultra Clutch Hairspray! For hair that holds up even in a NASA wind tunnel!
 
-...
+Every afternoon
+When the clock strikes four
+A crazy bunch of kids
+Crash through that door
 
-Edna: Don't be silly, it ain't colored. The TVs black and white.
+They throw off their coats
+And leave the squares behind
+And then they shake it,
+Shake it, shake it
+Like they're losing their mind
+You'll never see them frown
+'Cause they're
+The nicest kids in town
 
-> Corny:  
-Nice white kids  
-Who like to lead the way  
-And once a month  
-We have our Negro day!  
-And I'm the man  
-Who keeps it spinning round  
-Mr. Corny Collins  
-With the latest, greatest  
-Baltimore sound!  
-  
-So every afternoon  
-Dropping every thing  
-  
-Who needs to read and write  
-When you can dance and sing?  
-  
-Forget about your algebra  
-And calculus  
-You can always do your homework  
-On the morning bus  
-Can't tell a verb from a noun  
-They're the nicest kids in town  
+Every afternoon
+You turn your TV on
 
-> Corny & Kids: Roll Call!
+And we know you
+Turn the sound up
+When your parents are gone
 
-Edna: Turn that racket down. I'm trying to iron in here.
+And then you
+Twist and shout
+For your favorite star
 
-Girls: (scream) AHH 
-
-> Corny:  
-So, every night you're shaking  
-As you lie in bed  
-  
-And the bass and drums  
-Are pounding in your head  
-Who cares about sleep  
-When you can snooze in school?  
-  
-They'll never get to college  
-But they sure look cool  
-  
-Don't need a cap and gown  
-'Cause they're the  
-Nicest kids in town  
-  
-They're the  
-Nicest, nicest  
-They're the  
-Nicest, nicest  
-They're the  
-Sugar and spice-est, the Nicest Kids In...  
-Kids in Town!  
-
-> Corny: Yeah! And that was our new dance of the week — the "Stricken Chicken." We'll be right back.
+And once you've
+Practiced every step
+That's in your repertoire
+You better come on down
+And meet the
+Nicest kids in town
 
 ...
 
-Velma: And you, Mr. Collins! None of that Detroit sound today. You have something against Connie Francis? 
+EDNA
+Don't be silly, it ain't colored. The TVs black and white.
 
-> Corny: The kids are just over the moon for rhythm and blues, Velma. They can't get enough.
+CORNY
+Nice white kids
+Who like to lead the way
+And once a month
+We have our Negro day!
+And I'm the man
+Who keeps it spinning round
+Mr. Corny Collins
+With the latest, greatest
+Baltimore sound!
 
-...
+So every afternoon
+Dropping every thing
 
-Velma: Ah, ah, ah! None of that! Save your personal lives for the camera! And we're back in five... four... three...
+Who needs to read and write
+When you can dance and sing?
 
-(the lights change to indicate we're back on the air) 
+Forget about your algebra
+And calculus
+You can always do your homework
+On the morning bus
+Can't tell a verb from a noun
+They're the nicest kids in town
 
-> Corny: Now don't forget, guys and Gidgets — our very first primetime spectacular is coming up on June 6th. We'll be live at Baltimore's brand-new Eventorium broadcasting nationwide! Talent scouts will be on hand from all of the major record labels, and sponsoring the event will be none other than our own ULTRA CLUTCH HAIRSPRAY. So, let's give a great big fawning Baltimore salute to the President of Ultra Clutch, Harriman F. Spritzer.
+CORNY & KIDS
+Roll Call!
 
-Spritzer: Ultra Clutch is happy to bring you fine youngsters to national attention.
+EDNA
+Turn that racket down. I'm trying to iron in here.
 
-All: Our big break! 
+GIRLS
+(scream)
+AHH
 
-> Corny: Also, live on the special, we'll be crowning your choice for Miss Teenage Hairspray 1962!
+CORNY
+So, every night you're shaking
+As you lie in bed
 
-...
+And the bass and drums
+Are pounding in your head
+Who cares about sleep
+When you can snooze in school?
 
-Amber: Hey, gang, don't forget to watch mom and me next Thursday on mother daughter day. And I want to be your Miss Teenage Hairspray. Remember, a vote for me from you is a vote for me. 
+They'll never get to college
+But they sure look cool
 
-> Corny: What an unexpected ad lib, Amber. And it speaking of expecting the unexpected, our own a fun loving, freewheeling Brenda will be taking a little leave of absence from the show. How long will you be gone, Brenda?
+Don't need a cap and gown
+'Cause they're the
+Nicest kids in town
 
-Brenda: Nine months. 
+They're the
+Nicest, nicest
+They're the
+Nicest, nicest
+They're the
+Sugar and spice-est, the Nicest Kids In...
+Kids in Town!
 
-> Corny: So, it seems we'll have an opening for a girl who is just as fun-loving, but maybe not quite as freewheeling. Wanna be one of the nicest kids in town? Cut school tomorrow and come down to station WZZT to audition!
-
-## Scene 5 - The Madison
-
-(Patterson Park High School gymnasium. Corny takes the mic.)
-
-> Corny: Hey, there, sophomores and sophomores at heart. I'm honored to be your guest DJ here at PPHS. So with no further a do-do, let's do-do some dancing. (music starts) It's the hottest dance around and it was born right here in Baltimore. What's it called kids?
-
-Students: The Madison! 
-
-> Corny: And where'd you see it first?
-
-Students: The Corny Collins Show! 
-
-> Corny: Let's form to big strong lines — it's Madison time! Go!
-
-...
-
-Seaweed: You keep your eye on Corny. This could be your big chance. 
-
-Tracy: You better keep an eye on me.
-
-> Corny: Now when I say "Hit it," show me a big, bad Baltimore Box...... hit it!
-
-Little Inez: How come we always have to dance in the back?
-
-Seaweed: I don't know. There's them and there's us. That's just the way it is.
-
-> Corny: When I say "hit it," take it to the basket like Wilt the Stilt......hit it! (to Amber) Amber, who's your friend? She's like a breath of fresh, mountain air.
-
-Amber: You got the Mountain part right. Oink-oink. 
-
-> Corny: Now when I say "hit it," let's take a drive down Druid Hill....hit it! Hang a right....feed the monkey.....he's in the back seat.
-
-Link: Hey, little darlin'. Haven't we met somewhere? 
-
-Tracy: Ohmigod, Link Larkin just spoke to me. I'll never wash this ear again.
-
-> Corny: When I say "hit it," let's make like Jackie Gleason — hommina, hommina, hommina....hit it!
-
-All: And away we go!
-
-Tracy: Hi, Corny!
-
-> Corny: Hey, cupcake. What's your name? 
-
-Tracy: I'm Tracy Turnblad. 
-
-> Corny: What else have you got hiding in those Buster Browns?
+CORNY
+Yeah! And that was our new dance of the week — the "Stricken Chicken." We'll be right back.
 
 ...
 
-Amber: Everybody stop liking her!!!! 
+VELMA
+And you, Mr. Collins! None of that Detroit sound today. You have something against Connie Francis?
 
-> Corny: OK everybody, let's take it home. Crazy! (The kids do the Madison) And that, Baltimorians, is how we do the Madison.
-
-## Scene 6 - Success
-### Nicest Kids Reprise
-
-Kids: Oh - oo - oo... Hoot hoot hoot hoo-oot
-
-> Corny: Hey there teenage Baltimore. You're just in time for the Corny Collins Show!
-
-Spritzer: Brought to you by Ultra Clutch! 
-
-> Corny: And it tastes good too. Today's jam packed edition will feature Link Larkin singing a special request Top 40 hit "It Takes Two." So, let the party begin!
+CORNY
+The kids are just over the moon for rhythm and blues, Velma. They can't get enough.
 
 ...
 
-Tracy: And I'm Tracy!
+VELMA
+Ah, ah, ah! None of that! Save your personal lives for the camera! And we're back in five... four... three...
 
-Council Members: Whoo!
+The lights change to indicate we're back on the air
 
-> Corny & Kids:  
-So, every night you're shaking  
-As you lie in bed  
-  
-And the bass and drums  
-Are pounding in your head  
+CORNY
+Now don't forget, guys and Gidgets — our very first primetime spectacular is coming up on June 6th. We'll be live at Baltimore's brand-new Eventorium broadcasting nationwide! Talent scouts will be on hand from all of the major record labels, and sponsoring the event will be none other than our own ULTRA CLUTCH HAIRSPRAY. So, let's give a great big fawning Baltimore salute to the President of Ultra Clutch, Harriman F. Spritzer.
 
-> Corny:  
-Who cares about sleep  
-When you can snooze in school?  
-  
-They'll never get to college  
-But they sure look cool  
-  
-Don't need a cap and gown  
-'Cause they're the  
-Nicest kids in town  
-  
-They're the  
-Nicest, nicest  
-They're the  
-Nicest, nicest  
-They're the  
-Sugar and spice-est, the Nicest Kids In...  
-Kids in Town!  
+SPRITZER
+Ultra Clutch is happy to bring you fine youngsters to national attention.
 
-> Corny: Yeah! And that was our dance of the week — "Peyton Place After Midnight," introduced to you by our brand-new Council member, Miss Tracy Turnblad.
+ALL
+Our big break!
+
+CORNY
+Also, live on the special, we'll be crowning your choice for Miss Teenage Hairspray 1962!
 
 ...
 
-Edna: She can't hear you. (the phone rings and she answers it.) Hello?... Yes. This is her childhood home. No I'm not her father. 
+AMBER
+Hey, gang, don't forget to watch mom and me next Thursday on mother daughter day. And I want to be your Miss Teenage Hairspray. Remember, a vote for me from you is a vote for me.
 
-> Corny: So let's wave a wistful bye-bye to Brenda — see you next year.
+CORNY
+What an unexpected ad lib, Amber. And it speaking of expecting the unexpected, our own a fun loving, freewheeling Brenda will be taking a little leave of absence from the show. How long will you be gone, Brenda?
 
-Council Members: Awww...
+BRENDA
+Nine months.
 
-> Corny: ...and inaugurate the newest member of our Council, Tracy Turnblad! Cozy up to old Corny and tell us about yourself, Trrrrace.
+CORNY
+So, it seems we'll have an opening for a girl who is just as fun-loving, but maybe not quite as freewheeling. Wanna be one of the nicest kids in town? Cut school tomorrow and come down to station WZZT to audition!
 
-Tracy: Well, I go to Patterson Park High, I watch your show, and do absolutely nothing else. (all applaud and cheer) But someday I hope to be the first woman president of the world or a Rockette. You got to think big to be big!
+.SCENE 5 - THE MADISON
 
-> Corny: And if you were president, what would your first official act be?
+Patterson Park High School gymnasium. Corny takes the mic.
 
-Tracy: Well, I'd make every day Negro Day!
+CORNY
+Hey, there, sophomores and sophomores at heart. I'm honored to be your guest DJ here at PPHS. So with no further a do-do, let's do-do some dancing.
+(music starts)
+It's the hottest dance around and it was born right here in Baltimore. What's it called kids?
 
-Velma & Spritzer: Aaaaaiiieeeeeee!!!!!!
+STUDENTS
+The Madison!
 
-> Corny: I read you like tomorrow's headlines, Trace! What do you say, kids? Looks like we might just have a hot new candidate for Miss Teenage Hairspray.
+CORNY
+And where'd you see it first?
 
-Amber: (grabbing the mic) no, she can't be miss hairspray! She's the before in the Metrecal diet ad, and I'm the after, and afters always win!
+STUDENTS
+The Corny Collins Show!
 
-> Corny: Amber, what the comedian! (bonks Amber on the head) So, Tracy, tell us true, how would you like Link Larkin to sing a song just for you?
-
-Amber: (grabbing the mic) No! He can't because everyone knows that whenever he sings, he sings to me, he's completely involved with me, see?
-
-> Corny: Right. So, Tracy, tell us true, how would you like Link Larkin to sing a song just for you?
-
-Tracy: Would I? Would I?
-
-Amber: (grabbing the mic) You people are ignoring the laws of nature!
-
-> Corny: Link Larkin, our own budding Elvis, will now sing to the equally blooming Tracy Turnblad his version of this week's Top 40 hit, "It Takes Two."
+CORNY
+Let's form to big strong lines — it's Madison time! Go!
 
 ...
 
-Spritzer: Mrs. Von Tussle, Negro Day everyday? That chubby communist girl and kissing on the mouth with possibly parted lips... I assure you, controversy is not what Ultra Clutch wishes to promote.
+SEAWEED
+You keep your eye on Corny. This could be your big chance.
 
-> Corny: Negroes and chubby girls buy hairspray, too, Mr. Spritzer.
+TRACY
+You better keep an eye on me.
 
-Spritzer: Mrs. Von Tussle, how do you plan to handle this?
+CORNY
+Now when I say "Hit it," show me a big, bad Baltimore Box...... hit it!
 
-Velma: I plan to start by firing him!
+LITTLE INEZ
+How come we always have to dance in the back?
 
-> Corny: You can't fire Corny Collins from The Corny Collings Show.
+SEAWEED
+I don't know. There's them and there's us. That's just the way it is.
 
-Velma: Why not? They do it all the time on Lassie!
+CORNY
+When I say "hit it," take it to the basket like Wilt the Stilt......hit it!
+(to Amber)
+Amber, who's your friend? She's like a breath of fresh, mountain air.
 
-> Corny: Mr. Spritzer, to keep your audience, you got to keep up with the times.
+AMBER
+You got the Mountain part right. Oink-oink.
 
-Velma: This show's fine the way it is.
+CORNY
+Now when I say "hit it," let's take a drive down Druid Hill....hit it! Hang a right....feed the monkey.....he's in the back seat.
 
-> Corny: Bringing Tracy on is just beginning. I've got terrific ideas for updating the show.
+LINK
+Hey, little darlin'. Haven't we met somewhere?
 
-Spritzer: I'm getting one of my sick headaches. Is there a place where I might lie down?
+TRACY
+Ohmigod, Link Larkin just spoke to me. I'll never wash this ear again.
 
-Velma: There's a bed in my office. (Spritzer leaves) So you've got ideas, do you? And going behind my back to put this no talent Commie on the show is one of them?
+CORNY
+When I say "hit it," let's make like Jackie Gleason — hommina, hommina, hommina....hit it!
 
-> Corny: Damn right, Velma. It's time we put kids on the show who looks like the kids who watch the show.
+ALL
+And away we go!
 
-Velma: Not while I'm producing it.
+TRACY
+Hi, Corny!
 
-> Corny: I was thinking it might be time to change that, too.
+CORNY
+Hey, cupcake. What's your name?
 
-Velma: Are you threatening me, Collins?
+TRACY
+I'm Tracy Turnblad.
 
-> Corny: Aw, you know me, Velma! On the other hand, I could always take the show to Channel 11. (Corny exits laughing)
+CORNY
+What else have you got hiding in those Buster Browns?
 
-# Act 2
-# Scene 5 - Miss Teenage Hairspray
+...
 
-(Drum Roll... Corny appears on stage)
+AMBER
+Everybody stop liking her!!!!
 
-> Corny: And now, live, from the certified up-to-code Baltimore Eventorium... For the first time ever on nationwide television... it's The Corny Collins Spectacular...
+CORNY
+OK everybody, let's take it home. Crazy!
 
-Girls: He's Corny!
+The kids do the Madison
 
-> Corny: Brought to you by Ultra Clutch Hairspray!  
-  
-What gives a girl  
-Power and punch?  
-Is it a charm, is it poise?  
-No, it's hairspray!  
-  
-What gets a gal  
-Asked out to lunch  
-Is it brains, is it dough?  
-No, it's hairspray  
-  
-If you take a ride  
-With no can at to your side  
-Then your flip will be gone with the wind  
-  
-But if you spray it and lock it,  
-You can take off in a rocket  
-And in outer space  
-Each hair will be in place  
-  
-Why take a chance  
-When you get up and dance?  
-If you twist, I insist  
-You use hairspray  
-  
-And tell your mother  
-Her head she should smother  
-With "Ultra-Clutch" faithfully  
-  
-So if you're a redhead, a blond or brunette  
-Just take my advice  
-And you might just get  
-  
-The only thing better than hairspray  
-That's me!  
-  
-Forget the milk man  
-The only thing better than hairspray  
+CORNY
+And that, Baltimorians, is how we do the Madison.
+
+.SCENE 6 - SUCCESS
+
+.NICEST KIDS REPRISE
+
+KIDS
+Oh - oo - oo... Hoot hoot hoot hoo-oot
+
+CORNY
+Hey there teenage Baltimore. You're just in time for the Corny Collins Show!
+
+SPRITZER
+Brought to you by Ultra Clutch!
+
+CORNY
+And it tastes good too. Today's jam packed edition will feature Link Larkin singing a special request Top 40 hit "It Takes Two." So, let the party begin!
+
+...
+
+TRACY
+And I'm Tracy!
+
+COUNCIL MEMBERS
+Whoo!
+
+CORNY & KIDS
+So, every night you're shaking
+As you lie in bed
+
+And the bass and drums
+Are pounding in your head
+
+CORNY
+Who cares about sleep
+When you can snooze in school?
+
+They'll never get to college
+But they sure look cool
+
+Don't need a cap and gown
+'Cause they're the
+Nicest kids in town
+
+They're the
+Nicest, nicest
+They're the
+Nicest, nicest
+They're the
+Sugar and spice-est, the Nicest Kids In...
+Kids in Town!
+
+CORNY
+Yeah! And that was our dance of the week — "Peyton Place After Midnight," introduced to you by our brand-new Council member, Miss Tracy Turnblad.
+
+...
+
+EDNA
+She can't hear you.
+(the phone rings and she answers it.)
+Hello?... Yes. This is her childhood home. No I'm not her father.
+
+CORNY
+So let's wave a wistful bye-bye to Brenda — see you next year.
+
+COUNCIL MEMBERS
+Awww...
+
+CORNY
+...and inaugurate the newest member of our Council, Tracy Turnblad! Cozy up to old Corny and tell us about yourself, Trrrrace.
+
+TRACY
+Well, I go to Patterson Park High, I watch your show, and do absolutely nothing else.
+(all applaud and cheer)
+But someday I hope to be the first woman president of the world or a Rockette. You got to think big to be big!
+
+CORNY
+And if you were president, what would your first official act be?
+
+TRACY
+Well, I'd make every day Negro Day!
+
+VELMA & SPRITZER
+Aaaaaiiieeeeeee!!!!!!
+
+CORNY
+I read you like tomorrow's headlines, Trace! What do you say, kids? Looks like we might just have a hot new candidate for Miss Teenage Hairspray.
+
+AMBER
+(grabbing the mic)
+no, she can't be miss hairspray! She's the before in the Metrecal diet ad, and I'm the after, and afters always win!
+
+CORNY
+Amber, what the comedian!
+(bonks Amber on the head)
+So, Tracy, tell us true, how would you like Link Larkin to sing a song just for you?
+
+AMBER
+(grabbing the mic)
+No! He can't because everyone knows that whenever he sings, he sings to me, he's completely involved with me, see?
+
+CORNY
+Right. So, Tracy, tell us true, how would you like Link Larkin to sing a song just for you?
+
+TRACY
+Would I? Would I?
+
+AMBER
+(grabbing the mic)
+You people are ignoring the laws of nature!
+
+CORNY
+Link Larkin, our own budding Elvis, will now sing to the equally blooming Tracy Turnblad his version of this week's Top 40 hit, "It Takes Two."
+
+...
+
+SPRITZER
+Mrs. Von Tussle, Negro Day everyday? That chubby communist girl and kissing on the mouth with possibly parted lips... I assure you, controversy is not what Ultra Clutch wishes to promote.
+
+CORNY
+Negroes and chubby girls buy hairspray, too, Mr. Spritzer.
+
+SPRITZER
+Mrs. Von Tussle, how do you plan to handle this?
+
+VELMA
+I plan to start by firing him!
+
+CORNY
+You can't fire Corny Collins from The Corny Collings Show.
+
+VELMA
+Why not? They do it all the time on Lassie!
+
+CORNY
+Mr. Spritzer, to keep your audience, you got to keep up with the times.
+
+VELMA
+This show's fine the way it is.
+
+CORNY
+Bringing Tracy on is just beginning. I've got terrific ideas for updating the show.
+
+SPRITZER
+I'm getting one of my sick headaches. Is there a place where I might lie down?
+
+VELMA
+There's a bed in my office.
+(Spritzer leaves)
+So you've got ideas, do you? And going behind my back to put this no talent Commie on the show is one of them?
+
+CORNY
+Damn right, Velma. It's time we put kids on the show who looks like the kids who watch the show.
+
+VELMA
+Not while I'm producing it.
+
+CORNY
+I was thinking it might be time to change that, too.
+
+VELMA
+Are you threatening me, Collins?
+
+CORNY
+Aw, you know me, Velma! On the other hand, I could always take the show to Channel 11.
+(Corny exits laughing)
+
+> ACT 2 <
+
+.SCENE 5 - MISS TEENAGE HAIRSPRAY
+
+Drum Roll... Corny appears on stage
+
+CORNY
+And now, live, from the certified up-to-code Baltimore Eventorium... For the first time ever on nationwide television... it's The Corny Collins Spectacular...
+
+GIRLS
+He's Corny!
+
+CORNY
+Brought to you by Ultra Clutch Hairspray!
+
+What gives a girl
+Power and punch?
+Is it a charm, is it poise?
+No, it's hairspray!
+
+What gets a gal
+Asked out to lunch
+Is it brains, is it dough?
+No, it's hairspray
+
+If you take a ride
+With no can at to your side
+Then your flip will be gone with the wind
+
+But if you spray it and lock it,
+You can take off in a rocket
+And in outer space
+Each hair will be in place
+
+Why take a chance
+When you get up and dance?
+If you twist, I insist
+You use hairspray
+
+And tell your mother
+Her head she should smother
+With "Ultra-Clutch" faithfully
+
+So if you're a redhead, a blond or brunette
+Just take my advice
+And you might just get
+
+The only thing better than hairspray
 That's me!
 
-Ensemble: Ah Ah Ah Ah...
+Forget the milk man
+The only thing better than hairspray
+That's me!
 
-> Corny & Ensemble:  
-Ah, ah, ah, ah, ah, ah, ah  
-What makes a man  
-Reach out and touch  
-Ultra clutch!  
-So if you're a redhead, a blonde or brunette  
+ENSEMBLE
+Ah Ah Ah Ah...
 
-> Corny:  
-Just take my advice  
-And you might just get  
+CORNY & ENSEMBLE
+Ah, ah, ah, ah, ah, ah, ah
+What makes a man
+Reach out and touch
+Ultra clutch!
+So if you're a redhead, a blonde or brunette
 
-The only thing better than hairspray  
-That's me!  
+CORNY
+Just take my advice
+And you might just get
 
-Girls: He's Corny Collins!
+The only thing better than hairspray
+That's me!
 
-> Corny:  
-The only thing better than hairspray  
-That's me  
+GIRLS
+He's Corny Collins!
 
-Councilettes:  
+CORNY
+The only thing better than hairspray
+That's me
+
+COUNCILLETTES
 Ska-doo-dl-e-ya-do-wah
 
-> Corny & The Councilettes:  
+CORNY & THE COUNCILLETTES
 Ska-doo-dl-e-doo-wah-do-wah
 
-> Corny: "Hey baby, you look like you could use a stiff one!"
+CORNY
+"Hey baby, you look like you could use a stiff one!"
 
 ...
 
-Velma: Get out! And coming back to Corny on camera one in 3...2...
+VELMA
+Get out! And coming back to Corny on camera one in 3...2...
 
-> Corny: And now for the talent portion of the competition where the frontrunner gals present a dance of their own creation. (looking at the scoreboard) Presently, it appears Amber Von Tussle and Tracy Turnblad are neck and neck. But since, according to the latest police bulletins, Miss Turnblad is still at large...
+CORNY
+And now for the talent portion of the competition where the frontrunner gals present a dance of their own creation.
+(looking at the scoreboard)
+Presently, it appears Amber Von Tussle and Tracy Turnblad are neck and neck. But since, according to the latest police bulletins, Miss Turnblad is still at large...
 
-Amber: At VERY large.
+AMBER
+At VERY large.
 
-> Corny: ...our Miss Hairspray might just be a foregone conclusion. Still, our rules say contestants have to dance for it. Are you ready, Amber?
+CORNY
+...our Miss Hairspray might just be a foregone conclusion. Still, our rules say contestants have to dance for it. Are you ready, Amber?
 
 ...
 
-Amber: Thank you ladies, gentlemen and kids. I'm now ready to consume the title of Miss Teenage Hairspray.
+AMBER
+Thank you ladies, gentlemen and kids. I'm now ready to consume the title of Miss Teenage Hairspray.
 
-(Corny leads Spritzer on. Spritzer carries the crown and bouquet.)
+Corny leads Spritzer on. Spritzer carries the crown and bouquet.
 
-> Corny: Just to be sure, I think we'd better check the board.
+CORNY
+Just to be sure, I think we'd better check the board.
 
-Spritzer: Could we please see the tally?
+SPRITZER
+Could we please see the tally?
 
-(all turn to the board and amber wins by a few votes)
+all turn to the board and amber wins by a few votes
 
+SPRITZER
 Yes, Amber Von Tussle just squeaks in as the winner.
 
-Amber: What did I tell you? Give me the crown, give me the flowers, and everybody start bowing!
+AMBER
+What did I tell you? Give me the crown, give me the flowers, and everybody start bowing!
 
-Tracy: Not so fast, Amber. Look who's coming in the front door.
+TRACY
+Not so fast, Amber. Look who's coming in the front door.
 
-> Corny: Right on schedule! I mean, I know nothing about this complex plan. Ladies and gentlemen, I give you the never to be counted out Tracy Turnblad.
-
-...
-
-### after: You can't stop the beat
-
-(applause)
-
-> Corny: Everyone, look... Look at the scoreboard! (all look) Tracy Turnblad, I declare you Miss Teenage Hairspray 1962!
+CORNY
+Right on schedule! I mean, I know nothing about this complex plan. Ladies and gentlemen, I give you the never to be counted out Tracy Turnblad.
 
 ...
 
-Tracy: Of course you, Link. But I also want a graduate degree in Musicology with a minor in the ethnic studies. And if there's something else I'd like to say - The Corny Collins Show is now and forever more officially integrated! (Cheers fill the room)
+.AFTER: YOU CAN'T STOP THE BEAT
 
-> Corny: America look up! Here's history right before your eyes. Television will never be the same.
+applause
+
+CORNY
+Everyone, look... Look at the scoreboard!
+(all look)
+Tracy Turnblad, I declare you Miss Teenage Hairspray 1962!
 
 ...
 
-Prudy: And you look so happy. I can't say it's what I want, but if this fine looking cat-like black boy is responsible for the light in your eyes, then how could I object?
+TRACY
+Of course you, Link. But I also want a graduate degree in Musicology with a minor in the ethnic studies. And if there's something else I'd like to say - The Corny Collins Show is now and forever more officially integrated!
+(Cheers fill the room)
 
-> Corny: Live television - there's nothing like it.
+CORNY
+America look up! Here's history right before your eyes. Television will never be the same.
+
+...
+
+PRUDY
+And you look so happy. I can't say it's what I want, but if this fine looking cat-like black boy is responsible for the light in your eyes, then how could I object?
+
+CORNY
+Live television - there's nothing like it.

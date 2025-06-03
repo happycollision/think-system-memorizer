@@ -348,137 +348,220 @@ Tommy: G'bye, Professor.
 
 >Harold: Thanks, Tommy.
 
-## Scene 9
+.SCENE 9
 
-Mayor Shinn: Just a minute here. Are you soliciting? You haven't got a license.
+MAYOR SHINN
+Just a minute here. Are you soliciting? You haven't got a license.
 
->Harold: Why no, Mayor Shinn, I collect doorbells. This particular specimen has an unusual tone quality that —
+HAROLD
+Why no, Mayor Shinn, I collect doorbells. This particular specimen has an unusual tone quality that —
 
-Mayor Shinn: Flattery will not avail you. Soliciting is statutory in this county — malfeasance without a permit. Why haven't you been down't City Hall with your references?
+MAYOR SHINN
+Flattery will not avail you. Soliciting is statutory in this county — malfeasance without a permit. Why haven't you been down't City Hall with your references?
 
->Harold: Just missed you I — Mr. Mayor! Your hand — oh no!
+HAROLD
+Just missed you I — Mr. Mayor! Your hand — oh no!
 
-Mayor Shinn: What, what —
+MAYOR SHINN
+What, what —
 
->Harold: That spread of the little finger! It's hereditary!
+HAROLD
+That spread of the little finger! It's hereditary!
 
-Mayor Shinn: Oh it is — what does that mean?
+MAYOR SHINN
+Oh it is — what does that mean?
 
->Harold: It means that your son's little finger is perfectly situated to operate the spit valve on a B-flat Flugel Horn!
+HAROLD
+It means that your son's little finger is perfectly situated to operate the spit valve on a B-flat Flugel Horn!
 
-Mayor Shinn: Is that good?
+MAYOR SHINN
+Is that good?
 
->Harold: Good! It means that America has at last produced an artist who can flugel the minute waltz in 50 seconds.
+HAROLD
+Good! It means that America has at last produced an artist who can flugel the minute waltz in 50 seconds.
 
-Mayor Shinn: How could I get one of those horns?
+MAYOR SHINN
+How could I get one of those horns?
 
->Harold: Sign here, Mr. Mayor. That'll be seventeen dollars import fee.
+HAROLD
+Sign here, Mr. Mayor. That'll be seventeen dollars import fee.
 
-Mayor Shinn: Yes sir. Just think […] you be down’t city Hall with your By God papers at three o’clock.
+MAYOR SHINN
+Yes sir. Just think […] you be down’t city Hall with your By God papers at three o’clock.
 
->Harold: You mean this afternoon?
+HAROLD
+You mean this afternoon?
 
-Mayor Shinn: I couldn’t make myself any plainer if I’se a Quaker on his day off.
+MAYOR SHINN
+I couldn’t make myself any plainer if I’se a Quaker on his day off.
 
-### Scene 10
+.SCENE 10
 
->Harold: Mrs. Paroo do you realize you have the facial characteristics of a Cornet virtuoso?
+HAROLD
+Mrs. Paroo do you realize you have the facial characteristics of a Cornet virtuoso?
 
-Mrs. Paroo: I don’t know if I understand you entirely, Professor.
+MRS. PAROO
+I don’t know if I understand you entirely, Professor.
 
->Harold: If your boy has that same firm chin, and those splendid cheek muscles — By George! Not that he could ever be really great, you understand, but —
+HAROLD
+If your boy has that same firm chin, and those splendid cheek muscles — By George! Not that he could ever be really great, you understand, but —
 
-Mrs. Paroo: Oh, is that so. And in the name of St. Bridget, why not?
+MRS. PAROO
+Oh, is that so. And in the name of St. Bridget, why not?
 
->Harold: Well — you see all the really great Cornet players were Irish — O’Clark, O’Mendez, O’Klein —
+HAROLD
+Well — you see all the really great Cornet players were Irish — O’Clark, O’Mendez, O’Klein —
 
-Mrs. Paroo: But Professor, we are Irish!
+MRS. PAROO
+But Professor, we are Irish!
 
->Harold: No! No! Really! That clinches it! Sign here, Mrs. Paroo. Your boy was born to play the Cornet! (She signs) Fine, fine. That will be seven dollars earnest money. Nothing more due until the first installment payable at opening of band practice. (She pays him) Ah thank you. And of course, I'll need the boy's measurements for his band uniform.
+HAROLD
+No! No! Really! That clinches it! Sign here, Mrs. Paroo. Your boy was born to play the Cornet!
 
-Mrs. Paroo: His uniform! (Winthrop falls off the porch in excitement)
+She signs
 
->Harold: Hello, son. (Winthrop starts to run. Harold stops him) Certainly, his uniform. And there won't be a penny due till delivery, which gives him four weeks to enjoy, to anticipate, to imagine, at no cost whatever. Never allow the demands of tomorrow to interfere with the pleasures and excitement of today.
+HAROLD
+Fine, fine. That will be seven dollars earnest money. Nothing more due until the first installment payable at opening of band practice.
 
-Winthrop: Would it have... a... a...?
+She pays him
 
->Harold: A stripe? Certainly, my boy, a wide red stripe on each side. What do you think of that?
+HAROLD
+Ah thank you. And of course, I'll need the boy's measurements for his band uniform.
 
-Mrs. Paroo: You'll have to excuse him [...] Be-gob and be-jabbers! Where are you from, me bye?
+MRS. PAROO
+His uniform!
 
->Harold: Gary, Indiana.
+Winthrop falls off the porch in excitement
 
-Mrs. Paroo: I knew it! Gar — . Where did you say?
+HAROLD
+Hello, son.
 
->Harold: Gary, Indiana. In fact Gary Conservatory was my Alma Mater.
+Winthrop starts to run. Harold stops him
 
-Mrs. Paroo: Was she now?
+HAROLD
+Certainly, his uniform. And there won't be a penny due till delivery, which gives him four weeks to enjoy, to anticipate, to imagine, at no cost whatever. Never allow the demands of tomorrow to interfere with the pleasures and excitement of today.
 
->Harold: (Aware of Marian's approach) Why yes — Gold Medal Class of '05. Hodado, Miss Paroo.
+WINTHROP
+Would it have... a... a...?
 
-Marian: Hodado, Mr. Hill.
+HAROLD
+A stripe? Certainly, my boy, a wide red stripe on each side. What do you think of that?
 
->Harold: Of course! Paroo. I thought the name sounded familiar. (Sotto) I've tried to see you since the other night, but —
+MRS. PAROO
+You'll have to excuse him [...] Be-gob and be-jabbers! Where are you from, me bye?
 
-Mrs. Paroo: He wants to put Winthrop in the band!
+HAROLD
+Gary, Indiana.
 
-Marian: We're not interested, mama.
+MRS. PAROO
+I knew it! Gar — . Where did you say?
 
-Mrs. Paroo: But Marian, the boy might have his father's musical gift. He does have my jaw, you know.
+HAROLD
+Gary, Indiana. In fact Gary Conservatory was my Alma Mater.
 
->Harold: Oh — your husband musical? Well I'd like to have a talk with him. I'm sure we —
+MRS. PAROO
+Was she now?
 
-Marian: Do you burst in on everyone's home like this? Prying into personal affairs? We're not interested.
+HAROLD
+(Aware of Marian's approach)
+Why yes — Gold Medal Class of '05. Hodado, Miss Paroo.
 
-Mrs. Paroo: Marian!
+MARIAN
+Hodado, Mr. Hill.
 
->Harold: Well, that's one for and one against. Now why not let the boy's father decide?
+HAROLD
+Of course! Paroo. I thought the name sounded familiar.
+(Sotto)
+I've tried to see you since the other night, but —
 
-Marian: The boy's father is dead. Anything else?
+MRS. PAROO
+He wants to put Winthrop in the band!
 
->Harold: Oh, I'm sorry. But that's all the more reason why your brother should have something like this —
+MARIAN
+We're not interested, mama.
 
-Marian: My brother is a ten year old [...] As to your musical tricks, why don't you go into business with a nice carnival man who sells gold painted watches and glass diamond rings?
+MRS. PAROO
+But Marian, the boy might have his father's musical gift. He does have my jaw, you know.
 
->Harold: Musical tricks? Well, Miss Paroo, I hardly — (Without response Marian exits into house. Mrs. Paroo stands speechless. Harold stands approvingly, his finger alongside his nose) I get the feeling she likes the idea. Oh, a little cautious perhaps but I admire that in a woman. Just keep me alive and I'll be back later in the week.
+HAROLD
+Oh — your husband musical? Well I'd like to have a talk with him. I'm sure we —
 
-Mrs. Paroo: One moment, Professor Hill. About the boy's measurements. I make all his clothes. Sleeve 21, Waist 18, Crouch 14, —
+MARIAN
+Do you burst in on everyone's home like this? Prying into personal affairs? We're not interested.
 
->Harold: Fine, that's all I need. Now I must get back to the Hotel.
+MRS. PAROO
+Marian!
 
-Mrs. Paroo: Professor, I do hope you'll excuse Marian. She's not really —
+HAROLD
+Well, that's one for and one against. Now why not let the boy's father decide?
 
->Harold: Please. Don't worry about a thing. I'm sure that at heart she's as lovely as yourself. Good day to ya, Widda Paroo.
+MARIAN
+The boy's father is dead. Anything else?
 
+HAROLD
+Oh, I'm sorry. But that's all the more reason why your brother should have something like this —
 
-## Scene 11
+MARIAN
+My brother is a ten year old [...] As to your musical tricks, why don't you go into business with a nice carnival man who sells gold painted watches and glass diamond rings?
 
+HAROLD
+Musical tricks? Well, Miss Paroo, I hardly —
 
-Winthrop: It'th the band inthtrumenth!
+Without response Marian exits into house. Mrs. Paroo stands speechless. Harold stands approvingly, his finger alongside his nose
 
->Harold: Here you are, Winthrop.
+HAROLD
+I get the feeling she likes the idea. Oh, a little cautious perhaps but I admire that in a woman. Just keep me alive and I'll be back later in the week.
 
-Winthrop: My Cornet! Gee thankth, Profethor!
+MRS. PAROO
+One moment, Professor Hill. About the boy's measurements. I make all his clothes. Sleeve 21, Waist 18, Crouch 14, —
 
->Harold: Men! You will each receive individual instruction in due corse. In the meantime stay off the streets — get acquainted with your instruments and think about the Minuet in G. La de da de da de da de da —
+HAROLD
+Fine, that's all I need. Now I must get back to the Hotel.
 
+MRS. PAROO
+Professor, I do hope you'll excuse Marian. She's not really —
 
-Mayor Shinn: About that book — (Marian hands him the book. Harold catches Marian's look, which is changing from gratitude to adoration)
+HAROLD
+Please. Don't worry about a thing. I'm sure that at heart she's as lovely as yourself. Good day to ya, Widda Paroo.
 
->Harold: The Ladies' Dance Committee meets Tuesday nights at the High School.
+.SCENE 11
 
+WINTHROP
+It'th the band inthtrumenth!
 
-# Act 2
-##  scene 2
+HAROLD
+Here you are, Winthrop.
 
+WINTHROP
+My Cornet! Gee thankth, Profethor!
 
-Mayor Shinn: Well ya can't. I've read that book you gave me from cover to cover for a whole week not and didn't find a thing!
+HAROLD
+Men! You will each receive individual instruction in due corse. In the meantime stay off the streets — get acquainted with your instruments and think about the Minuet in G. La de da de da de da de da —
 
->Harold: Mr. Mayor, if you please —
+MAYOR SHINN
+About that book —
 
-Mayor Shinn: I'll settle your hash as soon as I get these premises offa' my oldest girl — yes.
+Marian hands him the book. Harold catches Marian's look, which is changing from gratitude to adoration
 
->Harold: All right but meantime I want you to know I'm vouching for Tommy Djilas. That boy's got the confidence of every kid in town — you'll be standing in line waiting to shake his hand by time our Band plays its first concert.
+HAROLD
+The Ladies' Dance Committee meets Tuesday nights at the High School.
+
+
+# ACT 2
+## SCENE 2
+
+
+MAYOR SHINN
+Well ya can't. I've read that book you gave me from cover to cover for a whole week not and didn't find a thing!
+
+HAROLD
+Mr. Mayor, if you please —
+
+MAYOR SHINN
+I'll settle your hash as soon as I get these premises offa' my oldest girl — yes.
+
+HAROLD
+All right but meantime I want you to know I'm vouching for Tommy Djilas. That boy's got the confidence of every kid in town — you'll be standing in line waiting to shake his hand by time our Band plays its first concert.
 
 
 Marian: Professor Hill, I think Mayor Shinn has behaved abominably and I think it was wonderful of you coming to Tommy's defense.
@@ -505,7 +588,7 @@ Marian: And he sings the "Minuet in G de da" almost constantly.
 
 >Harold: La de da de da de da de da. La de da. La de da —
 
-Marian: But he never touches the  Cornet.
+Marian: But he never touches the Cornet.
 
 >Harold: Well, you see —
 
@@ -518,26 +601,31 @@ Marian: He tells me about some "Think System." If he thinks the "Minuet in G", h
 >Harold: Miss Marian. The Think System is a revolutionary method, I'll admit. So was Gallileo's conception of the Heavens, Columbus' conception of the egg — ah — globe. Bach's conception of the Well-Tempered Clavicord. Hmm? Now I cannot discuss these things here in public. But if you'll allow me to call — (Spotting the ladies who are entering hastily) When may I call?
 
 
-# Scene 2
+## SCENE 2
 
-Ewart: Sorry, Professor, but we got our orders.
+EWART
+Sorry, Professor, but we got our orders.
 
-Oliver: We all been deputized.
+OLIVER
+We all been deputized.
 
->Harold: Yes — congratulations. Let's see now — you know all week I've tried to get you fellows my references and credentials, but every time you seem to get off the subject somehow. Now I have just what you want up in my hotel room — take me a second.
+>Harold: Yes — congratulations. Let's see now — you know all week I've tried to get you fellows my references and credentials, but every time you seem to get off the subject somehow. Now I have just what you want up in my hotel room — take me a second.
 
-Ewart: Sorry. 'Fraid I'll have to go along with you.
+EWART
+Sorry. 'Fraid I'll have to go along with you.
 
 >Harold: Yes — well, let's see if I have my key — (Finds paper in pocket) What's this? — Oh — a testimonial from Madame Rini, the only female bassoon player ever to appear on the Redpath Circuit. Her stage name, of course. Actually she was from Moline. Lida Rose Quackenbush.
 
-Ewart: Could I see that for a minute?
+EWART
+Could I see that for a minute?
 
 >Harold: (Hastily pocketing it) Oh, you'll never forget the name. Lida Rose. Same as the old song. (Gets out pitch pipe and blows it) LIDA ROSE I'M HOME AGAIN, ROSE,
 
-## Scene 3
+## SCENE 3
 
 
-Mrs. Paroo: Marian... Marian! Marian dear! Who was you talkin' to just — Why Professor Hill!
+MRS. PAROO
+Marian... Marian! Marian dear! Who was you talkin' to just — Why Professor Hill!
 
 >Harold: Mrs. Paroo! The top a' the evening! Miss Marian.
 
