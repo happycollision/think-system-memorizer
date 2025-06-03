@@ -81,13 +81,13 @@ const REGEX = {
 	TITLE_PAGE_KEY: /^([A-Za-z\s_]+):\s*(.*)/,
 	// Groups: 1=INT./EXT./EST./I./E. 2=INT/EXT etc. 3=Location 4=Time of Day 5=Scene Number
 	SCENE_HEADING:
-		/^(?:(?:(INT\.|EXT\.|EST\.|I\.?\/E\.?)(?:\.?\s*))|(?:(INT\/EXT|INT\.EXT|EXT\.INT)\.?\s*))?([A-Z0-9 \t\.\-\/\(\)]+?)(?:[ \t]+-\s*([A-Z0-9 \t\-\(\)]+))?(?:\s*(#.*?#))?$/i,
+		/^(?:(?:(INT\.|EXT\.|EST\.|I\.?\/E\.?)(?:\.?\s*))|(?:(INT\/EXT|INT\.EXT|EXT\.INT)\.?\s*))?([A-Z0-9 \t.\-/()]+?)(?:[ \t]+-\s*([A-Z0-9 \t\-()]+))?(?:\s*(#.*?#))?$/i,
 	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(#.*?#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
 	TRANSITION:
 		/^(?:FADE (?:TO BLACK|OUT|IN)|CUT TO BLACK|SMASH CUT TO|MATCH CUT TO|JUMP CUT TO|IRIS (?:IN|OUT)|WIPE TO|CONTINUOUS|BACK TO SCENE|TIME CUT)(?:\.)?$|^>?\s*([A-Z][A-Z0-9 \t]+TO:)$|^>\s*([^<]+?)\s*<$/i,
 	CHARACTER_CUE:
-		/^[ \t]*([A-Z0-9][A-Z0-9 \t\(\)\-\.'"]*(?:\s*\(V\.O\.\)|\s*\(O\.S\.\)|\s*\(O\.S\.C\.\)|\s*\(CONT'D\))?)(?:\s*\^)?$/, // O.S.C. for Off-Screen Character
+		/^[ \t]*([A-Z0-9][A-Z0-9 \t()\-.'"]*(?:\s*\(V\.O\.\)|\s*\(O\.S\.\)|\s*\(O\.S\.C\.\)|\s*\(CONT'D\))?)(?:\s*\^)?$/, // O.S.C. for Off-Screen Character
 	PARENTHETICAL: /^[ \t]*(\(.+\))$/,
 	// ACTION: /^[ \t]*!?(.*)/, // ! for action, or just normal text - handled by isAction
 	CENTERED_ACTION: /^[ \t]*>(.*)<(?!\w)/, // > TEXT < but not a transition like > SOMETHING TO:
@@ -387,7 +387,7 @@ export class FountainParser {
 		let currentScene: Scene | null = null;
 
 		while (this.currentLineNum < this.lines.length) {
-			let line = this.peek();
+			const line = this.peek();
 			if (line === null) break;
 
 			const trimmedLine = line.trim();
@@ -399,7 +399,6 @@ export class FountainParser {
 			}
 
 			let sceneMatch;
-			let isForcedScene = false;
 			let sceneHeadingText = '';
 			let sceneSetting: SceneHeading['setting'] = 'OTHER';
 			let sceneLocation = '';
@@ -407,7 +406,6 @@ export class FountainParser {
 			let sceneSceneNumber: string | undefined = undefined;
 
 			if ((sceneMatch = line.match(REGEX.FORCED_SCENE_HEADING))) {
-				isForcedScene = true;
 				sceneHeadingText = trimmedLine;
 				sceneLocation = sceneMatch[1].trim();
 				sceneSceneNumber = sceneMatch[2]?.trim();
