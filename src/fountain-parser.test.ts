@@ -1,5 +1,5 @@
 import { describe, beforeEach, it, expect, assert } from 'vitest';
-import { FountainParser } from './fountain-parser';
+import { FountainParser, type TitlePage } from './fountain-parser';
 
 describe('FountainParser', () => {
 	let parser: FountainParser;
@@ -86,7 +86,7 @@ This is an action line.`;
 			const result = parser.parse(script);
 			expect(result.title_page).toEqual({ title: ['Test'] });
 			expect(result.scenes.length).toBe(1);
-			expect(result.scenes[0].elements[0].type).toBe('action');
+			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
 			expect(result.scenes[0].elements[0].text).toBe('This is an action line.');
 		});
 
