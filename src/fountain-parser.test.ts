@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { describe, beforeEach, it, expect } from 'vitest';
-import { FountainParser, Screenplay, SceneElement, TitlePage } from './fountain-parser';
+import { describe, beforeEach, it, expect, assert } from 'vitest';
+import { FountainParser } from './fountain-parser';
 
 describe('FountainParser', () => {
 	let parser: FountainParser;
@@ -88,7 +88,7 @@ This is an action line.`;
 			expect(result.title_page).toEqual({ title: ['Test'] });
 			expect(result.scenes.length).toBe(1);
 			expect(result.scenes[0].elements[0].type).toBe('action');
-			expect((result.scenes[0].elements[0] as any).text).toBe('This is an action line.');
+			expect(result.scenes[0].elements[0].text).toBe('This is an action line.');
 		});
 
 		it('should allow blank lines within title page if followed by more title keys', () => {
@@ -112,8 +112,8 @@ Date: 2024`;
 			const script = `INT. KITCHEN - DAY`;
 			const result = parser.parse(script);
 			expect(result.scenes.length).toBe(1);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('INT.');
 			expect(sceneHeading.location).toBe('KITCHEN');
 			expect(sceneHeading.time_of_day).toBe('DAY');
@@ -122,8 +122,8 @@ Date: 2024`;
 		it('should parse EXT. scene heading with scene number', () => {
 			const script = `EXT. PARK - NIGHT #1A#`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('EXT.');
 			expect(sceneHeading.location).toBe('PARK');
 			expect(sceneHeading.time_of_day).toBe('NIGHT');
@@ -134,8 +134,8 @@ Date: 2024`;
 		it('should parse EST. scene heading', () => {
 			const script = `EST. CITYSCAPE - DAWN`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('EST.');
 			expect(sceneHeading.location).toBe('CITYSCAPE');
 			expect(sceneHeading.time_of_day).toBe('DAWN');
@@ -144,8 +144,8 @@ Date: 2024`;
 		it('should parse I./E. scene heading', () => {
 			const script = `I./E. SPACESHIP - DAY`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('INT./EXT.');
 			expect(sceneHeading.location).toBe('SPACESHIP');
 			expect(sceneHeading.time_of_day).toBe('DAY');
@@ -154,8 +154,8 @@ Date: 2024`;
 		it('should parse forced scene heading (starts with .)', () => {
 			const script = `.THE BRIDGE`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('OTHER');
 			expect(sceneHeading.location).toBe('THE BRIDGE');
 		});
@@ -163,7 +163,9 @@ Date: 2024`;
 		it('should parse INT./EXT. scene heading', () => {
 			const script = `INT./EXT. CAR - DAY`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
+
 			expect(sceneHeading.setting).toBe('INT./EXT.');
 			expect(sceneHeading.location).toBe('CAR');
 		});
@@ -174,8 +176,8 @@ Date: 2024`;
 			// Preceding blank line helps, but the regex itself will match "A BIG ROOM - DAY" as a scene heading.
 			const result = parser.parse(script);
 			expect(result.scenes.length).toBe(1);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('OTHER'); // No INT/EXT prefix
 			expect(sceneHeading.location).toBe('A BIG ROOM');
 			expect(sceneHeading.time_of_day).toBe('DAY');
@@ -184,8 +186,8 @@ Date: 2024`;
 		it('should parse scene heading with complex location and time', () => {
 			const script = `INT. JOE'S GARAGE/WORKSHOP - NIGHT (LATER)`;
 			const result = parser.parse(script);
-			const sceneHeading = result.scenes[0].elements[0] as any;
-			expect(sceneHeading.type).toBe('scene_heading');
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
 			expect(sceneHeading.setting).toBe('INT.');
 			expect(sceneHeading.location).toBe("JOE'S GARAGE/WORKSHOP");
 			expect(sceneHeading.time_of_day).toBe('NIGHT (LATER)');
@@ -196,40 +198,40 @@ Date: 2024`;
 		it('should parse action', () => {
 			const script = `INT. ROOM - DAY\n\nHe walks across the room.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[1].type).toBe('action');
-			expect((result.scenes[0].elements[1] as any).text).toBe('He walks across the room.');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[1].text).toBe('He walks across the room.');
 		});
 
 		it('should parse multi-line action', () => {
 			const script = `INT. ROOM - DAY\n\nHe walks.\nHe stops.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[1].type).toBe('action');
-			expect((result.scenes[0].elements[1] as any).text).toBe('He walks.\nHe stops.');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[1].text).toBe('He walks.\nHe stops.');
 		});
 
 		it('should parse character and dialogue', () => {
 			const script = `INT. ROOM - DAY\n\nBOB\nHello there.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[1].type).toBe('character');
-			expect((result.scenes[0].elements[1] as any).name).toBe('BOB');
-			expect(result.scenes[0].elements[2].type).toBe('dialogue');
-			expect((result.scenes[0].elements[2] as any).text).toBe('Hello there.');
+			assert(result.scenes[0].elements[1].type === 'character', 'Expected character type');
+			expect(result.scenes[0].elements[1].name).toBe('BOB');
+			assert(result.scenes[0].elements[2].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[2].text).toBe('Hello there.');
 		});
 
 		it('should parse character with (V.O.) and dialogue', () => {
 			const script = `NARRATOR (V.O.)\nOnce upon a time...`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('character');
-			expect((result.scenes[0].elements[0] as any).name).toBe('NARRATOR (V.O.)');
-			expect(result.scenes[0].elements[1].type).toBe('dialogue');
-			expect((result.scenes[0].elements[1] as any).text).toBe('Once upon a time...');
+			assert(result.scenes[0].elements[0].type === 'character', 'Expected character type');
+			expect(result.scenes[0].elements[0].name).toBe('NARRATOR (V.O.)');
+			assert(result.scenes[0].elements[1].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[1].text).toBe('Once upon a time...');
 		});
 
 		it('should parse character with (O.S.) and dialogue', () => {
 			const script = `GUARD (O.S.)\nWho goes there?`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('character');
-			expect((result.scenes[0].elements[0] as any).name).toBe('GUARD (O.S.)');
+			assert(result.scenes[0].elements[0].type === 'character', 'Expected character type');
+			expect(result.scenes[0].elements[0].name).toBe('GUARD (O.S.)');
 			expect(result.scenes[0].elements[1].type).toBe('dialogue');
 		});
 
@@ -237,17 +239,17 @@ Date: 2024`;
 			const script = `BOB\n(sarcastically)\nI love this.`;
 			const result = parser.parse(script);
 			expect(result.scenes[0].elements[0].type).toBe('character');
-			expect(result.scenes[0].elements[1].type).toBe('parenthetical');
-			expect((result.scenes[0].elements[1] as any).text).toBe('(sarcastically)');
-			expect(result.scenes[0].elements[2].type).toBe('dialogue');
-			expect((result.scenes[0].elements[2] as any).text).toBe('I love this.');
+			assert(result.scenes[0].elements[1].type === 'parenthetical', 'Expected parenthetical type');
+			expect(result.scenes[0].elements[1].text).toBe('(sarcastically)');
+			assert(result.scenes[0].elements[2].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[2].text).toBe('I love this.');
 		});
 
 		it('should parse multi-line dialogue', () => {
 			const script = `ALICE\nThis is the first line.\nThis is the second line.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[1].type).toBe('dialogue');
-			expect((result.scenes[0].elements[1] as any).text).toBe(
+			assert(result.scenes[0].elements[1].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[1].text).toBe(
 				'This is the first line.\nThis is the second line.'
 			);
 		});
@@ -255,30 +257,30 @@ Date: 2024`;
 		it('should parse standard transitions like FADE OUT.', () => {
 			const script = `FADE OUT.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('transition');
-			expect((result.scenes[0].elements[0] as any).text).toBe('FADE OUT.');
+			assert(result.scenes[0].elements[0].type === 'transition', 'Expected transition type');
+			expect(result.scenes[0].elements[0].text).toBe('FADE OUT.');
 		});
 
 		it('should parse transitions ending with TO:', () => {
 			const script = `CUT TO:`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('transition');
-			expect((result.scenes[0].elements[0] as any).text).toBe('CUT TO:');
+			assert(result.scenes[0].elements[0].type === 'transition', 'Expected transition type');
+			expect(result.scenes[0].elements[0].text).toBe('CUT TO:');
 		});
 
 		it('should parse transitions starting with > and ending with TO:', () => {
 			const script = `> ANGLE ON THE DOOR TO:`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('transition');
-			expect((result.scenes[0].elements[0] as any).text).toBe('> ANGLE ON THE DOOR TO:');
+			assert(result.scenes[0].elements[0].type === 'transition', 'Expected transition type');
+			expect(result.scenes[0].elements[0].text).toBe('> ANGLE ON THE DOOR TO:');
 		});
 
 		it('should parse centered text as action if not a transition', () => {
 			const script = `>THE END<`; // Does not end with TO:
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('action');
-			expect((result.scenes[0].elements[0] as any).text).toBe('THE END');
-			expect((result.scenes[0].elements[0] as any).isCentered).toBe(true);
+			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[0].text).toBe('THE END');
+			expect(result.scenes[0].elements[0].isCentered).toBe(true);
 		});
 
 		it('should parse centered text that looks like a transition but is not (e.g. > CUT TO THE QUICK <)', () => {
@@ -294,22 +296,22 @@ Date: 2024`;
 			// The current parser will likely treat this as a transition due to the broad centered match in its transition regex.
 			// For strict Fountain, this should be centered action unless it ends in "TO:".
 			// Let's test for what the current parser likely does:
-			expect(result.scenes[0].elements[0].type).toBe('transition');
-			expect((result.scenes[0].elements[0] as any).text).toBe('> A QUICK CUT <');
+			assert(result.scenes[0].elements[0].type === 'transition', 'Expected transition type');
+			expect(result.scenes[0].elements[0].text).toBe('> A QUICK CUT <');
 		});
 
 		it('should parse notes', () => {
 			const script = `[[This is a note.]]`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('note');
-			expect((result.scenes[0].elements[0] as any).text).toBe('This is a note.');
+			assert(result.scenes[0].elements[0].type === 'note', 'Expected note type');
+			expect(result.scenes[0].elements[0].text).toBe('This is a note.');
 		});
 
 		it('should parse lyrics', () => {
 			const script = `~Row, row, row your boat`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('lyric');
-			expect((result.scenes[0].elements[0] as any).text).toBe('Row, row, row your boat');
+			assert(result.scenes[0].elements[0].type === 'lyric', 'Expected lyric type');
+			expect(result.scenes[0].elements[0].text).toBe('Row, row, row your boat');
 		});
 
 		it('should parse scene number on its own line, associating with next scene', () => {
@@ -327,8 +329,8 @@ INT. LOCATION - DAY`;
 			const result = parser.parse(script);
 			expect(result.scenes.length).toBe(1);
 			expect(result.scenes[0].elements.length).toBe(1); // Only the action
-			expect(result.scenes[0].elements[0].type).toBe('action');
-			expect((result.scenes[0].elements[0] as any).text).toBe('This is action.');
+			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[0].text).toBe('This is action.');
 		});
 
 		it('should treat synopsis (= Synopsis) as non-action and not create elements', () => {
@@ -336,16 +338,16 @@ INT. LOCATION - DAY`;
 			const result = parser.parse(script);
 			expect(result.scenes.length).toBe(1);
 			expect(result.scenes[0].elements.length).toBe(1); // Only the action
-			expect(result.scenes[0].elements[0].type).toBe('action');
-			expect((result.scenes[0].elements[0] as any).text).toBe('This is action.');
+			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[0].text).toBe('This is action.');
 		});
 
 		it('should parse an all-caps line not followed by dialogue/parenthetical as action', () => {
 			const script = `INT. ROOM - DAY\n\nA LOUD BANG.`;
 			const result = parser.parse(script);
 			expect(result.scenes[0].elements.length).toBe(2);
-			expect(result.scenes[0].elements[1].type).toBe('action');
-			expect((result.scenes[0].elements[1] as any).text).toBe('A LOUD BANG.');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[1].text).toBe('A LOUD BANG.');
 		});
 	});
 
@@ -369,24 +371,24 @@ FADE TO BLACK.`;
 			expect(result.scenes.length).toBe(2);
 
 			// Scene 1
-			expect(result.scenes[0].elements[0].type).toBe('scene_heading');
-			expect((result.scenes[0].elements[0] as any).location).toBe('HOUSE');
-			expect(result.scenes[0].elements[1].type).toBe('action');
-			expect((result.scenes[0].elements[1] as any).text).toBe('Action one.');
-			expect(result.scenes[0].elements[2].type).toBe('character');
-			expect((result.scenes[0].elements[2] as any).name).toBe('BOB');
-			expect(result.scenes[0].elements[3].type).toBe('parenthetical');
-			expect((result.scenes[0].elements[3] as any).text).toBe('(shouting)');
-			expect(result.scenes[0].elements[4].type).toBe('dialogue');
-			expect((result.scenes[0].elements[4] as any).text).toBe('Hello!');
+			assert(result.scenes[0].elements[0].type === 'scene_heading', 'Expected scene heading type');
+			expect(result.scenes[0].elements[0].location).toBe('HOUSE');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[1].text).toBe('Action one.');
+			assert(result.scenes[0].elements[2].type === 'character', 'Expected character type');
+			expect(result.scenes[0].elements[2].name).toBe('BOB');
+			assert(result.scenes[0].elements[3].type === 'parenthetical', 'Expected parenthetical type');
+			expect(result.scenes[0].elements[3].text).toBe('(shouting)');
+			assert(result.scenes[0].elements[4].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[4].text).toBe('Hello!');
 
 			// Scene 2
-			expect(result.scenes[1].elements[0].type).toBe('scene_heading');
-			expect((result.scenes[1].elements[0] as any).location).toBe('GARDEN');
-			expect(result.scenes[1].elements[1].type).toBe('action');
-			expect((result.scenes[1].elements[1] as any).text).toBe('Action two.');
-			expect(result.scenes[1].elements[2].type).toBe('transition');
-			expect((result.scenes[1].elements[2] as any).text).toBe('FADE TO BLACK.');
+			assert(result.scenes[1].elements[0].type === 'scene_heading', 'Expected scene heading type');
+			expect(result.scenes[1].elements[0].location).toBe('GARDEN');
+			assert(result.scenes[1].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[1].elements[1].text).toBe('Action two.');
+			assert(result.scenes[1].elements[2].type === 'transition', 'Expected transition type');
+			expect(result.scenes[1].elements[2].text).toBe('FADE TO BLACK.');
 		});
 
 		it('should handle script starting directly with action', () => {
@@ -396,8 +398,8 @@ Followed by more action.`;
 			expect(result.title_page).toEqual({});
 			expect(result.scenes.length).toBe(1);
 			expect(result.scenes[0].elements.length).toBe(1);
-			expect(result.scenes[0].elements[0].type).toBe('action');
-			expect((result.scenes[0].elements[0] as any).text).toBe(
+			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[0].text).toBe(
 				'This is the very first line of action.\nFollowed by more action.'
 			);
 		});
@@ -411,15 +413,15 @@ Still dialogue.`;
 			expect(result.scenes[0].elements.length).toBe(3);
 			expect(result.scenes[0].elements[0].type).toBe('character');
 			expect(result.scenes[0].elements[1].type).toBe('parenthetical');
-			expect(result.scenes[0].elements[2].type).toBe('dialogue');
-			expect((result.scenes[0].elements[2] as any).text).toBe('This is dialogue.\nStill dialogue.');
+			assert(result.scenes[0].elements[2].type === 'dialogue', 'Expected dialogue type');
+			expect(result.scenes[0].elements[2].text).toBe('This is dialogue.\nStill dialogue.');
 		});
 
 		it("should handle character (CONT'D)", () => {
 			const script = `JOHN (CONT'D)\nI am still talking.`;
 			const result = parser.parse(script);
-			expect(result.scenes[0].elements[0].type).toBe('character');
-			expect((result.scenes[0].elements[0] as any).name).toBe("JOHN (CONT'D)");
+			assert(result.scenes[0].elements[0].type === 'character', 'Expected character type');
+			expect(result.scenes[0].elements[0].name).toBe("JOHN (CONT'D)");
 			expect(result.scenes[0].elements[1].type).toBe('dialogue');
 		});
 
@@ -457,19 +459,19 @@ What's all this commotion?`;
 
 			expect(elements[0].type).toBe('scene_heading');
 
-			expect(elements[1].type).toBe('action'); // THE QUICK BROWN FOX...
-			expect((elements[1] as any).text).toBe('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.');
+			assert(elements[1].type === 'action', 'Expected action type');
+			expect(elements[1].text).toBe('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.');
 
-			expect(elements[2].type).toBe('character'); // JANE
-			expect((elements[2] as any).name).toBe('JANE');
+			assert(elements[2].type === 'character', 'Expected character type');
+			expect(elements[2].name).toBe('JANE');
 			expect(elements[3].type).toBe('parenthetical');
 			expect(elements[4].type).toBe('dialogue');
 
-			expect(elements[5].type).toBe('action'); // THE CEO ENTERS.
-			expect((elements[5] as any).text).toBe('THE CEO ENTERS.');
+			assert(elements[5].type === 'action', 'Expected action type');
+			expect(elements[5].text).toBe('THE CEO ENTERS.');
 
-			expect(elements[6].type).toBe('character'); // CEO
-			expect((elements[6] as any).name).toBe('CEO');
+			assert(elements[6].type === 'character', 'Expected character type');
+			expect(elements[6].name).toBe('CEO');
 			expect(elements[7].type).toBe('dialogue');
 		});
 	});
