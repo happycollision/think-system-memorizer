@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, beforeEach, it, expect, assert } from 'vitest';
 import { FountainParser } from './fountain-parser';
 
