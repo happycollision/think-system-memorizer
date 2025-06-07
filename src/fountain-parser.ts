@@ -103,8 +103,6 @@ function isPotentialCharacter(line: string): boolean {
 	if (!trimmedLine || trimmedLine.length === 0) return false;
 	if (trimmedLine.startsWith('.') || trimmedLine.startsWith('>') || trimmedLine.endsWith('<'))
 		return false; // common scene/transition markers
-	// Explicitly check against scene heading patterns, case-insensitively for the prefix
-	if (/^(INT\.|EXT\.|EST\.|I\.?\/E\.?)/i.test(trimmedLine)) return false;
 	if (REGEX.SCENE_HEADING.test(trimmedLine)) return false; // Check full pattern
 	if (REGEX.FORCED_SCENE_HEADING.test(trimmedLine)) return false;
 	if (REGEX.TRANSITION.test(trimmedLine)) return false;
@@ -325,7 +323,7 @@ export class FountainParser {
 					}
 					currentScene.elements.push({ type: 'dialogue', text: dialogueText });
 					this.lastElementType = 'dialogue';
-					continue; // Already advanced, restart loop with new line
+					continue; // Already advanced, restart loop
 				} else {
 					// Line looks like something else, not dialogue. Let the main loop re-evaluate.
 					// This means the character's speech block has ended.
@@ -345,7 +343,8 @@ export class FountainParser {
 
 			// If we are here, the line was not consumed by specific rules above or by dialogue logic.
 			// It's either action or something that should end the scene (handled by loop start).
-			if (this.isAction(line, true)) {
+			else if (this.isAction(line, true)) {
+				console.log('action', trimmedLine, this.lastElementType, line);
 				let actionText = trimmedLine;
 				this.advance(); // Consume current action line
 				line = this.peek();
