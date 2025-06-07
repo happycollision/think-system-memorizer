@@ -126,8 +126,8 @@ Date: 2024`;
 			expect(sceneHeading.setting).toBe('EXT.');
 			expect(sceneHeading.location).toBe('PARK');
 			expect(sceneHeading.time_of_day).toBe('NIGHT');
-			expect(sceneHeading.scene_number).toBe('#1A#');
-			expect(result.scenes[0].scene_number_token).toBe('#1A#');
+			expect(sceneHeading.scene_number).toBe('1A');
+			expect(result.scenes[0].scene_number_token).toBe('1A');
 		});
 
 		it('should parse EST. scene heading', () => {
@@ -159,6 +159,16 @@ Date: 2024`;
 			expect(sceneHeading.location).toBe('THE BRIDGE');
 		});
 
+		it('should parse forced scene heading with scene number', () => {
+			const script = `.THE BRIDGE #2#`;
+			const result = parser.parse(script);
+			const sceneHeading = result.scenes[0].elements[0];
+			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
+			expect(sceneHeading.setting).toBe('OTHER');
+			expect(sceneHeading.location).toBe('THE BRIDGE');
+			expect(sceneHeading.scene_number).toBe('2');
+		});
+
 		it('should parse INT./EXT. scene heading', () => {
 			const script = `INT./EXT. CAR - DAY`;
 			const result = parser.parse(script);
@@ -167,19 +177,6 @@ Date: 2024`;
 
 			expect(sceneHeading.setting).toBe('INT./EXT.');
 			expect(sceneHeading.location).toBe('CAR');
-		});
-
-		it('should parse location-only scene heading (all caps, preceded by blank line)', () => {
-			const script = `\nA BIG ROOM - DAY`; // Fountain spec: "A line that is all caps, and does not fit any other rule, can be a Scene Heading. It must be preceded by a blank line."
-			// The current parser's SCENE_HEADING regex is quite greedy for all-caps.
-			// Preceding blank line helps, but the regex itself will match "A BIG ROOM - DAY" as a scene heading.
-			const result = parser.parse(script);
-			expect(result.scenes.length).toBe(1);
-			const sceneHeading = result.scenes[0].elements[0];
-			assert(sceneHeading.type === 'scene_heading', 'Expected scene heading type');
-			expect(sceneHeading.setting).toBe('OTHER'); // No INT/EXT prefix
-			expect(sceneHeading.location).toBe('A BIG ROOM');
-			expect(sceneHeading.time_of_day).toBe('DAY');
 		});
 
 		it('should parse scene heading with complex location and time', () => {

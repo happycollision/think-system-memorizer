@@ -79,10 +79,10 @@ export interface Screenplay {
 
 const REGEX = {
 	TITLE_PAGE_KEY: /^([A-Za-z\s_]+):\s*(.*)/,
-	// Groups: 1=INT./EXT./EST./I./E. 2=INT/EXT etc. 3=Location 4=Time of Day 5=Scene Number
+	// Groups: 1=INT./EXT./EST./I./E. 2=everything else (see below for extracted details)
 	SCENE_HEADING:
-		/^(?:(?:(INT\.|EXT\.|EST\.|I\.?\/E\.?)(?:\.?\s*))|(?:(INT\/EXT|INT\.EXT|EXT\.INT)\.?\s*))?([A-Z0-9 \t.\-/()]+?)(?:[ \t]+-\s*([A-Z0-9 \t\-()]+))?(?:\s*(#.*?#))?$/i,
-	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(#.*?#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
+		/^((?:INT\.?\/EXT|INT|EXT|EST|I\.?\/E)\.?)\s*(?:(.+?)(?:(?: - )(.+?))?(?: #(.+)#)?)$/i,
+	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(?:#(.*?)#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
 	TRANSITION:
 		/^(?:FADE (?:TO BLACK|OUT|IN)|CUT TO BLACK|SMASH CUT TO|MATCH CUT TO|JUMP CUT TO|IRIS (?:IN|OUT)|WIPE TO|CONTINUOUS|BACK TO SCENE|TIME CUT)(?:\.)?$|^>?\s*([A-Z][A-Z0-9 \t]+TO:)$|^>\s*([^<]+?)\s*<$/i,
@@ -411,12 +411,11 @@ export class FountainParser {
 				sceneSceneNumber = sceneMatch[2]?.trim();
 			} else if ((sceneMatch = line.match(REGEX.SCENE_HEADING))) {
 				sceneHeadingText = trimmedLine;
-				const settingToken = sceneMatch[1] || sceneMatch[2];
+				const settingToken = sceneMatch[1];
 				if (settingToken) {
 					const upperToken = settingToken.toUpperCase();
 					if (
-						upperToken.startsWith('INT./EXT') ||
-						upperToken.startsWith('I./E') ||
+						upperToken.includes('/') ||
 						upperToken.startsWith('INT.EXT') ||
 						upperToken.startsWith('EXT.INT')
 					) {
@@ -431,9 +430,9 @@ export class FountainParser {
 					// Our regex makes INT/EXT part optional, so sceneMatch[3] will be location.
 					sceneSetting = 'OTHER'; // Or could be context-dependent
 				}
-				sceneLocation = sceneMatch[3].trim();
-				sceneTimeOfDay = sceneMatch[4]?.trim();
-				sceneSceneNumber = sceneMatch[5]?.trim();
+				sceneLocation = sceneMatch[2].trim();
+				sceneTimeOfDay = sceneMatch[3]?.trim();
+				sceneSceneNumber = sceneMatch[4]?.trim();
 			}
 
 			if (sceneHeadingText) {
