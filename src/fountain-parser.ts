@@ -344,7 +344,6 @@ export class FountainParser {
 			// If we are here, the line was not consumed by specific rules above or by dialogue logic.
 			// It's either action or something that should end the scene (handled by loop start).
 			else if (this.isAction(line, true)) {
-				console.log('action', trimmedLine, this.lastElementType, line);
 				let actionText = trimmedLine;
 				this.advance(); // Consume current action line
 				line = this.peek();
