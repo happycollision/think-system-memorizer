@@ -455,7 +455,7 @@ What's all this commotion?`;
 
 			expect(elements[0].type).toBe('scene_heading');
 
-			assert(elements[1].type === 'action', 'Expected action type' + elements[1].type);
+			assert(elements[1].type === 'action', 'Expected action type');
 			expect(elements[1].text).toBe('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.');
 
 			assert(elements[2].type === 'character', 'Expected character type');
