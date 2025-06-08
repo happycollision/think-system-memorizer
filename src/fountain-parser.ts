@@ -52,6 +52,17 @@ export interface Note {
 	text: string;
 }
 
+export interface Section {
+	type: 'section';
+	text: string;
+	level: number; // 1 for #, 2 for ##, etc.
+}
+
+export interface Synopsis {
+	type: 'synopsis';
+	text: string;
+}
+
 export interface Lyric {
 	type: 'lyric';
 	text: string;
@@ -65,6 +76,8 @@ export type SceneElement =
 	| Transition
 	| SceneHeading
 	| Note
+	| Section
+	| Synopsis
 	| Lyric;
 
 export interface Scene {
@@ -92,7 +105,7 @@ const REGEX = {
 	CENTERED_ACTION: /^[ \t]*>(.*)<(?!\w)/, // > TEXT < but not a transition like > SOMETHING TO:
 	NOTE: /^\[\[\s*(.*?)\s*\]\]$/,
 	LYRIC: /^~(.*)/,
-	SECTION_MARKER: /^#+\s*(.+)/, // # Section, ## Subsection
+	SECTION_MARKER: /^(#+)\s*(.+)/, // # Section, ## Subsection
 	SYNOPSIS: /^=\s*(.*)/, // = Synopsis
 	BLANK_LINE: /^\s*$/
 };
@@ -262,6 +275,14 @@ export class FountainParser {
 				match = line.match(REGEX.NOTE);
 				currentScene.elements.push({ type: 'note', text: match![1].trim() });
 				this.lastElementType = 'note';
+			} else if (REGEX.SECTION_MARKER.test(line)) {
+				match = line.match(REGEX.SECTION_MARKER);
+				currentScene.elements.push({ type: 'section', text: match![2], level: match![1].length });
+				this.lastElementType = 'section';
+			} else if (REGEX.SYNOPSIS.test(line)) {
+				match = line.match(REGEX.SYNOPSIS);
+				currentScene.elements.push({ type: 'synopsis', text: match![1] });
+				this.lastElementType = 'section';
 			} else if (REGEX.LYRIC.test(line)) {
 				match = line.match(REGEX.LYRIC);
 				currentScene.elements.push({ type: 'lyric', text: match![1] });

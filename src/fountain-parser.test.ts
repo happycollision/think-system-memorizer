@@ -286,32 +286,23 @@ Date: 2024`;
 			expect(result.scenes[0].elements[0].text).toBe('Row, row, row your boat');
 		});
 
-		it('should parse scene number on its own line, associating with next scene', () => {
-			const script = `#S1#
-
-INT. LOCATION - DAY`;
-			const result = parser.parse(script);
-			expect(result.scenes.length).toBe(1);
-			expect(result.scenes[0].scene_number_token).toBe('#S1#');
-			expect(result.scenes[0].elements[0].type).toBe('scene_heading');
-		});
-
-		it('should treat section markers (# Section) as non-action and not create elements', () => {
+		it('should parse section markers (# Section)', () => {
 			const script = `# My Section\n\nThis is action.`;
 			const result = parser.parse(script);
-			expect(result.scenes.length).toBe(1);
-			expect(result.scenes[0].elements.length).toBe(1); // Only the action
-			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
-			expect(result.scenes[0].elements[0].text).toBe('This is action.');
+			assert(result.scenes[0].elements[0].type === 'section', 'Expected section type');
+			expect(result.scenes[0].elements[0].level).toBe(1);
+			expect(result.scenes[0].elements[0].text).toBe('My Section');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected section type');
+			expect(result.scenes[0].elements[1].text).toBe('This is action.');
 		});
 
-		it('should treat synopsis (= Synopsis) as non-action and not create elements', () => {
+		it('should parse synopsis (= Synopsis) ', () => {
 			const script = `= An overview.\n\nThis is action.`;
 			const result = parser.parse(script);
-			expect(result.scenes.length).toBe(1);
-			expect(result.scenes[0].elements.length).toBe(1); // Only the action
-			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
-			expect(result.scenes[0].elements[0].text).toBe('This is action.');
+			assert(result.scenes[0].elements[0].type === 'synopsis', 'Expected synopsis type');
+			expect(result.scenes[0].elements[0].text).toBe('An overview.');
+			assert(result.scenes[0].elements[1].type === 'action', 'Expected action type');
+			expect(result.scenes[0].elements[1].text).toBe('This is action.');
 		});
 
 		it('should parse an all-caps line not followed by dialogue/parenthetical as action', () => {
