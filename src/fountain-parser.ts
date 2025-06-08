@@ -84,8 +84,7 @@ const REGEX = {
 		/^((?:INT\.?\/EXT|INT|EXT|EST|I\.?\/E)\.?)\s*(?:(.+?)(?:(?: - )(.+?))?(?: #(.+)#)?)$/i,
 	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(?:#(.*?)#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
-	TRANSITION:
-		/^(?:FADE (?:TO BLACK|OUT|IN)|CUT TO BLACK|SMASH CUT TO|MATCH CUT TO|JUMP CUT TO|IRIS (?:IN|OUT)|WIPE TO|CONTINUOUS|BACK TO SCENE|TIME CUT)(?:\.)?$|^>?\s*([A-Z][A-Z0-9 \t]+TO:)$|^>\s*([^<]+?)\s*<$/i,
+	TRANSITION: /((?:[^a-z]* ?)TO:)\s*|\s*>([^<]+)$/i,
 	CHARACTER_CUE:
 		/^[ \t]*([A-Z0-9][A-Z0-9 \t()\-.'"]*(?:\s*\(V\.O\.\)|\s*\(O\.S\.\)|\s*\(O\.S\.C\.\)|\s*\(CONT'D\))?)(?:\s*\^)?$/, // O.S.C. for Off-Screen Character
 	PARENTHETICAL: /^[ \t]*(\(.+\))$/,
