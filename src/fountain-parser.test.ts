@@ -188,6 +188,20 @@ Date: 2024`;
 			expect(sceneHeading.location).toBe("JOE'S GARAGE/WORKSHOP");
 			expect(sceneHeading.time_of_day).toBe('NIGHT (LATER)');
 		});
+
+		it('should not mistake dialogue for scene heading', () => {
+			const script = `GRACE
+Intriguing.
+(TURNS TO JIMMY)
+And what was his motive for trying to murder me?
+`;
+			const result = parser.parse(script);
+			const elements = result.scenes[0].elements;
+			assert(elements[0].type === 'character');
+			assert(elements[1].type === 'dialogue');
+			assert(elements[2].type === 'parenthetical');
+			assert(elements[3].type === 'dialogue');
+		});
 	});
 
 	describe('Scene Element Parsing', () => {

@@ -94,7 +94,7 @@ const REGEX = {
 	TITLE_PAGE_KEY: /^([A-Za-z\s_]+):\s*(.*)/,
 	// Groups: 1=INT./EXT./EST./I./E. 2=everything else (see below for extracted details)
 	SCENE_HEADING:
-		/^((?:INT\.?\/EXT|INT|EXT|EST|I\.?\/E)\.?)\s*(?:(.+?)(?:(?: - )(.+?))?(?: #(.+)#)?)$/i,
+		/^((?:INT\.?\/EXT|INT|EXT|EST|I\.?\/E)\.?)\s+(?:(.+?)(?:(?: - )(.+?))?(?: #(.+)#)?)$/i,
 	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(?:#(.*?)#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
 	TRANSITION: /^((?:[^a-z]* ?)TO:)\s*|^>\s*([^<]+)$/,
