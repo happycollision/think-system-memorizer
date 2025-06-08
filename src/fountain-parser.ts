@@ -289,7 +289,6 @@ export class FountainParser {
 				this.lastElementType = 'lyric';
 			} else if (REGEX.TRANSITION.test(trimmedLine)) {
 				match = trimmedLine.match(REGEX.TRANSITION);
-				console.log('Transition match:', match);
 				currentScene.elements.push({ type: 'transition', text: match![1] || match![2] });
 				this.lastElementType = 'transition';
 			} else if (REGEX.CENTERED_ACTION.test(line)) {
