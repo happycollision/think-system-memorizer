@@ -261,7 +261,7 @@ Date: 2024`;
 			const script = `> transition text`;
 			const result = parser.parse(script);
 			assert(result.scenes[0].elements[0].type === 'transition', 'Expected transition type');
-			expect(result.scenes[0].elements[0].text).toBe('> transition text');
+			expect(result.scenes[0].elements[0].text).toBe('transition text');
 		});
 
 		it('should parse centered text as action', () => {
@@ -328,7 +328,7 @@ Hello!
 
 EXT. GARDEN - NIGHT
 Action two.
-FADE TO BLACK.`;
+>FADE TO BLACK.`;
 			const result = parser.parse(script);
 			expect(result.title_page).toEqual({ title: ['My Life'], author: ['Me'] });
 			expect(result.scenes.length).toBe(2);
@@ -348,6 +348,7 @@ FADE TO BLACK.`;
 			// Scene 2
 			assert(result.scenes[1].elements[0].type === 'scene_heading', 'Expected scene heading type');
 			expect(result.scenes[1].elements[0].location).toBe('GARDEN');
+			expect(result.scenes[1].elements[0].time_of_day).toBe('NIGHT');
 			assert(result.scenes[1].elements[1].type === 'action', 'Expected action type');
 			expect(result.scenes[1].elements[1].text).toBe('Action two.');
 			assert(result.scenes[1].elements[2].type === 'transition', 'Expected transition type');

@@ -97,7 +97,7 @@ const REGEX = {
 		/^((?:INT\.?\/EXT|INT|EXT|EST|I\.?\/E)\.?)\s*(?:(.+?)(?:(?: - )(.+?))?(?: #(.+)#)?)$/i,
 	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(?:#(.*?)#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
-	TRANSITION: /((?:[^a-z]* ?)TO:)\s*|\s*>([^<]+)$/i,
+	TRANSITION: /^((?:[^a-z]* ?)TO:)\s*|^>\s*([^<]+)$/,
 	CHARACTER_CUE:
 		/^[ \t]*([A-Z0-9][A-Z0-9 \t()\-.'"]*(?:\s*\(V\.O\.\)|\s*\(O\.S\.\)|\s*\(O\.S\.C\.\)|\s*\(CONT'D\))?)(?:\s*\^)?$/, // O.S.C. for Off-Screen Character
 	PARENTHETICAL: /^[ \t]*(\(.+\))$/,
@@ -288,7 +288,9 @@ export class FountainParser {
 				currentScene.elements.push({ type: 'lyric', text: match![1] });
 				this.lastElementType = 'lyric';
 			} else if (REGEX.TRANSITION.test(trimmedLine)) {
-				currentScene.elements.push({ type: 'transition', text: trimmedLine });
+				match = trimmedLine.match(REGEX.TRANSITION);
+				console.log('Transition match:', match);
+				currentScene.elements.push({ type: 'transition', text: match![1] || match![2] });
 				this.lastElementType = 'transition';
 			} else if (REGEX.CENTERED_ACTION.test(line)) {
 				match = line.match(REGEX.CENTERED_ACTION);
