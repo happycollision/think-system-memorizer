@@ -56,21 +56,43 @@
 								{/if}
 							</div>
 						{:else if el.type === 'action'}
+							{@const text = el.text.split('\n')}
 							<p class="action {el.isCentered ? 'centered' : ''}">
-								{@html el.text.replace(/\n/g, '<br>')}
+								{#each text as line, j (j)}
+									{line}{#if j < text.length - 1}<br />{/if}
+								{/each}
 							</p>
 						{:else if el.type === 'character'}
 							<p class="character">{el.name}</p>
 						{:else if el.type === 'dialogue'}
-							<p class="dialogue">{@html el.text.replace(/\n/g, '<br>')}</p>
+							{@const text = el.text.split('\n')}
+							<p class="dialogue">
+								{#each text as line, j (j)}
+									{line}{#if j < text.length - 1}<br />{/if}
+								{/each}
+							</p>
 						{:else if el.type === 'parenthetical'}
 							<p class="parenthetical">{el.text}</p>
 						{:else if el.type === 'transition'}
 							<p class="transition">{el.text}</p>
 						{:else if el.type === 'note'}
-							<p class="note"><em>{@html el.text.replace(/\n/g, '<br>')}</em></p>
+							{@const text = el.text.split('\n')}
+							<p class="note">
+								<em
+									>{#each text as line, j (j)}
+										{line}{#if j < text.length - 1}<br />{/if}
+									{/each}</em
+								>
+							</p>
 						{:else if el.type === 'lyric'}
-							<p class="lyric"><em>{@html el.text.replace(/\n/g, '<br>')}</em></p>
+							{@const text = el.text.split('\n')}
+							<p class="lyric">
+								<em
+									>{#each text as line, j (j)}
+										{line}{#if j < text.length - 1}<br />{/if}
+									{/each}</em
+								>
+							</p>
 						{/if}
 					{/each}
 				</div>
