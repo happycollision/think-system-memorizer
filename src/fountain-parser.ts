@@ -168,6 +168,8 @@ export class FountainParser {
 				continue;
 			}
 
+			if (REGEX.TRANSITION.test(line)) break; // If we hit a transition, assume title page is over
+
 			const titleMatch = line.match(REGEX.TITLE_PAGE_KEY);
 			if (titleMatch) {
 				// If a blank line was encountered after a title element, and now we see another title element,
