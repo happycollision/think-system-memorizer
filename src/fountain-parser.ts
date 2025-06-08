@@ -98,7 +98,8 @@ const REGEX = {
 	BLANK_LINE: /^\s*$/
 };
 
-function isPotentialCharacter(line: string): boolean {
+function isPotentialCharacter(line: string, nextLine: string | null): boolean {
+	if (REGEX.BLANK_LINE.test(nextLine || '')) return false;
 	const trimmedLine = line.trim();
 	if (!trimmedLine || trimmedLine.length === 0) return false;
 	if (trimmedLine.startsWith('.') || trimmedLine.startsWith('>') || trimmedLine.endsWith('<'))
@@ -128,6 +129,11 @@ export class FountainParser {
 
 	private peek(): string | null {
 		return this.currentLineNum < this.lines.length ? this.lines[this.currentLineNum] : null;
+	}
+
+	private peekNext(): string | null {
+		const nextLineNum = this.currentLineNum + 1;
+		return nextLineNum < this.lines.length ? this.lines[nextLineNum] : null;
 	}
 
 	private advance(): string | null {
@@ -208,7 +214,6 @@ export class FountainParser {
 		if (REGEX.FORCED_SCENE_HEADING.test(line)) return false;
 		if (REGEX.SCENE_NUMBER_ONLY.test(line) && !inSceneContext) return false; // Scene number alone isn't action if not in scene
 		if (REGEX.TRANSITION.test(line.trim())) return false;
-		if (isPotentialCharacter(line)) return false;
 		if (REGEX.PARENTHETICAL.test(line)) return false;
 		if (REGEX.NOTE.test(line)) return false;
 		if (REGEX.LYRIC.test(line)) return false;
@@ -267,7 +272,7 @@ export class FountainParser {
 				match = line.match(REGEX.CENTERED_ACTION);
 				currentScene.elements.push({ type: 'action', text: match![1].trim(), isCentered: true });
 				this.lastElementType = 'action';
-			} else if (isPotentialCharacter(line)) {
+			} else if (isPotentialCharacter(line, this.peekNext())) {
 				currentScene.elements.push({ type: 'character', name: trimmedLine });
 				this.lastElementType = 'character';
 			} else if (
@@ -291,7 +296,7 @@ export class FountainParser {
 					!REGEX.SCENE_HEADING.test(line) &&
 					!REGEX.FORCED_SCENE_HEADING.test(line) &&
 					!REGEX.TRANSITION.test(trimmedLine) &&
-					!isPotentialCharacter(line) &&
+					!isPotentialCharacter(line, this.peekNext()) &&
 					!REGEX.NOTE.test(line) &&
 					!REGEX.LYRIC.test(line) &&
 					!REGEX.SECTION_MARKER.test(line) &&
@@ -309,7 +314,7 @@ export class FountainParser {
 						!REGEX.SCENE_HEADING.test(line) &&
 						!REGEX.FORCED_SCENE_HEADING.test(line) &&
 						!REGEX.TRANSITION.test(line.trim()) &&
-						!isPotentialCharacter(line) &&
+						!isPotentialCharacter(line, this.peekNext()) &&
 						!REGEX.NOTE.test(line) &&
 						!REGEX.LYRIC.test(line) &&
 						!REGEX.SECTION_MARKER.test(line) &&
