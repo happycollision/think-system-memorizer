@@ -88,16 +88,12 @@
 		margin: 20px auto;
 		padding: 20px;
 		line-height: 1.6;
-		background-color: #fdf6e3; /* Solarized light background */
-		color: #657b83; /* Solarized base text color */
-		border: 1px solid #eee8d5;
 	}
 
 	.title-page {
 		text-align: center;
 		margin-bottom: 40px;
 		padding-bottom: 20px;
-		border-bottom: 1px solid #eee8d5;
 	}
 
 	.title-page-item {
@@ -107,7 +103,6 @@
 	.title-key {
 		font-weight: bold;
 		display: block;
-		color: #268bd2; /* Solarized blue */
 	}
 
 	.title-value {
@@ -123,19 +118,15 @@
 		text-transform: uppercase;
 		margin-top: 20px;
 		margin-bottom: 15px;
-		background-color: #eee8d5; /* Slightly darker background for heading */
 		padding: 5px 10px;
-		color: #586e75; /* Darker text for heading */
 	}
 	.scene-number-token {
 		font-weight: bold;
 		margin-bottom: 10px;
-		color: #859900; /* Solarized green */
 	}
 	.scene-number-inline {
 		margin-left: 10px;
 		font-style: italic;
-		color: #b58900; /* Solarized yellow */
 	}
 
 	.action {
@@ -156,7 +147,6 @@
 		margin-top: 15px;
 		margin-bottom: 5px;
 		margin-left: 3.5in; /* Standard character indent */
-		color: #cb4b16; /* Solarized orange */
 	}
 
 	.dialogue {
@@ -169,7 +159,6 @@
 		margin-left: 3in; /* Standard parenthetical indent */
 		margin-right: 3in;
 		margin-bottom: 5px;
-		color: #6c71c4; /* Solarized violet */
 	}
 
 	.transition {
@@ -178,26 +167,20 @@
 		margin-top: 15px;
 		margin-bottom: 15px;
 		margin-right: 1in;
-		color: #d33682; /* Solarized magenta */
 	}
 
 	.note {
-		background-color: #fdf6e3;
-		border-left: 3px solid #2aa198; /* Solarized cyan */
 		padding: 10px;
 		margin: 10px 1.5in;
 		font-style: italic;
-		color: #93a1a1; /* Lighter text for notes */
 	}
 
 	.lyric {
 		margin-left: 2.5in;
 		margin-bottom: 5px;
 		font-style: italic;
-		color: #2aa198; /* Solarized cyan */
 	}
 	.error {
-		color: #dc322f; /* Solarized red */
 		font-weight: bold;
 	}
 
