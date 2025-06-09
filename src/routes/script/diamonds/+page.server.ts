@@ -11,9 +11,9 @@ export async function load() {
 		const fileContent = fs.readFileSync(filePath, 'utf-8');
 		const parser = new FountainParser();
 		screenplay = parser.parse(fileContent);
-	} catch (e: any) {
+	} catch (e) {
 		console.error('Error loading or parsing screenplay:', e);
-		error = e.message || 'Failed to load or parse screenplay.';
+		error = (e as Error | { message?: never })?.message || 'Failed to load or parse screenplay.';
 	}
 
 	return {
