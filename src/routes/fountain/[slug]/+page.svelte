@@ -4,7 +4,7 @@
 
 	export let data: PageData;
 
-	const { screenplay, error } = data;
+	const { screenplay } = data;
 	console.log('Screenplay data:', screenplay);
 </script>
 
@@ -13,9 +13,7 @@
 </svelte:head>
 
 <div class="screenplay-container">
-	{#if error}
-		<p class="error">Error loading screenplay: {error}</p>
-	{:else if screenplay}
+	{#if screenplay}
 		{#if Object.keys(screenplay.title_page).length > 0}
 			<div class="title-page">
 				{#each Object.entries(screenplay.title_page) as [key, values] (key)}
