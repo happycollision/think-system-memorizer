@@ -7,6 +7,20 @@
 	};
 
 	let { front, back, isFlipped, flipCard }: Props = $props();
+
+	let frontDiv: HTMLDivElement | null = null;
+
+	$effect(
+		/**
+		 * If the front card is quite long, we likely don't care much about the stuff
+		 * near the top, since that is not the actor's cue.
+		 */
+		function scrollFrontCardToBottom() {
+			if (frontDiv) {
+				frontDiv.scrollTop = frontDiv.scrollHeight;
+			}
+		}
+	);
 </script>
 
 <button
@@ -19,7 +33,7 @@
 	]}
 >
 	<span class="sr-only">(Click or tap to flip)</span>
-	<div class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900">
+	<div class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900" bind:this={frontDiv}>
 		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 		{@html front}
 	</div>
