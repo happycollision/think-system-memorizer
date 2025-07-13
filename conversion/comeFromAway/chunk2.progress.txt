@@ -1,29 +1,29 @@
 COME FROM AWAY
 Scene 1
-#1-~—Welcome To The Rock
+#1 - Welcome To The Rock
 A bodhran beats a fast rhythm.
 CLAUDE
 On the northeast tip of North America, on an island called Newfoundland, there’s an
 airport—it used to be one of the biggest airports in the world. And next to it, is a
 town called Gander.
 OZ
-- There’s a two-person police department.
-—_ BEULAH
--” An elementary school.
+There's a two-person police department.
+BEULAH
+An elementary school.
 BONNIE
 An SPCA.
 JANICE
-o A local TV station.
-, DOUG
+A local TV station.
+DOUG
 And a hockey rink.
-- CLAUDE
--_ It’s a small place—on a giant rock in the ocean. Everybody knows everybody else.
+CLAUDE
+It's a small place—on a giant rock in the ocean. Everybody knows everybody else.
 And everybody in this room has a story about how they started that day.
 WELCOME TO THE ROCK! IF YOU COME FROM AWAY
 YOU'LL PROBABLY UNDERSTAND ABOUT A HALF OF WHAT WE SAY
 THEY SAY NO MAN’S AN ISLAND, BUT AN ISLAND MAKES A MAN
-; CLAUDE, OZ, BEULAH, BONNIE
-- ‘SPECIALLY WHEN ONE COMES FROM ONE LIKE NEWFOUNDLAND
+CLAUDE, OZ, BEULAH, BONNIE
+'SPECIALLY WHEN ONE COMES FROM ONE LIKE NEWFOUNDLAND
 ALL
 WELCOME TO THE ROCK
 BEULAH
@@ -46,7 +46,6 @@ SINGER 11
 FISH AND CHIPS AND SHIPWRECKS
 WOMEN & SINGER 11
 THIS IS NEWFOUNDLAND
-_ -_ mm Me: Ma MW an dir din dm din dh ahai
 MEN
 WELCOME TO THE ROCK
 WOMEN
@@ -61,7 +60,7 @@ that time a day people are in a little bit of a rush to get to work and stuff, s
 normally I sit there and run my radar.
 OZ cues the cast to make a “WOOP-WOOP” noise together.
 And if they're speeding, I'll stop ‘em and write out a warning ticket. I'll write
-“STFD” ~—Slow The Fuck Down.
+"STFD" - Slow The Fuck Down.
 ACTOR 2
 WELCOME TO THE LAND WHERE THE WINTERS TRIED TO KILL US
 AND WE SAID
@@ -84,7 +83,7 @@ ALL
 AND WE SAID NO
 BONNIE
 That morning, I drop my kids off at school and head to the SPCA, where I’m greeted
-by my other kids ~—all barking and meowing for breakfast and a belly rub. Not that
+by my other kids - all barking and meowing for breakfast and a belly rub. Not that
 I'm complaining. I loves ‘em. But by the time feeding’s done, I’ve got to get back to
 pick up my human kids. So, I take just one second for myself. And I’m sitting in my
 car.
@@ -102,11 +101,11 @@ WHERE THE RIVER MEETS THE SEA
 HERE—ON THE EDGE OF THE ATLANTIC
 ON AN ISLAND IN BETWEEN
 THERE AND HERE
-  ~ 4 — COME FROM AWAY
+[[Page 4]]
 ALL
 (repeated hushed underneath)
-VM AN ISLANDER, I AM AN ISLANDER
-I’M AN ISLANDER, | AM AN ISLANDER...
+I'M AN ISLANDER, I AM AN ISLANDER
+I'M AN ISLANDER, I AM AN ISLANDER...
 OZ
 I’m running my radar when Bonnie comes by. She pulls up, and she’s wavin’ at me
 like mad, so I roll down my window and she says...
@@ -116,7 +115,6 @@ OZ
 Slow it down, Bonnie.
 BONNIE
 Jesus H.! Oz! Turn on your radio!
-~_~—— —MJ_—oaioinmrtenmnenea Dh @ & @& 2 O
 WHERE OUR STORIES START
 COMPANY
 JANICE
@@ -130,8 +128,8 @@ COMPANY
 CRYSTAL
 Five minutes ‘til my smoke break.
 COMPANY
-. EVERY SINGLE FLIGHT
-| DWIGHT
+EVERY SINGLE FLIGHT
+DWIGHT
 I'm off to work at the airport.
 MEN
 WELCOME TO THE FOG
@@ -170,7 +168,6 @@ Morning, Mr. Mayor.
 CLAUDE
 Dwight.
 DWIGHT
-ee ee ee ee ee ee ae ae ae a a
 Morning Claude. Garth. Crystal.
 Claude. Crystal. Dwight. Garth. Morning.
 DOUG
@@ -190,11 +187,10 @@ DWIGHT
 Are they tearing down the airport?
 CLAUDE
 Not today.
-pURLDUI:
 COME FROM AWAY
 DOUG
 (changing the subject)
-T heard Don Burton and his wife won the Super 7!
+I heard Don Burton and his wife won the Super 7!
 CLAUDE
 You don’t say.
 DWIGHT
@@ -235,11 +231,10 @@ DOUG
 There’s only supposed to be two air traffic controllers on, but instead there’s
 fourteen... Everyone’s heard and they all shows up without even being asked. We're
 told there'll be over 200 planes getting diverted across the country.
-~—_— oo —o—— or Oo lO a oe lo
-ComMeE FROM AWAY ~ 9
+~[[Page 9]]
 Scene 3
 #2 — Diverted
-Everyone becomes AIR TRAFFICE CONTROLLERS as the bodhran starts beating
+Everyone becomes AIR TRAFFIC CONTROLLERS as the bodhran starts beating
 slowly.
 CONTROL 12 (DOUG)
 Lufthansa four one four, this is Gander center —squawk code seven two tree five.
@@ -250,7 +245,7 @@ CONTROL CONTROL CONTROL CONTROL CONTROL
 Roger
 Lufthansa four Air India one Sabena five tree
 one four. Turn one tree, reduce niner,Gander— _ Delta one five
-right heading speed to one winds two one — Gander Air Lingus
+right heading speed to one winds two one — Gander Aer Lingus
 one niner zero zero five, you zerp degrees Center—Ishow two two
 degrees. You are are ordered to five naughts. you on the seven, the
 cleared to flight
@@ -331,17 +326,17 @@ CONTROL 9
 No, sir. You do not have a choice.
 CONTROL 10
 No, sir. This is not a drill.
-—-— 10 — COME FROM AWAY
+[[Page 10]]
 CONTROL 12
 Yes, sir. | understand you have VIP’s onboard. I'll see your VIP’s and raise you an
 international emergency. Land your plane now.
 Everyone becomes PILOTS. The bodhran builds in intensity.
-COME FROM AWAY - 11
+[[Page 11]]
 Scene 4
 Copy that, Gander Tower.
 This is Air France.
-Air Lingus
-Lufthanza
+Aer Lingus
+Lufthansa
 PILOT 6 (BEVERLEY)
 PILOT 5
 PILOT 1
@@ -443,5 +438,4 @@ The FLIGHT ATTENDANT turns back, as the PASSENGERS unfreeze.
 Tray tables up, please. We will be dimming the lights in the cabin. Pushing the
 light-bulb button will turn your reading light on; however, pushing the
 flight-attendant button will not turn your flight attendant on.
-_ aaa aa aaa
-CoME From AWAy —~ 13
+[[Page 13]]
