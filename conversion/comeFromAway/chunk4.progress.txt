@@ -1,869 +1,1101 @@
-Scene 12
+.Scene 12
+
 Meanwhile, in an airplane hold, BONNIE is searching with DOUG.
-DOUG
+
+DOUG  
 I said, you've got five minutes, Bonnie!
+
 In the background, a dog barks quietly.
-BONNIE
+
+BONNIE  
 There's hundreds of suitcases — I can hear barking — but I can't find them! They fast them before flying, so they're starving and they need water.
+
 OFFICER STEPHENSON enters.
-DWIGHT
-Sir? Sir! Oh, Doug. You got to get out of there. We're keeping all personnel out of the
-holds until —
-DOUG
-Sorry, Dwight. It’s the wife you know, Bonnie — from the SPCA — she’s feeding
-some animals inside. Nothing’s coming off.
+
+DWIGHT  
+Sir? Sir! Oh, Doug. You got to get out of there. We're keeping all personnel out of the holds until —
+
+DOUG  
+Sorry, Dwight. It’s the wife you know, Bonnie — from the SPCA — she’s feeding some animals inside. Nothing’s coming off.
+
 A cat meows.
-BONNIE
-I found a cat! His name is Lyle! There’s a pill taped to his carrier. Well I’m glad I got
-in here to GIVE IT TO HIM! It’s okay, Lyle.
-DWIGHT
+
+BONNIE  
+I found a cat! His name is Lyle! There’s a pill taped to his carrier. Well I’m glad I got in here to give it to him! It’s okay, Lyle.
+
+DWIGHT  
 Bonnie — I need you to get out of —
-DOUG
+
+DOUG  
 Bonnie, you got to move your arse!
-BONNIE
-Doug, I have found ONE cat! Do you think it's LYLE who's barking?! (to Lyle)
+
+BONNIE  
+Doug, I have found one cat! Do you think it's Lyle who's barking?!  
+(to Lyle)  
 Here's some crunchy, Lyle. I'll be back to give you your pill.
 
-DOUG
-(meekly underneath)
+DOUG  
+(meekly underneath)  
 No...
-DWIGHT
-Listen to me — FAA sent over new orders — we're treating all U.S. planes as bomb
-threats.
-DOUG
-Oh, god. Bonnie!
-[[Page 41]]
-BONNIE
-Doug... Doug!
-DOUG
-What? Bonnie? Bonnie, talk to me!
-BONNIE
-Doug! There are monkeys on this plane.
-[[Page 42]]
-Scene 13
-#6b — Wheels on the Bus
-Two bus drivers, MICKY and TERRY take a seat. They speak over their shoulders to
-their passengers, as they shift into gear and drive.
-TERRY (ACTOR 7)
-Climb aboard.
-MICKY (ACTOR 2)
-Hop right in! You look some tired.
-TERRY
-Nothing to worry about now.
-MICKY
-We'll get you where you're going.
-TERRY
-I’m guessing you've never heard of Gander before. Well, that’s it in the rearview
-mirror.
-MICKY
-You'll need to re-set your watches — we've got our own time zone here. Everything
-happens half an hour later in Newfoundland.
-TERRY
-You've all seen the airport — used to be the biggest airport in North America. Planes used to stop here to gas up from everywhere.
-MICKY
-Frank Sinatra. Albert Einstein.
-TERRY
-Muhammad Ali.
-BOTH
-The Queen.
-TERRY
-This is where the Beatles first set foot in North America!
-MICKY
-And my father once went sledding with Fidel Castro!
-TERRY
-Then they invented jet planes that can get across the ocean on one tank...
-[[Page 43]]
-MICKY
-So there's no need to refuel anymore...
-TERRY
-Leaving us with this giant airport.
-There’s talk lately about tearing it down.
-MICKY
-TERRY
-Lucky for you, we haven’t got around to it yet.
-THEY brake suddenly, screeching.
-MICKY
-Now there’s the reason I drives slow.
-TERRY
-That there in the middle of the road.
-MICKY & TERRY
-Yeah. That's a moose.
-EVERYONE faces forward, motionless.
-An incredibly long pause.
-Even longer than that.
-MICKY
-She’ll move when she’s good and ready.
-[[Page 44]]
-Scene 14
-#6c — Nick and Diane
-On one of the busses, NICK approaches DIANE.
-NICK
-Mind if I sit here? The drunk people from our plane are snoring back there...
-DIANE
-Oh hello, Nick! Please do... I thought we'd lost you.
-NICK
-No —I just needed to get an emergency prescription filled -my medication is in my
-suitcase. Nothing serious. Not like, “Ohmygod, he’s off his medication.” I'll stop
-talking now.
-DIANE
-It’s fine.
-NICK
-It's heart medication. I've got a slight arrhythmia — nothing serious. There you go
-—everything you need to know about me.
-DIANE
-Okay. I’m allergic to bananas and I have never had the chicken pox.
-THEY both smile.
-NICK
-Any news yet about your husband who was flying today?
-DIANE
-My —? No — do you mind if we just don't talk about that. I haven't been able to get
-to a phone.
-NICK
-I'm sorry. I’ll help you find a phone as soon as we get... wherever we're going.
-[[Page 45]]
-Scene 15
-#6d — Darkness and Trees Reprise
-GARTH
-Finally, out of the darkness, my bus arrives at the Salvation Army camp.
-ALL (Except GARTH & MUHUMUZA)
-KATI YA GIZA
-MUHUMUZA
-We pass through a large gate and the bus pulls to a stop. And through the windows
-— out there in the darkness — we see all these people coming out of the buildings.
-ALL (Except GARTH & MUHUMUZA)
-GHAFLA MWANGAZA
-GARTH
-Now we rarely use them, but everyone’s dusted off their Salvation Army uniforms
-to welcome these people.
-MUHUMUZA
-There are soldiers everywhere.
-PANDE ZOTE SISI
-ALL (Except GARTH & MUHUMUZA)
-MUHUMUZA
-The man at the front opens the door.
-GARTH
-I say, “Here you are. Out you go.” But he’s not moving. None of them are.
-ALL (Except GARTH & MUHUMUZA)
-GIZA NA MITI
-GARTH
-But then I notice his wife. Well, she’s clutching a bible. Now obviously I can’t read it,
-but it'll have the same number system ours does — so I ask to see it and I'm searching
-for something — and then in Philippians 4:6 — I give them their bible and I'm pointing
-and saying, look! Philippians 4:6 - Be anxious for nothing. Be anxious for nothing.
-GARTH & MUHUMUZA
-And that’s how we started speaking the same language.
-[[Page 46]]
-ALL
-KATI YA GIZA (OUT OF THE DARKNESS)
-GHAFLA MWANGAZA (SUDDENLY BRIGHTNESS)
-MA-BADILIKO (EVERYTHING CHANGES)
-GIZA NA MITI (DARKNESS AND TREES)
-KATI YA GIZA (OUT OF THE DARKNESS)
-MA-BADILIKO (SUDDENLY LIGHT)
-[[Page 47]]
-Scene 16
-BEULAH
-Welcome to Gander Academy — nicest hotel on the east coast, except for those with
-actual beds. My name’s Beulah. Washrooms are just down the hall. There’s food over
-there if you're hungry — and clothes, if you'd like to change. I’ll show you now
-where you’re going to sleep. Let us know if there’s anything else you need.
-EVERYONE surrounds BEULAH.
-KEVIN J
-So what really happened?
-Well... what's the last thing you heard?
-BEULAH
-KEVIN J
-There was an accident in New York.
-BEULAH
-Okay... I'm going to show you now to your rooms, and then if you want to come
-back, we've got two TV's set up in the cafeteria with the news on — so you can see
-what's actually happened for yourselves...
-#6e — Lead Us Out Of The Darkness
-JANICE
-I didn’t even think — they haven’t seen any of it yet.
-ALL
-LEAD US OUT OF THE DARKNESS
 
-HANNAH
+DWIGHT  
+Listen to me — FAA sent over new orders — we're treating all U.S. planes as bomb threats.
+
+DOUG  
+Oh, god. Bonnie!
+
+BONNIE  
+Doug... Doug!
+
+DOUG  
+What? Bonnie? Bonnie, talk to me!
+
+BONNIE  
+Doug! There are monkeys on this plane.
+
+.Scene 13
+
+# Song 6b: Wheels on the Bus
+
+Two bus drivers, MICKY and TERRY take a seat. They speak over their shoulders to their passengers, as they shift into gear and drive.
+
+TERRY (ACTOR 7)  
+Climb aboard.
+
+MICKY (ACTOR 2)  
+Hop right in! You look some tired.
+
+TERRY  
+Nothing to worry about now.
+
+MICKY  
+We'll get you where you're going.
+
+TERRY  
+I’m guessing you've never heard of Gander before. Well, that’s it in the rearview mirror.
+
+MICKY  
+You'll need to re-set your watches — we've got our own time zone here. Everything happens half an hour later in Newfoundland.
+
+TERRY  
+You've all seen the airport — used to be the biggest airport in North America. Planes used to stop here to gas up from everywhere.
+
+MICKY  
+Frank Sinatra. Albert Einstein.
+
+TERRY  
+Muhammad Ali.
+
+BOTH  
+The Queen.
+
+TERRY  
+This is where the Beatles first set foot in North America!
+
+MICKY  
+And my father once went sledding with Fidel Castro!
+
+TERRY  
+Then they invented jet planes that can get across the ocean on one tank...
+
+MICKY  
+So there's no need to refuel anymore...
+
+TERRY  
+Leaving us with this giant airport.  
+There’s talk lately about tearing it down.
+
+MICKY  
+Lucky for you, we haven’t got around to it yet.
+
+THEY brake suddenly, screeching.
+
+MICKY  
+Now there’s the reason I drives slow.
+
+TERRY  
+That there in the middle of the road.
+
+MICKY & TERRY  
+Yeah. That's a moose.
+
+EVERYONE faces forward, motionless.
+
+An incredibly long pause.
+
+Even longer than that.
+
+MICKY  
+She’ll move when she’s good and ready.
+
+.Scene 14
+
+# Song 6c: Nick and Diane
+
+On one of the busses, NICK approaches DIANE.
+
+NICK  
+Mind if I sit here? The drunk people from our plane are snoring back there...
+
+DIANE  
+Oh hello, Nick! Please do... I thought we'd lost you.
+
+NICK  
+No — I just needed to get an emergency prescription filled — my medication is in my suitcase. Nothing serious. Not like, “Ohmygod, he’s off his medication.” I'll stop talking now.
+
+DIANE  
+It’s fine.
+
+NICK  
+It's heart medication. I've got a slight arrhythmia — nothing serious. There you go — everything you need to know about me.
+
+DIANE  
+Okay. I’m allergic to bananas and I have never had the chicken pox.
+
+THEY both smile.
+
+NICK  
+Any news yet about your husband who was flying today?
+
+DIANE  
+My —? No — do you mind if we just don't talk about that. I haven't been able to get to a phone.
+
+NICK  
+I'm sorry. I’ll help you find a phone as soon as we get... wherever we're going.
+
+.Scene 15
+
+# Song 6d: Darkness and Trees Reprise
+
+GARTH  
+Finally, out of the darkness, my bus arrives at the Salvation Army camp.
+
+ALL (Except GARTH & MUHUMUZA)  
+~Kati ya giza
+
+MUHUMUZA  
+We pass through a large gate and the bus pulls to a stop. And through the windows — out there in the darkness — we see all these people coming out of the buildings.
+
+ALL (Except GARTH & MUHUMUZA)  
+~Ghafa mwangaza
+
+GARTH  
+Now we rarely use them, but everyone’s dusted off their Salvation Army uniforms to welcome these people.
+
+MUHUMUZA  
+There are soldiers everywhere.
+
+ALL (Except GARTH & MUHUMUZA)  
+~Pande zote sisi
+
+MUHUMUZA  
+The man at the front opens the door.
+
+GARTH  
+I say, “Here you are. Out you go.” But he’s not moving. None of them are.
+
+ALL (Except GARTH & MUHUMUZA)  
+~Giza na miti
+
+GARTH  
+But then I notice his wife. Well, she’s clutching a bible. Now obviously I can’t read it, but it'll have the same number system ours does — so I ask to see it and I'm searching for something — and then in Philippians 4:6 — I give them their bible and I'm pointing and saying, look! Philippians 4:6 - Be anxious for nothing. Be anxious for nothing.
+
+GARTH & MUHUMUZA  
+And that’s how we started speaking the same language.
+
+ALL  
+~Kati ya giza (out of the darkness)  
+~Ghafla mwangaza (suddenly brightness)  
+~Ma-badiliko (everything changes)  
+~Giza na miti (darkness and trees)  
+~Kati ya giza (out of the darkness)  
+~Ma-badiliko (suddenly light)
+
+.Scene 16
+
+BEULAH  
+Welcome to Gander Academy — nicest hotel on the east coast, except for those with actual beds. My name’s Beulah. Washrooms are just down the hall. There’s food over there if you're hungry — and clothes, if you'd like to change. I’ll show you now where you’re going to sleep. Let us know if there’s anything else you need.
+
+EVERYONE surrounds BEULAH.
+
+KEVIN J  
+So what really happened?
+
+BEULAH  
+Well... what's the last thing you heard?
+
+KEVIN J  
+There was an accident in New York.
+
+BEULAH  
+Okay... I'm going to show you now to your rooms, and then if you want to come back, we've got two TV's set up in the cafeteria with the news on — so you can see what's actually happened for yourselves...
+
+# Song 6e: Lead Us Out Of The Darkness
+
+JANICE  
+I didn’t even think — they haven’t seen any of it yet.
+
+ALL  
+~Lead us out of the darkness
+
+HANNAH  
 We're all staring at those images.
 
-BEULAH
-And we just stand helpless watching them.
-LEAD US SOMEWHERE TO SAFETY
-BOB
+BEULAH  
+And we just stand helpless watching them.  
+~Lead us somewhere to safety
+
+BOB  
 We barely know where we are, but we know it's not there.
 
-ALL
-LEAD US FAR FROM DISASTER
-[[Page 48]]
-BEVERLEY
-Charles Burlingame was the captain of Flight 77 that crashed into the Pentagon. I
-just saw him at a Pub in London. You can’t imagine. A pilot will fight to the ends of
-the earth to save his airplane. He just will.
-ALL
-LEAD US OUT OF THE NIGHT
-KEVIN T
+ALL  
+~Lead us far from disaster
+
+BEVERLEY  
+Charles Burlingame was the captain of Flight 77 that crashed into the Pentagon. I just saw him at a Pub in London. You can’t imagine. A pilot will fight to the ends of the earth to save his airplane. He just will.
+
+ALL  
+~Lead us out of the night
+
+KEVIN T  
 We watch those images for hours.
-THEY all stand and watch, unmoving. Suddenly THEY all react in shock.
+
+THEY all stand and watch, unmoving. Suddenly THEY all react in shock.  
 Until someone finally turns it off.
+
 CLAUDE holds up a remote control and turns off the TV.
-[[Page 49]]
-Scene 17
-CLAUDE
+
+.Scene 17
+
+CLAUDE  
 1:15am.
-ALL
-Wednesday.
-CLAUDE
+
+ALL  
+~Wednesday.
+
+CLAUDE  
 September 12th.
-#6f — Phoning Home
+
+# Song 6f: Phoning Home
+
 Crisis counselors are called to Gander Academy.
-BEULAH
-The plane people — they're exhausted — but they don't want to sleep. And we’re
-standing there, ready with all that food. But that’s not what they wanted. They
-wanted phones.
-JANICE
-1:45 am — Six phones are put on tables for the Plane People to use free of charge —
-lined up alongside the road by the NEW-tel building.
-BEULAH
+
+BEULAH  
+The plane people — they're exhausted — but they don't want to sleep. And we’re standing there, ready with all that food. But that’s not what they wanted. They wanted phones.
+
+JANICE  
+1:45 am — Six phones are put on tables for the Plane People to use free of charge — lined up alongside the road by the NEW-tel building.
+
+BEULAH  
 An hour later, they setup 20 more phones.
-CLAUDE
-An hour after that, there's 75 phones and computers with internet — all being used
-round the clock.
+
+CLAUDE  
+An hour after that, there's 75 phones and computers with internet — all being used round the clock.
+
 A number of PASSENGERS appear on telephones.
-PASSENGER 5
-HELLO? YES — IT'S ME.
-BOB
-DAD, I’M OKAY. IT’S OKAY.
-PASSENGER 2
-I’M CALLING FROM CANADA.
-KEVIN J
-SAFE AND SOUND ON THE GROUND HERE IN ICELAND
-KEVIN T
-NO, NEWFOUNDLAND
-[[Page 50]]
-BOB
-YEAH.
-ALL ON PHONES
-WE JUST SAW THE NEWS
-' HANNAH
-HAVE YOU HEARD YET FROM KEV?
-KEVIN J
-OR CELENA
-PASSENGER 5
-CALL MICAH
-PASSENGER 7
-AND LAUREN
-KEVIN T
-MY PARENTS
-PASSENGER 6
-MY AUNT
-DIANE
-IT’S DIANE. NO, I’M FINE.
+
+PASSENGER 5  
+~Hello? Yes — it's me.
+
+BOB  
+~Dad, I’m okay. It’s okay.
+
+PASSENGER 2  
+~I’m calling from Canada.
+
+KEVIN J  
+~Safe and sound on the ground here in Iceland
+
+KEVIN T  
+~No, Newfoundland
+
+BOB  
+~Yeah.
+
+ALL ON PHONES  
+~We just saw the news
+
+HANNAH  
+~Have you heard yet from Kev?
+
+KEVIN J  
+~Or Celena
+
+PASSENGER 5  
+~Call Micah
+
+PASSENGER 7  
+~And Lauren
+
+KEVIN T  
+~My parents
+
+PASSENGER 6  
+~My aunt
+
+DIANE  
+~It’s Diane. No, I’m fine.  
 Where’s David?
-SHE covers her mouth and starts crying.
+
+She covers her mouth and starts crying.  
 Oh, thank God.
-NICK
-Hello. It's Nick Marson — My plane's been diverted. Can you pass on to someone at
-head office that I'm fine? ...No, no — I just thought someone should know.
-[[Page 51]]
-Scene 18
-#7 — Costume Party
-JANICE
-3:45 am. Overnight, the community's population has gone from approximately 9,000
-to 16,000. I’m sure barely any of us have slept tonight. We’re hopeful that our visitors
-will be back in the air come morning.
-KEVIN T
-I woke up from a dream which I can’t quite remember, but there was this music in it
-that I’d heard somewhere before.
-KEVIN J
-I woke up from a dream that we were stuck in some backwater Canadian town and
-that my air mattress deflated.
-BOB
+
+NICK  
+Hello. It's Nick Marson — My plane's been diverted. Can you pass on to someone at head office that I'm fine? ...No, no — I just thought someone should know.
+
+.Scene 18
+
+# Song 7: Costume Party
+
+JANICE  
+3:45 am. Overnight, the community's population has gone from approximately 9,000 to 16,000. I’m sure barely any of us have slept tonight. We’re hopeful that our visitors will be back in the air come morning.
+
+KEVIN T  
+I woke up from a dream which I can’t quite remember, but there was this music in it that I’d heard somewhere before.
+
+KEVIN J  
+I woke up from a dream that we were stuck in some backwater Canadian town and that my air mattress deflated.
+
+BOB  
 I woke up to the smell of... freshly baked bread.
-ANNETTE
-4am in Newfoundland is breakfast time in Germany. And we’ve got a lot of
-passengers here from Frankfurt, so breakfast starts at 4am and we start scrambling
-eggs.
+
+ANNETTE  
+4am in Newfoundland is breakfast time in Germany. And we’ve got a lot of passengers here from Frankfurt, so breakfast starts at 4am and we start scrambling eggs.  
 Poached eggs, scrambled eggs, omelettes.
-BOB
-DIANE
+
+BOB  
 Fried Bologna.
-NICK
+
+DIANE  
 Something called “toutans.”
-KEVIN T .
+
+NICK  
 I saw a casserole dish I don’t think I could lift.
-BOB
+
+KEVIN T  
 They made enough food to feed 7,000 people. It’s like they never slept.
-BEULAH
-There’s this one man —from the Middle East — well, we don’t really know. Hasn’t
-said a word to a soul — and some of the other passengers seem a bit wary of him. So,
-it’s a little odd to find him poking around the kitchen.
-ALI
-(surprised)
+
+BEULAH  
+There’s this one man — from the Middle East — well, we don’t really know. Hasn’t said a word to a soul — and some of the other passengers seem a bit wary of him. So, it’s a little odd to find him poking around the kitchen.
+
+ALI  
+(surprised)  
 Hello.
 
-[[Page 52]]
-BEULAH
+BEULAH  
 Hello. Can I help you with something?
-ALI
+
+ALI  
 I would like to be of assistance with the food.
-BEULAH
+
+BEULAH  
 No. That’s not necessary.
-ALI
+
+ALI  
 But I am —
-BEULAH
+
+BEULAH  
 Really. You go out there and sit down.
-CLAUDE
-We've been going all night, but we can’t stop. I splash some cold water on my face
-and just keep going. We’ve got 7,000 scared and angry people who don’t want to be
-here. And they’re about to wake up.
-DIANE
-IN A CROWDED ROOM FILLED WITH STRANGERS SLEEPING
-KEVIN T
-AN AIRPLANE BLANKET AND PILLOW ON THE FLOOR
-DIANE
-THE SUN COMES STREAMING THROUGH THE WINDOW
-KEVIN T & DIANE
-AND I CAN’T SLEEP ANY MORE
-KEVIN J
-STARING AT THESE STRANGERS — WAKING UP AROUND ME
-HANNAH
-SITTING IN A CROWD OF PEOPLE WAITING FOR THE PHONE
-KEVIN J
-AND IN A TOWN THAT’S SUDDENLY DOUBLED POPULATION
-KEVIN T, HANNAH, DIANE, & KEVIN J
-I FEEL SO ALONE
-KEVIN J
-IT’S LIKE ANY OF US COULD HAVE DIED ON TUESDAY
-KEVIN T
-AND LIKE WE’RE DARED TO SEE THINGS DIFFERENTLY TODAY
-[[Page 53]]
-DIANE
-I'M FEELING DIFFERENT
-HANNAH
-DISTANT
-KEVIN J
-STRANGE
-KEVIN T
-WHO ARE THESE PEOPLE HERE?
-HANNAH
-WHERE AM I?
-DIANE
-KEVIN T, HANNAH, DIANE & KEVIN J
-WHO AM I IF I DON’T FEEL LIKE THE ME FROM YESTERDAY?
-NICK
-I wake up in a crowded room full of people sleeping on the floor and I see Diane -
-and ask, “Are we leaving?”
-DIANE
+
+CLAUDE  
+We've been going all night, but we can’t stop. I splash some cold water on my face and just keep going. We’ve got 7,000 scared and angry people who don’t want to be here. And they’re about to wake up.
+
+DIANE  
+~In a crowded room filled with strangers sleeping
+
+KEVIN T  
+~An airplane blanket and pillow on the floor
+
+DIANE  
+~The sun comes streaming through the window
+
+KEVIN T & DIANE  
+~And I can’t sleep any more
+
+KEVIN J  
+~Staring at these strangers — waking up around me
+
+HANNAH  
+~Sitting in a crowd of people waiting for the phone
+
+KEVIN J  
+~And in a town that’s suddenly doubled population
+
+KEVIN T, HANNAH, DIANE, & KEVIN J  
+~I feel so alone
+
+KEVIN J  
+~It’s like any of us could have died on Tuesday
+
+KEVIN T  
+~And like we’re dared to see things differently today
+
+DIANE  
+~I'm feeling different
+
+HANNAH  
+~Distant
+
+KEVIN J  
+~Strange
+
+KEVIN T  
+~Who are these people here?
+
+HANNAH  
+~Where am I?
+
+DIANE  
+KEVIN T, HANNAH, DIANE & KEVIN J  
+~Who am I if I don’t feel like the me from yesterday?
+
+NICK  
+I wake up in a crowded room full of people sleeping on the floor and I see Diane — and ask, “Are we leaving?”
+
+DIANE  
 Any time now.
-NICK
+
+NICK  
 Is your hair different? I mean... you look good. I like it.
-DIANE
+
+DIANE  
 Oh! Thank you. No shampoo for three days.
-KEVIN T
+
+KEVIN T  
 They start handing out clothes to anyone who needs them.
-KEVIN J
+
+KEVIN J  
 I haven't changed my clothes in 39 hours.
-BOB
-I wanted to burn my socks. .
-KEVIN J
-Kevin puts on this plaid thing. He says he’s To it
-“incognito” and that he’s going to
-“blend in with the natives,” but he just looks like a gay lumberjack.
-DIANE
-CHANGING INTO ANOTHER WOMAN'S DONATED SET OF CLOTHES
-KEVIN T
-LOOKING DIFFERENT — FEELING KIND OF DIFFERENT TOO
-[[Page 54]]
-DIANE
-1 CAN’T QUITE EXPLAIN
-KEVIN T
-BUT WHEN I WOKE
-DIANE
-WHEN DAVID WASN’T ON THAT PLANE
-KEVIN T & DIANE
-IT’S LIKE I CHANGED INTO SOMEBODY ELSE — BUT WHO?
-AND IT’S SOMEHOW LIKE WE’RE AT A COSTUME PARTY
-KEVIN T
-AND FOR A SECOND YOU ARE NOT YOURSELF
-DIANE
-YOU ARE NOT YOURSELF
-KEVIN T
-AND YOU LOOK AROUND AND BLINK YOUR EYES
-DIANE
-AND BARELY EVEN RECOGNIZE
-KEVIN T & DIANE
-THE PERSON IN THE MIRROR WHO’S TURNED INTO SOMEONE ELSE
-KEVIN J
-(On the phone)
-Hey Little Sister — Yeah, still here where they eat rainbows for breakfast. Are you
-taking care of mom? No. I’m just freaking out. I wish I was home. No, not LA.
-Brooklyn. Shut up. You're such a brat. No. I just needed to hear your voice.
+
+BOB  
+I wanted to burn my socks.
+
+KEVIN J  
+Kevin puts on this plaid thing. He says he’s “incognito” and that he’s going to “blend in with the natives,” but he just looks like a gay lumberjack.
+
+DIANE  
+~Changing into another woman's donated set of clothes
+
+KEVIN T  
+~Looking different — feeling kind of different too
+
+DIANE  
+~I can’t quite explain
+
+KEVIN T  
+~But when I woke
+
+DIANE  
+~When David wasn’t on that plane
+
+KEVIN T & DIANE  
+~It’s like I changed into somebody else — but who?  
+~And it’s somehow like we’re at a costume party
+
+KEVIN T  
+~And for a second you are not yourself
+
+DIANE  
+~You are not yourself
+
+KEVIN T  
+~And you look around and blink your eyes
+
+DIANE  
+~And barely even recognize
+
+KEVIN T & DIANE  
+~The person in the mirror who’s turned into someone else
+
+KEVIN J  
+(On the phone)  
+Hey Little Sister — Yeah, still here where they eat rainbows for breakfast. Are you taking care of mom? No. I’m just freaking out. I wish I was home. No, not LA. Brooklyn. Shut up. You're such a brat. No. I just needed to hear your voice.
+
 BEULAH approaches HANNAH.
-BEULAH
+
+BEULAH  
 Excuse me? Are you Hannah?
-HANNAH
-(expectant)
+
+HANNAH  
+(expectant)  
 Yes — that’s me.
-BEULAH
-My name’s Beulah. Someone told me your son’s a firefighter... Mine is too. Here in
-town. And I know Gander’s not New York, but... Is there anything I can do?
-[[Page 55]]
-HANNAH
+
+BEULAH  
+My name’s Beulah. Someone told me your son’s a firefighter... Mine is too. Here in town. And I know Gander’s not New York, but... Is there anything I can do?
+
+HANNAH  
 No. I just need to hear from my son.
-BEULAH
+
+BEULAH  
 I understand.
+
 BEULAH leaves.
-HANNAH
-PRAYING FOR A PHONE CALL
-KEVIN J
-PRAYING FOR A WAY HOME
-HANNAH & KEVIN J
-ASKING QUESTIONS
-KEVIN J
-ASKING CAN I GET BACK ON THAT GODFORSAKEN PLANE?
-HANNAH
-AND ALL AROUND ME, PEOPLE CHAT
-KEVIN J
-AND PEOPLE ACT LIKE NOTHING’S HAPPENED
-HANNAH & KEVIN J
-AND I NEED TO HEAR WE’RE GOING BACK BEFORE I GO INSANE
-BEVERLEY
-Good morning. I’m Captain Beverly Bass. Now I know this is going to be hard to
-hear, but the American airspace remains closed. I can’t tell y’all how long we'll be on
-the ground. We are going to be here for some time.
+
+HANNAH  
+~Praying for a phone call
+
+KEVIN J  
+~Praying for a way home
+
+HANNAH & KEVIN J  
+~Asking questions
+
+KEVIN J  
+~Asking can I get back on that godforsaken plane?
+
+HANNAH  
+~And all around me, people chat
+
+KEVIN J  
+~And people act like nothing’s happened
+
+HANNAH & KEVIN J  
+~And I need to hear we’re going back before I go insane
+
+BEVERLEY  
+Good morning. I’m Captain Beverly Bass. Now I know this is going to be hard to hear, but the American airspace remains closed. I can’t tell y’all how long we'll be on the ground. We are going to be here for some time.
+
 PASSENGERS react in shock.
-DIANE
-HERE FOR SOME TIME
-KEVIN J
-HERE FOR SOME TIME
-HANNAH
-HERE FOR TOO LONG
-KEVIN T
-HERE FOR HOW LONG
-[[Page 56]]
-KEVIN J, ACTORS 10, 12
-WHEN WILL WE KNOW
-ACTORS 4, 5, 6 & 7, 11
-WHEN WILL WE KNOW
-ALL
-HOW MUCH LONGER?
-HANNAH
+
+DIANE  
+~Here for some time
+
+KEVIN J  
+~Here for some time
+
+HANNAH  
+~Here for too long
+
+KEVIN T  
+~Here for how long
+
+KEVIN J, ACTORS 10, 12  
+~When will we know
+
+ACTORS 4, 5, 6 & 7, 11  
+~When will we know
+
+ALL  
+~How much longer?
+
+HANNAH  
 Beulah, wait. Can you help me find a Catholic Church?
-DIANE
+
+DIANE  
 I can’t sit here. I need to get some air.
-KEVIN T
+
+KEVIN T  
 Let’s go see where we are. It'll do you good.
-KEVIN J
+
+KEVIN J  
 What'll do me good is to lie down and pretend this isn’t happening.
-KEVIN T
+
+KEVIN T  
 Suit yourself.
-HANNAH & KEVIN J
-AND IT’S SOMEHOW LIKE WE’RE STUCK HERE
-AT A MESSED UP COSTUME PARTY
-DIANE & KEVIN T
-AND THERE’S NOTHING HERE FAMILIAR
-HANNAH & KEVIN J
-FAR AWAY FROM THOSE YOU CARE FOR
-KEVIN T, KEVIN J, HANNAH & DIANE
-ON AN ISOLATED ISLAND IN BETWEEN THERE AND HERE
-ALL OTHERS
-THERE AND HERE
-[[Page 57]]
 
-Scene 19
-JANICE
-By the middle of the day on Wednesday, I’m coordinating menus for 7,000 people.
-(starts reporting)
-Ladies and Gentlemen, the Rotary Club is looking for some fish dishes. And we have
-a bunch of German passengers down at the Moose Club who'd like to try elk... No,
-sorry. That's the Elk's Club that's looking for moose. Sorry, I'm new.
-BEULAH
-Well if you won't try cod tongue, we got cheeseburgers - or we got hot dogs too —
-and there's tuna casserole over there — or I could make you up a bologna sandwich?
+HANNAH & KEVIN J  
+~And it’s somehow like we’re stuck here  
+~At a messed up costume party
 
-KEVIN J
-(to KEVIN T)
+DIANE & KEVIN T  
+~And there’s nothing here familiar
+
+HANNAH & KEVIN J  
+~Far away from those you care for
+
+KEVIN T, KEVIN J, HANNAH & DIANE  
+~On an isolated island in between there and here
+
+ALL OTHERS  
+~There and here
+
+.Scene 19
+
+JANICE  
+By the middle of the day on Wednesday, I’m coordinating menus for 7,000 people.  
+(starts reporting)  
+Ladies and Gentlemen, the Rotary Club is looking for some fish dishes. And we have a bunch of German passengers down at the Moose Club who'd like to try elk... No, sorry. That's the Elk's Club that's looking for moose. Sorry, I'm new.
+
+BEULAH  
+Well if you won't try cod tongue, we got cheeseburgers - or we got hot dogs too — and there's tuna casserole over there — or I could make you up a bologna sandwich?
+
+KEVIN J  
+(to KEVIN T)  
 Are there vegetables in Canada?
-KEVIN T
-(to BEULAH)
-We're vegetarians.
-KEVIN J
-I converted him.
-KEVIN T
-Anyway, I notice this other passenger who hasn’t eaten anything at all—
-KEVIN J
-Kevin's suddenly in everyone else’s business.
-KEVIN T
-So, I notify our hosts.
-RABBI (ACTOR 7)
-No. No, thank you. Please. I’m fine.
-BEULAH
-Turns out he’s an Orthodox Jewish Rabbi and he only eats Kosher food. Now, we
-have all kinds of people living in Newfoundland: Protestants, Baptists, Catholics,
-Salvation Army-ists — but not a lot of Jewish people.
-RABBI
-The next thing I know, I’m set up in the faculty lounge, making a Kosher kitchen for
-any other Jewish passengers — but also for two Hindu women, some Muslims.
-KEVIN T
-And a couple vegetarians.
-[[Page 58]]
-Scene 20
-ANNETTE
-One of the pilots for Virgin Atlantic — Captain Bristol —
-#7a — Captain Bristol
-He's a very strong leader. He's good to his passengers. And he's handsome too.
-Anyway, he takes me aside and he says...
-CAPTAIN BRISTOL (ACTOR 10)
-(over the top romantic)
-I've been watching you — you're doing beautiful work. I'd like you to be my personal
-liaison and... work closely with me, helping to handle anything I might need.
-BEULAH
-Annette — what’ya on about? He did not say that.
-ANNETTE
-Well, he said something like that.
-ALI approaches BEULAH, holding a bowl.
-ALI
-Miss Beulah? Hello.
-BEULAH
-(caught off guard)
-Ah! ...Hello, Ali.
-ALI
-May I ask? This food. What is it?
-BEULAH
-(simply)
-That's called Cod au Gratin.
-; BEULAH
-Fish with cheese. It’s fish. With cheese.
-SHE walks away.
-ALI
-(calling after her)
-...Are you sure I cannot help you with the food?
-[[Page 59]]
-CLAUDE
-People start taking passengers back to their houses to get cleaned up and then
-inviting them to dinner — and then putting them up in their guest rooms.
-MARTHA (ACTOR 5)
-Look, Misses. I’m just 20 weeks along and my Terry’s already set up the nursery, you
-and your little one will be much more comfortable there.
-BRITNEY (ACTOR 3)
-Thank you for shopping at Wal-Mart. Would you like to come back to my house for
-a shower?
-BOB
-People are saying ‘we want you to come to our house’. And I think, what is up with
-this? I mean, are they charging for these “free” showers? Or are they gonna go all
-Norman Bates... Anyway, I wasn’t falling for it. But finally, I’m invited back to the
-Mayor of Appleton’s house — that sounds fancy, but it’s not~there’s a mayor for
-every town of a thousand people in Newfoundland. There’s the Mayor of Gander
-(he points to CLAUDE).
-There’s the Mayor of Lewisporte
-(CLAUDE puts on glasses).
-There’s the Mayor of Gambo
-(CLAUDE puts on a moustache).
-Anyway, I’m staying with the Mayor of Appleton.
-(CLAUDE puts on a hat, becoming DERM.)
-DERM
-Come on in, son. The Irish Whiskey’s in the bar downstairs.
-BOB
-His wife shows me where my bedroom is and where the shower is and through it
-all, l keep thinking — where am I going to leave my wallet? Someone is gonna steal
-my wallet.
-KEVIN J
-Someone says there’s a way out of here. They say there might be a boat —
-KEVIN T
-Kevin, we’re on the other side of the continent. We’re not taking a boat.
-KEVIN J
-So I stop an officer and ask him, “How do I get back home?”
-BOB
-Yeah, how do we get out of here?
-[[Page 60]]
-OZ
-(quickly)
-Well, you take a taxi to The Goose —there’s a bus there to Port Aux Basque, leaves
-once a day, that’s about six hours. Once you're there, you take the ferry across the
-Gulf, right? That's eight hours or so, then you catch another bus, not sure how often
-they leave, but it’s another eight hours to Yarmouth where you can get another ferry
-to the US Border, that's another four hours or so — and from Bar Harbor you should
-be able to grab a Greyhound to wherever you need to go.
-It’s about 2 or 3 days travel. But it’s sure a nice view.
-[[Page 61]]
-Scene 21
-BEVERLEY
-I don’t leave the hotel. I wait by the phone. Wait for someone to tell me we can fly
-again. Planes aren’t made to just sit on the tarmac— planes are made to be in
-constant motion. They arrive, you switch crew, you switch passengers, you empty
-the honey buckets, and then the plane keeps going. When they sit still for too long,
-well, it’s not good for ‘em. They start to break down.
-#7b — It's Sure a Nice View
-DIANE
-Our pilot says we’re not leaving anytime soon, and Nick says...
-NICK
-I might get a picture or two before we go.
-KEVIN T
-I finally convince Kevin to go for a walk.
-KEVIN J
-There’s four of us to begin with. This Texan woman and this English guy with a
-disposable camera and a huge stick up his ass.
-KEVIN T
-They’re nice enough...
-(pointing at KEVIN)
-Kevin and | are a little wary of telling people we’re together.
-KEVIN J
-I mean you just don’t know how redneck people can be.
-DIANE
-(happily)
-This nice gay couple come along with us.
-NICK
-We kind of make small talk. They ask me what I do.
-KEVIN J
-He works for this oil company in England and she was there visiting with her son.
-NICK
-Wait... You've got a son?
-[[Page 62]]
-DIANE
-Yes. David. The one who was flying on Tuesday.
-KEVIN J
-She goes on and on about England and how she didn’t get to travel when she was
-married.
-NICK
-Wait... You're divorced?
-DIANE
-Yes. For a long time now.
-KEVIN T
-(to Nick)
-What about you?
-NICK
-No. Not divorced, I mean... Not that I’m married! I’m neither. I travel a lot for
-work —
-KEVIN T
-Kevin and I work for an environmental energy company. It’s my company — and
-Kevin’s my secretary.
-KEVIN J
-I’m his secretary.
-KEVIN T
-Anyway — we do a lot of green work, so we generally hate people who work in oil.
-NICK
-I just got the feeling that they hated me.
-DIANE
-Then they want to go into some old building that looks like a shed. Now, they'd
-heard it was a bar, but I wasn’t going into a bar in the middle of the afternoon with
-three men I had just met.
-NICK
-And I think, I'll stay with Diane, you know, instead of the gay men who hate me.
-THEY exit in opposite directions.
-[[Page 63]]
-Scene 22
-#7c — World's Largest Refrigerator
-In an airplane hangar, BONNIE is feeding animals, as DOUG gets increasingly
-frustrated.
-BONNIE
-Doug's helping me feed the animals — and after security checks each plane - slow as
-cold molasses — we finally find eight dogs, nine cats — one of whom's epileptic — not
-to mention two rare Bonobo chimpanzees! And the female Bonobo is pregnant.
-We've got to get them off these planes!
-(into the phone)
-Hello? Is the Mayor there? It’s Bonnie Harris again. Yes, I'll hold.
-DOUG
-FAA was pretty clear about “No rare chimpanzees on Canadian soil.”
-BONNIE hands a bucket to DOUG.
-Doug. Take that.
 
-BONNIE
+KEVIN T  
+(to BEULAH)  
+We're vegetarians.
+
+KEVIN J  
+I converted him.
+
+KEVIN T  
+Anyway, I notice this other passenger who hasn’t eaten anything at all —
+
+KEVIN J  
+Kevin's suddenly in everyone else’s business.
+
+KEVIN T  
+So, I notify our hosts.
+
+RABBI (ACTOR 7)  
+No. No, thank you. Please. I’m fine.
+
+BEULAH  
+Turns out he’s an Orthodox Jewish Rabbi and he only eats Kosher food. Now, we have all kinds of people living in Newfoundland: Protestants, Baptists, Catholics, Salvation Army-ists — but not a lot of Jewish people.
+
+RABBI  
+The next thing I know, I’m set up in the faculty lounge, making a Kosher kitchen for any other Jewish passengers — but also for two Hindu women, some Muslims.
+
+KEVIN T  
+And a couple vegetarians.
+
+.Scene 20
+
+ANNETTE  
+One of the pilots for Virgin Atlantic — Captain Bristol —
+
+# Song 7a: Captain Bristol
+
+He's a very strong leader. He's good to his passengers. And he's handsome too.  
+Anyway, he takes me aside and he says...
+
+CAPTAIN BRISTOL (ACTOR 10)  
+(over the top romantic)  
+I've been watching you — you're doing beautiful work. I'd like you to be my personal liaison and... work closely with me, helping to handle anything I might need.
+
+BEULAH  
+Annette — what’ya on about? He did not say that.
+
+ANNETTE  
+Well, he said something like that.
+
+ALI approaches BEULAH, holding a bowl.
+
+ALI  
+Miss Beulah? Hello.
+
+BEULAH  
+(caught off guard)  
+Ah! ...Hello, Ali.
+
+ALI  
+May I ask? This food. What is it?
+
+BEULAH  
+(simply)  
+That's called Cod au Gratin.  
+Fish with cheese. It’s fish. With cheese.
+
+She walks away.
+
+ALI  
+(calling after her)  
+...Are you sure I cannot help you with the food?
+
+CLAUDE  
+People start taking passengers back to their houses to get cleaned up and then inviting them to dinner — and then putting them up in their guest rooms.
+
+MARTHA (ACTOR 5)  
+Look, Misses. I’m just 20 weeks along and my Terry’s already set up the nursery, you and your little one will be much more comfortable there.
+
+BRITNEY (ACTOR 3)  
+Thank you for shopping at Wal-Mart. Would you like to come back to my house for a shower?
+
+BOB  
+People are saying ‘we want you to come to our house’. And I think, what is up with this? I mean, are they charging for these “free” showers? Or are they gonna go all Norman Bates... Anyway, I wasn’t falling for it. But finally, I’m invited back to the Mayor of Appleton’s house — that sounds fancy, but it’s not — there’s a mayor for every town of a thousand people in Newfoundland. There’s the Mayor of Gander (he points to CLAUDE).  
+There’s the Mayor of Lewisporte (CLAUDE puts on glasses).  
+There’s the Mayor of Gambo (CLAUDE puts on a moustache).  
+Anyway, I’m staying with the Mayor of Appleton.  
+(CLAUDE puts on a hat, becoming DERM.)
+
+DERM  
+Come on in, son. The Irish Whiskey’s in the bar downstairs.
+
+BOB  
+His wife shows me where my bedroom is and where the shower is and through it all, I keep thinking — where am I going to leave my wallet? Someone is gonna steal my wallet.
+
+KEVIN J  
+Someone says there’s a way out of here. They say there might be a boat —
+
+KEVIN T  
+Kevin, we’re on the other side of the continent. We’re not taking a boat.
+
+KEVIN J  
+So I stop an officer and ask him, “How do I get back home?”
+
+BOB  
+Yeah, how do we get out of here?
+
+OZ  
+(quickly)  
+Well, you take a taxi to The Goose — there’s a bus there to Port Aux Basque, leaves once a day, that’s about six hours. Once you're there, you take the ferry across the Gulf, right? That's eight hours or so, then you catch another bus, not sure how often they leave, but it’s another eight hours to Yarmouth where you can get another ferry to the US Border, that's another four hours or so — and from Bar Harbor you should be able to grab a Greyhound to wherever you need to go.  
+It’s about 2 or 3 days travel. But it’s sure a nice view.
+
+.Scene 21
+
+BEVERLEY  
+I don’t leave the hotel. I wait by the phone. Wait for someone to tell me we can fly again. Planes aren’t made to just sit on the tarmac — planes are made to be in constant motion. They arrive, you switch crew, you switch passengers, you empty the honey buckets, and then the plane keeps going. When they sit still for too long, well, it’s not good for ‘em. They start to break down.
+
+# Song 7b: It's Sure a Nice View
+
+DIANE  
+Our pilot says we’re not leaving anytime soon, and Nick says...
+
+NICK  
+I might get a picture or two before we go.
+
+KEVIN T  
+I finally convince Kevin to go for a walk.
+
+KEVIN J  
+There’s four of us to begin with. This Texan woman and this English guy with a disposable camera and a huge stick up his ass.
+
+KEVIN T  
+They’re nice enough...  
+(pointing at KEVIN)  
+Kevin and I are a little wary of telling people we’re together.
+
+KEVIN J  
+I mean you just don’t know how redneck people can be.
+
+DIANE  
+(happily)  
+This nice gay couple come along with us.
+
+NICK  
+We kind of make small talk. They ask me what I do.
+
+KEVIN J  
+He works for this oil company in England and she was there visiting with her son.
+
+NICK  
+Wait... You've got a son?
+
+DIANE  
+Yes. David. The one who was flying on Tuesday.
+
+KEVIN J  
+She goes on and on about England and how she didn’t get to travel when she was married.
+
+NICK  
+Wait... You're divorced?
+
+DIANE  
+Yes. For a long time now.
+
+KEVIN T  
+(to Nick)  
+What about you?
+
+NICK  
+No. Not divorced, I mean... Not that I’m married! I’m neither. I travel a lot for work —
+
+KEVIN T  
+Kevin and I work for an environmental energy company. It’s my company — and Kevin’s my secretary.
+
+KEVIN J  
+I’m his secretary.
+
+KEVIN T  
+Anyway — we do a lot of green work, so we generally hate people who work in oil.
+
+NICK  
+I just got the feeling that they hated me.
+
+DIANE  
+Then they want to go into some old building that looks like a shed. Now, they'd heard it was a bar, but I wasn’t going into a bar in the middle of the afternoon with three men I had just met.
+
+NICK  
+And I think, I'll stay with Diane, you know, instead of the gay men who hate me.
+
+THEY exit in opposite directions.
+
+.Scene 22
+
+# Song 7c: World's Largest Refrigerator
+
+In an airplane hangar, BONNIE is feeding animals, as DOUG gets increasingly frustrated.
+
+BONNIE  
+Doug's helping me feed the animals — and after security checks each plane — slow as cold molasses — we finally find eight dogs, nine cats — one of whom's epileptic — not to mention two rare Bonobo chimpanzees! And the female Bonobo is pregnant.  
+We've got to get them off these planes!  
+(into the phone)  
+Hello? Is the Mayor there? It’s Bonnie Harris again. Yes, I'll hold.
+
+DOUG  
+FAA was pretty clear about “No rare chimpanzees on Canadian soil.”
+
+BONNIE hands a bucket to DOUG.
+
+BONNIE  
 What is that?
 
-DOUG
-It’s rare chimpanzee shit. What do you think it is?
-(into the phone)
+DOUG  
+It’s rare chimpanzee shit. What do you think it is?  
+(into the phone)  
 Yes? The mayor! Yes! I'll hold!
 
-DOUG
-(finally losing his patience)
+DOUG  
+(finally losing his patience)  
 I've got to get back to Air Traffic Control!
 
-BONNIE
+BONNIE  
 Doug — look up! Do you see anything flying?
-DOUG
+
+DOUG  
 I can't see across the friggin' Atlantic!
-BONNIE
+
+BONNIE  
 Just get me more litter from the truck!
-DOUG
+
+DOUG  
 Get your own litter!
-[[Page 64]]
+
 DOUG exits.
-BONNIE
-Fine then! Goodbye!
-(into the phone)
+
+BONNIE  
+Fine then! Goodbye!  
+(into the phone)  
 No! Not you! Hello? Hello?!
-[[Page 65]]
-Scene 23
+
+.Scene 23
+
 CLAUDE enters, as the STAFF fires a barrage of questions at him.
-STAFF 1/8 STAFF 10/12 STAFF 2/7 STAFF 4/9 STAFF 6
-Claude Excuse me. Claude Mister Mayor! Claude
-STAFF 8
-Health Canada says all this food needs refrigeration, but we’ve got nowhere to store
-it — none of the shelters are equipped for this!
-STAFF 1
+
+STAFF 1/8  
+Claude
+
+STAFF 10/12  
+Excuse me. Claude
+
+STAFF 2/7  
+Mister Mayor! Claude
+
+STAFF 4/9  
+Claude
+
+STAFF 6  
+Health Canada says all this food needs refrigeration, but we’ve got nowhere to store it — none of the shelters are equipped for this!
+
+STAFF 1  
 We're getting three more truckloads of food tonight —
-STAFF 8
+
+STAFF 8  
 Stop them! We've got nowhere to put it!
-STAFF 7
+
+STAFF 7  
 Well, then what do we feed people?
-STAFF 6
+
+STAFF 6  
 You need to talk to Health Canada
 
-STAFF 8
+STAFF 8  
 Well cancel the effing food too!
 
-STAFF 12
+STAFF 12  
 Don't look at me! It's not my decision!
 
-STAFF 4
+STAFF 4  
 Now there's five vats of chilli. My uncle has a truck
 
-STAFF 1
+STAFF 1  
 That Rogers girl does NOT know what she's doing.
 
-STAFF 2
+STAFF 2  
 Until further notice? What does that mean?
-STAFF 12
-We also need that girl at Rogers to announce that rotary, hockey, boys and girls club
-—everything’s cancelled until further notice.
-CLAUDE
+
+STAFF 12  
+We also need that girl at Rogers to announce that rotary, hockey, boys and girls club — everything’s cancelled until further notice.
+
+CLAUDE  
 Hold on. Did you just say that Hockey's cancelled?
+
 A pause.
-JANICE
-3:47pm — The town is asking all bulk food deliveries be taken to the Gander
-community center hockey rink. Since hockey’s cancelled, the Mayor is now calling
-it...
-CLAUDE
+
+JANICE  
+3:47pm — The town is asking all bulk food deliveries be taken to the Gander community center hockey rink. Since hockey’s cancelled, the Mayor is now calling it...
+
+CLAUDE  
 The world’s largest walk-in refrigerator!
-[[Page 66]]
-Scene 24
-#7d — Bar and Grills
+
+.Scene 24
+
+# Song 7d: Bar and Grills
+
 In Gambo, KEVIN T and KEVIN J are at the bar.
-KEVIN T
-It’s hot outside, so we stay in the bar, and make small talk with Matty, the owner,
-and his wife, Brenda—
-KEVIN J
-We're not sure how much to say — you just don't know where the red states are ina
-foreign country, right?
-KEVIN T
-But we'd been drinking all afternoon and | accidentally say something like, Kevin
-and I have been together for almost five years...
-KEVIN J
-(quickly)
+
+KEVIN T  
+It’s hot outside, so we stay in the bar, and make small talk with Matty, the owner, and his wife, Brenda—
+
+KEVIN J  
+We're not sure how much to say — you just don't know where the red states are in a foreign country, right?
+
+KEVIN T  
+But we'd been drinking all afternoon and I accidentally say something like, Kevin and I have been together for almost five years...
+
+KEVIN J  
+(quickly)  
 In business. We've been together in business. I’m his secretary — His secretary!
+
 The music stops as EVERYONE looks at them.
-KEVIN T
+
+KEVIN T  
 And it feels like the entire bar goes silent —
-KEVIN J
+
+KEVIN J  
 And I’m like... Oh, god.
-KEVIN T
+
+KEVIN T  
 And then Matty says...
-MATTY (ACTOR 7)
+
+MATTY (ACTOR 7)  
 You're gay?
-KEVIN J
-And I’m about to pass out.
+
+KEVIN J  
+And I’m about to pass out.  
 But then Matty says...
-KEVIN T
+
+KEVIN T  
 Well, praise be to God. My daughter’s gay!
-MATTY
-KEVIN T
+
+MATTY  
 And then Brenda says...
-[[Page 67]]
-BRENDA (ACTOR 1)
-Sure, my sister’s gay —and the woman across the road just ran off with her best
-friend!
-KEVIN T
+
+BRENDA (ACTOR 1)  
+Sure, my sister’s gay — and the woman across the road just ran off with her best friend!
+
+KEVIN T  
 And then Brenda’s brother says...
-BRENDA’S BROTHER (ACTOR 11)
+
+BRENDA’S BROTHER (ACTOR 11)  
 Our uncle is 68 years old and he just told us he’s a bi-sexual.
-KEVIN T
-We somehow ended up in the gayest town in Newfoundland. And Kevin and I are
-looking at each other like —I think I even say, “There must be something in the
-water.” And then Brenda’s brother says...
-BRENDA’S BROTHER
+
+KEVIN T  
+We somehow ended up in the gayest town in Newfoundland. And Kevin and I are looking at each other like — I think I even say, “There must be something in the water.” And then Brenda’s brother says...
+
+BRENDA’S BROTHER  
 That's why I only drink the beer.
-[[Page 68]]
-Scene 25
-BOB
-Watching the news all day, some of us are starting to lose it. So these people here,
-they decide to have a big cook out for the whole community —just trying to get our
-minds off of everything. And Derm, the Mayor of Appleton, says to me...
-DERM
+
+.Scene 25
+
+BOB  
+Watching the news all day, some of us are starting to lose it. So these people here, they decide to have a big cook out for the whole community — just trying to get our minds off of everything. And Derm, the Mayor of Appleton, says to me...
+
+DERM  
 Right, m’son, do me a favor and start to round up some grills.
-BOB
+
+BOB  
 Round up some grills?
-DERM
+
+DERM  
 Yeah, just go to people’s yards and take their grills.
+
 A pause.
-BOB
+
+BOB  
 ... Take their grills? Someone’s gonna shoot me.
-DERM
+
+DERM  
 No, no, no, no, no... Just go to people’s yards and grab their grill.
+
 Another pause.
-BOB
-(to audience)
+
+BOB  
+(to audience)  
 So I'm going from yard to yard and I keep thinking, someone is going to shoot me in the back.
-MALE TOWNSPERSON (ACTOR 12)
+
+MALE TOWNSPERSON (ACTOR 12)  
 Hello there!
+
 BOB freezes.
+
 Are you taking my barbecue?
+
+BOB  
 ... This is your barbecue?
-MALE TOWNSPERSON
-BOB
-MALE TOWNSPERSON
+
+MALE TOWNSPERSON  
 Yeah, buddy.
-BOB
-Listen, [am so sorry —
-[[Page 69]]
-MALE TOWNSPERSON
+
+BOB  
+Listen, I am so sorry —
+
+MALE TOWNSPERSON  
 The wife’s got the kettle on, if you want a cuppa.
-BOB
-I get offered a cup a tea in every single backyard — and most of them offer to help
-me steal their own barbecues. We bring them all over to the community center — no
-names on them. I don’t know how they ever get “em back. But that’s how we have
-a big cookout — completely free. After that I stop worrying so much about my
-wallet.
-JANICE
+
+BOB  
+I get offered a cup a tea in every single backyard — and most of them offer to help me steal their own barbecues. We bring them all over to the community center — no names on them. I don’t know how they ever get ‘em back. But that’s how we have a big cookout — completely free. After that I stop worrying so much about my wallet.
+
+JANICE  
 8:45 am.
-ALL
-Thursday.
-JANICE
+
+ALL  
+~Thursday.
+
+JANICE  
 September 13th. We've got a... situation down at Gander Academy.
+
 At the Academy, BEULAH and ANNETTE address everyone.
-BEULAH
-Ladies and Gentlemen. We have an indelicate request. We need volunteers to help
-clean the bathrooms. As you can imagine, with 700 adults in a primary school...
-Health Canada needs us to clean them every hour and a half and we just don’t
-have the people. So, we're asking for your help.
+
+BEULAH  
+Ladies and Gentlemen. We have an indelicate request. We need volunteers to help clean the bathrooms. As you can imagine, with 700 adults in a primary school... Health Canada needs us to clean them every hour and a half and we just don’t have the people. So, we're asking for your help.
+
 A pause as EVERYONE looks away.
-ANNETTE
-But.no one volunteers.
-BEULAH
+
+ANNETTE  
+But no one volunteers.
+
+BEULAH  
 No one comes. And we’re run off our feet with everything else. And then—
-#7e — Cardiologists
-ANNETTE
+
+# Song 7e: Cardiologists
+
+ANNETTE  
 Sweet Jesus in the garden.
+
 This line of men comes walking down the hall.
-- Six men in doctor coats walk towards her in a slow motion burlesque. ANNETTE’s
-jaw drops.
-The top six cardiologists from all over the world. On their way to a conference.
-Highly qualified cardiologists.
+
+Six men in doctor coats walk towards her in a slow motion burlesque. ANNETTE’s jaw drops.
+
+The top six cardiologists from all over the world. On their way to a conference.  
+Highly qualified cardiologists.  
 And they know about the importance of cleanliness.
-[[Page 70]]
-CARDIOLOGIST (ACTOR 7)
+
+CARDIOLOGIST (ACTOR 7)  
 If we don’t get these bathrooms clean, we’re going to have... bigger problems.
+
 The CARDIOLOGISTS exit.
-[[Page 71]]
-Scene 26
-#7f — I Am Here
-BEULAH
-Anyway I get lunch set up, labeling anything that'll go bad with the date and time, I
-let the pants out for one of the pilots who’s been enjoying our cooking. I make a
-balloon animal for a crying toddler —and then I check on Hannah, talking to anyone
-she can reach.
-On the other side of the stage, HANNAH puts the phone to her ear,
+
+.Scene 26
+
+# Song 7f: I Am Here
+
+BEULAH  
+Anyway I get lunch set up, labeling anything that'll go bad with the date and time, I let the pants out for one of the pilots who’s been enjoying our cooking. I make a balloon animal for a crying toddler — and then I check on Hannah, talking to anyone she can reach.
+
+On the other side of the stage, HANNAH puts the phone to her ear.
+
+HANNAH  
+~I am here — I am here on an island  
+~Hello? Hello. It’s me again  
+~Yeah, my son. He’s with Rescue Two  
+~Any news?  
+~I am his mother  
+~I’m far away — stuck here  
+~I’m trying to find out —  
+~Fine — I’ll hold again  
+~I should be down there  
+~And checking the hospitals  
+~Putting up signs  
+~Doing something!  
+~Instead  
+~I am
+
+
+
+
 HANNAH
 1 AM HERE—I AM HERE ON AN ISLAND
 HELLO? HELLO. IT’S ME AGAIN
