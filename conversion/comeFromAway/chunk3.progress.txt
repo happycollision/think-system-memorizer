@@ -1,894 +1,1129 @@
-Scene 5
-Everyone become PASSENGERS, facing sideways. One of the passengers, DIANE,
-turns out the window.
-DIANE
-I look out the window to see if there’s something mechanical —like if we've lost an
-engine or if something’s on fire. But I don’t see anything.
+.Scene 5
+
+Everyone become PASSENGERS, facing sideways. One of the passengers, DIANE, turns out the window.
+
+DIANE  
+I look out the window to see if there’s something mechanical —like if we've lost an engine or if something’s on fire. But I don’t see anything.
+
 Another passenger, NICK, turns out his window.
-NICK
-I told head office I need to travel less —I told them it was doctor’s orders. But they
-say, “You're going to the conference,” so you go.
+
+NICK  
+I told head office I need to travel less —I told them it was doctor’s orders. But they say, “You're going to the conference,” so you go.
+
 BOB turns out his window.
-BOB
-My dad is always saying, Bob, you've got to calm down. But the flight attendant is
-shaking like a leaf, so I figure I’ve got permission.
+
+BOB  
+My dad is always saying, Bob, you've got to calm down. But the flight attendant is shaking like a leaf, so I figure I’ve got permission.
+
 HANNAH turns out her window.
-HANNAH
-My son sends me on this vacation—he says, “Mom, you've never gone anywhere.”
-And when I get back, I'm telling him — this is exactly why.
+
+HANNAH  
+My son sends me on this vacation—he says, “Mom, you've never gone anywhere.” And when I get back, I'm telling him — this is exactly why.
+
 KEVIN T turns out his window.
-KEVIN T
+
+KEVIN T  
 Suddenly, there's a drop.
+
 The GROUP drops, with a gasp.
-A sudden change in direction. And I fly a lot, so I know that's not normal. Outside
-the window, all I can see below are trees and rocks and... nothing.
-[[Page 14]]
-Scene 6
-38
-BEVERLEY
-On final approach, we're coming into runway two-two, and I think, "Where am I
-going to park this thing?" There are planes lined up like sardines. And as far as I can
-see there’s cars lined up too. It looks like everybody in Newfoundland is here.
+
+A sudden change in direction. And I fly a lot, so I know that's not normal. Outside the window, all I can see below are trees and rocks and... nothing.
+
+.Scene 6
+
+BEVERLEY  
+On final approach, we're coming into runway two-two, and I think, "Where am I going to park this thing?" There are planes lined up like sardines. And as far as I can see there’s cars lined up too. It looks like everybody in Newfoundland is here.
+
 The TOWNSPEOPLE stand looking upward.
-ALL Unless Speaking
-(one at a time, then building together)
-ONE PLANE THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-THIRTEEN PLANES THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-NINETEEN PLANES THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-TWENTY-SIX PLANES
-THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-TWENTY-NINE PLANES
-THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-THIRTY-TWO PLANES
-THEN ANOTHER
-AND THEN ANOTHER
-AND THEN ANOTHER
-AND THEN
-THIRTY-EIGHT THIRTY-EIGHT
-THIRTY-EIGHT THIRTY-EIGHT
-JANICE
-Is this on? Sorry. I’m new. This is Rogers TV
-Channel 9. My name is Janice Mosher and
-I'm reporting live from Gander Airport
-where the 19th plane has just touched down.
-I'm here with...
-BONNIE
-Bonnie Harris. On a normal day, we get a
-half dozen flights, and now we've already
-got three times that many landing in two
-hours. It’s a lot of noise. You can smell the
-fuel. You can smell the exhaust.
-OZ
-Jaysus, that’s a jumbo! There’s gotta be
-two-fifty or three hundred on her. That's a
-fairly large one, there’s gotta be two
-hundred on her- now, I’m adding this up.
-We got 38 planes — we got two, three
-hundred people on the average...
-[[Page 15]]
-(ALL Unless Speaking)
-THIRTY-EIGHT THIRTY-EIGHT
-PLANES Holy shit!
-(OZ)
-[[Page 16]]
-Scene 7
-At the Town Hall, everyone becomes STAFF who shout for CLAUDE as he enters,
-trailed by JANICE.
-Claude! Excuse me. Claude! The Claude? Mister Mayor? phones are
-STAFF STAFF STAFF STAFF STAFF
-Mister Mayor! Claude! I just
-need to talk to heard from
-ringing off the you. Ottawa.
+
+ALL Unless Speaking  
+(one at a time, then building together)  
+~One plane then another  
+~And then another  
+~And then another  
+~And then  
+~Thirteen planes then another  
+~And then another  
+~And then another  
+~And then  
+~Nineteen planes then another  
+~And then another  
+~And then another  
+~And then  
+~Twenty-six planes  
+~Then another  
+~And then another  
+~And then another  
+~And then  
+~Twenty-nine planes  
+~Then another  
+~And then another  
+~And then another  
+~And then  
+~Thirty-two planes  
+~Then another  
+~And then another  
+~And then another  
+~And then  
+~Thirty-eight, thirty-eight  
+~Thirty-eight, thirty-eight
+
+JANICE  
+Is this on? Sorry. I’m new. This is Rogers TV Channel 9. My name is Janice Mosher and I'm reporting live from Gander Airport where the 19th plane has just touched down. I'm here with...
+
+BONNIE  
+Bonnie Harris. On a normal day, we get a half dozen flights, and now we've already got three times that many landing in two hours. It’s a lot of noise. You can smell the fuel. You can smell the exhaust.
+
+OZ  
+Jaysus, that’s a jumbo! There’s gotta be two-fifty or three hundred on her. That's a fairly large one, there’s gotta be two hundred on her- now, I’m adding this up. We got 38 planes — we got two, three hundred people on the average...
+
+ALL Unless Speaking  
+~Thirty-eight, thirty-eight  
+~Planes
+
+OZ  
+Holy shit!
+
+.Scene 7
+
+At the Town Hall, everyone becomes STAFF who shout for CLAUDE as he enters, trailed by JANICE.
+
+STAFF STAFF STAFF STAFF STAFF  
+Claude! Excuse me. Claude! The Claude? Mister Mayor? Phones are ringing off the hook!
+
+STAFF  
+Mister Mayor! Claude! I just need to talk to you. Heard from Ottawa.
+
 CLAUDE whistles for attention and points to STAFF 10.
-STAFF 10
+
+STAFF 10  
 Air traffic control says five of the planes on the ground aren’t responding.
-STAFF 9
+
+STAFF 9  
 Reg says they're probably just on the wrong frequency.
-CLAUDE
+
+CLAUDE  
 Thank you, Dwight.
-STAFF 12
+
+STAFF 12  
 FAA won't give us a timeline for reopening the airspace.
-STAFF 9
+
+STAFF 9  
 And the airplane crews need to be rested or we'll never get them out of here.
-STAFF 7 (OZ) STAFF 12
-American Transatlantic flight number
-25 is requesting when they deplane If they deplane.
-that they be a priority...
-CLAUDE
+
+STAFF 7 (OZ)  
+American Transatlantic flight number 25 is requesting that when they deplane, they be a priority...
+
+CLAUDE  
 Why?
-STAFF 7 (OZ)
+
+STAFF 7 (OZ)  
 They were headed to Disneyworld with 90 Wish Kids.
-CLAUDE
+
+CLAUDE  
 Oh, Jaysus.
-STAFF 6
-Even with all the hotels in town, we've got no room—we gotta start looking at other
-towns.
-[[Page 17]]
-STAFF 5
+
+STAFF 6  
+Even with all the hotels in town, we've got no room—we gotta start looking at other towns.
+
+STAFF 5  
 Appleton and Gambo have already offered—but we can’t get them there.
-STAFF 1
-(pointing at Garth)
-Garth’s bus drivers are still on the picket line—and without them no one’s going
-anywhere.
-CLAUDE
-Oh for Jaysus sake, I'll tell them where to go.
-(to JANICE)
+
+STAFF 1  
+(pointing at Garth)  
+Garth’s bus drivers are still on the picket line—and without them no one’s going anywhere.
+
+CLAUDE  
+Oh for Jaysus sake, I'll tell them where to go.  
+(to JANICE)  
 Don’t quote me on that.
-STAFF 2
-(covering the phone)
+
+STAFF 2  
+(covering the phone)  
 I've got the SPCA lady on the line again asking about animals —
-CLAUDE
+
+CLAUDE  
 Tell Bonnie we've got people to deal with.
-STAFF 4
-Claude! Apparently those five planes that aren’t responding? They’re treating them
-as bomb threats!
+
+STAFF 4  
+Claude! Apparently those five planes that aren’t responding? They’re treating them as bomb threats!
+
 EVERYONE begins to panic.
-STAFF 8 STAFF 12 STAFF 5 STAFF 9 STAFF 7
-Why are we Oh no. Donny’s Bomb threats! = My kids are Why were they
-getting the down there. He What do they watching those even sent here?
-bomb threats? just headed mean Bomb planes. Why not
-down there! threats? Toronto?!
-STAFF 1 STAFF 10 STAFF 2 STAFF 4 STAFF 6
-How many ARE Half the town’s What are we They don’t Do we evacuate
-we getting? gone down to
-supposed to
-watch!
-do?
+
+STAFF 8 ^  
+Why are we getting the bomb threats?
+
+STAFF 12 ^  
+Oh no. Donny’s down there. He just headed down there!
+
+STAFF 5 ^  
+Bomb threats! What do they mean Bomb threats?
+
+STAFF 9 ^  
+My kids are watching those planes.
+
+STAFF 7 ^  
+Why were they even sent here? Why not Toronto?!
+
+STAFF 1 ^  
+How many are we getting?
+
+STAFF 10 ^  
+Half the town’s gone down to watch!
+
+STAFF 2 ^  
+What are we supposed to do?
+
+STAFF 4 ^  
+They don’t know what's on them!
+
+STAFF 6 ^  
+Do we evacuate the town? What do we do? Who’s on them?!
+
 CLAUDE puts his fingers to his lips and whistles.
-know what's
-the town? What
-on them! Or
-do we do?
-who’s on them!
-CLAUDE
-Alright! The RCMP is gonna handle it. But we’ve got almost seven thousand people
-who might be spending the night. Jaysus, that’s near as many as we got living here
-in town. We need to house them somewhere and we need to get them there —
-[[Page 18]]
-GARTH
+
+CLAUDE  
+Alright! The RCMP is gonna handle it. But we’ve got almost seven thousand people who might be spending the night. Jaysus, that’s near as many as we got living here in town. We need to house them somewhere and we need to get them there —
+
+GARTH  
 Don't look at me!
-CLAUDE
+
+CLAUDE  
 Not to mention food and supplies and anything else that snarls up.
-STAFF 12
+
+STAFF 12  
 Well, why are they sending them here? Why not Toronto or Ottawa?
+
 CLAUDE looks at them all.
-CLAUDE
+
+CLAUDE  
 Because if anything goes wrong, we have a lot less people to lose.
+
 A slight pause as they all take that in.
-Alright, Janice Mosher. Here’s your news. Gander Town Council declares a state of
-emergency.
-#4—Blankets and Bedding
-JANICE
+
+Alright, Janice Mosher. Here’s your news. Gander Town Council declares a state of emergency.
+
+# Song 4: Blankets and Bedding
+
+JANICE  
 11:53 am.
-ALL
-Tuesday.
-JANICE
-(on camera)
-September 11th, 2001. Any available community buildings will be converted into
-shelters. With thousands of passengers arriving at any minute, the town is asking for
-help with— well, anything you can do...
-[[Page 19]]
-Scene 8
-BEULAH
-CRYSTAL, I SAW ON THE NEWS
-THAT THEY’RE LOOKING FOR
-BLANKETS AND BEDDING
-AND MAYBE SOME FOOD
-CRYSTAL (ACTOR 1)
-DO YOU KNOW WHAT THEY NEED
-AND HOW MUCH
-MARTHA (ACTOR 5)
-I NEED SOMETHING TO DO
-MARTHA, CRYSTAL & BEULAH
-CAUSE I CAN’T WATCH THE NEWS ANYMORE
-ANNETTE (ACTOR 6)
-CAN I HELP?
-IS THERE SOMETHING?
-I NEED TO DO SOMETHING
-TO KEEP ME FROM THINKING OF
-ALL OF THOSE SCENES ON THE TUBE
-CRYSTAL (ACTOR 1)
-I NEED SOMETHING TO DO
-CAUSE I CAN’T WATCH THE NEWS
-WOMEN — GROUP 1
-NO, I CAN’T WATCH THE NEWS ANYMORE
-WOMEN — GROUP 2
-IN THE WINTER, FROM THE WATER, THROUGH THE WIND
-ALL WOMEN
-IF A STRANGER ENDS UP AT YOUR DOOR
-BEULAH
-YOU GET ON THE HORN
-(on the phone)
-Hello? This is Beulah Davis down at the Academy. I heard we might be getting some
-guests and I thought I'd see if I could help whosever in charge of getting the school
-organized. How many passengers can we take? Uh— well, we fit about 400 students —
-yes, we could probably do 600. Or sure, 700, if we really pack them in. When are
-they coming? Could be any time now? Well, I’m glad I phoned!
-[[Page 20]]
-OZ
-I get a call from Beulah looking for “anything 700 people from around the world
-might need.” So, I go down to Shoppers and the manager says to just take what I
-want off the shelves — toothbrushes, floss, mouthwash, deodorant. And I'm back at
-the school, when Beulah says...
-BEULAH
+
+ALL  
+~Tuesday.
+
+JANICE  
+(on camera)  
+September 11th, 2001. Any available community buildings will be converted into shelters. With thousands of passengers arriving at any minute, the town is asking for help with— well, anything you can do...
+
+.Scene 8
+
+BEULAH  
+~Crystal, I saw on the news  
+~That they’re looking for  
+~Blankets and bedding  
+~And maybe some food
+
+CRYSTAL (ACTOR 1)  
+~Do you know what they need  
+~And how much
+
+MARTHA (ACTOR 5)  
+~I need something to do
+
+MARTHA, CRYSTAL & BEULAH  
+~'Cause I can’t watch the news anymore
+
+ANNETTE (ACTOR 6)  
+~Can I help?  
+~Is there something?  
+~I need to do something  
+~To keep me from thinking of  
+~All of those scenes on the tube
+
+CRYSTAL (ACTOR 1)  
+~I need something to do  
+~'Cause I can’t watch the news
+
+WOMEN — GROUP 1  
+~No, I can’t watch the news anymore
+
+WOMEN — GROUP 2  
+~In the winter, from the water, through the wind
+
+ALL WOMEN  
+~If a stranger ends up at your door
+
+BEULAH  
+You get on the horn  
+(on the phone)  
+Hello? This is Beulah Davis down at the Academy. I heard we might be getting some guests and I thought I'd see if I could help whosever in charge of getting the school organized. How many passengers can we take? Uh— well, we fit about 400 students — yes, we could probably do 600. Or sure, 700, if we really pack them in. When are they coming? Could be any time now? Well, I’m glad I phoned!
+
+OZ  
+I get a call from Beulah looking for “anything 700 people from around the world might need.” So, I go down to Shoppers and the manager says to just take what I want off the shelves — toothbrushes, floss, mouthwash, deodorant. And I'm back at the school, when Beulah says...
+
+BEULAH  
 You know, those planes probably got some babies on ‘em...
+
 A slight pause.
-OZ
-So, I'm back to Shoppers for diapers. And we're unpacking them, when Annette
-says...
-ANNETTE
+
+OZ  
+So, I'm back to Shoppers for diapers. And we're unpacking them, when Annette says...
+
+ANNETTE  
 You know, those babies are probably going to be hungry...
+
 A slight pause.
-OZ
-So, I’m back to Shoppers for formula and baby food. And when I get back, Beulah
-says...
-BEULAH
+
+OZ  
+So, I’m back to Shoppers for formula and baby food. And when I get back, Beulah says...
+
+BEULAH  
 You know, those planes are probably filled with women of child bearing age...
+
 Another pause.
-OZ
+
+OZ  
 Sooo?
-BEULAH
+
+BEULAH  
 So, I’m back to Shoppers to pick up as many pads and tampons as they have.
+
 OZ exits, wincing.
-JANICE
-The Baptist Church needs a hand moving their pews... Doctor O’Brien down at the
-pharmacy is ready to fill any prescriptions. Oh, and the Lion’s Club is looking for
-some toilet paper, if you have any extra.
+
+JANICE  
+The Baptist Church needs a hand moving their pews... Doctor O’Brien down at the pharmacy is ready to fill any prescriptions. Oh, and the Lion’s Club is looking for some toilet paper, if you have any extra.
+
 The WOMEN begin packing and stacking boxes.
-ANNETTE
-MEDICINE
-MARGIE
-TOOTHPASTE
-[[Page 21]]
-MARTHA
-UNDERWEAR
-BEULAH
-ASPIRIN
-CRYSTAL & ANNETTE
-JACKETS OUR KIDS GREW OUT OF LAST SUMMER
-JANICE
-AND DOWN AT THE STATION, WE'RE TAKING DONATIONS
-OUT BY THE DOOR
-ALL
-HOLY JESUS, THERE’S MORE!
-ANNETTE
-IT’S BETTER THAN BEING AT HOME ALONE
-WONDERING WHAT'S REALLY HAPPENING
-MARGIE
-EVERYONE'S PHONING
-ANNETTE & BEULAH
-WE’RE SETTING UP ROOMS IN THE SCHOOLS
-MARGIE
-BEEN CRYING ALL AFTERNOON WONDERING
-WHAT CAN BE DONE
+
+ANNETTE  
+~Medicine
+
+MARGIE  
+~Toothpaste
+
+MARTHA  
+~Underwear
+
+BEULAH  
+~Aspirin
+
+CRYSTAL & ANNETTE  
+~Jackets our kids grew out of last summer
+
+JANICE  
+~And down at the station, we're taking donations  
+~Out by the door
+
+ALL  
+~Holy Jesus, there’s more!
+
+ANNETTE  
+~It’s better than being at home alone  
+~Wondering what's really happening
+
+MARGIE  
+~Everyone's phoning
+
+ANNETTE & BEULAH  
+~We’re setting up rooms in the schools
+
+MARGIE  
+~Been crying all afternoon wondering  
+~What can be done
+
 The MEN enter carrying boxes across the stage.
-MEN
-WHAT DO WE NEED?
-ANNETTE
+
+MEN  
+~What do we need?
+
+ANNETTE  
 I made a tray of sandwiches
-BEULAH
+
+BEULAH  
 We need 50 more.
-ANNETTE
+
+ANNETTE  
 Sandwiches?
-BEULAH
+
+BEULAH  
 Trays!
-MEN
-WHAT DO WE NEED?
-[[Page 22]]
-DWIGHT
+
+MEN  
+~What do we need?
+
+DWIGHT  
 200 gym mats! Is that enough?
-BEULAH
+
+BEULAH  
 You tell me and we'll both know.
-MEN
-WHAT DO WE NEED?
-JANICE
+
+MEN  
+~What do we need?
+
+JANICE  
 For the love of God, stop bringing toilet paper to the Lion’s Club!
-BARITONE MEN
-HOW DO YOU KNOW WHAT YOU NEED
-WHEN YOU DON’T KNOW HOW MANY YOU'RE NEEDING TO FEED
-TENOR MEN
-WHEN YOU DON’T KNOW HOW MANY ARE STAYING
-ALL MEN
-HOW LONG THEY ARE STAYING —
-WE BETTER START PRAYING THE WEATHER STAYS NICE
-ALL
-IN THE WINTER, FROM THE WATER, THROUGH THE WIND
-(IN THE WINTER, FROM THE WATER, THROUGH THE WIND)
-IN THE WINTER, FROM THE WATER, THROUGH THE WIND
-(IN THE WINTER, FROM THE WATER, THROUGH THE WIND)
-IF A STRANGER ENDS UP SENT BY FATE
-ANNETTE
+
+BARITONE MEN  
+~How do you know what you need  
+~When you don’t know how many you're needing to feed
+
+TENOR MEN  
+~When you don’t know how many are staying
+
+ALL MEN  
+~How long they are staying —  
+~We better start praying the weather stays nice
+
+ALL  
+~In the winter, from the water, through the wind  
+~(In the winter, from the water, through the wind)  
+~In the winter, from the water, through the wind  
+~(In the winter, from the water, through the wind)  
+~If a stranger ends up sent by fate
+
+ANNETTE  
 Are we going to be ready?
-BEULAH
+
+BEULAH  
 Well we have to be, don’t we?
-[[Page 23]]
-Scene 9
-#5 — 28 Hours/Wherever We Are
+
+.Scene 9
+
+# Song 5: 28 Hours/Wherever We Are
+
 On the plane, the PASSENGERS look out the window.
-PASSENGER 1
+
+PASSENGER 1  
 When you include the original flight, we were on the plane probably 12, 13 hours.
-PASSENGER 8 (KEVIN T)
+
+PASSENGER 8 (KEVIN T)  
 We were on there 15 hours.
-PASSENGER 9 (KEVIN J)
-(correcting him)
+
+PASSENGER 9 (KEVIN J)  
+(correcting him)  
 20 hours.
-PASSENGER 10
+
+PASSENGER 10  
 28 hours. We were on the plane for over an entire day.
-ALL
-28 HOURS
-OVER AN ENTIRE DAY
-THERE WAS ONE AISLE IN THE MIDDLE
-EVERYONE KNEW EVERY INCH OF THAT PLANE
-PASSENGER 11 ALL
-We were allowed out of our seats, but not 28 HOURS
-off the plane.
-PASSENGER 8 (KEVIN T)
-You never think about it, but airplane OVER AN ENTIRE DAY
-doors are twenty feet in the air.
-PASSENGER 9 (KEVIN J)
-And even if you survived the jump, they THERE WAS ONE AISLE IN THE MIDDLE
-probably would’ve shot you.
-PASSENGER 10
-Everyone knew every inch of that plane. PASSENGER 3 THAT PLANE
-EVERYONE KNEW EVERY INCH OF
-You could go up to first class. You could
-stretch in the aisles. 28 HOURS
-PASSENGER 4
-Our flight was full—there were children
-sleeping on the floor. OVER AN ENTIRE DAY
-[[Page 24]]
-PASSENGER 7 ALL
-It had three seats on each side. There was THERE WAS ONE AISLE IN THE MIDDLE
-only one aisle in the middle.
-PASSENGER 2
-We had no way to get information. PASSENGER 12 THAT PLANE
-EVERYONE KNEW EVERY INCH OF
-This was before most people had mobile
-phones —and only a couple people got
-through.
-PASSENGER 8
+
+ALL  
+~28 hours  
+~Over an entire day  
+~There was one aisle in the middle  
+~Everyone knew every inch of that plane
+
+PASSENGER 11  
+We were allowed out of our seats, but not off the plane.
+
+ALL  
+~28 hours
+
+PASSENGER 8 (KEVIN T)  
+You never think about it, but airplane doors are twenty feet in the air.
+
+ALL  
+~Over an entire day
+
+PASSENGER 9 (KEVIN J)  
+And even if you survived the jump, they probably would’ve shot you.
+
+ALL  
+~There was one aisle in the middle
+
+PASSENGER 10  
+Everyone knew every inch of that plane.
+
+PASSENGER 3  
+~That plane  
+~Everyone knew every inch of
+
+You could go up to first class. You could stretch in the aisles.
+
+ALL  
+~28 hours
+
+PASSENGER 4  
+Our flight was full—there were children sleeping on the floor.
+
+ALL  
+~Over an entire day
+
+PASSENGER 7  
+It had three seats on each side. There was only one aisle in the middle.
+
+ALL  
+~There was one aisle in the middle
+
+PASSENGER 2  
+We had no way to get information.
+
+PASSENGER 12  
+~That plane  
+~Everyone knew every inch of
+
+This was before most people had mobile phones —and only a couple people got through.
+
+PASSENGER 8  
 Hello?
-PASSENGER 7
+
+PASSENGER 7  
 Mom?
-PASSENGER 5
+
+PASSENGER 5  
 Bonjour.
-PASSENGER 2
+
+PASSENGER 2  
 Operator?
+
 BEVERLEY is alone in the cockpit. She holds a phone to her ear.
-BEVERLEY
-TOM? OH, THANK GOD.
-I FINALLY GOT THROUGH.
-I BORROWED A PASSENGER’S PHONE.
-HOW ARE YOU? ARE THE KIDS OKAY?
-NO I’M FINE, TOM. I'M FINE.
-SAFE AND SOUND ON THE GROUND
-HERE IN NEWFOUNDLAND.
-WE DON’T KNOW MUCH—
-EXCEPT FOR THE BBC
-LISTEN, I CAN’T TALK LONG
-CAN YOU DO SOMETHING FOR ME?
-PASSENGER 8
+
+BEVERLEY  
+~Tom? Oh, thank God.  
+~I finally got through.  
+~I borrowed a passenger’s phone.  
+~How are you? Are the kids okay?  
+~No I’m fine, Tom. I'm fine.  
+~Safe and sound on the ground here in Newfoundland.  
+~We don’t know much—except for the BBC  
+~Listen, I can’t talk long  
+~Can you do something for me?
+
+PASSENGER 8  
 I'm okay.
-PASSENGER 7
+
+PASSENGER 7  
 I’m fine.
-PASSENGER 5
+
+PASSENGER 5  
 Oui. Bien.
-[[Page 25]]
-PASSENGER 2
+
+PASSENGER 2  
 Pick up.
-BEVERLEY
-TELL THE KIDS I'M ALRIGHT
-TAKE THEM INTO THE KITCHEN
-AND SHOW THEM THE MAP
-THAT WE USED TO PUT PINS IN
-FOR EACH DESTINATION
-THAT WE FLEW TOGETHER
-TELL THEM I’M FINE
-PUT A PIN HERE IN GANDER
-PASSENGER 12
+
+BEVERLEY  
+~Tell the kids I'm alright  
+~Take them into the kitchen  
+~And show them the map  
+~That we used to put pins in  
+~For each destination  
+~That we flew together  
+~Tell them I’m fine  
+~Put a pin here in Gander
+
+PASSENGER 12  
 On our plane, someone has a cell phone.
-PASSENGER 10
-But then the battery dies.
-There are phones in the backs of the seats.
-PASSENGER 9
-PASSENGER 2
+
+PASSENGER 10  
+But then the battery dies. There are phones in the backs of the seats.
+
+PASSENGER 9  
 But they don’t work.
-PASSENGER 4
+
+PASSENGER 4  
 Half the passengers on our plane don’t speak English.
-PASSENGER 11
+
+PASSENGER 11  
 Even if we knew what was happening, we don’t speak their language.
-PASSENGER 10
+
+PASSENGER 10  
 On our plane, we ask the flight attendants.
-FLIGHT ATTENDANT (ACTOR 3)
+
+FLIGHT ATTENDANT (ACTOR 3)  
 But the captain says not to say too much. And that’s when rumors start flying.
-PASSENGERS start sharing what they've heard. Some lines repeat through the planes,
-building to everyone speaking at the end.
-[[Page 26]]
-FRONT PLANE MID PLANE BACK PLANE
-PASSENGER 5
+
+PASSENGERS start sharing what they've heard. Some lines repeat through the planes, building to everyone speaking at the end.
+
+FRONT PLANE  
+PASSENGER 5  
 There was an accident
-PASSENGER 12
+
+MID PLANE  
+PASSENGER 12  
 An accident?
-PASSENGER 9
+
+BACK PLANE  
+PASSENGER 9  
 The US airspace is closed
-PASSENGER 8
+
+PASSENGER 8  
 For the first time in history.
-PASSENGER 9
-A helicopter crashed in
-Pennsylvania
-PASSENGER 11
-Why won’t she tell us
-what's happening? PASSENGER 5
-A helicopter crashed into a
-building.
-PASSENGER 10
+
+PASSENGER 9  
+A helicopter crashed in Pennsylvania
+
+PASSENGER 11  
+Why won’t she tell us what's happening?
+
+PASSENGER 5  
+A helicopter crashed into a building.
+
+PASSENGER 10  
 A building?
-PASSENGER 8
-The white house!
-PASSENGER 7
-The white house was
-bombed.
-PASSENGER 3
-I need you to calm down,
-ma’‘am!
-PASSENGER 9
-We need to do something.
-Everyone calm down!
-PASSENGER 10
-It's World War 3! Ohmygod,
-it’s World War 3!
-PASSENGER 4
+
+PASSENGER 8  
+The White House!
+
+PASSENGER 7  
+The White House was bombed.
+
+PASSENGER 3  
+I need you to calm down, ma’am!
+
+PASSENGER 9  
+We need to do something. Everyone calm down!
+
+PASSENGER 10  
+It's World War 3! Ohmygod, it’s World War 3!
+
+PASSENGER 4  
 Tell us what is going on!
-In another area, JOEY jumps onto his chair unsteadily, holding up a mini-bottle of
-liquor. A FLIGHT ATTENDANT tries to get him down.
-JOEY
-WOOOOOO!
-MEANWHILE ON OUR PLANE
-WE DIDN'T HAVE A CLUE
-WE WERE ALL GOING INSANE BECAUSE
-ALL
-THERE WASN'T SQUAT TO DO
-[[Page 27]]
-JOEY
-THEN THE CAPTAIN STARTS APOLOGIZING
-SAYS ON BEHALF OF THE AIRLINE,
-I'M GIVING EACH AND EVERYONE SOME
-ALL
-COMPLIMENTARY BOOZE!
-OPEN THE AIRPLANE DOORS
-WAVE AT ALL THE CARS
-HELLO TO WHOEVER YOU ARE—
-WHEREVER WE ARE
-PASSENGER 1
+
+In another area, JOEY jumps onto his chair unsteadily, holding up a mini-bottle of liquor. A FLIGHT ATTENDANT tries to get him down.
+
+JOEY  
+~Woooooo!  
+~Meanwhile on our plane  
+~We didn't have a clue  
+~We were all going insane because
+
+ALL  
+~There wasn't squat to do
+
+JOEY  
+~Then the captain starts apologizing  
+~Says on behalf of the airline, I'm giving each and everyone some
+
+ALL  
+~Complimentary booze!  
+~Open the airplane doors  
+~Wave at all the cars  
+~Hello to whoever you are—  
+~Wherever we are
+
+PASSENGER 1  
 The ground crews supplied whatever we needed.
-PASSENGER 9 (KEVIN J)
+
+PASSENGER 9 (KEVIN J)  
 Nicotine patches.
-PASSENGER 12 (NICK)
+
+PASSENGER 12 (NICK)  
 Medication.
-PASSENGER 5
+
+PASSENGER 5  
 Pampers.
-KEVIN T, KEVIN J, JOEY, BOB & PARTY GIRLS
+
+KEVIN T, KEVIN J, JOEY, BOB & PARTY GIRLS  
 Something to drink!
-JOEY
-SO THE FLIGHT ATTENDANTS
-BROUGHT OUT ALL THE MINI BOTTLES OF LIQUOR
-AND DELIVERED THEM TO EVERYONE
-ALL
-SOON EVERYONE GOT FRIENDLIER!
-JOEY
-I TOOK A COUPLE OF PICTURES OF THE VIEW THERE WITH MY CAMERA
-WE DIDN’T KNOW WHERE WE WERE
-ALL
-BUT WE KNEW THAT WE WERE HAMMERED!
-OPEN THE AIRPLANE DOORS! WAVE AT ALL THE LOCALS
-SURELY THERE'S SOMETHING BETTER TO DO THAN PARK
-WHEREVER WE ARE
-KEVIN T
+
+JOEY  
+~So the flight attendants brought out all the mini bottles of liquor  
+~And delivered them to everyone
+
+ALL  
+~Soon everyone got friendlier!
+
+JOEY  
+~I took a couple of pictures of the view there with my camera  
+~We didn’t know where we were
+
+ALL  
+~But we knew that we were hammered!  
+~Open the airplane doors! Wave at all the locals  
+~Surely there's something better to do than park  
+~Wherever we are
+
+KEVIN T  
 We'd been sitting there for 14 hours when we pull out the Grey Goose.
-[[Page 28]]
-KEVIN J
+
+KEVIN J  
 Kevin and I were kind of hiding it because, well...
-KEVIN T
-Because we
-(indicating KEVIN J)
-didn’t want to share it. Anyway, this woman—this hot mess behind us kept
-completely freaking out.
+
+KEVIN T  
+Because we  
+(indicating KEVIN J)  
+didn’t want to share it. Anyway, this woman—this hot mess behind us kept completely freaking out.
+
 DELORES is sitting behind them, completely freaking out.
-DELORES
-I don’t understand why they can’t let us off. I mean, just to stretch our legs, I mean
-really? I need to get some air! Oh my god! I need to get off this plane!
-KEVIN T
-And my boyfriend, Kevin— we're both named Kevin. It was cute for a while.
-Anyway, Kevin was not dealing with it well.
-KEVIN J
+
+DELORES  
+I don’t understand why they can’t let us off. I mean, just to stretch our legs, I mean really? I need to get some air! Oh my god! I need to get off this plane!
+
+KEVIN T  
+And my boyfriend, Kevin— we're both named Kevin. It was cute for a while. Anyway, Kevin was not dealing with it well.
+
+KEVIN J  
 I'm going to kill her.
+
 DELORES pushes the call button above her over and over.
-DELORES
+
+DELORES  
 Excuse me?! I would like to get off the plane. I am claustrophobic!
-KEVIN J
-Excuse me! Would you like some Xanax? Because you are freaking out and it is
-freaking me out and we are all FREAKING THE FUCK OUT!!!
-ALL
-OPEN THE AIRPLANE DOORS!
-LET A LITTLE AIR IN HERE
-CAUSE I COULD USE A SHOWER - OR A BAR (OR A BAR!)
-OPEN THE AIRPLANE DOORS!
-LOOK AT ALL THE PLANES OUT THERE
-THERE MUST BE A CONVENTION, IT’S BIZARRE
-WHEREVER WE ARE
-GROUP 1 GROUP 2 GROUP 3
-28 HOURS 28 HOURS OUT OF THE WINDOWS
-28 HOURS 28 HOURS NOTHING BUT DARKNESS
-28 HOURS 28 HOURS DARKNESS AND HEADLIGHTS
-28 HOURS 28 HOURS NOTHING TO SEE
-[[Page 29]]
+
+KEVIN J  
+Excuse me! Would you like some Xanax? Because you are freaking out and it is freaking me out and we are all FREAKING THE FUCK OUT!!!
+
+ALL  
+~Open the airplane doors!  
+~Let a little air in here  
+~'Cause I could use a shower — or a bar (or a bar!)  
+~Open the airplane doors!  
+~Look at all the planes out there  
+~There must be a convention, it’s bizarre  
+~Wherever we are
+
+GROUP 1 ^  
+~28 hours  
+~Out of the windows
+
+GROUP 2 ^  
+~28 hours  
+~Nothing but darkness
+
+GROUP 3 ^  
+~28 hours  
+~Darkness and headlights  
+~28 hours  
+~Nothing to see
+
 BONNIE picks up her phone.
-BONNIE
-Hello? It’s Bonnie Harris down at the Gander SPCA. I went down with the rest of the town to look at all those planes. Well, I got to wondering if there weren't any animals on them... No? There’s no animals on those planes? Not A ONE?! Okay,
-then. Thank you for your time.
-SHE hangs up and dials another number.
-Doug, are there animals on those planes?
-DOUG
+
+BONNIE  
+Hello? It’s Bonnie Harris down at the Gander SPCA. I went down with the rest of the town to look at all those planes. Well, I got to wondering if there weren't any animals on them... No? There’s no animals on those planes? Not a one?! Okay, then. Thank you for your time.
+
+She hangs up and dials another number.
+
+Bonnie, are there animals on those planes?
+
+DOUG  
 Uh... Probably?
-BONNIE
+
+BONNIE  
 “Probably.” Are they “probably” feeding them then? I’m heading over.
-DOUG
+
+DOUG  
 Bonnie, there’s armed guards, the army, police everywhere —
-BONNIE
+
+BONNIE  
 Well, then they'll have to shoot me.
-DOUG
-... Bonnie? Bonnie? Bonnie!
-CLAUDE
+
+DOUG  
+...Bonnie? Bonnie? Bonnie!
+
+CLAUDE  
 Look at it from my perspective. We've been coming to the table.
+
 GARTH  
 Will you look at it from MY perspective? We've been coming to the table too!
-CLAUDE
+
+CLAUDE  
 We've got the College, the churches and we've got the hotels for the crews. But we need your school busses. We've got no effing way to get them there...
-GARTH
+
+GARTH  
 Well, why don't you take them in your car?
-CLAUDE
+
+CLAUDE  
 Yeah, I can fit four in my Corolla, that's a great start.
-UNION SUPPORTERS & TOWN STAFF
+
+UNION SUPPORTERS & TOWN STAFF  
 Yeah, why don't you take them? Yeah, that's a great start.
-GARTH
+
+GARTH  
 That's a great start. Great.
-CLAUDE
+
+CLAUDE  
 Great. You think about it.
-GARTH
+
+GARTH  
 YOU think about it.
-CLAUDE
+
+CLAUDE  
 YOU think about it.
-[[Page 30]]
-CLAUDE & GARTH
+
+CLAUDE & GARTH  
 Jaysus!
-JANICE
+
+JANICE  
 2:10pm. School bus drivers “thinking about” leaving the picket lines.
-CLAUDE
-What's the point of an emergency if no one treats it like an effing emergency? ... And
-you can quote me on that.
-HANNAH
-The flight attendants keep telling us nothing’s wrong - but I’ve got kids and I’ve got
-grandkids —I know when someone's hiding something. And when parents need their
-kids to stop asking questions... They start playing movies.
-FLIGHT ATTENDANT
-We ran through every movie we had: Legally Blonde, Doctor Dolittle 2, and...
-Titanic.
-DELORES
-(totally drunk)
-NEAR... FAR... WHEREVER YOU —
-ALL
-NOTHING TO DO, NOTHING TO SEE
-THANK GOD WE STOPPED AT THE DUTY FREE
-WHEREVER WE ARE
-NICK
-Do you mind if I sit here? I need to get some work done and there’s some drunk
-people at the back of the plane singing at the top of their lungs.
-DIANE
+
+CLAUDE  
+What's the point of an emergency if no one treats it like an effing emergency?... And you can quote me on that.
+
+HANNAH  
+The flight attendants keep telling us nothing’s wrong - but I’ve got kids and I’ve got grandkids —I know when someone's hiding something. And when parents need their kids to stop asking questions... They start playing movies.
+
+FLIGHT ATTENDANT  
+We ran through every movie we had: Legally Blonde, Doctor Dolittle 2, and... Titanic.
+
+DELORES  
+(totally drunk)  
+~Near... far... wherever you —
+
+ALL  
+~Nothing to do, nothing to see  
+~Thank God we stopped at the duty free  
+~Wherever we are
+
+NICK  
+Do you mind if I sit here? I need to get some work done and there’s some drunk people at the back of the plane singing at the top of their lungs.
+
+DIANE  
 No... Of course. I’m Diane.
-NICK
+
+NICK  
 Nick. How are you doing?
-DIANE
-I’m worried about someone. He was flying today. I just wish there was some way to
-tell him where I am.
-NICK
-Newfoundland —no, you know that— you just can’t tell him. Right. I’m hoping
-you're one of those people who laughs when English people say awkward things.
-DIANE
+
+DIANE  
+I’m worried about someone. He was flying today. I just wish there was some way to tell him where I am.
+
+NICK  
+Newfoundland —no, you know that— you just can’t tell him. Right. I’m hoping you're one of those people who laughs when English people say awkward things.
+
+DIANE  
 I just wish we knew what was happening.
-[[Page 31]]
-ACTOR 2
-(sotto)
+
+ACTOR 2 (sotto)  
 What's happening?
-ACTOR 5
-(sotto)
+
+ACTOR 5 (sotto)  
 What's happening?
-SOMEWHERE IN BETWEEN
+
+SOMEWHERE IN BETWEEN  
 DIANE & NICK
-DIANE
-YOUR LIFE
-NICK
-AND YOUR WORK
-ALL
-WHEN THE WORLD MAY BE FALLING APART
-NICK & DIANE
-AND YOU THINK
-DIANE
-I’M ALONE
-NICK
-I'M ALONE
-NICK & DIANE
-AND I'M SO DAMN HELPLESS
-KEVIN T, KEVIN J, JOEY and the other DRUNK PASSENGERS stand together on
-their plane.
-KEVIN T, KEVIN J, JOEY, DRUNK PASSENGERS
-THERE’S NOTHING LEFT TO DO BUT DRINK
+
+DIANE  
+~Your life
+
+NICK  
+~And your work
+
+ALL  
+~When the world may be falling apart
+
+NICK & DIANE  
+~And you think
+
+DIANE  
+~I’m alone
+
+NICK  
+~I'm alone
+
+NICK & DIANE  
+~And I'm so damn helpless
+
+KEVIN T, KEVIN J, JOEY and the other DRUNK PASSENGERS stand together on their plane.
+
+KEVIN T, KEVIN J, JOEY, DRUNK PASSENGERS  
+~There's nothing left to do but drink
+
 Several PARTY GIRLS stand.
-PARTY GIRLS (ACTORS 3 & 2)
-WE OPEN THE AIRPLANE DOORS
-FLASH ALL THE CARS
-WOOO! I'VE NEVER DONE THAT BEFORE
-[[Page 32]]
-KEVIN T, KEVIN J, JOEY, DRUNK PASSENGERS
-28 HOURS GONE OVER AN ENTIRE DAY
-RUNNING OUT OF THINGS TO SAY
-AND WONDERING IF THERE’S SOMEONE
-ALL
-GOING TO CLUE US IN
-TELL US ALL WHAT’S HAPPENING
-BECAUSE THE SUN IS SETTING
-AND WE'RE SITTING IN THE DARK
-WHEREVER WE ARE
-BOB
-Later that night, I’m up in the cockpit with some of the other passengers when the
-pilot puts the radio on over the intercom—and the whole plane goes silent when the
-President gives his speech.
-PRESIDENT BUSH (ACTOR 8)
-ask the American people to join me in saying a thanks for all the folks who have
-been fighting hard to rescue our fellow citizens and to join me in saying a prayer for
-the victims and their families. The resolve of our great nation is being tested. But
-make no mistake: we will show the world that we will pass this test. God bless.
-BEVERLEY
-YOU GOT THROUGH TO THE AIRLINE
-TOM, I'M OKAY — TELL ME WHAT'S HAPPENING OUT THERE
-HOW BAD IS IT — TELL ME EVERYTHING
-TOM. WHO WAS IN THE AIR?
-NO-NO, I WOULDN'T HAVE KNOWN THEM
-NO-NO ONE ON THAT AIRLINE
-Charles...
+
+PARTY GIRLS (ACTORS 3 & 2)  
+~We open the airplane doors  
+~Flash all the cars  
+~Wooo! I've never done that before
+
+KEVIN T, KEVIN J, JOEY, DRUNK PASSENGERS  
+~28 hours gone over an entire day  
+~Running out of things to say  
+~And wondering if there’s someone
+
+ALL  
+~Going to clue us in  
+~Tell us all what’s happening  
+~Because the sun is setting  
+~And we're sitting in the dark  
+~Wherever we are
+
+BOB  
+Later that night, I’m up in the cockpit with some of the other passengers when the pilot puts the radio on over the intercom—and the whole plane goes silent when the President gives his speech.
+
+PRESIDENT BUSH (ACTOR 8)  
+ask the American people to join me in saying a thanks for all the folks who have been fighting hard to rescue our fellow citizens and to join me in saying a prayer for the victims and their families. The resolve of our great nation is being tested. But make no mistake: we will show the world that we will pass this test. God bless.
+
+BEVERLEY  
+~You got through to the airline  
+~Tom, I'm okay — tell me what's happening out there  
+~How bad is it — tell me everything  
+~Tom. Who was in the air?  
+~No-no, I wouldn't have known them  
+~No-no one on that airline  
+Charles...  
 Are you sure?
+
 The music fades away.
-BEVERLEY
-(acapella)
-NO,
-I’M FINE, TOM.
-I'M FINE.
-[[Page 33]]
-Scene 10
-#6 — Darkness and Trees
-BOB
-We can see them from the plane —this long line of headlights coming through the
-darkness.
-GARTH
+
+BEVERLEY (acapella)  
+~No,  
+~I’m fine, Tom.  
+~I'm fine.
+
+.Scene 10
+
+# Song 6: Darkness and Trees
+
+BOB  
+We can see them from the plane —this long line of headlights coming through the darkness.
+
+GARTH  
 Claude, can I have a word with you?
-CLAUDE
-Garth, I don’t have time to go in circles with you anymore. I’ve got the army
-delivering a thousand less cots than we were —
-GARTH
-Look. The union just voted. You’ve got your busses. Our complaint’s with our
-employer, not with the people on those planes.
-CLAUDE
+
+CLAUDE  
+Garth, I don’t have time to go in circles with you anymore. I’ve got the army delivering a thousand less cots than we were —
+
+GARTH  
+Look. The union just voted. You’ve got your busses. Our complaint’s with our employer, not with the people on those planes.
+
+CLAUDE  
 Thank you.
-GARTH
+
+GARTH  
 But we’re back on the line the minute this is over.
-CLAUDE
+
+CLAUDE  
 Right.
+
 THEY shake hands.
-ALL
-OFF OF THE AIRPLANE
-FLIGHT ATTENDANT
-Ladies and gentlemen, you can take only your carry-on items. Checked luggage will
-remain in the hold.
-ALL
-INTO THE AIRPORT
-PASSENGER 1 (DIANE)
-The captain and flight attendants tell everyone to take their blankets and pillows off
-the plane.
-ALL
-OUT OF THE WINDOWS
-[[Page 34]]
-KEVIN T
+
+ALL  
+~Off of the airplane
+
+FLIGHT ATTENDANT  
+Ladies and gentlemen, you can take only your carry-on items. Checked luggage will remain in the hold.
+
+ALL  
+~Into the airport
+
+PASSENGER 1 (DIANE)  
+The captain and flight attendants tell everyone to take their blankets and pillows off the plane.
+
+ALL  
+~Out of the windows
+
+KEVIN T  
 We grab bottles of water too —
-KEVIN J
+
+KEVIN J  
 No one has any idea where they’re taking us.
-ALL
-DARKNESS AND TREES
-BOB
+
+ALL  
+~Darkness and trees
+
+BOB  
 As we enter the airport, all those car lights are still aimed at us.
-HANNAH
+
+HANNAH  
 We're scared. They’re probably scared too.
-FLIGHT ATTENDANT
+
+FLIGHT ATTENDANT  
 The people here don’t know what to expect off of these planes.
-KEVIN T
+
+KEVIN T  
 The airport looks like something left over from the Cold War. Kevin is like...
-KEVIN J
+
+KEVIN J  
 Oh my god. We've gone back in time.
-BOB
-The whole procedure — the soldiers and all the formality — it just makes me really
-nervous.
+
+BOB  
+The whole procedure — the soldiers and all the formality — it just makes me really nervous.
+
 Inside the airport, two CUSTOMS OFFICERS process PASSENGERS.
-CUSTOMS OFFICERS (ACTORS 4 & 7)
+
+CUSTOMS OFFICERS (ACTORS 4 & 7)  
 Citizenship?
-DIANE
-NICK
+
+DIANE  
 American.
+
+NICK  
 British.
+
+CUSTOMS OFFICERS  
 Purpose of your trip?
-CUSTOMS OFFICERS
-DIANE
+
+DIANE  
 Vacation.
-NICK
+
+NICK  
 Conference.
-CUSTOMS OFFICERS
+
+CUSTOMS OFFICERS  
 Destination?
-[[Page 35]]
-DIANE
-Houston.
+
+DIANE  
+Houston.  
 Texas.
+
+NICK  
 Thank you.
-NICK
-CUSTOMS OFFICERS
+
 PASSENGERS 1 and 12 are waved on, replaced by PASSENGERS 3 and 9.
-CUSTOMS OFFICERS
+
+CUSTOMS OFFICERS  
 Citizenship?
+
+PASSENGER 3  
 American.
+
+ALI (ACTOR 9)  
 Egyptian.
-PASSENGER 3
-ALI (ACTOR 9)
+
 The CUSTOMS OFFICER and a few OTHERS stop to look at ALI.
-CUSTOMS OFFICERS
+
+CUSTOMS OFFICERS  
 Purpose of your trip?
-PASSENGER 3
+
+PASSENGER 3  
 Family.
-ALI (ACTOR 9)
+
+ALI (ACTOR 9)  
 Business... just business.
-CUSTOMS OFFICERS
+
+CUSTOMS OFFICERS  
 Destination?
-PASSENGER 3
+
+PASSENGER 3  
 LA.
+
+ALI (ACTOR 9)  
 Dallas — then Washington, D.C.
-ALI (ACTOR 9)
-CUSTOMS OFFICER 4
-(to passenger 3)
+
+CUSTOMS OFFICER 4  
+(to passenger 3)  
 Thank you.
-CUSTOMS OFFICER 7
-(to ALI)
+
+CUSTOMS OFFICER 7  
+(to ALI)  
 Could you come with me, sir?
-[[Page 36]]
-BEVERLEY
-There’s a giant map on the wall of the airport and someone has written in red
-marker, “You are here.”
-DIANE
+
+BEVERLEY  
+There’s a giant map on the wall of the airport and someone has written in red marker, “You are here.”
+
+DIANE  
 Excuse me. I need to find a phone.
-HANNAH
+
+HANNAH  
 I need to call my son.
-CUSTOMS OFFICER
+
+CUSTOMS OFFICER  
 Phones are over there. But it's gonna be a while.
-OZ
-They’re all lined up at the airport payphones —so eventually we put an “Out of
-Order” sign on them just so we can get people on the busses.
-CLAUDE
-11:48 pm. Busses and drivers are now taking passengers to shelters, not just in
-Gander, but also to Gambo, Appleton, and farther communities of Lewisporte,
-Norris Arm, and Glenwood.
-PASSENGER 12
+
+OZ  
+They’re all lined up at the airport payphones —so eventually we put an “Out of Order” sign on them just so we can get people on the busses.
+
+CLAUDE  
+11:48 pm. Busses and drivers are now taking passengers to shelters, not just in Gander, but also to Gambo, Appleton, and farther communities of Lewisporte, Norris Arm, and Glenwood.
+
+PASSENGER 12  
 Our bus sits there forever.
-PASSENGER 5
-While all the others leave.
-Finally, this other passenger gets on.
-PASSENGER 4
-PASSENGER 11
+
+PASSENGER 5  
+While all the others leave. Finally, this other passenger gets on.
+
+PASSENGER 4  
 This guy from the Middle East.
-PASSENGER 2
+
+PASSENGER 11  
 Someone says he got questioned.
-PASSENGER 7
+
+PASSENGER 2  
 Someone says he got searched.
-PASSENGER 1
+
+PASSENGER 1  
 And now... he’s on our bus.
+
 ALI slowly walks to the back of the bus as all the other passengers watch.
-JANICE
-I try to interview the Red Cross, the Salvation Army ~ but they’ve got more
-important things to do than talk to me. That’s when I see them—the Plane People —
-through the bus windows. The terror on their faces. They have no idea where they’re
-going.
-[[Page 37]]
-BEVERLEY
-They take me and my crew in a separate van and I'm looking out the window, trying
-to see where we are, but it is pitch dark. Now, I have flown over this area hundreds
-and hundreds of times. And it is just darkness — hardly any lights anywhere. And
-now here I am. Oh my god, this is just so remote.
-[[Page 38]]
-Scene 11
-MEN
-INTO THE DARKNESS
-WOMEN
-STARS AND THE MOONLIGHT
-MEN
-BUT ALL AROUND US
-NOTHING BUT DARKNESS
-WOMEN
-MEN
-OUT OF THE WINDOWS
-WOMEN
-INTO THE DARKNESS
-ALL
-DARKNESS AND TREES
+
+JANICE  
+I try to interview the Red Cross, the Salvation Army ~ but they’ve got more important things to do than talk to me. That’s when I see them—the Plane People — through the bus windows. The terror on their faces. They have no idea where they’re going.
+
+BEVERLEY  
+They take me and my crew in a separate van and I'm looking out the window, trying to see where we are, but it is pitch dark. Now, I have flown over this area hundreds and hundreds of times. And it is just darkness — hardly any lights anywhere. And now here I am. Oh my god, this is just so remote.
+
+.Scene 11
+
+MEN  
+~Into the darkness
+
+WOMEN  
+~Stars and the moonlight
+
+MEN  
+~But all around us  
+~Nothing but darkness
+
+WOMEN  
+~Out of the windows
+
+MEN  
+~Into the darkness
+
+ALL  
+~Darkness and trees
+
 GARTH enters and sits in front of a bus of passengers.
-GARTH
-Every school bus we got is goin’ back and forth all night. Out at the Salvation Army
-Camp, we've delivered passengers from Germany, England, and France. And around
-three in the morning, my bus is designated to take all these African people out there.
-ALL Except GARTH & MUHUMUZA
-INTO THE DARKNESS
-MUHUMUZA (ACTOR 10)
+
+GARTH  
+Every school bus we got is goin’ back and forth all night. Out at the Salvation Army Camp, we've delivered passengers from Germany, England, and France. And around three in the morning, my bus is designated to take all these African people out there.
+
+ALL Except GARTH & MUHUMUZA  
+~Into the darkness
+
+MUHUMUZA (ACTOR 10)  
 My family and I try to see out the bus windows. No one tells us where we are going.
-ALL Except GARTH & MUHUMUZA
-ONTO A GRAVEL ROAD
-GARTH
+
+ALL Except GARTH & MUHUMUZA  
+~Onto a gravel road
+
+GARTH  
 Silence comes on the bus. We get outside of Gander and you could hear a pin drop.
-ALL Except GARTH & MUHUMUZA
-AND ALL AROUND US
-MUHUMUZA
+
+ALL Except GARTH & MUHUMUZA  
+~And all around us
+
+MUHUMUZA  
 My wife and daughter are scared. They ask me what is happening and I do not know.
-ALL Except GARTH & MUHUMUZA
-DARKNESS AND TREES
-[[Page 39]]
-GARTH
+
+ALL Except GARTH & MUHUMUZA  
+~Darkness and trees
+
+GARTH  
 Behind me, this big man comes up to me and he says in this low voice...
-MUHUMUZA
+
+MUHUMUZA  
 Wewe watuchukuwa wapi?
-GARTH
+
+GARTH  
 What?
+
 At the Academy, BEULAH and ANNETTE address everyone.
-BEULAH
-Ladies and gentlemen, we need some help translating. If anyone speaks Mandarin,
-can you come to the library? And if anyone speaks Hindi, could you please come to
-the cafeteria? And if anyone speaks Newfoundlander, well lard tunder’n jaysus god
-bless ya, b’y.
-ANNETTE
-We've got passengers from all over the world coming off these busses, all speaking
-different languages. We can’t even say “hello.”
-BEULAH
+
+BEULAH  
+Ladies and gentlemen, we need some help translating. If anyone speaks Mandarin, can you come to the library? And if anyone speaks Hindi, could you please come to the cafeteria? And if anyone speaks Newfoundlander, well lard tunder’n jaysus god bless ya, b’y.
+
+ANNETTE  
+We've got passengers from all over the world coming off these busses, all speaking different languages. We can’t even say “hello.”
+
+BEULAH  
 And if anyone knows — we think it’s...
-ANNETTE
+
+ANNETTE  
 Moldovan.
-BEULAH
+
+BEULAH  
 Moldovan — that would also be helpful.
-ANNETTE
-Other passengers help us translate. Mrs. Noonan, our French teacher, turns out to
-know a little Russian. And Mr. Michaels, our gym teacher, apparently he speaks
-Spanish.
-#6a — Mr. Michaels
-MR. MICHAELS stands, holding a shaker and dressed as a fantasy Latin lover. HE
-moves to Annette.
-MR. MICHAELS (ACTOR 7)
-Si, hablo. Espafiol es la lengua del amor. No sélo soy un profesor de gimnasia, soy
-un profesor de pasi6n.
-HE exits with a flourish.
-ANNETTE
+
+ANNETTE  
+Other passengers help us translate. Mrs. Noonan, our French teacher, turns out to know a little Russian. And Mr. Michaels, our gym teacher, apparently he speaks Spanish.
+
+# Song 6a: Mr. Michaels
+
+MR. MICHAELS stands, holding a shaker and dressed as a fantasy Latin lover. He moves to Annette.
+
+MR. MICHAELS (ACTOR 7)  
+~Si, hablo. Español es la lengua del amor. No sólo soy un profesor de gimnasia, soy un profesor de pasión.
+
+He exits with a flourish.
+
+ANNETTE  
 I'm sorry, what was I saying?
-[[Page 40]]
