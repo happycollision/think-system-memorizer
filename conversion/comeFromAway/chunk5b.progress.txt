@@ -1,130 +1,189 @@
-Scene 33
+
+.Scene 33
+
 The next morning, DIANE wakes up, hungover.
+
 NICK
 Good morning.
+
 DIANE
 Nnnnnnn.
+
 NICK
 You were snoring.
 My head hurts.
 You had a couple.
-DIANE
-NICK
+
 DIANE
 Did I kiss the fish?
-HE looks at her, surprised.
-Don’t you-? ...Yes, you did.
+
+(He looks at her, surprised.)
+
 NICK
+Don’t you—? ...Yes, you did.
+
 DIANE
 Oh good... Wait—
+
 NICK
 We’re running out of time. Our plane could be the next one to go.
-KEVIN T turns to KEVIN J.
+
+(KEVIN T turns to KEVIN J.)
+
 KEVIN T
 Our plane could be the next one to go. ...Are you still upset that I kissed a fish?
+
 KEVIN J
 No. I’m upset that I left the bar and you didn’t even notice!
+
 KEVIN T
 You left without telling me—
+
 KEVIN J
-After everything that’s happened. You're out there acting like it’s okay. And it’s not
-okay.
+After everything that’s happened. You're out there acting like it’s okay. And it’s not okay.
+
 KEVIN T
 I know. But I’m not gonna shut myself inside. Let’s just get back to LA.
-[[Page 96]]
+
 DIANE
 While you’re in Dallas, I’d love to have you over.
+
 KEVIN J
 I tried to change my flight to New York. They wouldn’t do it.
+
 NICK
 My conference was cancelled. So, I head back to London immediately.
+
 KEVIN T
 I don’t understand. Why would you...?
+
 KEVIN J
 I just need to be back home.
+
 NICK
 Back home.
+
 DIANE
 Back home.
+
 KEVIN T
 Back home.
-ALL FOUR are silent.
+
+(All four are silent.)
+
 NICK
 (sadly)
 Well. All good things, right?
-[[Page 97]]
-Scene 34
+
+.Scene 34
+
 BEULAH
-As the plane people leave, they keep stopping us, thanking us, trying to give us
-money, but we say...
+As the plane people leave, they keep stopping us, thanking us, trying to give us money, but we say...
+
 OZ
-No, buddy. You. would’ve done the same.
+No, buddy. You would’ve done the same.
+
 ANNETTE
 But one guy keeps insisting till Beulah finally tells him...
+
 BEULAH
-Look, you can slip it in the suggestion box down at Town Hall, but honestly, we’re
-happy with a thank you on your way out.
+Look, you can slip it in the suggestion box down at Town Hall, but honestly, we’re happy with a thank you on your way out.
+
 ANNETTE
-Captain Bristol—that pilot for Virgin Atlantic. He comes to find me to help him
-round up his passengers.
+Captain Bristol—that pilot for Virgin Atlantic. He comes to find me to help him round up his passengers.
+
 CAPTAIN BRISTOL
 (over the top romantic)
-Annette —my darling — Before I leave, I need to thank you for... everything we've
-shared. Though I travel home today, 1 leave my heart behind.
-ANNETTE salutes him.
+Annette—my darling—Before I leave, I need to thank you for... everything we've shared. Though I travel home today, I leave my heart behind.
+
+(ANNETTE salutes him.)
+
 ANNETTE
 Don’t.
 (stopping her from saying anything else)
-Blablablablablaba —
-All of the LOCALS overlap saying goodbye.
-LOCAL 1 LOCAL 2 LOCAL 3 BEULAH
-Goodbye! Goodbye! I'll miss Tell us when the ll be waiting by
-you! baby’s born! the phone.
-LOCAL 5 ANNETTE OZ LOCAL 8
-Let us know you Goodbye! Take Don’t be a stranger. Don’t forget us
-made it home safe! Care now! now!
-LOCAL 9 LOCAL 11 LOCAL 12
-Thank you for the You write us now! Goodbye!
-bottle of wine!
-A beat. All the LOCALS slump with a sigh, exhausted.
-[[Page 98]]
+Blablablablablaba—
+
+(All of the LOCALS overlap saying goodbye.)
+
+LOCAL 1
+Goodbye! I'll miss you!
+
+LOCAL 2
+Tell us when the baby's born!
+
+LOCAL 3
+I'll be waiting by the phone.
+
+BEULAH
+Let us know you made it home safe!
+
+LOCAL 5
+Goodbye! Take care now!
+
+ANNETTE
+Don’t be a stranger.
+
+OZ
+Don’t forget us now!
+
+LOCAL 8
+Thank you for the bottle of wine!
+
+LOCAL 9
+You write us now!
+
+LOCAL 11
+Goodbye!
+
+LOCAL 12
+
+(A beat. All the LOCALS slump with a sigh, exhausted.)
+
 BOB
-We get down to the airport —and it's chaos. Passengers dropped off from multiple
-flights. Every bag has to be emptied.
+We get down to the airport—and it's chaos. Passengers dropped off from multiple flights. Every bag has to be emptied.
+
 OZ
 No scissors. No nail clippers. If any bags are unidentified, they'll be blown up.
+
 BOB
 Then, someone says there’s issues with security.
-BEVERLEY steps forward.
+
+(BEVERLEY steps forward.)
+
 BEVERLEY
 One of my flight attendants comes to find me. She says...
-The FLIGHT ATTENDANT steps forward.
+
+(The FLIGHT ATTENDANT steps forward.)
+
 FLIGHT ATTENDANT
-There’s a Muslim man on our flight —
-ALI steps forward.
-I saw him praying —and and...
-he’s been acting... suspicious. He doesn’t have a carry-on...
-I'm not getting back on that plane with him.
+There’s a Muslim man on our flight—
+
+(ALI steps forward.)
+I saw him praying—and... he’s been acting... suspicious. He doesn’t have a carry-on... I'm not getting back on that plane with him.
+
 ALI
-| arrive at the airport and am pulled out of line.
+I arrive at the airport and am pulled out of line.
+
 BEVERLEY
-I am responsible for the safety of my passengers and my crew. And security tells me
-any perceived threats must be taken extremely seriously.
+I am responsible for the safety of my passengers and my crew. And security tells me any perceived threats must be taken extremely seriously.
+
 They bring me to a private room and he is brought in for questioning.
+
 ALI
 At first I do not understand what the police are asking. And then I do.
-In my culture, there is a word— “awrah” —the area between your stomach and your
-knees. It is forbidden in my religion for anyone to see this but my wife.
+In my culture, there is a word—“awrah”—the area between your stomach and your knees. It is forbidden in my religion for anyone to see this but my wife.
 To have a woman in the room, watching this. Watching me. You can’t understand.
+
 BEVERLEY
-It is the most thorough body search I’ve ever witnessed. And when it’s over, I find
-him and I tell him—I am so very sorry that happened.
+It is the most thorough body search I’ve ever witnessed. And when it’s over, I find him and I tell him—I am so very sorry that happened.
+
 ALI
 (barely looking at her)
 Am I free to go now?
-BEVERLEY nods.
+
+(BEVERLEY nods.)
+
 ACTOR 11
 When are we leaving?!
-The CROWD jumps in with questions about leaving, pulling BEVERLEY away.
-[[Page 99]]
-[[Page 100]]
+
+(The CROWD jumps in with questions about leaving, pulling BEVERLEY away.)
