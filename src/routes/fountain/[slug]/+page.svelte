@@ -106,9 +106,19 @@
 
 	/* Highlight OZ */
 	[data-speaking~='OZ'],
-	[data-speaking~='MEN'],
-	[data-speaking~='COMPANY'],
-	[data-speaking~='ALL'] {
+	[data-speaking~='JOEY'],
+	[data-speaking~='MICHAELS'],
+	[data-speaking~='TERRY'],
+	[data-speaking~='RABBI'],
+	[data-speaking~='MATTY'],
+	[data-speaking~='CARDIOLOGIST'],
+	[data-speaking='CUSTOMS OFFICERS'],
+	[data-speaking='CUSTOMS OFFICER 7'],
+	[data-speaking='TENOR MEN'],
+	[data-speaking='ALL MEN'],
+	[data-speaking='MEN'],
+	[data-speaking='COMPANY'],
+	[data-speaking='ALL'] {
 		@apply highlight;
 	}
 
