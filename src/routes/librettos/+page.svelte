@@ -52,6 +52,29 @@
 		</div>
 	{:else}
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			{#each data.fountain as libretto (libretto.title)}
+				<div
+					class="relative isolate rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:bg-gray-200 hover:shadow-md dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700"
+				>
+					<h3 class="mb-2 text-xl font-semibold text-gray-800 dark:text-gray-200">
+						<a href="{base}/fountain/{libretto.id}">
+							{libretto.title}
+							<span class="absolute inset-0"></span>
+						</a>
+					</h3>
+					<div class="flex justify-end gap-2">
+						<button
+							onclick={(e) => {
+								e.preventDefault();
+								deleteLibretto(libretto.id);
+							}}
+							class="z-10 rounded bg-red-600 px-3 py-2 text-sm text-white transition-colors hover:bg-red-700"
+						>
+							Delete
+						</button>
+					</div>
+				</div>
+			{/each}
 			{#each data.librettos as libretto (libretto.title)}
 				<div
 					class="relative isolate rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:bg-gray-200 hover:shadow-md dark:border-gray-600 dark:bg-gray-800 dark:hover:bg-gray-700"

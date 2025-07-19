@@ -7,6 +7,7 @@ export const load: PageLoad = async ({ fetch }) => {
 	const librettos: Libretto[] = await response.json();
 
 	return {
-		librettos
+		librettos,
+		fountain: [{ id: 'away', title: 'Come From Away', content: '' }] satisfies Libretto[]
 	};
 };
