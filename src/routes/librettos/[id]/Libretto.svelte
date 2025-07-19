@@ -39,8 +39,6 @@
 <style lang="postcss">
 	@reference 'tailwindcss';
 	div :global .highlighted .dialogue {
-		@apply relative rounded bg-yellow-200 px-1 dark:bg-yellow-700 dark:text-white;
-		box-decoration-break: clone;
-		-webkit-box-decoration-break: clone;
+		@apply highlight;
 	}
 </style>

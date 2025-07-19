@@ -25,6 +25,7 @@ export interface Character {
 
 export interface Dialogue {
 	type: 'dialogue';
+	character: string | undefined; // Name of the character speaking
 	text: string;
 }
 
@@ -65,6 +66,7 @@ export interface Synopsis {
 
 export interface Lyric {
 	type: 'lyric';
+	character: string | undefined; // Name of the character speaking
 	text: string;
 }
 
@@ -241,6 +243,7 @@ export class FountainParser {
 
 	private parseSceneElements(currentScene: Scene): void {
 		let line = this.peek();
+		let currentCharacter: string | undefined = undefined;
 
 		while (line !== null) {
 			const trimmedLine = line.trim();
@@ -285,7 +288,7 @@ export class FountainParser {
 				this.lastElementType = 'section';
 			} else if (REGEX.LYRIC.test(line)) {
 				match = line.match(REGEX.LYRIC);
-				currentScene.elements.push({ type: 'lyric', text: match![1] });
+				currentScene.elements.push({ type: 'lyric', text: match![1], character: currentCharacter });
 				this.lastElementType = 'lyric';
 			} else if (REGEX.TRANSITION.test(trimmedLine)) {
 				match = trimmedLine.match(REGEX.TRANSITION);
@@ -296,6 +299,7 @@ export class FountainParser {
 				currentScene.elements.push({ type: 'action', text: match![1].trim(), isCentered: true });
 				this.lastElementType = 'action';
 			} else if (isPotentialCharacter(line, this.peekNext())) {
+				currentCharacter = trimmedLine;
 				currentScene.elements.push({ type: 'character', name: trimmedLine });
 				this.lastElementType = 'character';
 			} else if (
@@ -349,7 +353,11 @@ export class FountainParser {
 						this.advance();
 						line = this.peek();
 					}
-					currentScene.elements.push({ type: 'dialogue', text: dialogueText });
+					currentScene.elements.push({
+						type: 'dialogue',
+						text: dialogueText,
+						character: currentCharacter
+					});
 					this.lastElementType = 'dialogue';
 					continue; // Already advanced, restart loop
 				} else {

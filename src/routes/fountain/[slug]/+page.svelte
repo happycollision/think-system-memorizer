@@ -64,7 +64,7 @@
 							<p class="character">{el.name}</p>
 						{:else if el.type === 'dialogue'}
 							{@const text = el.text.split('\n')}
-							<p class="dialogue">
+							<p class="dialogue" data-speaking={el.character}>
 								{#each text as line, j (j)}
 									{line}{#if j < text.length - 1}<br />{/if}
 								{/each}
@@ -84,7 +84,7 @@
 							</p>
 						{:else if el.type === 'lyric'}
 							{@const text = el.text.split('\n')}
-							<p class="lyric">
+							<p class="lyric" data-speaking={el.character}>
 								<em
 									>{#each text as line, j (j)}
 										{line}{#if j < text.length - 1}<br />{/if}
@@ -101,7 +101,17 @@
 	{/if}
 </div>
 
-<style>
+<style lang="postcss">
+	@reference "../../../app.css";
+
+	/* Highlight OZ */
+	[data-speaking~='OZ'],
+	[data-speaking~='MEN'],
+	[data-speaking~='COMPANY'],
+	[data-speaking~='ALL'] {
+		@apply highlight;
+	}
+
 	.screenplay-container {
 		font-family: 'Courier New', Courier, monospace;
 		max-width: 800px;
