@@ -1,0 +1,1 @@
+import{r as e}from"../chunks/B90CZVMX.js";import{b as o}from"../chunks/CfCTUKyv.js";async function r(){e(303,`${o}/librettos`)}const i=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{i as universal};
