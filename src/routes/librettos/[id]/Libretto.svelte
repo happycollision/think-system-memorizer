@@ -37,7 +37,7 @@
 </div>
 
 <style lang="postcss">
-	@reference 'tailwindcss';
+	@reference '../../../app.css';
 	div :global .highlighted .dialogue {
 		@apply highlight;
 	}
