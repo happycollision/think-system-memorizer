@@ -23,8 +23,29 @@ const imports = import.meta.glob('./files/*.{txt,fountain}', {
 	eager: true
 });
 
+const characterHighlightDict: Record<string, Libretto['characterName']> = {
+	ComeFromAway: {
+		exact: [
+			'CUSTOMS OFFICERS',
+			'CUSTOMS OFFICER 7',
+			'TENOR MEN',
+			'ALL MEN',
+			'MEN',
+			'COMPANY',
+			'ALL'
+		],
+		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST']
+	}
+};
+
 const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
 	const isFountain = local.includes('fountain');
+	const title =
+		local
+			.split('/')
+			.pop()
+			?.replace(/\.(txt|fountain)/, '') || 'Untitled';
+	const characters = characterHighlightDict[title];
 
 	return {
 		id: generateIdWithSeed(),
@@ -34,7 +55,8 @@ const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
 				.pop()
 				?.replace(/\.(txt|fountain)/, '') || 'Untitled',
 		content: fromSrc,
-		isFountain
+		isFountain,
+		characters
 	};
 }) as Libretto[];
 

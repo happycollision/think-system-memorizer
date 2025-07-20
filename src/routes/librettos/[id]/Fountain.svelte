@@ -1,10 +1,24 @@
 <script lang="ts">
 	import { FountainParser, type SceneElement } from '../../../fountain-parser';
+	import type { Libretto } from '../../api/librettos.json/+server';
 
 	type Props = {
 		text: string;
+		characterName?: Libretto['characterName'];
 	};
-	const { text }: Props = $props();
+	const { text, characterName }: Props = $props();
+
+	function characterMatch(
+		characterName: Libretto['characterName'],
+		speaking: string | undefined
+	): boolean {
+		if (!characterName || !speaking) return false;
+		return (
+			characterName.exact?.some((c) => c.toLowerCase() === speaking.toLowerCase()) ||
+			characterName.approximate?.some((c) => speaking.toLowerCase().includes(c.toLowerCase())) ||
+			false
+		);
+	}
 
 	const screenplay = new FountainParser().parse(text);
 </script>
@@ -61,7 +75,7 @@
 							<p class="character">{el.name}</p>
 						{:else if el.type === 'dialogue'}
 							{@const text = el.text.split('\n')}
-							<p class="dialogue" data-speaking={el.character}>
+							<p class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}>
 								{#each text as line, j (j)}
 									{line}{#if j < text.length - 1}<br />{/if}
 								{/each}
@@ -81,7 +95,7 @@
 							</p>
 						{:else if el.type === 'lyric'}
 							{@const text = el.text.split('\n')}
-							<p class="lyric" data-speaking={el.character}>
+							<p class={['lyric', characterMatch(characterName, el.character) && 'highlight']}>
 								<em
 									>{#each text as line, j (j)}
 										{line}{#if j < text.length - 1}<br />{/if}
@@ -99,26 +113,6 @@
 </div>
 
 <style lang="postcss">
-	@reference "../../../app.css";
-
-	/* Highlight OZ */
-	[data-speaking~='OZ'],
-	[data-speaking~='JOEY'],
-	[data-speaking~='MICHAELS'],
-	[data-speaking~='TERRY'],
-	[data-speaking~='RABBI'],
-	[data-speaking~='MATTY'],
-	[data-speaking~='CARDIOLOGIST'],
-	[data-speaking='CUSTOMS OFFICERS'],
-	[data-speaking='CUSTOMS OFFICER 7'],
-	[data-speaking='TENOR MEN'],
-	[data-speaking='ALL MEN'],
-	[data-speaking='MEN'],
-	[data-speaking='COMPANY'],
-	[data-speaking='ALL'] {
-		@apply highlight;
-	}
-
 	.screenplay-container {
 		font-family: 'Courier New', Courier, monospace;
 		max-width: 800px;

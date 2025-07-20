@@ -16,4 +16,4 @@
 	{/snippet}
 </Header>
 
-<Fountain text={libretto.content} />
+<Fountain text={libretto.content} characterName={libretto.characterName} />
