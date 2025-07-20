@@ -1,6 +1,8 @@
+import type { Snippet } from 'svelte';
+
 type Card = {
-	front: string;
-	back: string;
+	front: string | Snippet;
+	back: string | Snippet;
 	isFlipped: boolean;
 };
 

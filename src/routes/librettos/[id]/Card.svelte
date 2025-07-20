@@ -1,7 +1,9 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
+
 	type Props = {
-		front: string;
-		back: string;
+		front: string | Snippet;
+		back: string | Snippet;
 		isFlipped: boolean;
 		flipCard: () => void;
 	};
@@ -34,12 +36,20 @@
 >
 	<span class="sr-only">(Click or tap to flip)</span>
 	<div class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900" bind:this={frontDiv}>
-		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		{@html front}
+		{#if typeof front === 'string'}
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+			{@html front}
+		{:else}
+			{@render front()}
+		{/if}
 	</div>
 	<div class="back overflow-auto rounded-xl bg-green-400 p-4 dark:bg-green-900">
-		<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-		{@html back}
+		{#if typeof back === 'string'}
+			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+			{@html back}
+		{:else}
+			{@render back()}
+		{/if}
 	</div>
 </button>
 
