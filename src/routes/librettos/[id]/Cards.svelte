@@ -61,6 +61,7 @@
 							{front}
 							{back}
 							{isFlipped}
+							isFocusedCard={i === cardStore.currentCardIndex}
 							flipCard={() => cardStore.flipCard(i)}
 						/>
 					</div>

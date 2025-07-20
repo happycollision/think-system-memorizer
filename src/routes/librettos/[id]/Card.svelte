@@ -1,29 +1,33 @@
 <script lang="ts" generics="T">
 	import type { Component as SvelteComponent } from 'svelte';
+	import type { Attachment } from 'svelte/attachments';
 
 	type Props = {
 		front: T;
 		back: T;
 		isFlipped: boolean;
+		isFocusedCard: boolean;
 		flipCard: () => void;
 		Component: SvelteComponent<{ content: T }>;
 	};
 
-	let { front, back, isFlipped, flipCard, Component }: Props = $props();
+	let { front, back, isFlipped, isFocusedCard, flipCard, Component }: Props = $props();
 
-	let frontDiv: HTMLDivElement | null = null;
-
-	$effect(
-		/**
-		 * If the front card is quite long, we likely don't care much about the stuff
-		 * near the top, since that is not the actor's cue.
-		 */
-		function scrollFrontCardToBottom() {
-			if (frontDiv) {
-				frontDiv.scrollTop = frontDiv.scrollHeight;
-			}
-		}
-	);
+	/**
+	 * If the front card is quite long, we likely don't care much about the stuff
+	 * near the top, since that is not the actor's cue.
+	 */
+	const scrollCardToBottom: Attachment = (el) => {
+		$effect(() => {
+			if (!isFocusedCard) return;
+			setTimeout(() => {
+				el.scrollTo({
+					top: el.scrollHeight,
+					behavior: 'smooth'
+				});
+			}, 200);
+		});
+	};
 </script>
 
 <button
@@ -36,7 +40,10 @@
 	]}
 >
 	<span class="sr-only">(Click or tap to flip)</span>
-	<div class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900" bind:this={frontDiv}>
+	<div
+		class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900"
+		{@attach scrollCardToBottom}
+	>
 		<Component content={front} />
 	</div>
 	<div class="back overflow-auto rounded-xl bg-green-400 p-4 dark:bg-green-900">
