@@ -13,6 +13,7 @@
 	};
 
 	let { libretto }: Props = $props();
+	console.log(libretto);
 	let cards = $state(true);
 
 	let parsed = $derived(new FountainParser().parse(libretto.content));
@@ -25,10 +26,8 @@
 		let currentSpeaker: string | undefined;
 		let currentPair: (typeof pairs)[number] = { cue: [], line: [] };
 
-		while (elements.length > 0) {
+		for (const el of elements) {
 			const startingSpeaker = currentSpeaker;
-			const el = elements.shift();
-			if (!el) break;
 
 			if (el.type === 'character') {
 				currentSpeaker = el.name;
@@ -36,15 +35,14 @@
 				currentSpeaker = el.character;
 			}
 
-			if (
-				characterMatch(libretto.characterName, startingSpeaker) &&
-				startingSpeaker !== currentSpeaker
-			) {
+			const currentSpeakerMatches = characterMatch(libretto.characterName, currentSpeaker);
+
+			if (characterMatch(libretto.characterName, startingSpeaker) && !currentSpeakerMatches) {
 				pairs.push(currentPair);
 				currentPair = { cue: [], line: [] };
 			}
 
-			if (characterMatch(libretto.characterName, currentSpeaker)) {
+			if (currentSpeakerMatches) {
 				currentPair.line.push(el);
 			} else {
 				currentPair.cue.push(el);
