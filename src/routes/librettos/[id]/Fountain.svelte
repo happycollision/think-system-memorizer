@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { FountainParser, type SceneElement } from '../../../fountain-parser';
+	import type { FountainParser, SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 
 	type Props = {
-		text: string;
+		parsed: ReturnType<FountainParser['parse']>;
 		characterName?: Libretto['characterName'];
 	};
-	const { text, characterName }: Props = $props();
+	const { parsed: screenplay, characterName }: Props = $props();
 
 	function characterMatch(
 		characterName: Libretto['characterName'],
@@ -19,8 +19,6 @@
 			false
 		);
 	}
-
-	const screenplay = new FountainParser().parse(text);
 </script>
 
 <div class="screenplay-container">

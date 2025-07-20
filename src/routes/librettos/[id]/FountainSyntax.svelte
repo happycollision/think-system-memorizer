@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { FountainParser } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import Fountain from './Fountain.svelte';
 	import Header from './Header.svelte';
@@ -7,7 +8,8 @@
 		libretto: Libretto;
 	};
 
-	const { libretto }: Props = $props();
+	let { libretto }: Props = $props();
+	let parsed = $derived(new FountainParser().parse(libretto.content));
 </script>
 
 <Header>
@@ -16,4 +18,4 @@
 	{/snippet}
 </Header>
 
-<Fountain text={libretto.content} characterName={libretto.characterName} />
+<Fountain {parsed} characterName={libretto.characterName} />
