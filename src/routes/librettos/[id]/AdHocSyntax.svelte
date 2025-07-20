@@ -5,6 +5,7 @@
 	import Header from './Header.svelte';
 	import Libretto from './Libretto.svelte';
 	import type { Libretto as LibrettoType } from '../../api/librettos.json/+server.js';
+	import CardFaceRawHtml from './CardFaceRawHTML.svelte';
 
 	type Props = { libretto: LibrettoType };
 
@@ -14,7 +15,10 @@
 
 	const textParts = $derived(makeParts(libretto.content));
 	const cardStore = $derived(
-		new CardStore(textParts.map(([front, back]) => ({ front, back, isFlipped: false })))
+		new CardStore<string>(
+			textParts.map(([front, back]) => ({ front, back, isFlipped: false })),
+			CardFaceRawHtml
+		)
 	);
 
 	function changeViewAtIndex(index: number) {

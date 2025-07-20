@@ -1,18 +1,18 @@
-<script lang="ts">
+<script lang="ts" generics="T">
 	import type { CardStore } from '$lib/cardStore.svelte';
 	import Card from './Card.svelte';
 	import Swiper, { SwiperSlide } from './Swiper.svelte';
 
 	type Props = {
-		cardStore: CardStore;
+		cardStore: CardStore<T>;
 	};
 
 	let { cardStore }: Props = $props();
 
 	class CardsController {
-		#store: CardStore;
+		#store: CardStore<T>;
 		#sequenceStep = 0;
-		constructor(store: CardStore) {
+		constructor(store: CardStore<T>) {
 			this.#store = store;
 		}
 
@@ -56,7 +56,13 @@
 			{#each cardStore.cards as { front, back, isFlipped }, i (i)}
 				<SwiperSlide>
 					<div class="h-full px-2">
-						<Card {front} {back} {isFlipped} flipCard={() => cardStore.flipCard(i)} />
+						<Card
+							Component={cardStore.Component}
+							{front}
+							{back}
+							{isFlipped}
+							flipCard={() => cardStore.flipCard(i)}
+						/>
 					</div>
 				</SwiperSlide>
 			{/each}

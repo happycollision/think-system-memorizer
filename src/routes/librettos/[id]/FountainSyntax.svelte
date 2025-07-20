@@ -1,15 +1,65 @@
 <script lang="ts">
-	import { FountainParser } from '../../../fountain-parser';
+	import { characterMatch } from '$lib/characterMatch';
+	import { FountainParser, type SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import Fountain from './Fountain.svelte';
 	import Header from './Header.svelte';
+	import { CardStore } from '$lib/cardStore.svelte';
+	import CardFaceSceneElements from './CardFaceSceneElements.svelte';
+	import Cards from './Cards.svelte';
 
 	type Props = {
 		libretto: Libretto;
 	};
 
 	let { libretto }: Props = $props();
+	let cards = $state(true);
+
 	let parsed = $derived(new FountainParser().parse(libretto.content));
+	let parts = $derived.by(() => {
+		const elements = parsed.scenes.flatMap((scene) => {
+			return scene.elements;
+		});
+
+		const pairs: { cue: typeof elements; line: typeof elements }[] = [];
+		let currentSpeaker: string | undefined;
+		let currentPair: (typeof pairs)[number] = { cue: [], line: [] };
+
+		while (elements.length > 0) {
+			const startingSpeaker = currentSpeaker;
+			const el = elements.shift();
+			if (!el) break;
+
+			if (el.type === 'character') {
+				currentSpeaker = el.name;
+			} else if (el.type === 'dialogue' || el.type === 'lyric') {
+				currentSpeaker = el.character;
+			}
+
+			if (
+				characterMatch(libretto.characterName, startingSpeaker) &&
+				startingSpeaker !== currentSpeaker
+			) {
+				pairs.push(currentPair);
+				currentPair = { cue: [], line: [] };
+			}
+
+			if (characterMatch(libretto.characterName, currentSpeaker)) {
+				currentPair.line.push(el);
+			} else {
+				currentPair.cue.push(el);
+			}
+		}
+		pairs.push(currentPair);
+		return pairs;
+	});
+
+	let cardStore = $derived(
+		new CardStore<SceneElement[]>(
+			parts.map(({ cue, line }) => ({ front: cue, back: line, isFlipped: false })),
+			CardFaceSceneElements
+		)
+	);
 </script>
 
 <Header>
@@ -17,5 +67,11 @@
 		{libretto.title}
 	{/snippet}
 </Header>
+
+{#if cards}
+	<Cards {cardStore} />
+{:else}
+	<Fountain {parsed} characterName={libretto.characterName} />
+{/if}
 
 <Fountain {parsed} characterName={libretto.characterName} />

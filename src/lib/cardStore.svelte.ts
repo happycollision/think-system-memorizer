@@ -1,17 +1,19 @@
-import type { Snippet } from 'svelte';
+import type { Component as SvelteComponent } from 'svelte';
 
-type Card = {
-	front: string | Snippet;
-	back: string | Snippet;
+type Card<T> = {
+	front: T;
+	back: T;
 	isFlipped: boolean;
 };
 
-export class CardStore {
-	#cards: Card[] = $state([]);
+export class CardStore<T = unknown> {
+	#cards: Card<T>[] = $state([]);
 	#currentCardIndex = $state(0);
+	Component: SvelteComponent<{ content: T }>;
 
-	constructor(cards: Card[]) {
+	constructor(cards: Card<T>[], component: typeof this.Component) {
 		this.#cards = cards;
+		this.Component = component;
 	}
 
 	get cards() {

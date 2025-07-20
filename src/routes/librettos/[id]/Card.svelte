@@ -1,14 +1,15 @@
-<script lang="ts">
-	import type { Snippet } from 'svelte';
+<script lang="ts" generics="T">
+	import type { Component as SvelteComponent } from 'svelte';
 
 	type Props = {
-		front: string | Snippet;
-		back: string | Snippet;
+		front: T;
+		back: T;
 		isFlipped: boolean;
 		flipCard: () => void;
+		Component: SvelteComponent<{ content: T }>;
 	};
 
-	let { front, back, isFlipped, flipCard }: Props = $props();
+	let { front, back, isFlipped, flipCard, Component }: Props = $props();
 
 	let frontDiv: HTMLDivElement | null = null;
 
@@ -36,20 +37,10 @@
 >
 	<span class="sr-only">(Click or tap to flip)</span>
 	<div class="front overflow-auto rounded-xl bg-blue-400 p-4 dark:bg-blue-900" bind:this={frontDiv}>
-		{#if typeof front === 'string'}
-			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-			{@html front}
-		{:else}
-			{@render front()}
-		{/if}
+		<Component content={front} />
 	</div>
 	<div class="back overflow-auto rounded-xl bg-green-400 p-4 dark:bg-green-900">
-		{#if typeof back === 'string'}
-			<!-- eslint-disable-next-line svelte/no-at-html-tags -->
-			{@html back}
-		{:else}
-			{@render back()}
-		{/if}
+		<Component content={back} />
 	</div>
 </button>
 
