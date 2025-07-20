@@ -13,7 +13,6 @@
 	};
 
 	let { libretto }: Props = $props();
-	console.log(libretto);
 	let cards = $state(true);
 
 	let parsed = $derived(new FountainParser().parse(libretto.content));
