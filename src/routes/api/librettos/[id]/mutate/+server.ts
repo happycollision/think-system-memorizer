@@ -23,10 +23,6 @@ export const PUT: RequestHandler = async ({ params, request }) => {
 };
 
 export const DELETE: RequestHandler = async ({ params }) => {
-	console.log(
-		'starting librettos',
-		librettos.current.map((l) => l.id)
-	);
 	const index = librettos.current.findIndex((l) => l.id === params.id);
 
 	if (index === -1) {
@@ -34,7 +30,5 @@ export const DELETE: RequestHandler = async ({ params }) => {
 	}
 
 	librettos.current = librettos.current.filter((l) => l.id !== params.id);
-	console.log(`Deleted libretto with ID: ${params.id}`);
-	console.log(librettos.current);
 	return json({ success: true });
 };

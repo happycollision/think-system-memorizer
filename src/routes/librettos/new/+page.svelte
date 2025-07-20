@@ -33,7 +33,6 @@
 				return;
 			}
 
-			console.log('Libretto submitted:', { title, content });
 			goto(`${base}/librettos`);
 		} catch (error) {
 			console.error('Error submitting libretto:', error);
