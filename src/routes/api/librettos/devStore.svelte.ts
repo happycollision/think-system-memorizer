@@ -17,16 +17,25 @@ function generateIdWithSeed(): string {
 	return randomNumberViaSeed().toString(36).substring(2);
 }
 
-const imports = import.meta.glob('./files/*.txt', {
+const imports = import.meta.glob('./files/*.{txt,fountain}', {
 	query: 'raw',
 	import: 'default',
 	eager: true
 });
 
-const localLibs = Object.entries(imports).map(([local, fromSrc]) => ({
-	id: generateIdWithSeed(),
-	title: local.split('/').pop()?.replace('.txt', '') || 'Untitled',
-	content: fromSrc
-})) as Libretto[];
+const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
+	const isFountain = local.includes('fountain');
+
+	return {
+		id: generateIdWithSeed(),
+		title:
+			local
+				.split('/')
+				.pop()
+				?.replace(/\.(txt|fountain)/, '') || 'Untitled',
+		content: fromSrc,
+		isFountain
+	};
+}) as Libretto[];
 
 export const librettos: { current: Libretto[] } = $state({ current: localLibs });
