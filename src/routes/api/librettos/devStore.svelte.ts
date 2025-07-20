@@ -56,7 +56,7 @@ const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
 				?.replace(/\.(txt|fountain)/, '') || 'Untitled',
 		content: fromSrc,
 		isFountain,
-		characters
+		characterName: characters
 	};
 }) as Libretto[];
 
