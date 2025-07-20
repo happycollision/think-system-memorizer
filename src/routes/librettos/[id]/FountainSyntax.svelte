@@ -73,5 +73,3 @@
 {:else}
 	<Fountain {parsed} characterName={libretto.characterName} />
 {/if}
-
-<Fountain {parsed} characterName={libretto.characterName} />
