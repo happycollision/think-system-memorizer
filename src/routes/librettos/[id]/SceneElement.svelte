@@ -13,7 +13,7 @@
 	const { el, id, scene_number_token, characterName, onclick }: Props = $props();
 </script>
 
-<button class="block w-full text-left" {id} onclick={() => onclick?.()}>
+<button class="@container block w-full text-left" {id} onclick={() => onclick?.()}>
 	{#if el.type === 'scene_heading'}
 		<div class="scene-heading">
 			{el.text}
@@ -128,7 +128,7 @@
 	}
 
 	/* Adjust indents for smaller screens if necessary */
-	@media (max-width: 768px) {
+	@container (width < 768px) {
 		.action {
 			margin-left: 1em;
 			margin-right: 1em;
