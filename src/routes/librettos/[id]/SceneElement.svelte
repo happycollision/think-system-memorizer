@@ -5,58 +5,62 @@
 
 	type Props = {
 		el: SceneElement;
+		id: string;
 		scene_number_token?: string;
 		characterName?: Libretto['characterName'];
+		onclick?: () => void;
 	};
-	const { el, scene_number_token, characterName }: Props = $props();
+	const { el, id, scene_number_token, characterName, onclick }: Props = $props();
 </script>
 
-{#if el.type === 'scene_heading'}
-	<div class="scene-heading">
-		{el.text}
-		{#if el.scene_number && el.scene_number !== scene_number_token}
-			<span class="scene-number-inline">{el.scene_number}</span>
-		{/if}
-	</div>
-{:else if el.type === 'action'}
-	{@const text = el.text.split('\n')}
-	<p class="action {el.isCentered ? 'centered' : ''}">
-		{#each text as line, j (j)}
-			{line}{#if j < text.length - 1}<br />{/if}
-		{/each}
-	</p>
-{:else if el.type === 'character'}
-	<p class="character">{el.name}</p>
-{:else if el.type === 'dialogue'}
-	{@const text = el.text.split('\n')}
-	<p class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}>
-		{#each text as line, j (j)}
-			{line}{#if j < text.length - 1}<br />{/if}
-		{/each}
-	</p>
-{:else if el.type === 'parenthetical'}
-	<p class="parenthetical">{el.text}</p>
-{:else if el.type === 'transition'}
-	<p class="transition">{el.text}</p>
-{:else if el.type === 'note'}
-	{@const text = el.text.split('\n')}
-	<p class="note">
-		<em
-			>{#each text as line, j (j)}
+<button class="block w-full text-left" {id} onclick={() => onclick?.()}>
+	{#if el.type === 'scene_heading'}
+		<div class="scene-heading">
+			{el.text}
+			{#if el.scene_number && el.scene_number !== scene_number_token}
+				<span class="scene-number-inline">{el.scene_number}</span>
+			{/if}
+		</div>
+	{:else if el.type === 'action'}
+		{@const text = el.text.split('\n')}
+		<p class="action {el.isCentered ? 'centered' : ''}">
+			{#each text as line, j (j)}
 				{line}{#if j < text.length - 1}<br />{/if}
-			{/each}</em
-		>
-	</p>
-{:else if el.type === 'lyric'}
-	{@const text = el.text.split('\n')}
-	<p class={['lyric', characterMatch(characterName, el.character) && 'highlight']}>
-		<em
-			>{#each text as line, j (j)}
+			{/each}
+		</p>
+	{:else if el.type === 'character'}
+		<p class="character">{el.name}</p>
+	{:else if el.type === 'dialogue'}
+		{@const text = el.text.split('\n')}
+		<p class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}>
+			{#each text as line, j (j)}
 				{line}{#if j < text.length - 1}<br />{/if}
-			{/each}</em
-		>
-	</p>
-{/if}
+			{/each}
+		</p>
+	{:else if el.type === 'parenthetical'}
+		<p class="parenthetical">{el.text}</p>
+	{:else if el.type === 'transition'}
+		<p class="transition">{el.text}</p>
+	{:else if el.type === 'note'}
+		{@const text = el.text.split('\n')}
+		<p class="note">
+			<em
+				>{#each text as line, j (j)}
+					{line}{#if j < text.length - 1}<br />{/if}
+				{/each}</em
+			>
+		</p>
+	{:else if el.type === 'lyric'}
+		{@const text = el.text.split('\n')}
+		<p class={['lyric', characterMatch(characterName, el.character) && 'highlight']}>
+			<em
+				>{#each text as line, j (j)}
+					{line}{#if j < text.length - 1}<br />{/if}
+				{/each}</em
+			>
+		</p>
+	{/if}
+</button>
 
 <style>
 	.scene-heading {

@@ -6,8 +6,26 @@
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
 		characterName?: Libretto['characterName'];
+		startingIndex: number;
+		changeViewAtIndex: (index: number) => void;
+		getIndexFromEl: (el: SceneElement) => number | undefined;
 	};
-	const { parsed: screenplay, characterName }: Props = $props();
+	const {
+		parsed: screenplay,
+		characterName,
+		startingIndex,
+		changeViewAtIndex,
+		getIndexFromEl
+	}: Props = $props();
+
+	$effect(function scrollToStart() {
+		if (startingIndex) {
+			const sceneElement = document.getElementById(`card-${startingIndex}`);
+			if (sceneElement) {
+				sceneElement.scrollIntoView();
+			}
+		}
+	});
 </script>
 
 <div class="screenplay-container">
@@ -45,9 +63,11 @@
 					{#each scene.elements as element, i (i)}
 						{@const el = element as SceneElement}
 						<SceneElementComponent
+							id={`card-${getIndexFromEl(el)}`}
 							{el}
 							scene_number_token={scene.scene_number_token}
 							{characterName}
+							onclick={() => changeViewAtIndex(getIndexFromEl(el) || 0)}
 						/>
 					{/each}
 				</div>

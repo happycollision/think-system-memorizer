@@ -16,7 +16,7 @@
 	let cards = $state(true);
 
 	let parsed = $derived(new FountainParser().parse(libretto.content));
-	let parts = $derived.by(() => {
+	let { pairs, elementMap } = $derived.by(() => {
 		const elements = parsed.scenes.flatMap((scene) => {
 			return scene.elements;
 		});
@@ -24,6 +24,7 @@
 		const pairs: { cue: typeof elements; line: typeof elements }[] = [];
 		let currentSpeaker: string | undefined;
 		let currentPair: (typeof pairs)[number] = { cue: [], line: [] };
+		let elementMap = new Map<SceneElement, number>();
 
 		for (const el of elements) {
 			const previousSpeaker = currentSpeaker;
@@ -44,6 +45,7 @@
 				currentPair = { cue: [], line: [] };
 			}
 
+			elementMap.set(el, pairs.length);
 			if (currentSpeakerMatches) {
 				currentPair.line.push(el);
 			} else {
@@ -51,15 +53,25 @@
 			}
 		}
 		pairs.push(currentPair);
-		return pairs;
+		return { pairs, elementMap };
 	});
 
 	let cardStore = $derived(
 		new CardStore<SceneElement[]>(
-			parts.map(({ cue, line }) => ({ front: cue, back: line, isFlipped: false })),
+			pairs.map(({ cue, line }) => ({ front: cue, back: line, isFlipped: false })),
 			CardFaceSceneElements
 		)
 	);
+
+	let getIndexFromEl = $derived((el: SceneElement) => {
+		return elementMap.get(el);
+	});
+
+	let changeViewAtIndex = $derived((index: number) => {
+		cardStore.goToCard(index);
+		cardStore.unFlipAll();
+		cards = !cards;
+	});
 </script>
 
 <Header>
@@ -80,6 +92,7 @@
 		{parsed}
 		characterName={libretto.characterName}
 		startingIndex={cardStore.currentCardIndex}
+		{getIndexFromEl}
 		{changeViewAtIndex}
 	/>
 {/if}
