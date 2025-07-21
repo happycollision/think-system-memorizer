@@ -26,7 +26,7 @@
 		let currentPair: (typeof pairs)[number] = { cue: [], line: [] };
 
 		for (const el of elements) {
-			const startingSpeaker = currentSpeaker;
+			const previousSpeaker = currentSpeaker;
 
 			if (el.type === 'character') {
 				currentSpeaker = el.name;
@@ -35,8 +35,11 @@
 			}
 
 			const currentSpeakerMatches = characterMatch(libretto.characterName, currentSpeaker);
+			const previousSpeakerMatches = characterMatch(libretto.characterName, previousSpeaker);
+			const speakerChangedFromMatchToOther = previousSpeakerMatches && !currentSpeakerMatches;
+			const newSceneStarted = el.type === 'scene_heading';
 
-			if (characterMatch(libretto.characterName, startingSpeaker) && !currentSpeakerMatches) {
+			if (speakerChangedFromMatchToOther || newSceneStarted) {
 				pairs.push(currentPair);
 				currentPair = { cue: [], line: [] };
 			}
@@ -73,5 +76,10 @@
 {#if cards}
 	<Cards {cardStore} />
 {:else}
-	<Fountain {parsed} characterName={libretto.characterName} />
+	<Fountain
+		{parsed}
+		characterName={libretto.characterName}
+		startingIndex={cardStore.currentCardIndex}
+		{changeViewAtIndex}
+	/>
 {/if}
