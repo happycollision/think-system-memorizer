@@ -38,9 +38,8 @@
 			const currentSpeakerMatches = characterMatch(libretto.characterName, currentSpeaker);
 			const previousSpeakerMatches = characterMatch(libretto.characterName, previousSpeaker);
 			const speakerChangedFromMatchToOther = previousSpeakerMatches && !currentSpeakerMatches;
-			const newSceneStarted = el.type === 'scene_heading';
 
-			if (speakerChangedFromMatchToOther || newSceneStarted) {
+			if (speakerChangedFromMatchToOther) {
 				pairs.push(currentPair);
 				currentPair = { cue: [], line: [] };
 			}
