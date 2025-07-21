@@ -63,6 +63,11 @@
 	{#snippet title()}
 		{libretto.title}
 	{/snippet}
+	{#snippet location()}
+		{cardStore.currentCardIndex + 1} / {cardStore.cards.length}
+	{/snippet}
+
+	<button class="btn" onclick={() => (cards = !cards)}>View as {cards ? 'script' : 'cards'}</button>
 </Header>
 
 {#if cards}
