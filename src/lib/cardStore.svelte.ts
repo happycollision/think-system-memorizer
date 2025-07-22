@@ -1,3 +1,4 @@
+import { browser } from '$app/environment';
 import { goto } from '$app/navigation';
 import { page } from '$app/state';
 import type { Component as SvelteComponent } from 'svelte';
@@ -11,15 +12,20 @@ type Card<T> = {
 export class CardStore<T = unknown> {
 	#cards: Card<T>[] = $state([]);
 	#currentCardIndex = $derived.by(() => {
-		let idx = Number(page.url.searchParams.get('card') || '1') - 1;
+		const incoming = Number(page.url.searchParams.get('card') || '0') - 1;
+		let idx = incoming;
 		if (idx < 0) {
 			idx = 0;
 		}
 		if (idx >= this.#cards.length) {
 			idx = this.#cards.length - 1;
 		}
+		// Fix the URL if necessary
+		if (incoming !== idx && browser) this.goToCard(idx);
+
 		return idx;
 	});
+
 	Component: SvelteComponent<{ content: T }>;
 
 	constructor(cards: Card<T>[], component: typeof this.Component) {
