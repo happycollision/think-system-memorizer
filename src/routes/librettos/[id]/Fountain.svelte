@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { CardStore } from '$lib/cardStore.svelte';
 	import type { FountainParser, SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import SceneElementComponent from './SceneElement.svelte';
@@ -9,13 +10,15 @@
 		startingIndex: number;
 		changeViewAtIndex: (index: number) => void;
 		getIndexFromEl: (el: SceneElement) => number | undefined;
+		cardStore: CardStore;
 	};
 	const {
 		parsed: screenplay,
 		characterName,
 		startingIndex,
 		changeViewAtIndex,
-		getIndexFromEl
+		getIndexFromEl,
+		cardStore
 	}: Props = $props();
 
 	$effect(function scrollToStart() {
@@ -62,6 +65,31 @@
 					{/if}
 					{#each scene.elements as element, i (i)}
 						{@const el = element as SceneElement}
+						<div
+							{@attach (divEl) => {
+								if (divEl) {
+									const observer = new IntersectionObserver(
+										(entries) => {
+											entries.forEach((entry) => {
+												if (entry.isIntersecting && entry.intersectionRect.top <= 0) {
+													// divEl has hit the top of the viewport
+													console.log('observed!', el);
+													cardStore.goToCard(getIndexFromEl(el) || 0);
+												}
+											});
+										},
+										{
+											threshold: [0],
+											root: null
+										}
+									);
+									observer.observe(divEl);
+
+									// Cleanup observer when element is removed
+									return () => observer.disconnect();
+								}
+							}}
+						></div>
 						<SceneElementComponent
 							id={`card-${getIndexFromEl(el)}`}
 							{el}
