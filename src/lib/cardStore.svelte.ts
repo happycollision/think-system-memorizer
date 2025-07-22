@@ -1,3 +1,5 @@
+import { goto } from '$app/navigation';
+import { page } from '$app/state';
 import type { Component as SvelteComponent } from 'svelte';
 
 type Card<T> = {
@@ -8,7 +10,16 @@ type Card<T> = {
 
 export class CardStore<T = unknown> {
 	#cards: Card<T>[] = $state([]);
-	#currentCardIndex = $state(0);
+	#currentCardIndex = $derived.by(() => {
+		let idx = Number(page.url.searchParams.get('card') || '1') - 1;
+		if (idx < 0) {
+			idx = 0;
+		}
+		if (idx >= this.#cards.length) {
+			idx = this.#cards.length - 1;
+		}
+		return idx;
+	});
 	Component: SvelteComponent<{ content: T }>;
 
 	constructor(cards: Card<T>[], component: typeof this.Component) {
@@ -37,7 +48,9 @@ export class CardStore<T = unknown> {
 	}
 
 	goToCard(index: number) {
-		this.#currentCardIndex = index;
+		const url = page.url;
+		url.searchParams.set('card', (index + 1).toString());
+		goto(url, { replaceState: true });
 	}
 
 	flipCard(index = this.#currentCardIndex) {
@@ -46,13 +59,13 @@ export class CardStore<T = unknown> {
 
 	nextCard() {
 		if (this.#currentCardIndex < this.#cards.length - 1) {
-			this.#currentCardIndex++;
+			this.goToCard(this.#currentCardIndex + 1);
 		}
 	}
 
 	previousCard() {
 		if (this.#currentCardIndex > 0) {
-			this.#currentCardIndex--;
+			this.goToCard(this.#currentCardIndex - 1);
 		}
 	}
 
