@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { CardStore } from '$lib/cardStore.svelte';
+	import { onMount } from 'svelte';
 	import type { FountainParser, SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import SceneElementComponent from './SceneElement.svelte';
@@ -12,7 +13,7 @@
 		getIndexFromEl: (el: SceneElement) => number | undefined;
 		cardStore: CardStore;
 	};
-	const {
+	let {
 		parsed: screenplay,
 		characterName,
 		startingIndex,
@@ -21,13 +22,40 @@
 		cardStore
 	}: Props = $props();
 
-	$effect(function scrollToStart() {
+	let observer: IntersectionObserver | undefined = $state();
+
+	onMount(() => {
 		if (startingIndex) {
 			const sceneElement = document.getElementById(`card-${startingIndex}`);
 			if (sceneElement) {
-				sceneElement.scrollIntoView();
+				sceneElement.scrollIntoView({ behavior: 'smooth' });
 			}
 		}
+
+		setTimeout(
+			() =>
+				(observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								const dataId = (entry.target as HTMLDivElement).dataset.elIndex;
+								if (!dataId) return;
+								const idx = Number(dataId);
+								if (idx === cardStore.currentCardIndex) return;
+								cardStore.goToCard(idx);
+							}
+						});
+					},
+					{
+						// A thin line at the top of the viewport
+						rootMargin: '-1px 0px -99% 0px'
+					}
+				)),
+			// Time for the smooth scroll above to complete. One second won't hurt anybody.
+			1000
+		);
+
+		return () => observer?.disconnect();
 	});
 </script>
 
@@ -66,28 +94,11 @@
 					{#each scene.elements as element, i (i)}
 						{@const el = element as SceneElement}
 						<div
+							data-el-index={getIndexFromEl(el)}
 							{@attach (divEl) => {
-								if (divEl) {
-									const observer = new IntersectionObserver(
-										(entries) => {
-											entries.forEach((entry) => {
-												if (entry.isIntersecting && entry.intersectionRect.top <= 0) {
-													// divEl has hit the top of the viewport
-													console.log('observed!', el);
-													cardStore.goToCard(getIndexFromEl(el) || 0);
-												}
-											});
-										},
-										{
-											threshold: [0],
-											root: null
-										}
-									);
-									observer.observe(divEl);
-
-									// Cleanup observer when element is removed
-									return () => observer.disconnect();
-								}
+								if (!observer) return;
+								observer.observe(divEl);
+								return () => observer?.unobserve(divEl);
 							}}
 						></div>
 						<SceneElementComponent

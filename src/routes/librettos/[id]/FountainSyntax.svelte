@@ -13,7 +13,7 @@
 	};
 
 	let { libretto }: Props = $props();
-	let cards = $state(true);
+	let cards = $state(false);
 
 	let parsed = $derived(new FountainParser().parse(libretto.content));
 	let { pairs, elementMap } = $derived.by(() => {
@@ -69,7 +69,7 @@
 	let changeViewAtIndex = $derived((index: number) => {
 		cardStore.goToCard(index);
 		cardStore.unFlipAll();
-		cards = !cards;
+		// cards = !cards;
 	});
 </script>
 
@@ -85,6 +85,7 @@
 {:else}
 	<Fountain
 		{parsed}
+		{cardStore}
 		characterName={libretto.characterName}
 		startingIndex={cardStore.currentCardIndex}
 		{getIndexFromEl}

@@ -13,7 +13,8 @@
 	const { el, id, scene_number_token, characterName, onclick }: Props = $props();
 </script>
 
-<button class="@container block w-full text-left" {id} onclick={() => onclick?.()}>
+<button class="@container relative block w-full text-left" {id} onclick={() => onclick?.()}>
+	<div class="text-right text-xs">{el.type}</div>
 	{#if el.type === 'scene_heading'}
 		<div class="scene-heading">
 			{el.text}

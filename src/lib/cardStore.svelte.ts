@@ -21,7 +21,7 @@ export class CardStore<T = unknown> {
 			idx = this.#cards.length - 1;
 		}
 		// Fix the URL if necessary
-		if (incoming !== idx && browser) this.goToCard(idx);
+		if (incoming !== idx && browser) goto(this.getNewUrlForIdx(idx));
 
 		return idx;
 	});
@@ -31,6 +31,18 @@ export class CardStore<T = unknown> {
 	constructor(cards: Card<T>[], component: typeof this.Component) {
 		this.#cards = cards;
 		this.Component = component;
+	}
+
+	getNewUrlForIdx(idx: number) {
+		if (!browser) return '';
+		const url = new URL(page.url.href);
+		url.searchParams.set('card', (idx + 1).toString());
+		return url;
+	}
+
+	setUrlFromIdx(idx: number) {
+		if (!browser) return;
+		goto(this.getNewUrlForIdx(idx), { noScroll: true, replaceState: true });
 	}
 
 	get cards() {
@@ -54,9 +66,8 @@ export class CardStore<T = unknown> {
 	}
 
 	goToCard(index: number) {
-		const url = page.url;
-		url.searchParams.set('card', (index + 1).toString());
-		goto(url, { replaceState: true });
+		if (index === this.#currentCardIndex) return;
+		this.setUrlFromIdx(index);
 	}
 
 	flipCard(index = this.#currentCardIndex) {
