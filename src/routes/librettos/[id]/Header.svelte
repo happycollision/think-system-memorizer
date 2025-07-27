@@ -16,7 +16,7 @@
 	let nextValue = $derived(cardStore.currentCardIndex + 1);
 </script>
 
-<div class="sticky top-0 bg-gray-200 dark:bg-gray-800">
+<div class="sticky top-0 isolate z-10 bg-gray-200 dark:bg-gray-800">
 	<div class="flex justify-between gap-2 p-2">
 		<a class="btn" href="{base}/librettos/">
 			<span>Back <span class="sr-only sm:not-sr-only">to libretto list</span></span>
