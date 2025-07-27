@@ -11,7 +11,7 @@
 		startingIndex: number;
 		changeViewAtIndex: (index: number) => void;
 		getIndexFromEl: (el: SceneElement) => number | undefined;
-		cardStore: CardStore;
+		cardStore: CardStore<SceneElement[]>;
 	};
 	let {
 		parsed: screenplay,
