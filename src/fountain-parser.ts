@@ -255,7 +255,10 @@ export class FountainParser {
 			}
 
 			// Check for new scene heading or transition that might end current scene's elements
-			if (REGEX.SCENE_HEADING.test(line) || REGEX.FORCED_SCENE_HEADING.test(line)) {
+			if (
+				this.lastElementType === null &&
+				(REGEX.SCENE_HEADING.test(line) || REGEX.FORCED_SCENE_HEADING.test(line))
+			) {
 				break; // New scene starts, end current scene element parsing
 			}
 			// Scene number on its own line might also indicate a break or belong to current scene if first
@@ -319,8 +322,6 @@ export class FountainParser {
 				// Check if it's not any other element type that could interrupt dialogue
 				if (
 					!REGEX.BLANK_LINE.test(line) &&
-					!REGEX.SCENE_HEADING.test(line) &&
-					!REGEX.FORCED_SCENE_HEADING.test(line) &&
 					!REGEX.TRANSITION.test(trimmedLine) &&
 					!isPotentialCharacter(line, this.peekNext()) &&
 					!REGEX.NOTE.test(line) &&
@@ -337,8 +338,6 @@ export class FountainParser {
 					while (
 						line !== null &&
 						!REGEX.BLANK_LINE.test(line) &&
-						!REGEX.SCENE_HEADING.test(line) &&
-						!REGEX.FORCED_SCENE_HEADING.test(line) &&
 						!REGEX.TRANSITION.test(line.trim()) &&
 						!isPotentialCharacter(line, this.peekNext()) &&
 						!REGEX.NOTE.test(line) &&
@@ -403,7 +402,6 @@ export class FountainParser {
 					this.lastElementType = 'action';
 				}
 			}
-
 			this.advance(); // Ensure progress if no other rule advanced
 			line = this.peek();
 		}

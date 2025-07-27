@@ -452,5 +452,28 @@ What's all this commotion?`;
 			expect(elements[6].name).toBe('CEO');
 			expect(elements[7].type).toBe('dialogue');
 		});
+
+		it('should correctly distinguish see when a character dialogue starts with ...', () => {
+			const script = `.Scene 1
+
+JANE
+...Did you see that?
+
+The CEO enters.
+`;
+
+			const result = parser.parse(script);
+			expect(result.scenes.length).toBe(1);
+			const elements = result.scenes[0].elements;
+
+			expect(elements[0].type).toBe('scene_heading');
+
+			assert(elements[1].type === 'character', 'Expected character type');
+			expect(elements[1].name).toBe('JANE');
+			expect(elements[2].type).toBe('dialogue');
+
+			assert(elements[3].type === 'action', 'Expected action type');
+			expect(elements[3].text).toBe('The CEO enters.');
+		});
 	});
 });
