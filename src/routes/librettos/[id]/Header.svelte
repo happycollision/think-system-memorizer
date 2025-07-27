@@ -35,7 +35,7 @@
 		step="1"
 		value={cardStore.currentCardIndex + 1}
 		oninput={(ev) => (nextValue = Number(ev.currentTarget.value))}
-		onchange={(ev) => cardStore.goToCard(Number(ev.currentTarget.value) - 1)}
+		onchange={(ev) => cardStore.goToCard(Number(ev.currentTarget.value) - 1, { hardNav: true })}
 		max={cardStore.cards.length}
 		min="1"
 	/>

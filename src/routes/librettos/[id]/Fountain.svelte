@@ -57,6 +57,8 @@
 	});
 </script>
 
+<div class="fixed right-0 bottom-0">{cardStore.currentCardIndex + 1}</div>
+
 <div class="screenplay-container">
 	{#if screenplay}
 		{#if Object.keys(screenplay.title_page).length > 0}
