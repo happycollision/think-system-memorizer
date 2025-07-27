@@ -78,8 +78,7 @@
 	.action {
 		margin-top: 10px;
 		margin-bottom: 10px;
-		margin-left: 1.5in; /* Standard action indent */
-		margin-right: 1in;
+		padding-inline: 0.5in;
 	}
 
 	.action.centered {
@@ -92,12 +91,10 @@
 		text-transform: uppercase;
 		margin-top: 15px;
 		margin-bottom: 5px;
-		margin-left: 3.5in; /* Standard character indent */
+		text-align: center;
 	}
 
 	.dialogue {
-		margin-left: 2.5in; /* Standard dialogue indent */
-		margin-right: 2.5in;
 		margin-bottom: 10px;
 	}
 
@@ -122,7 +119,7 @@
 	}
 
 	.lyric {
-		margin-left: 2.5in;
+		padding-left: 1in;
 		margin-bottom: 5px;
 		font-style: italic;
 	}
