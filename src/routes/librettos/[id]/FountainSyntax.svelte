@@ -65,12 +65,6 @@
 	let getIndexFromEl = $derived((el: SceneElement) => {
 		return elementMap.get(el);
 	});
-
-	let changeViewAtIndex = $derived((index: number) => {
-		cardStore.goToCard(index);
-		cardStore.unFlipAll();
-		// cards = !cards;
-	});
 </script>
 
 <Header
@@ -89,6 +83,5 @@
 		characterName={libretto.characterName}
 		startingIndex={cardStore.currentCardIndex}
 		{getIndexFromEl}
-		{changeViewAtIndex}
 	/>
 {/if}

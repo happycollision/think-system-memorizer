@@ -8,12 +8,11 @@
 		id: string;
 		scene_number_token?: string;
 		characterName?: Libretto['characterName'];
-		onclick?: () => void;
 	};
-	const { el, id, scene_number_token, characterName, onclick }: Props = $props();
+	const { el, id, scene_number_token, characterName }: Props = $props();
 </script>
 
-<button class="@container relative block w-full text-left" {id} onclick={() => onclick?.()}>
+<div class="@container relative block w-full text-left" {id}>
 	<div class="text-right text-xs">{el.type}</div>
 	{#if el.type === 'scene_heading'}
 		<div class="scene-heading">
@@ -61,7 +60,7 @@
 			>
 		</p>
 	{/if}
-</button>
+</div>
 
 <style>
 	.scene-heading {

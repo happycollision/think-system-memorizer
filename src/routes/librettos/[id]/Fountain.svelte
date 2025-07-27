@@ -9,7 +9,6 @@
 		parsed: ReturnType<FountainParser['parse']>;
 		characterName?: Libretto['characterName'];
 		startingIndex: number;
-		changeViewAtIndex: (index: number) => void;
 		getIndexFromEl: (el: SceneElement) => number | undefined;
 		cardStore: CardStore<SceneElement[]>;
 	};
@@ -17,7 +16,6 @@
 		parsed: screenplay,
 		characterName,
 		startingIndex,
-		changeViewAtIndex,
 		getIndexFromEl,
 		cardStore
 	}: Props = $props();
@@ -106,7 +104,6 @@
 							{el}
 							scene_number_token={scene.scene_number_token}
 							{characterName}
-							onclick={() => changeViewAtIndex(getIndexFromEl(el) || 0)}
 						/>
 					{/each}
 				</div>
