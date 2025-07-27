@@ -100,9 +100,8 @@ const REGEX = {
 	FORCED_SCENE_HEADING: /^\.(.+?)(?:\s*(?:#(.*?)#))?$/, // Starts with a period. Groups: 1=Location 2=SceneNumber
 	SCENE_NUMBER_ONLY: /^\s*(#.*?#)\s*$/,
 	TRANSITION: /^((?:[^a-z]* ?)TO:)\s*|^>\s*([^<]+)$/,
-	CHARACTER_CUE: /^[ \t]*([A-Z0-9][A-Z0-9 \t()\-.'"]*(?:\s?\(.*\))?)(?:\s*\^)?$/, // O.S.C. for Off-Screen Character
+	CHARACTER_CUE: /^[ \t]*([^a-z]*(?:\s?\(.*\))?)(?:\s*\^)?$/,
 	PARENTHETICAL: /^[ \t]*(\(.+\))$/,
-	// ACTION: /^[ \t]*!?(.*)/, // ! for action, or just normal text - handled by isAction
 	CENTERED_ACTION: /^[ \t]*>(.*)<(?!\w)/, // > TEXT < but not a transition like > SOMETHING TO:
 	NOTE: /^\[\[\s*(.*?)\s*\]\]$/,
 	LYRIC: /^~(.*)/,
