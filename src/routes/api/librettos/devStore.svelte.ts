@@ -27,14 +27,15 @@ const characterHighlightDict: Record<string, Libretto['characterName']> = {
 	ComeFromAway: {
 		exact: [
 			'CUSTOMS OFFICERS',
-			'CUSTOMS OFFICER 7',
 			'TENOR MEN',
 			'ALL MEN',
 			'MEN',
+			"MEN (CONT'D)",
 			'COMPANY',
-			'ALL'
+			'ALL',
+			'ALL (UNLESS SPEAKING)'
 		],
-		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST']
+		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST', '7']
 	}
 };
 
