@@ -12,7 +12,7 @@ type Card<T> = {
 export class CardStore<T = unknown> {
 	#cards: Card<T>[] = $state([]);
 	#currentCardIndex = $derived.by(() => {
-		const incoming = Number(page.url.searchParams.get('card') || '0') - 1;
+		const incoming = browser ? Number(page.url.searchParams.get('card') || '0') - 1 : 0;
 		let idx = incoming;
 		if (idx < 0) {
 			idx = 0;
