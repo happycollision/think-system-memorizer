@@ -1,7 +1,6 @@
 import { browser } from '$app/environment';
-import { goto, replaceState } from '$app/navigation';
-import { page } from '$app/state';
 import type { Component as SvelteComponent } from 'svelte';
+import { navState } from './nav.extension.svelte';
 
 type Card<T> = {
 	front: T;
@@ -20,13 +19,8 @@ declare global {
 
 export class CardStore<T = unknown> {
 	#cards: Card<T>[] = $state([]);
-	#cardViaPage = $derived.by(() => {
-		if (!browser) return 0;
-		if (page.state.card) return page.state.card as number;
-		return Number(page.url.searchParams.get('card') || '0');
-	});
 	#currentCardIndex = $derived.by(() => {
-		const incoming = this.#cardViaPage - 1;
+		const incoming = navState.card - 1;
 		let idx = incoming;
 		if (idx < 0) {
 			idx = 0;
@@ -35,7 +29,7 @@ export class CardStore<T = unknown> {
 			idx = this.#cards.length - 1;
 		}
 		// Fix the URL if necessary
-		if (incoming !== idx && browser) goto(this.getNewUrlForIdx(idx));
+		if (incoming !== idx && browser) navState.setCard(idx + 1);
 
 		return idx;
 	});
@@ -45,18 +39,6 @@ export class CardStore<T = unknown> {
 	constructor(cards: Card<T>[], component: typeof this.Component) {
 		this.#cards = cards;
 		this.Component = component;
-	}
-
-	private getNewUrlForIdx(idx: number) {
-		if (!browser) return '';
-		const url = new URL(page.url.href);
-		url.searchParams.set('card', (idx + 1).toString());
-		return url;
-	}
-
-	private setUrlFromIdx(idx: number) {
-		if (!browser) return;
-		replaceState(this.getNewUrlForIdx(idx), { card: idx + 1 });
 	}
 
 	get cards() {
@@ -81,11 +63,7 @@ export class CardStore<T = unknown> {
 
 	goToCard(index: number, opts?: { hardNav?: boolean }) {
 		if (index === this.#currentCardIndex) return;
-		this.setUrlFromIdx(index);
-		if (opts?.hardNav && browser) {
-			// Ugh this is terribly entangled. We have to do this because on the fountain script view, we cannot get the scrolling to work properly.
-			document.getElementById(`card-${index + 1}`)?.scrollIntoView();
-		}
+		navState.setCard(index + 1, opts?.hardNav ? 'scroll' : undefined);
 	}
 
 	flipCard(index = this.#currentCardIndex) {

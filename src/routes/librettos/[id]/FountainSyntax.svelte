@@ -58,8 +58,8 @@
 	let cardStore = $derived(
 		new CardStore<SceneElement[]>(
 			pairs.map(({ cue, line }) => ({ front: cue, back: line, isFlipped: false })),
-			CardFaceSceneElements
-		)
+			CardFaceSceneElements,
+		),
 	);
 
 	let getIndexFromEl = $derived((el: SceneElement) => {
@@ -77,11 +77,5 @@
 {#if cards}
 	<Cards {cardStore} />
 {:else}
-	<Fountain
-		{parsed}
-		{cardStore}
-		characterName={libretto.characterName}
-		startingIndex={cardStore.currentCardIndex}
-		{getIndexFromEl}
-	/>
+	<Fountain {parsed} {cardStore} characterName={libretto.characterName} {getIndexFromEl} />
 {/if}

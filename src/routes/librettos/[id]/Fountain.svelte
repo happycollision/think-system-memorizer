@@ -4,32 +4,54 @@
 	import type { FountainParser, SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import SceneElementComponent from './SceneElement.svelte';
+	import { navState } from '$lib/nav.extension.svelte';
+	import { replaceState } from '$app/navigation';
+	import { page } from '$app/state';
 
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
 		characterName?: Libretto['characterName'];
-		startingIndex: number;
 		getIndexFromEl: (el: SceneElement) => number | undefined;
 		cardStore: CardStore<SceneElement[]>;
 	};
-	let {
-		parsed: screenplay,
-		characterName,
-		startingIndex,
-		getIndexFromEl,
-		cardStore
-	}: Props = $props();
+	let { parsed: screenplay, characterName, getIndexFromEl, cardStore }: Props = $props();
 
 	let observer: IntersectionObserver | undefined = $state();
 
-	onMount(() => {
-		if (startingIndex) {
-			const sceneElement = document.getElementById(`card-${startingIndex}`);
+	function scrollIntoViewAsync(element: HTMLElement, options = { behavior: 'smooth' as const }) {
+		return new Promise<void>((resolve) => {
+			let lastScrollTime = Date.now();
+			const handler = () => {
+				lastScrollTime = Date.now();
+			};
+
+			window.addEventListener('scroll', handler);
+
+			element.scrollIntoView(options);
+
+			function checkScrollEnd() {
+				if (Date.now() - lastScrollTime > 100) {
+					window.removeEventListener('scroll', handler);
+					resolve();
+				} else {
+					requestAnimationFrame(checkScrollEnd);
+				}
+			}
+			requestAnimationFrame(checkScrollEnd);
+		});
+	}
+
+	$effect(() => {
+		if (navState.shouldScroll) {
+			const sceneElement = document.getElementById(`card-${navState.card - 1}`);
 			if (sceneElement) {
-				sceneElement.scrollIntoView({ behavior: 'smooth' });
+				navState.acceptScrollRequest((done) => scrollIntoViewAsync(sceneElement).then(done));
 			}
 		}
+	});
 
+	onMount(() => {
+		navState.shouldScroll = true;
 		setTimeout(
 			() =>
 				(observer = new IntersectionObserver(
@@ -46,11 +68,11 @@
 					},
 					{
 						// A thin line at the top of the viewport
-						rootMargin: '-1px 0px -99% 0px'
-					}
+						rootMargin: '-1px 0px -99% 0px',
+					},
 				)),
 			// Time for the smooth scroll above to complete. One second won't hurt anybody.
-			1000
+			1000,
 		);
 
 		return () => observer?.disconnect();
