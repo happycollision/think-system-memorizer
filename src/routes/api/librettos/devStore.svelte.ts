@@ -20,7 +20,7 @@ function generateIdWithSeed(): string {
 const imports = import.meta.glob('./files/*.{txt,fountain}', {
 	query: 'raw',
 	import: 'default',
-	eager: true
+	eager: true,
 });
 
 const characterHighlightDict: Record<string, Libretto['characterName']> = {
@@ -33,10 +33,13 @@ const characterHighlightDict: Record<string, Libretto['characterName']> = {
 			"MEN (CONT'D)",
 			'COMPANY',
 			'ALL',
-			'ALL (UNLESS SPEAKING)'
+			'ALL (UNLESS SPEAKING)',
 		],
-		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST', '7']
-	}
+		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST', '7'],
+	},
+	Tosha: {
+		approximate: ['TOSHA'],
+	},
 };
 
 const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
@@ -57,7 +60,7 @@ const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
 				?.replace(/\.(txt|fountain)/, '') || 'Untitled',
 		content: fromSrc,
 		isFountain,
-		characterName: characters
+		characterName: characters,
 	};
 }) as Libretto[];
 
