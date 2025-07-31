@@ -1,1 +1,0 @@
-import{R as o,b as r}from"../chunks/BCFmvlly.js";function n(e,t){throw new o(e,t.toString())}new TextEncoder;async function a(){n(303,`${r}/librettos`)}const c=Object.freeze(Object.defineProperty({__proto__:null,load:a},Symbol.toStringTag,{value:"Module"}));export{c as universal};
