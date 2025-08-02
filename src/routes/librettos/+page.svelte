@@ -8,7 +8,7 @@
 		if (confirm('Are you sure you want to delete this libretto?')) {
 			try {
 				const response = await fetch(`${base}/api/librettos/${id}/mutate`, {
-					method: 'DELETE'
+					method: 'DELETE',
 				});
 
 				if (!response.ok) {

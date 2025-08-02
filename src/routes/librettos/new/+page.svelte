@@ -10,7 +10,7 @@
 		if (!e.target) return;
 
 		const { title, content } = Object.fromEntries(
-			new FormData(e.currentTarget).entries()
+			new FormData(e.currentTarget).entries(),
 		) as Libretto;
 
 		if (!title || !content) {
@@ -22,9 +22,9 @@
 			const response = await fetch(`${base}/api/librettos/mutate`, {
 				method: 'POST',
 				headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
 				},
-				body: JSON.stringify({ title, content })
+				body: JSON.stringify({ title, content }),
 			});
 
 			if (!response.ok) {

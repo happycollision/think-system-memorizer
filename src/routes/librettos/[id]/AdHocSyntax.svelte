@@ -17,8 +17,8 @@
 	const cardStore = $derived(
 		new CardStore<string>(
 			textParts.map(([front, back]) => ({ front, back, isFlipped: false })),
-			CardFaceRawHtml
-		)
+			CardFaceRawHtml,
+		),
 	);
 
 	function changeViewAtIndex(index: number) {

@@ -2,7 +2,7 @@ import type { Libretto } from '../routes/api/librettos.json/+server';
 
 export function characterMatch(
 	characterName: Libretto['characterName'],
-	speaking: string | undefined
+	speaking: string | undefined,
 ): boolean {
 	if (!characterName || !speaking) return false;
 	return (

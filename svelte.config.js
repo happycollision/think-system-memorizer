@@ -9,15 +9,15 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			fallback: '404.html'
+			fallback: '404.html',
 		}),
 		prerender: {
-			handleHttpError: 'warn'
+			handleHttpError: 'warn',
 		},
 		paths: {
-			base: process.argv.includes('dev') ? '' : '/think-system-memorizer'
-		}
-	}
+			base: process.argv.includes('dev') ? '' : '/think-system-memorizer',
+		},
+	},
 };
 
 export default config;

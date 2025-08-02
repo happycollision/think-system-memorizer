@@ -7,6 +7,6 @@ export const load: PageLoad = async ({ fetch }) => {
 	const librettos: Libretto[] = await response.json();
 
 	return {
-		librettos
+		librettos,
 	};
 };

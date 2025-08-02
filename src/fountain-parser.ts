@@ -107,7 +107,7 @@ const REGEX = {
 	LYRIC: /^~(.*)/,
 	SECTION_MARKER: /^(#+)\s*(.+)/, // # Section, ## Subsection
 	SYNOPSIS: /^=\s*(.*)/, // = Synopsis
-	BLANK_LINE: /^\s*$/
+	BLANK_LINE: /^\s*$/,
 };
 
 function isPotentialCharacter(line: string, nextLine: string | null): boolean {
@@ -353,7 +353,7 @@ export class FountainParser {
 					currentScene.elements.push({
 						type: 'dialogue',
 						text: dialogueText,
-						character: currentCharacter
+						character: currentCharacter,
 					});
 					this.lastElementType = 'dialogue';
 					continue; // Already advanced, restart loop
@@ -476,7 +476,7 @@ export class FountainParser {
 					setting: sceneSetting,
 					location: sceneLocation,
 					time_of_day: sceneTimeOfDay,
-					scene_number: sceneSceneNumber
+					scene_number: sceneSceneNumber,
 				};
 				currentScene.elements.push(sceneHeadingElement);
 				this.lastElementType = 'scene_heading';
@@ -508,7 +508,7 @@ export class FountainParser {
 
 		// Clean up empty scenes that might have been added speculatively
 		this.screenplay.scenes = this.screenplay.scenes.filter(
-			(scene) => scene.elements.length > 0 || scene.scene_number_token
+			(scene) => scene.elements.length > 0 || scene.scene_number_token,
 		);
 
 		return this.screenplay;

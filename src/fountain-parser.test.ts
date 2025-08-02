@@ -20,7 +20,7 @@ Draft Date: 01/01/2024`;
 				credit: ['Written by'],
 				author: ['A. N. Author'],
 				source: ['Based on a true story'],
-				draft_date: ['01/01/2024']
+				draft_date: ['01/01/2024'],
 			};
 			const result = parser.parse(script);
 			expect(result.title_page).toEqual(expectedTitlePage);
@@ -42,7 +42,7 @@ my custom key: Value 2`;
 			const script = `Authors: John Doe
 Authors: Jane Smith`;
 			const expectedTitlePage: TitlePage = {
-				authors: ['John Doe', 'Jane Smith']
+				authors: ['John Doe', 'Jane Smith'],
 			};
 			const result = parser.parse(script);
 			expect(result.title_page).toEqual(expectedTitlePage);
@@ -51,7 +51,7 @@ Authors: Jane Smith`;
 		it('should handle custom keys', () => {
 			const script = `My Custom Key: Some Value`;
 			const expectedTitlePage: TitlePage = {
-				my_custom_key: ['Some Value']
+				my_custom_key: ['Some Value'],
 			};
 			const result = parser.parse(script);
 			expect(result.title_page).toEqual(expectedTitlePage);
@@ -100,7 +100,7 @@ Date: 2024`;
 			expect(result.title_page).toEqual({
 				title: ['My Film'],
 				author: ['Some One'],
-				date: ['2024']
+				date: ['2024'],
 			});
 			expect(result.scenes.length).toBe(0);
 		});
@@ -260,7 +260,7 @@ And what was his motive for trying to murder me?
 			const result = parser.parse(script);
 			assert(result.scenes[0].elements[1].type === 'dialogue', 'Expected dialogue type');
 			expect(result.scenes[0].elements[1].text).toBe(
-				'This is the first line.\nThis is the second line.'
+				'This is the first line.\nThis is the second line.',
 			);
 		});
 
@@ -378,7 +378,7 @@ Followed by more action.`;
 			expect(result.scenes[0].elements.length).toBe(1);
 			assert(result.scenes[0].elements[0].type === 'action', 'Expected action type');
 			expect(result.scenes[0].elements[0].text).toBe(
-				'This is the very first line of action.\nFollowed by more action.'
+				'This is the very first line of action.\nFollowed by more action.',
 			);
 		});
 

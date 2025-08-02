@@ -19,7 +19,7 @@ export function makeParts(text: string) {
 		const [cue, ...lines] = match.split(/^>/m);
 		a.push([
 			htmlForMarkdownifiedCue(markdownify(cue)),
-			htmlForMarkdownifiedLine(markdownify(lines.join('')))
+			htmlForMarkdownifiedLine(markdownify(lines.join(''))),
 		]);
 	}
 
@@ -91,7 +91,7 @@ function htmlForMarkdownifiedLine(str: string, highlightDialogue = true) {
 
 		// eslint-disable-next-line prefer-const
 		let [, open, character, dialogue, close] = node.match(
-			/(<p>)([\w\s.&/;#']{1,38}:)?([\s\S]*?)(<\/p>)/
+			/(<p>)([\w\s.&/;#']{1,38}:)?([\s\S]*?)(<\/p>)/,
 		) as string[];
 		dialogue = wrapStageDirections(dialogue);
 		character = character ? `<span class="character">${character}</span>` : '';
