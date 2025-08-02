@@ -6,7 +6,7 @@ import { page } from '$app/state';
  * Why do we need this? Because some weird stuff happens on iOS Webkit (or mobile in general?) where app navigation via goto totally trashes the scrolling behavior.
  */
 export const navState = new (class NavState {
-	card = $derived(page.state.card ?? Number(page.url.searchParams.get('card') || '1'));
+	card = $derived(page.state.card ?? Number((browser && page.url.searchParams.get('card')) || '1'));
 
 	shouldScroll = $state(false);
 
