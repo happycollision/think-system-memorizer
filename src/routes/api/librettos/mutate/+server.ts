@@ -16,7 +16,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ error: `Libretto with title "${title}" already exists` }, { status: 409 });
 	}
 
-	const newLibretto: Libretto = { id: generateId(), title, content };
+	const newLibretto: Libretto = { id: generateId(), title, content, isFountain: false };
 	librettos.current = [...librettos.current, newLibretto];
 	return json(newLibretto, { status: 201 });
 };

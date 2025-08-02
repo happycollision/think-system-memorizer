@@ -5,7 +5,7 @@
 
 	type Props = {
 		el: SceneElement;
-		id: string;
+		id?: string;
 		scene_number_token?: string;
 		characterName?: Libretto['characterName'];
 	};

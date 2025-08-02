@@ -7,7 +7,7 @@ export type Libretto = {
 	title: string;
 	content: string;
 	isFountain: boolean;
-	characterName?: { exact: string[]; approximate?: string[] };
+	characterName?: { exact?: string[]; approximate?: string[] };
 };
 
 export const GET: RequestHandler = async () => {
