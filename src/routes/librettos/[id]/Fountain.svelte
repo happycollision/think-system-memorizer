@@ -5,8 +5,6 @@
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import SceneElementComponent from './SceneElement.svelte';
 	import { navState } from '$lib/nav.extension.svelte';
-	import { replaceState } from '$app/navigation';
-	import { page } from '$app/state';
 
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
