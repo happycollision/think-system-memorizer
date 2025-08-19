@@ -306,35 +306,22 @@ Everyone becomes AIR TRAFFIC CONTROLLERS as the bodhran starts beating slowly.
 CONTROL 12 (DOUG)
 Lufthansa four one four, this is Gander center —squawk code seven two tree five. Due to a recent development, you are ordered to land at Gander YOX immediately. Copy that. This is an order.
 
-CONTROL 12
-Roger Lufthansa four one four. Turn right heading one niner zero degrees. You are cleared to land your aircraft at Gander YOX immediately.
+CONTROL 12/10
+Roger Lufthansa four one four. Turn right heading one niner zero degrees. You are cleared to flight level two four zero.
+Speedbird one one seven— squawk code two tree five. This is Gander Center. You're radar identified —now cleared to Gander YQX via present position direct.
 
-CONTROL 10
-Air India one tree, reduce speed to one zero five, you are ordered to flight level two four zero.
+CONTROL 8/7 ^
+Air India one tree, reduce speed to one zero five, you are ordered to land your aircraft at Gander YQX immediately.
+American airspace has been closed. you are cleared to six thousand feet Gander altimeter tree zero zero one. Roger one one tree, Cleared flight level two four zero.
 
-CONTROL 8
-Sabena five tree niner,Gander— winds two one zero degrees Center—I show you on the seven, five naughts. Contact tower now on frequency one one eight decimal one.
+CONTROL 9/2/2 ^
+Sabena five tree niner,Gander— winds two one zero degrees five naughts. You are cleared to land runway two two. Thank you five tree niner, vector for runway two two. Turn left heading two five zero to Intercept the localizer. Cleared straigh in back-course runway two two.
 
-CONTROL 7
-Delta one five — Gander Aer Lingus two two, the U.S. airspace has been closed. You are cleared to land runway two two. Thank you five tree niner, vector for runway two two. Turn left heading two five zero to Intercept the localizer.
+CONTROL 11/3/4 ^
+Delta one five — Gander Center—I show you on the localizer eight miles final. Contact tower now on frequency one one eight decimal one. Thank you one five. Air New Zealand eight five two, squawk code seven two tree five. This is Gander Center.
 
-CONTROL 9
-Speedbird one one seven— squawk code two tree five. This is Gander Center. You're radar identified —now cleared to Gander YOX via present position direct.
-
-CONTROL 11
-American airspace has been closed. you are cleared to six thousand feet Gander altimeter tree zero zero one. Roger one one tree, Cleared straight in back-course runway two two.
-
-CONTROL 3
-Air New Zealand eight five two, squawk code seven two tree five. This is Gander Center.
-
-CONTROL 4
-Deer Lake YDX or Gander YOX. Roger two two seven. Turn left heading one five zero degrees and proceed.
-
-CONTROL 5
-Thank you one five. flight level two four zero.
-
-CONTROL 6
-Cleared flight level two four zero.
+CONTROL 5/6 ^
+Aer Lingus two two, the U.S. airspace has been closed. You are ordered to land at Deer Lake YDX or Gander YQX. Roger two two seven. Turn left heading one five zero degrees and proceed.
 
 CONTROL 9
 No, sir. You do not have a choice.
@@ -376,43 +363,23 @@ Ladies and Gentlemen, this is your Captain speaking. There's been an incident in
 PILOT 7
 We're having trouble with the... cabin lighting system. We're just going to touch down while we fix the system.
 
-PILOT 2 ^
+PILOT 2/3
 Damen und Herren: dieses ist Ihr pilot. Wir haben eine Situation in den America. Es hat eine Terroristtatigkeit gegeben und wir werden bestellt, in Kanada zu landen.
 
-PILOT 3 ^
+PILOT 10/8 ^
 This is your pilot speaking. We'll be making an unexpected detour. The US airspace is closed and we are being diverted. I will provide more details as they become available.
 
-PILOT 10 ^
+PILOT 1/6/11 ^
 Ladies and Gentlemen: can I have your attention? We've received word that there has been an incident in the US that will require us to make an unscheduled stop in Gander, Newfoundland.
 
-PILOT 8 ^
+PILOT 4/5/12 ^
 Mesdames et Messieurs nous allons faire un court arrêt à Gander, Terre-Neuve pour prendre de l'essence. Merci beaucoup pour votre patience.
 
-PILOT 1 ^
+PILOT 9/7 ^
 Señoras y Señores Por favor regresen a sus asientos y abrochense los cinturones. Vamos a aterrizar en Newfoundland.
 
 PILOT 6 ^
 This is your pilot. Wir haben eine Situation in den America. Es hat eine Terroristtatigkeit gegeben und wir werden bestellt, in Kanada zu landen.
-
-PILOT 11 ^
-You are cleared localizer eight miles final.
-
-PILOT 4 ^
-Cleared straight in back-course runway two two.
-
-PILOT 5 ^
-flight level two four zero.
-
-PILOT 12 ^
-Cleared flight level two four zero.
-
-PILOT 9 ^
-Cleared straight in back-course runway two two.
-
-PILOT 7 ^
-Cleared straight in back-course runway two two.
-
-The flight attendant button goes "BOONG-BOONG."
 
 FLIGHT ATTENDANT (ACTOR 3)
 Ladies and Gentlemen, please fasten your seat belts. Looks like we'll be making an unexpected landing in Gander, Newfoundland.
@@ -542,7 +509,13 @@ STAFF 9
 And the airplane crews need to be rested or we'll never get them out of here.
 
 STAFF 7 (OZ)  
-American Transatlantic flight number 25 is requesting that when they deplane, they be a priority...
+American Transatlantic flight number 25 is requesting that when they deplane, 
+
+STAFF 12
+If they deplane
+
+STAFF 7 (CONT'D)
+they be a priority...
 
 CLAUDE  
 Why?
@@ -580,7 +553,7 @@ Claude! Apparently those five planes that aren’t responding? They’re treatin
 
 EVERYONE begins to panic.
 
-STAFF 8 ^  
+STAFF 8 ^
 Why are we getting the bomb threats?
 
 STAFF 12 ^  
@@ -596,7 +569,7 @@ STAFF 7 ^
 Why were they even sent here? Why not Toronto?!
 
 STAFF 1 ^  
-How many are we getting?
+How many ARE we getting?
 
 STAFF 10 ^  
 Half the town’s gone down to watch!
@@ -605,7 +578,7 @@ STAFF 2 ^
 What are we supposed to do?
 
 STAFF 4 ^  
-They don’t know what's on them!
+They don’t know what's on them! Or who’s on them!
 
 STAFF 6 ^  
 Do we evacuate the town? What do we do? Who’s on them?!
@@ -631,6 +604,7 @@ Because if anything goes wrong, we have a lot less people to lose.
 
 A slight pause as they all take that in.
 
+CLAUDE (CONT'D)
 Alright, Janice Mosher. Here’s your news. Gander Town Council declares a state of emergency.
 
 # Song 4: Blankets and Bedding
