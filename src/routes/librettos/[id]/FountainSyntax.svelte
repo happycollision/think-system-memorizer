@@ -48,6 +48,9 @@
 			if (currentSpeakerMatches) {
 				currentPair.line.push(el);
 			} else {
+				if (libretto.title === 'ComeFromAway2' && el.type === 'character') {
+					currentPair.cue.length = 0;
+				}
 				currentPair.cue.push(el);
 			}
 		}
