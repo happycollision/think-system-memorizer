@@ -64,4 +64,15 @@ const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
 	};
 }) as Libretto[];
 
+const ComeFromAway = localLibs.findIndex((x) => x.title === 'ComeFromAway');
+localLibs.splice(ComeFromAway + 1, 0, {
+	...localLibs[ComeFromAway],
+	title: 'ComeFromAway2',
+	id: generateIdWithSeed(),
+	characterName: {
+		exact: ['CUSTOMS OFFICERS'],
+		approximate: ['OZ', 'JOEY', 'MICHAELS', 'TERRY', 'RABBI', 'MATTY', 'CARDIOLOGIST', '7'],
+	},
+});
+
 export const librettos: { current: Libretto[] } = $state({ current: localLibs });
