@@ -37,6 +37,13 @@
 				{line}{#if j < text.length - 1}<br />{/if}
 			{/each}
 		</p>
+	{:else if el.type === 'actor_direction'}
+		<p
+			data-actor-direction
+			class="bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white"
+		>
+			{el.text}
+		</p>
 	{:else if el.type === 'parenthetical'}
 		<p class="parenthetical">{el.text}</p>
 	{:else if el.type === 'transition'}

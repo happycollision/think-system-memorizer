@@ -70,8 +70,14 @@ export interface Lyric {
 	text: string;
 }
 
+export interface ActorDirection {
+	type: 'actor_direction';
+	text: string;
+}
+
 export type SceneElement =
 	| Action
+	| ActorDirection
 	| Character
 	| Dialogue
 	| Parenthetical
@@ -108,7 +114,12 @@ const REGEX = {
 	SECTION_MARKER: /^(#+)\s*(.+)/, // # Section, ## Subsection
 	SYNOPSIS: /^=\s*(.*)/, // = Synopsis
 	BLANK_LINE: /^\s*$/,
+	ACTOR_DIRECTION: /^>>/,
 };
+
+function extractActorDirection(line: string) {
+	return line.substring(2).trim();
+}
 
 function isPotentialCharacter(line: string, nextLine: string | null): boolean {
 	if (REGEX.BLANK_LINE.test(nextLine || '')) return false;
@@ -279,6 +290,10 @@ export class FountainParser {
 				match = line.match(REGEX.NOTE);
 				currentScene.elements.push({ type: 'note', text: match![1].trim() });
 				this.lastElementType = 'note';
+			} else if (REGEX.ACTOR_DIRECTION.test(line)) {
+				match = line.match(REGEX.SECTION_MARKER);
+				currentScene.elements.push({ type: 'actor_direction', text: extractActorDirection(line) });
+				this.lastElementType = 'actor_direction';
 			} else if (REGEX.SECTION_MARKER.test(line)) {
 				match = line.match(REGEX.SECTION_MARKER);
 				currentScene.elements.push({ type: 'section', text: match![2], level: match![1].length });
