@@ -5,6 +5,7 @@
 	import type { Libretto } from '../../api/librettos.json/+server';
 	import SceneElementComponent from './SceneElement.svelte';
 	import { navState } from '$lib/nav.extension.svelte';
+	import { getHeaderHeightAndPadding } from './Header.svelte';
 
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
@@ -47,6 +48,40 @@
 			}
 		}
 	});
+
+	function toActorDirection(dir: 'next' | 'prev') {
+		const elements = Array.from(
+			document.querySelectorAll('[data-actor-direction]'),
+		) as HTMLElement[];
+		const targetIndex = elements.findIndex((el) => {
+			const pos = el.getBoundingClientRect().top + window.scrollY;
+			return pos > window.scrollY + getHeaderHeightAndPadding();
+		});
+
+		let target = elements[targetIndex + (dir === 'next' ? 0 : -2)];
+
+		// we might be at/past the last one...
+		if (targetIndex === -1 && elements.length > 0 && dir === 'prev') {
+			const penultimate = elements[elements.length - 2];
+			const ultimate = elements[elements.length - 1];
+
+			target = ultimate;
+
+			if (ultimate && penultimate) {
+				if (
+					ultimate.getBoundingClientRect().top + window.scrollY ===
+					window.scrollY + getHeaderHeightAndPadding()
+				) {
+					// already at the end, so go to the previous one
+					target = penultimate;
+				}
+			}
+		}
+
+		if (target) {
+			navState.acceptScrollRequest((done) => scrollIntoViewAsync(target).then(done));
+		}
+	}
 
 	onMount(() => {
 		navState.shouldScroll = true;
@@ -134,6 +169,19 @@
 	{:else}
 		<p>Loading screenplay...</p>
 	{/if}
+</div>
+
+<div class="fixed bottom-0 left-0 p-4">
+	<div class="inline-flex gap-2">
+		<button
+			class="aspect-square rounded-full bg-blue-400 p-2 shadow-lg shadow-black/40"
+			onclick={() => toActorDirection('next')}>Nxt</button
+		>
+		<button
+			class="aspect-square rounded-full bg-blue-400 p-2 shadow-lg shadow-black/40"
+			onclick={() => toActorDirection('prev')}>Prv</button
+		>
+	</div>
 </div>
 
 <style lang="postcss">
