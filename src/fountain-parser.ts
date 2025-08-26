@@ -12,34 +12,40 @@ export interface TitlePage {
 	[key: string]: string[] | undefined; // For other custom key-value pairs
 }
 
-export interface Action {
+export interface SceneElementBase {
+	id: string;
+	globalIndex: number;
+	sceneIndex: number;
+}
+
+export interface Action extends SceneElementBase {
 	type: 'action';
 	text: string;
 	isCentered?: boolean;
 }
 
-export interface Character {
+export interface Character extends SceneElementBase {
 	type: 'character';
 	name: string;
 }
 
-export interface Dialogue {
+export interface Dialogue extends SceneElementBase {
 	type: 'dialogue';
 	character: string | undefined; // Name of the character speaking
 	text: string;
 }
 
-export interface Parenthetical {
+export interface Parenthetical extends SceneElementBase {
 	type: 'parenthetical';
 	text: string;
 }
 
-export interface Transition {
+export interface Transition extends SceneElementBase {
 	type: 'transition';
 	text: string;
 }
 
-export interface SceneHeading {
+export interface SceneHeading extends SceneElementBase {
 	type: 'scene_heading';
 	text: string;
 	setting: 'INT.' | 'EXT.' | 'EST.' | 'INT./EXT.' | 'OTHER'; // OTHER for forced headings like .LOCATION
@@ -48,29 +54,29 @@ export interface SceneHeading {
 	scene_number?: string;
 }
 
-export interface Note {
+export interface Note extends SceneElementBase {
 	type: 'note';
 	text: string;
 }
 
-export interface Section {
+export interface Section extends SceneElementBase {
 	type: 'section';
 	text: string;
 	level: number; // 1 for #, 2 for ##, etc.
 }
 
-export interface Synopsis {
+export interface Synopsis extends SceneElementBase {
 	type: 'synopsis';
 	text: string;
 }
 
-export interface Lyric {
+export interface Lyric extends SceneElementBase {
 	type: 'lyric';
 	character: string | undefined; // Name of the character speaking
 	text: string;
 }
 
-export interface ActorDirection {
+export interface ActorDirection extends SceneElementBase {
 	type: 'actor_direction';
 	text: string;
 }
@@ -145,6 +151,8 @@ function isPotentialCharacter(line: string, nextLine: string | null): boolean {
 }
 
 export class FountainParser {
+	private currentGlobalIndex = 0;
+	private currentSceneIndex = 0;
 	private lines: string[] = [];
 	private currentLineNum: number = 0;
 	private screenplay: Screenplay = { title_page: {}, scenes: [] };
@@ -250,6 +258,23 @@ export class FountainParser {
 		return true;
 	}
 
+	private createNextElement<T extends SceneElement['type']>(
+		type: T,
+		props: Omit<SceneElement & { type: T }, keyof SceneElementBase | 'type'>,
+	) {
+		if (type === 'scene_heading') {
+			this.currentSceneIndex = 0;
+		}
+		this.lastElementType = type;
+		return {
+			type,
+			globalIndex: this.currentGlobalIndex++,
+			sceneIndex: this.currentSceneIndex++,
+			id: (this.currentGlobalIndex - 1).toString(),
+			...props,
+		};
+	}
+
 	private parseSceneElements(currentScene: Scene): void {
 		let line = this.peek();
 		let currentCharacter: string | undefined = undefined;
@@ -288,36 +313,54 @@ export class FountainParser {
 
 			if (REGEX.NOTE.test(line)) {
 				match = line.match(REGEX.NOTE);
-				currentScene.elements.push({ type: 'note', text: match![1].trim() });
-				this.lastElementType = 'note';
+				currentScene.elements.push(this.createNextElement('note', { text: match![1].trim() }));
 			} else if (REGEX.ACTOR_DIRECTION.test(line)) {
 				match = line.match(REGEX.SECTION_MARKER);
-				currentScene.elements.push({ type: 'actor_direction', text: extractActorDirection(line) });
-				this.lastElementType = 'actor_direction';
+				currentScene.elements.push(
+					this.createNextElement('actor_direction', { text: extractActorDirection(line) }),
+				);
 			} else if (REGEX.SECTION_MARKER.test(line)) {
 				match = line.match(REGEX.SECTION_MARKER);
-				currentScene.elements.push({ type: 'section', text: match![2], level: match![1].length });
-				this.lastElementType = 'section';
+				currentScene.elements.push(
+					this.createNextElement('section', { text: match![2], level: match![1].length }),
+				);
 			} else if (REGEX.SYNOPSIS.test(line)) {
 				match = line.match(REGEX.SYNOPSIS);
-				currentScene.elements.push({ type: 'synopsis', text: match![1] });
-				this.lastElementType = 'section';
+				currentScene.elements.push(
+					this.createNextElement('synopsis', {
+						text: match![1],
+					}),
+				);
 			} else if (REGEX.LYRIC.test(line)) {
 				match = line.match(REGEX.LYRIC);
-				currentScene.elements.push({ type: 'lyric', text: match![1], character: currentCharacter });
-				this.lastElementType = 'lyric';
+				currentScene.elements.push(
+					this.createNextElement('lyric', {
+						text: match![1],
+						character: currentCharacter,
+					}),
+				);
 			} else if (REGEX.TRANSITION.test(trimmedLine)) {
 				match = trimmedLine.match(REGEX.TRANSITION);
-				currentScene.elements.push({ type: 'transition', text: match![1] || match![2] });
-				this.lastElementType = 'transition';
+				currentScene.elements.push(
+					this.createNextElement('transition', {
+						text: match![1] || match![2],
+					}),
+				);
 			} else if (REGEX.CENTERED_ACTION.test(line)) {
 				match = line.match(REGEX.CENTERED_ACTION);
-				currentScene.elements.push({ type: 'action', text: match![1].trim(), isCentered: true });
-				this.lastElementType = 'action';
+				currentScene.elements.push(
+					this.createNextElement('action', {
+						text: match![1].trim(),
+						isCentered: true,
+					}),
+				);
 			} else if (isPotentialCharacter(line, this.peekNext())) {
 				currentCharacter = trimmedLine;
-				currentScene.elements.push({ type: 'character', name: trimmedLine });
-				this.lastElementType = 'character';
+				currentScene.elements.push(
+					this.createNextElement('character', {
+						name: trimmedLine,
+					}),
+				);
 			} else if (
 				REGEX.PARENTHETICAL.test(line) &&
 				(this.lastElementType === 'character' ||
@@ -325,8 +368,11 @@ export class FountainParser {
 					this.lastElementType === 'dialogue')
 			) {
 				match = line.match(REGEX.PARENTHETICAL);
-				currentScene.elements.push({ type: 'parenthetical', text: match![1] }); // Keep inner content as is, trim later if needed
-				this.lastElementType = 'parenthetical';
+				currentScene.elements.push(
+					this.createNextElement('parenthetical', {
+						text: match![1],
+					}),
+				); // Keep inner content as is, trim later if needed
 			} else if (
 				this.lastElementType === 'character' ||
 				this.lastElementType === 'parenthetical' ||
@@ -365,12 +411,12 @@ export class FountainParser {
 						this.advance();
 						line = this.peek();
 					}
-					currentScene.elements.push({
-						type: 'dialogue',
-						text: dialogueText,
-						character: currentCharacter,
-					});
-					this.lastElementType = 'dialogue';
+					currentScene.elements.push(
+						this.createNextElement('dialogue', {
+							text: dialogueText,
+							character: currentCharacter,
+						}),
+					);
 					continue; // Already advanced, restart loop
 				} else {
 					// Line looks like something else, not dialogue. Let the main loop re-evaluate.
@@ -401,8 +447,11 @@ export class FountainParser {
 					this.advance();
 					line = this.peek();
 				}
-				currentScene.elements.push({ type: 'action', text: actionText });
-				this.lastElementType = 'action';
+				currentScene.elements.push(
+					this.createNextElement('action', {
+						text: actionText,
+					}),
+				);
 				continue; // Already advanced, restart loop
 			} else {
 				// If it's not action and not handled above, it might be a blank line (handled at top)
@@ -412,8 +461,11 @@ export class FountainParser {
 				if (line !== null && !REGEX.BLANK_LINE.test(line)) {
 					// Fallback: treat as unclassified action if nothing else fits.
 					// This helps catch things like standalone parentheticals if not handled explicitly.
-					currentScene.elements.push({ type: 'action', text: line.trim() });
-					this.lastElementType = 'action';
+					currentScene.elements.push(
+						this.createNextElement('action', {
+							text: line.trim(),
+						}),
+					);
 				}
 			}
 			this.advance(); // Ensure progress if no other rule advanced
@@ -485,16 +537,16 @@ export class FountainParser {
 				currentScene = { elements: [], scene_number_token: sceneSceneNumber };
 				this.screenplay.scenes.push(currentScene);
 
-				const sceneHeadingElement: SceneHeading = {
-					type: 'scene_heading',
-					text: sceneHeadingText,
-					setting: sceneSetting,
-					location: sceneLocation,
-					time_of_day: sceneTimeOfDay,
-					scene_number: sceneSceneNumber,
-				};
-				currentScene.elements.push(sceneHeadingElement);
-				this.lastElementType = 'scene_heading';
+				currentScene.elements.push(
+					this.createNextElement('scene_heading', {
+						text: sceneHeadingText,
+						setting: sceneSetting,
+						location: sceneLocation,
+						time_of_day: sceneTimeOfDay,
+						scene_number: sceneSceneNumber,
+					}),
+				);
+
 				this.advance();
 				this.parseSceneElements(currentScene);
 			} else if (REGEX.SCENE_NUMBER_ONLY.test(trimmedLine)) {

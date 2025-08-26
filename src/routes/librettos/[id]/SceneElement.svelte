@@ -13,7 +13,7 @@
 </script>
 
 <div class="@container relative block w-full text-left" {id}>
-	<div class="text-right text-xs">{el.type}</div>
+	<div class="text-right text-xs">{el.type}; {el.sceneIndex}; {el.id}</div>
 	{#if el.type === 'scene_heading'}
 		<div class="scene-heading">
 			{el.text}
