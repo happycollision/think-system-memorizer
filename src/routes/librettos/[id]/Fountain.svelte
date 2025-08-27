@@ -174,11 +174,11 @@
 <div class="fixed bottom-0 left-0 p-4">
 	<div class="inline-flex gap-2">
 		<button
-			class="aspect-square rounded-full bg-blue-400 p-2 shadow-lg shadow-black/40"
+			class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
 			onclick={() => toActorDirection('next')}>Nxt</button
 		>
 		<button
-			class="aspect-square rounded-full bg-blue-400 p-2 shadow-lg shadow-black/40"
+			class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
 			onclick={() => toActorDirection('prev')}>Prv</button
 		>
 	</div>
