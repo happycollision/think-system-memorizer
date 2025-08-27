@@ -73,10 +73,6 @@
 		margin-bottom: 15px;
 		padding: 5px 10px;
 	}
-	.scene-number-inline {
-		margin-left: 10px;
-		font-style: italic;
-	}
 
 	.action {
 		margin-top: 10px;
