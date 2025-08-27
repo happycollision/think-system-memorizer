@@ -131,7 +131,7 @@
 			</div>
 		{/if}
 
-		<div class="@contaier">
+		<div class="@container">
 			{#each screenplay.scenes as scene, i (i)}
 				{#each scene.elements as sceneElement, i (i)}
 					<SceneElementComponent
