@@ -131,23 +131,20 @@
 			</div>
 		{/if}
 
-		<div class="scenes">
+		<div class="@contaier">
 			{#each screenplay.scenes as scene, i (i)}
 				{#each scene.elements as sceneElement, i (i)}
-					<div
+					<SceneElementComponent
 						data-el-index={getIndexFromEl(sceneElement)}
+						id={`card-${getIndexFromEl(sceneElement)}`}
 						{@attach (divEl) => {
 							if (!observer) return;
 							observer.observe(divEl);
 							return () => observer?.unobserve(divEl);
 						}}
-					>
-						<SceneElementComponent
-							id={`card-${getIndexFromEl(sceneElement)}`}
-							el={sceneElement}
-							{characterName}
-						/>
-					</div>
+						el={sceneElement}
+						{characterName}
+					/>
 				{/each}
 			{/each}
 		</div>

@@ -1,69 +1,72 @@
 <script lang="ts">
 	import { characterMatch } from '$lib/characterMatch';
+	import type { HTMLAttributes } from 'svelte/elements';
 	import type { SceneElement } from '../../../fountain-parser';
 	import type { Libretto } from '../../api/librettos.json/+server';
 
-	type Props = {
+	interface Props extends HTMLAttributes<HTMLDivElement | HTMLParagraphElement> {
 		el: SceneElement;
-		id?: string;
 		characterName?: Libretto['characterName'];
-	};
-	const { el, id, characterName }: Props = $props();
+	}
+	const { el, characterName, ...htmlProps }: Props = $props();
 </script>
 
-<div class="@container relative block w-full text-left" {id}>
-	<div class="text-right text-xs">{el.type}; {el.sceneIndex}; {el.id}</div>
-	{#if el.type === 'scene_heading'}
-		<div class="scene-heading">
-			{el.text}
-		</div>
-	{:else if el.type === 'action'}
-		{@const text = el.text.split('\n')}
-		<p class="action {el.isCentered ? 'centered' : ''}">
-			{#each text as line, j (j)}
+<div class="text-right text-xs">{el.type}; {el.sceneIndex}; {el.id}</div>
+
+{#if el.type === 'scene_heading'}
+	<div class="scene-heading" {...htmlProps}>
+		{el.text}
+	</div>
+{:else if el.type === 'action'}
+	{@const text = el.text.split('\n')}
+	<p class="action {el.isCentered ? 'centered' : ''}" {...htmlProps}>
+		{#each text as line, j (j)}
+			{line}{#if j < text.length - 1}<br />{/if}
+		{/each}
+	</p>
+{:else if el.type === 'character'}
+	<p class="character" {...htmlProps}>{el.name}</p>
+{:else if el.type === 'dialogue'}
+	{@const text = el.text.split('\n')}
+	<p
+		class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}
+		{...htmlProps}
+	>
+		{#each text as line, j (j)}
+			{line}{#if j < text.length - 1}<br />{/if}
+		{/each}
+	</p>
+{:else if el.type === 'actor_direction'}
+	<p
+		data-actor-direction
+		class="bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white"
+		{...htmlProps}
+	>
+		{el.text}
+	</p>
+{:else if el.type === 'parenthetical'}
+	<p class="parenthetical" {...htmlProps}>{el.text}</p>
+{:else if el.type === 'transition'}
+	<p class="transition" {...htmlProps}>{el.text}</p>
+{:else if el.type === 'note'}
+	{@const text = el.text.split('\n')}
+	<p class="note" {...htmlProps}>
+		<em
+			>{#each text as line, j (j)}
 				{line}{#if j < text.length - 1}<br />{/if}
-			{/each}
-		</p>
-	{:else if el.type === 'character'}
-		<p class="character">{el.name}</p>
-	{:else if el.type === 'dialogue'}
-		{@const text = el.text.split('\n')}
-		<p class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}>
-			{#each text as line, j (j)}
-				{line}{#if j < text.length - 1}<br />{/if}
-			{/each}
-		</p>
-	{:else if el.type === 'actor_direction'}
-		<p
-			data-actor-direction
-			class="bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white"
+			{/each}</em
 		>
-			{el.text}
-		</p>
-	{:else if el.type === 'parenthetical'}
-		<p class="parenthetical">{el.text}</p>
-	{:else if el.type === 'transition'}
-		<p class="transition">{el.text}</p>
-	{:else if el.type === 'note'}
-		{@const text = el.text.split('\n')}
-		<p class="note">
-			<em
-				>{#each text as line, j (j)}
-					{line}{#if j < text.length - 1}<br />{/if}
-				{/each}</em
-			>
-		</p>
-	{:else if el.type === 'lyric'}
-		{@const text = el.text.split('\n')}
-		<p class={['lyric', characterMatch(characterName, el.character) && 'highlight']}>
-			<em
-				>{#each text as line, j (j)}
-					{line}{#if j < text.length - 1}<br />{/if}
-				{/each}</em
-			>
-		</p>
-	{/if}
-</div>
+	</p>
+{:else if el.type === 'lyric'}
+	{@const text = el.text.split('\n')}
+	<p class={['lyric', characterMatch(characterName, el.character) && 'highlight']} {...htmlProps}>
+		<em
+			>{#each text as line, j (j)}
+				{line}{#if j < text.length - 1}<br />{/if}
+			{/each}</em
+		>
+	</p>
+{/if}
 
 <style>
 	.scene-heading {
