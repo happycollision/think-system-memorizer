@@ -196,13 +196,4 @@
 	.title-value {
 		margin-top: 5px;
 	}
-
-	.scene {
-		margin-bottom: 30px;
-	}
-
-	.scene-number-token {
-		font-weight: bold;
-		margin-bottom: 10px;
-	}
 </style>
