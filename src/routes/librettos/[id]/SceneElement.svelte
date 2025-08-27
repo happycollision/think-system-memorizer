@@ -6,10 +6,9 @@
 	type Props = {
 		el: SceneElement;
 		id?: string;
-		scene_number_token?: string;
 		characterName?: Libretto['characterName'];
 	};
-	const { el, id, scene_number_token, characterName }: Props = $props();
+	const { el, id, characterName }: Props = $props();
 </script>
 
 <div class="@container relative block w-full text-left" {id}>
@@ -17,9 +16,6 @@
 	{#if el.type === 'scene_heading'}
 		<div class="scene-heading">
 			{el.text}
-			{#if el.scene_number && el.scene_number !== scene_number_token}
-				<span class="scene-number-inline">{el.scene_number}</span>
-			{/if}
 		</div>
 	{:else if el.type === 'action'}
 		{@const text = el.text.split('\n')}

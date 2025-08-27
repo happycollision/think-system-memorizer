@@ -132,38 +132,23 @@
 		{/if}
 
 		<div class="scenes">
-			{#each screenplay.scenes as scene_, i (i)}
-				{@const scene = scene_ as {
-					elements: SceneElement[];
-					scene_number_token?: string;
-					scene_number?: string;
-				}}
-				{#if i > 0}
-					<hr />
-				{/if}
-				<div class="scene">
-					{#if scene.scene_number_token && scene.elements.length > 0 && scene.elements[0].type !== 'scene_heading'}
-						<!-- Display scene number if it's standalone and not part of a heading -->
-						<p class="scene-number-token">{scene.scene_number_token}</p>
-					{/if}
-					{#each scene.elements as element, i (i)}
-						{@const el = element as SceneElement}
-						<div
-							data-el-index={getIndexFromEl(el)}
-							{@attach (divEl) => {
-								if (!observer) return;
-								observer.observe(divEl);
-								return () => observer?.unobserve(divEl);
-							}}
-						></div>
+			{#each screenplay.scenes as scene, i (i)}
+				{#each scene.elements as sceneElement, i (i)}
+					<div
+						data-el-index={getIndexFromEl(sceneElement)}
+						{@attach (divEl) => {
+							if (!observer) return;
+							observer.observe(divEl);
+							return () => observer?.unobserve(divEl);
+						}}
+					>
 						<SceneElementComponent
-							id={`card-${getIndexFromEl(el)}`}
-							{el}
-							scene_number_token={scene.scene_number_token}
+							id={`card-${getIndexFromEl(sceneElement)}`}
+							el={sceneElement}
 							{characterName}
 						/>
-					{/each}
-				</div>
+					</div>
+				{/each}
 			{/each}
 		</div>
 	{:else}
