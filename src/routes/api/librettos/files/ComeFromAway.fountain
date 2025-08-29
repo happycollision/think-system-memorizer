@@ -30,19 +30,19 @@ And a hockey rink.
 CLAUDE
 It's a small place—on a giant rock in the ocean. Everybody knows everybody else. And everybody in this room has a story about how they started that day.
 
->> Walk to front of chair and sit on "Rock".
+/>> Walk to front of chair and sit on "Rock".
 
 CLAUDE (CONT'D)
 ~Welcome to the rock! If you come from away
 ~You'll probably understand about a half of what we say
 ~They say no man's an island, but an island makes a man
 
->> Look left at Beulah
+/>> Look left at Beulah
 
 CLAUDE, OZ, BEULAH, BONNIE
 ~'Specially when one comes from one like Newfoundland
 
->> Look at Claude on "Rock"
+/>> Look at Claude on "Rock"
 
 ALL
 ~Welcome to the rock
@@ -53,12 +53,12 @@ That morning, I'm in the classroom. It's our first day back and the school busse
 ANNETTE
 Sorry, Beulah! How's the kids?
 
->> During next line, walk with Claude to US platform.
+/>> During next line, walk with Claude to US platform.
 
 BEULAH
 Not exactly thrilled to be inside on such a gorgeous day, so I told them we'd only have a half-day this morning — and they were quite pleased — until I told them we'd have the other half in the afternoon.
 
->> Step RLRL for 8, backward for 6, stopping on "This is Newfoundland".
+/>> Step RLRL for 8, backward for 6, stopping on "This is Newfoundland".
 
 SINGER 8
 ~Welcome to the wildest weather that you've ever heard of
@@ -75,12 +75,12 @@ SINGER 11
 WOMEN & SINGER 11
 ~This is Newfoundland
 
->> Look at Doug.
+/>> Look at Doug.
 
 MEN
 ~Welcome to the rock
 
->> Join the islander step the third time, joining all men starting to the left.
+/>> Join the islander step the third time, joining all men starting to the left.
 
 WOMEN
 ~I'm an islander
@@ -93,7 +93,7 @@ ALL
 ~I'm an islander, I am an islander
 ~I'm an islander, I am an islander
 
->> X DS to 4, walking slowly to center during next line.
+/>> X DS to 4, walking slowly to center during next line.
 
 OZ
 That morning I'm in my car. The kids cross Airport Boulevard to get to school —and that time a day people are in a little bit of a rush to get to work and stuff, so normally I sit there and run my radar.
@@ -103,7 +103,7 @@ OZ cues the cast to make a "WOOP-WOOP" noise together.
 OZ (CONT'D)
 And if they're speeding, I'll stop 'em and write out a warning ticket. I'll write "STFD" - Slow The Fuck Down.
 
->> Step back and swap places with Beulah, waves choreo
+/>> Step back and swap places with Beulah, waves choreo
 
 ACTOR 2
 ~Welcome to the land where the winters tried to kill us
@@ -132,7 +132,7 @@ ACTOR 10
 ALL
 ~And we said no
 
->> Walk to "You are here" moments
+/>> Walk to "You are here" moments
 
 BONNIE
 That morning, I drop my kids off at school and head to the SPCA, where I'm greeted by my other kids - all barking and meowing for breakfast and a belly rub. Not that I'm complaining. I loves 'em. But by the time feeding's done, I've got to get back to pick up my human kids. So, I take just one second for myself. And I'm sitting in my car.
@@ -207,6 +207,8 @@ MEN (CONT'D)
 ~You're never truly gone
 ~A candle's in the window
 ~And the kettle's always on
+
+>> Exit L during "In the winter from the water..."
 
 ALL
 ~When the sun is coming up
@@ -508,7 +510,7 @@ ALL (Unless Speaking)
 OZ  
 Holy shit!
 
->> Transition to "American Transatlantic number 25..." position
+/>> Transition to "American Transatlantic number 25..." position
 
 .Scene 7
 
@@ -693,7 +695,7 @@ You get on the horn
 (on the phone)  
 Hello? This is Beulah Davis down at the Academy. I heard we might be getting some guests and I thought I'd see if I could help whosever in charge of getting the school organized. How many passengers can we take? Uh— well, we fit about 400 students — yes, we could probably do 600. Or sure, 700, if we really pack them in. When are they coming? Could be any time now? Well, I’m glad I phoned!
 
->> Enter L, stay on platform.
+>> Enter L, stay on platform. After, Exit L and push chair back a bit.
 
 OZ  
 I get a call from Beulah looking for “anything 700 people from around the world might need.” So, I go down to Shoppers and the manager says to just take what I want off the shelves — toothbrushes, floss, mouthwash, deodorant. And I'm back at the school, when Beulah says...
@@ -727,8 +729,6 @@ So, I’m back to Shoppers to pick up as many pads and tampons as they have.
 
 OZ exits, wincing.
 
->> Exit and push chair back a bit.
-
 JANICE  
 The Baptist Church needs a hand moving their pews... Doctor O’Brien down at the pharmacy is ready to fill any prescriptions. Oh, and the Lion’s Club is looking for some toilet paper, if you have any extra.
 
@@ -753,7 +753,7 @@ JANICE
 ~And down at the station, we're taking donations  
 ~Out by the door
 
->> After "Holy Jesus there's more", count 8 and enter L toward center for "what do we need?"
+>> After "Holy Jesus there's more", count 8 and enter L toward center for "what do we need?" (Ditch hat on box when exiting to see if that works.) Eventually, lead Ali USR to exit. Quickly back on as Oz (grabbing hat) for "They're all lined up...", then immediately set chair for bus ride.
 
 ALL  
 ~Holy Jesus, there’s more!
@@ -801,7 +801,7 @@ You tell me and we'll both know.
 MEN  
 ~What do we need?
 
->> Exit R with box. Come back and place 2 chairs in first plane position. Then go to my plane spot and sit on the cutoff of "fate".
+/>> Exit R with box. Come back and place 2 chairs in first plane position. Then go to my plane spot and sit on the cutoff of "fate".
 
 JANICE  
 For the love of God, stop bringing toilet paper to the Lion’s Club!
@@ -1149,7 +1149,7 @@ Bonnie, there’s armed guards, the army, police everywhere —
 BONNIE  
 Well, then they'll have to shoot me.
 
->> After "bonnie (x3)", take position for Union Supporter.
+/>> After "bonnie (x3)", take position for Union Supporter.
 
 DOUG  
 ...Bonnie? Bonnie? Bonnie!
@@ -1187,7 +1187,7 @@ YOU think about it.
 CLAUDE & GARTH  
 Jaysus!
 
->> Back to plane position.
+/>> Back to plane position.
 
 JANICE  
 2:10pm. School bus drivers “thinking about” leaving the picket lines.
@@ -1205,7 +1205,7 @@ DELORES
 (totally drunk)  
 ~Near... far... wherever you —
 
->> pose, pose, feet
+/>> pose, pose, feet
 
 ALL  
 ~Nothing to do, nothing to see  
@@ -1334,7 +1334,7 @@ Right.
 
 THEY shake hands.
 
->> pick up chair, swing, then walk to airport position, then do waiting step behind chair. After blinding headlights, it is Customs Officer position.
+/>> pick up chair, swing, then walk to airport position, then do waiting step behind chair. After blinding headlights, it is Customs Officer position.
 
 ALL  
 ~Off of the airplane
@@ -1443,7 +1443,7 @@ CUSTOMS OFFICER 4
 (to passenger 3)  
 Thank you.
 
->> Lead Ali USR to exit. Quickly back on as Oz for "They're all lined up...", then immediately set chair for bus ride.
+/>> Lead Ali USR to exit. Quickly back on as Oz (grabbing hat) for "They're all lined up...", then immediately set chair for bus ride.
 
 CUSTOMS OFFICER 7  
 (to ALI)  
@@ -1495,7 +1495,7 @@ They take me and my crew in a separate van and I'm looking out the window, tryin
 
 .Scene 11
 
->> On "darkness", start right shoulder into air, reverse on "windows", then rise on the resolution of "trees". Exit into clump R of bus.
+/>> On "darkness", start right shoulder into air, reverse on "windows", then rise on the resolution of "trees". Exit into clump R of bus.
 
 MEN  
 ~Into the darkness
@@ -1866,7 +1866,7 @@ CLAUDE holds up a remote control and turns off the TV.
 CLAUDE  
 1:15am.
 
->> After "Wednesday", set chair back against wall, prep for phone calls. Remember step turn after "thought someone should know".
+/>> After "Wednesday", set chair back against wall, prep for phone calls. Remember step turn after "thought someone should know".
 
 ALL  
 ~Wednesday.
@@ -2337,7 +2337,7 @@ OZ
 Well, you take a taxi to The Goose — there’s a bus there to Port Aux Basque, leaves once a day, that’s about six hours. Once you're there, you take the ferry across the Gulf, right? That's eight hours or so, then you catch another bus, not sure how often they leave, but it’s another eight hours to Yarmouth where you can get another ferry to the US Border, that's another four hours or so — and from Bar Harbor you should be able to grab a Greyhound to wherever you need to go.  
 It’s about 2 or 3 days travel. But it’s sure a nice view.
 
->> Exit L. Prep for following Claude and "Well, then what do we feed people?"
+>> Exit L. Prep for following Claude and "Well, then what do we feed people?". After, set bar chairs, and sit.
 
 .Scene 21
 
@@ -2520,7 +2520,7 @@ Hold on. Did you just say that Hockey's cancelled?
 
 A pause.
 
->> Set up bar scene chairs and sit.
+/>> Set up bar scene chairs and sit.
 
 JANICE  
 3:47pm — The town is asking all bulk food deliveries be taken to the Gander community center hockey rink. Since hockey’s cancelled, the Mayor is now calling it...
@@ -2647,7 +2647,7 @@ September 13th. We've got a... situation down at Gander Academy.
 
 At the Academy, BEULAH and ANNETTE address everyone.
 
->> Cardiologists. Enter SL.
+>> Cardiologists. Enter SL. Exit same.
 
 BEULAH  
 Ladies and Gentlemen. We have an indelicate request. We need volunteers to help clean the bathrooms. As you can imagine, with 700 adults in a primary school... Health Canada needs us to clean them every hour and a half and we just don’t have the people. So, we're asking for your help.
@@ -2779,7 +2779,7 @@ Tell me another one.
 
 .Scene 27
 
->> Enter SL, walking through space to watch TV for moment of silence. (Bring hat and deposit on table for later.) Exit R, then get into Rabbi outfit.
+>> Enter SL as Oz, walking through space to watch TV for moment of silence. (Bring hat and deposit on table for later.) Exit R, then get into Rabbi outfit.
 
 KEVIN T
 Everywhere you look, there are people from around the globe. Going back and forth for phones — or showers. Grabbing something from Shoppers. I’m getting coffee at a gas station on the main drag —and suddenly the entire place goes quiet...
@@ -2817,6 +2817,8 @@ KEVIN T
 ~Only light,
 ~And where there's sadness,
 ~Ever joy, ever joy
+
+>> Enter L as Rabbi. Hat should be on table from after momet of silence earlier.
 
 RABBI
 ~Oseh shalom bim’romav
@@ -2916,7 +2918,7 @@ Some of the Plane People haven't slept in three days. None of us have either—a
 ALL
 ~On the edge of the world
 
->> Move chair to wall.
+/>> Move chair to wall.
 
 BEULAH
 Around suppertime on Thursday, people are waiting to use the phones and there's a fight in the hallway —
@@ -3668,7 +3670,7 @@ Well. All good things, right?
 
 .Scene 34
 
->> Enter L for goodbye/hello sequence. Then move chair 3 into overlook position.
+>> Enter L for goodbye/hello sequence. Then move chair 3 into overlook position, exit L.
 
 BEULAH
 As the plane people leave, they keep stopping us, thanking us, trying to give us money, but we say...
@@ -4064,7 +4066,7 @@ The winds start to pick up. 50 mile an hour winds. We’ve been here too long. W
 
 .Scene 38
 
->> Enter R with chair for the last downstage spot on the plane. Come on as soon as Bob clears and move fast. Have hat in right hand pocket.
+>> Enter R with chair (1?) for the last downstage spot on the plane. Come on as soon as Bob clears and move fast. Have hat in right hand pocket.
 
 # Song 13: Somewhere in the Middle of Nowhere
 
@@ -4256,7 +4258,7 @@ And then I was alone.
 JANICE
 ~Back to the way that things were
 
->> Step to chair 7.
+/>> Step to chair 7.
 
 OZ
 ~Back to the simple and plain
@@ -4272,7 +4274,7 @@ A moment, as they ALL look up.
 BEULAH
 ~At the end of the day, after everyone left
 
->> Sit after line.
+/>> Sit after line.
 
 OZ
 ~We all tried to go back to normal except
@@ -4295,7 +4297,7 @@ CLAUDE
 ALL
 ~So we start
 
->> move chair to left 10, left of Claude.
+/>> move chair to left 10, left of Claude.
 
 CLAUDE
 7:42 am.
@@ -4359,7 +4361,7 @@ ALL
 KEVIN T
 Kevin breaks up with me. And then he quits and moves back home to New York. And I miss him. I miss his jokes.
 
->> "Lost": book it across the stage, stopping abruptly r of center.
+/>> "Lost": book it across the stage, stopping abruptly r of center.
 
 ALL
 ~Something's lost
@@ -4373,12 +4375,12 @@ ALL
 BOB
 I go down to Ground Zero, which is like the end of the world. It's literally still burning.
 
->> Looking out to audience.
+/>> Looking out to audience.
 
 ALL
 ~Something's not
 
->> Step in to Bob.
+/>> Step in to Bob.
 
 BOB
 My dad asks, "Were you ok out where you were stranded?" How do I tell him that I wasn't just okay—I was so much better.
@@ -4391,7 +4393,7 @@ I phone American and say, "I'm ready to go wherever you want to send me." But th
 
 BEULAH answers the phone.
 
->> step back to allow room for call.
+/>> step back to allow room for call.
 
 BEULAH
 Hello. You've reached the Gander Academy, this is Beulah Davis. How can I help
@@ -4445,7 +4447,7 @@ JANICE
 OZ
 ~In my car
 
->> Move chair 3 off Right.
+/>> Move chair 3 off Right.
 
 ALL
 ~And wherever you are (something's gone)
@@ -4548,7 +4550,7 @@ Mister Mayor, I saw your car in the lot. You might want to get down to Town Hall
 
 # Song 15: Epilogue
 
->> Sit in the open chair next to Janice.
+/>> Sit in the open chair next to Janice.
 
 CLAUDE
 When the bank finally converted all the currency from around the world—people had donated over sixty thousand dollars.
@@ -4589,7 +4591,7 @@ It was a big break—but I didn't really like shoving microphones into people's 
 
 REPORTERS from around the world overlap.
 
->> X US just in time for "CTV"
+/>> X US just in time for "CTV"
 
 REPORTER 9
 I'm reporting live from Newfoundland for BBC.
@@ -4609,7 +4611,7 @@ For Rogers TV, I'm Janice Mosher—on September 11th.
 ALL
 Two thousand eleven.
 
->> Hug whoever the hell Katelyn is playing.
+/>> Hug whoever the hell Katelyn is playing.
 
 JANICE
 The town is again filled with Come From Aways. On the tenth anniversary, from all around the world, we welcome back the Plane People.
@@ -4628,7 +4630,7 @@ CLAUDE
 ~If you're coming from Toledo or you're coming from Taipei
 ~Because we come from everywhere
 
->> Look at Katelyn.
+/>> Look at Katelyn.
 
 ALL
 ~We all come from away
@@ -4656,7 +4658,7 @@ OZ
 
 The band rocks out onstage.
 
->> No, don't finish the strong lyric. Instead, just go and remove a chair with coach Jeff.
+/>> No, don't finish the strong lyric. Instead, just go and remove a chair with coach Jeff.
 
 ALL
 ~Welcome to the Rock
@@ -4726,7 +4728,7 @@ It's about four meters long and 12,000 kilograms.
 JANICE
 Newfoundland is the only place outside of the United States, where we share the steel from the World Trade Center.
 
->> X US of Janice way to the right of Tauren.
+/>> X US of Janice way to the right of Tauren.
 
 CLAUDE steps forward
 

@@ -81,8 +81,14 @@ export interface ActorDirection extends SceneElementBase {
 	text: string;
 }
 
+export interface LesserActorDirection extends SceneElementBase {
+	type: 'lesser_actor_direction';
+	text: string;
+}
+
 export type SceneElement =
 	| Action
+	| LesserActorDirection
 	| ActorDirection
 	| Character
 	| Dialogue
@@ -121,10 +127,14 @@ const REGEX = {
 	SYNOPSIS: /^=\s*(.*)/, // = Synopsis
 	BLANK_LINE: /^\s*$/,
 	ACTOR_DIRECTION: /^>>/,
+	LESSER_ACTOR_DIRECTION: /^\/>>/,
 };
 
 function extractActorDirection(line: string) {
 	return line.substring(2).trim();
+}
+function extractLesserActorDirection(line: string) {
+	return line.substring(3).trim();
 }
 
 function isPotentialCharacter(line: string, nextLine: string | null): boolean {
@@ -315,9 +325,14 @@ export class FountainParser {
 				match = line.match(REGEX.NOTE);
 				currentScene.elements.push(this.createNextElement('note', { text: match![1].trim() }));
 			} else if (REGEX.ACTOR_DIRECTION.test(line)) {
-				match = line.match(REGEX.SECTION_MARKER);
 				currentScene.elements.push(
 					this.createNextElement('actor_direction', { text: extractActorDirection(line) }),
+				);
+			} else if (REGEX.LESSER_ACTOR_DIRECTION.test(line)) {
+				currentScene.elements.push(
+					this.createNextElement('lesser_actor_direction', {
+						text: extractLesserActorDirection(line),
+					}),
 				);
 			} else if (REGEX.SECTION_MARKER.test(line)) {
 				match = line.match(REGEX.SECTION_MARKER);

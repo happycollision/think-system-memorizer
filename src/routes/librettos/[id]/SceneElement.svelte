@@ -44,6 +44,13 @@
 	>
 		{el.text}
 	</p>
+{:else if el.type === 'lesser_actor_direction'}
+	<p
+		class="p-2 font-sans inset-shadow-sm inset-shadow-black/20 dark:inset-shadow-white"
+		{...htmlProps}
+	>
+		{el.text}
+	</p>
 {:else if el.type === 'parenthetical'}
 	<p class="parenthetical" {...htmlProps}>{el.text}</p>
 {:else if el.type === 'transition'}
