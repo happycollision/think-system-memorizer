@@ -4445,6 +4445,8 @@ JANICE
 OZ
 ~In my car
 
+>> Move chair 3 off Right.
+
 ALL
 ~And wherever you are (something's gone)
 ~You are here
@@ -4529,6 +4531,8 @@ Well, we're coming to the table.
 CLAUDE
 Well, we're coming to the table too.
 
+>> Enter R.
+
 DWIGHT
 Are they tearing down the airport?
 
@@ -4543,6 +4547,8 @@ Mister Mayor, I saw your car in the lot. You might want to get down to Town Hall
 .Scene 41
 
 # Song 15: Epilogue
+
+>> Sit in the open chair next to Janice.
 
 CLAUDE
 When the bank finally converted all the currency from around the world—people had donated over sixty thousand dollars.
@@ -4583,6 +4589,8 @@ It was a big break—but I didn't really like shoving microphones into people's 
 
 REPORTERS from around the world overlap.
 
+>> X US just in time for "CTV"
+
 REPORTER 9
 I'm reporting live from Newfoundland for BBC.
 
@@ -4601,6 +4609,8 @@ For Rogers TV, I'm Janice Mosher—on September 11th.
 ALL
 Two thousand eleven.
 
+>> Hug whoever the hell Katelyn is playing.
+
 JANICE
 The town is again filled with Come From Aways. On the tenth anniversary, from all around the world, we welcome back the Plane People.
 
@@ -4617,6 +4627,8 @@ CLAUDE
 ~Welcome to the locals who have always said they'd stay
 ~If you're coming from Toledo or you're coming from Taipei
 ~Because we come from everywhere
+
+>> Look at Katelyn.
 
 ALL
 ~We all come from away
@@ -4643,6 +4655,8 @@ OZ
 ~And the drunkest fellas in the room are playing in the band
 
 The band rocks out onstage.
+
+>> No, don't finish the strong lyric. Instead, just go and remove a chair with coach Jeff.
 
 ALL
 ~Welcome to the Rock
@@ -4701,6 +4715,8 @@ Come on in—the door's open!
 
 BEULAH laughs. JANICE is interviewing OZ.
 
+>> Enter R and x DSC with Janice.
+
 JANICE
 The donation we are most honored by just arrived today.
 
@@ -4709,6 +4725,8 @@ It's about four meters long and 12,000 kilograms.
 
 JANICE
 Newfoundland is the only place outside of the United States, where we share the steel from the World Trade Center.
+
+>> X US of Janice way to the right of Tauren.
 
 CLAUDE steps forward
 
