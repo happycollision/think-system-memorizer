@@ -53,12 +53,12 @@ That morning, I'm in the classroom. It's our first day back and the school busse
 ANNETTE
 Sorry, Beulah! How's the kids?
 
-/>> During next line, walk with Claude to US platform.
+/>> During next line, walk with Claude to US platform, landing on 7.
 
 BEULAH
 Not exactly thrilled to be inside on such a gorgeous day, so I told them we'd only have a half-day this morning — and they were quite pleased — until I told them we'd have the other half in the afternoon.
 
-/>> Step RLRL for 8, backward for 6, stopping on "This is Newfoundland".
+/>> Step RLRL for 8 small steps stay on platform, backward for 6, stopping on "This is Newfoundland".
 
 SINGER 8
 ~Welcome to the wildest weather that you've ever heard of
@@ -93,7 +93,7 @@ ALL
 ~I'm an islander, I am an islander
 ~I'm an islander, I am an islander
 
-/>> X DS to 4, walking slowly to center during next line.
+/>> X DS to 4, walking slowly to center during next line. Stay tight with group behind, inline with purple spike on right foot.
 
 OZ
 That morning I'm in my car. The kids cross Airport Boulevard to get to school —and that time a day people are in a little bit of a rush to get to work and stuff, so normally I sit there and run my radar.
@@ -132,7 +132,7 @@ ACTOR 10
 ALL
 ~And we said no
 
-/>> Walk to "You are here" moments
+/>> Walk to "You are here" moments. First one is on 6.
 
 BONNIE
 That morning, I drop my kids off at school and head to the SPCA, where I'm greeted by my other kids - all barking and meowing for breakfast and a belly rub. Not that I'm complaining. I loves 'em. But by the time feeding's done, I've got to get back to pick up my human kids. So, I take just one second for myself. And I'm sitting in my car.
@@ -159,6 +159,8 @@ ALL
 (repeated hushed underneath)
 ~I'm an islander, I am an islander
 ~I'm an islander, I am an islander...
+
+/>> Run to Bonnie.
 
 OZ
 I'm running my radar when Bonnie comes by. She pulls up, and she's wavin' at me like mad, so I roll down my window and she says...
@@ -323,6 +325,8 @@ OZ runs in.
 OZ
 Mister Mayor, I saw your car in the lot. Crystal, turn up the radio so's we all can hear. Doug, you probably want to get down to Air Traffic Control right away.
 
+/>> Move to chair right away. Pick up and hold over pink spike. Put down on "the country".
+
 DOUG
 There's only supposed to be two air traffic controllers on, but instead there's fourteen... Everyone's heard and they all shows up without even being asked. We're told there'll be over 200 planes getting diverted across the country.
 
@@ -357,6 +361,8 @@ No, sir. You do not have a choice.
 
 CONTROL 10
 No, sir. This is not a drill.
+
+/>> On "emergency" start walking around chair. Sit on "now".
 
 CONTROL 12
 Yes, sir. I understand you have VIP's onboard. I'll see your VIP's and raise you an international emergency. Land your plane now.
@@ -410,6 +416,8 @@ Señoras y Señores Por favor regresen a sus asientos y abrochense los cinturone
 PILOT 6 ^
 This is your pilot. Wir haben eine Situation in den America. Es hat eine Terroristtatigkeit gegeben und wir werden bestellt, in Kanada zu landen.
 
+/>> Matt will cue BONG BONG
+
 FLIGHT ATTENDANT (ACTOR 3)
 Ladies and Gentlemen, please fasten your seat belts. Looks like we'll be making an unexpected landing in Gander, Newfoundland.
 
@@ -461,6 +469,8 @@ BEVERLEY
 On final approach, we're coming into runway two-two, and I think, "Where am I going to park this thing?" There are planes lined up like sardines. And as far as I can see there’s cars lined up too. It looks like everybody in Newfoundland is here.
 
 The TOWNSPEOPLE stand looking upward.
+
+/>> Be the sound guy when you sit after "One plane then another". Don't start as Oz.
 
 ALL (Unless Speaking)  
 (one at a time, then building together)  
@@ -635,7 +645,7 @@ Because if anything goes wrong, we have a lot less people to lose.
 
 A slight pause as they all take that in.
 
->> After "Tuesday" and "2001", Exit R. Next entrance is L. 
+>> After "Tuesday", Exit R, making way for Katelyn to get mugs (be upstage of her). Next entrance is L for Shoppers. (after that) Set blazer on table after Shoppers scene.
 
 CLAUDE (CONT'D)
 Alright, Janice Mosher. Here’s your news. Gander Town Council declares a state of emergency.
@@ -720,6 +730,8 @@ BEULAH
 You know, those planes are probably filled with women of child bearing age...
 
 Another pause.
+
+/>> On exit, push chair back for approaching table. Then set blazer on table.
 
 OZ  
 Sooo?
@@ -900,14 +912,19 @@ ALL
 PASSENGER 2  
 We had no way to get information.
 
-PASSENGER 12  
+ALL
 ~That plane  
 ~Everyone knew every inch of
 
+/>> On "mobile phones" start calling.
+
+PASSENGER 12  
 This was before most people had mobile phones —and only a couple people got through.
 
 PASSENGER 8  
 Hello?
+
+/>> Take "mom" up physically.
 
 PASSENGER 7  
 Mom?
@@ -1334,7 +1351,7 @@ Right.
 
 THEY shake hands.
 
-/>> pick up chair, swing, then walk to airport position, then do waiting step behind chair. After blinding headlights, it is Customs Officer position.
+/>> pick up chair, swing, then walk to airport position (use DS purple spike (third from edge of stage)), then do waiting step behind chair. After blinding headlights, it is Customs Officer position.
 
 ALL  
 ~Off of the airplane
@@ -1464,6 +1481,8 @@ Phones are over there. But it's gonna be a while.
 OZ  
 They’re all lined up at the airport payphones —so eventually we put an “Out of Order” sign on them just so we can get people on the busses.
 
+/>> Sit on "glenwood"
+
 CLAUDE  
 11:48 pm. Busses and drivers are now taking passengers to shelters, not just in Gander, but also to Gambo, Appleton, and farther communities of Lewisporte, Norris Arm, and Glenwood.
 
@@ -1495,7 +1514,7 @@ They take me and my crew in a separate van and I'm looking out the window, tryin
 
 .Scene 11
 
-/>> On "darkness", start right shoulder into air, reverse on "windows", then rise on the resolution of "trees". Exit into clump R of bus.
+/>> On "but all around us", start right shoulder into air, reverse on "windows", then rise on the resolution of "trees". Exit into clump R of bus.
 
 MEN  
 ~Into the darkness
@@ -1548,12 +1567,12 @@ Behind me, this big man comes up to me and he says in this low voice...
 MUHUMUZA  
 Wewe watuchukuwa wapi?
 
+>> after scene ends, exit R (quickly DS of Tristan) for Mr Michaels Spanish entrance.
+
 GARTH  
 What?
 
 At the Academy, BEULAH and ANNETTE address everyone.
-
->> Exit R for Mr Michaels Spanish entrance.
 
 BEULAH  
 Ladies and gentlemen, we need some help translating. If anyone speaks Mandarin, can you come to the library? And if anyone speaks Hindi, could you please come to the cafeteria? And if anyone speaks Newfoundlander, well lard tunder’n jaysus god bless ya, b’y.
@@ -1866,7 +1885,8 @@ CLAUDE holds up a remote control and turns off the TV.
 CLAUDE  
 1:15am.
 
-/>> After "Wednesday", set chair back against wall, prep for phone calls. Remember step turn after "thought someone should know".
+/>> After "Wednesday", set chair back against wall, prep for phone calls.
+Phone position is directly DS of offstage side of step (10). Remember step turn after "thought someone should know".
 
 ALL  
 ~Wednesday.
@@ -2246,6 +2266,8 @@ No. No, thank you. Please. I’m fine.
 
 BEULAH  
 Turns out he’s an Orthodox Jewish Rabbi and he only eats Kosher food. Now, we have all kinds of people living in Newfoundland: Protestants, Baptists, Catholics, Salvation Army-ists — but not a lot of Jewish people.
+
+/>> Entirely to the Kevins. Start exiting on "any other Jewish passengers".
 
 RABBI  
 The next thing I know, I’m set up in the faculty lounge, making a Kosher kitchen for any other Jewish passengers — but also for two Hindu women, some Muslims.
