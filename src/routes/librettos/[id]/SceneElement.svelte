@@ -70,18 +70,14 @@
 {:else if el.type === 'section'}
 	{#if el.level === 1}
 		<h1
-			class={[
-				runSheet ? 'bg-black text-white dark:bg-white dark:text-black' : 'my-4 text-xl font-bold',
-			]}
+			class={[runSheet ? 'underline [text-decoration-style:dotted]' : 'my-4 text-xl font-bold']}
 			{...htmlProps}
 		>
 			{el.text}
 		</h1>
 	{:else if el.level === 2}
 		<h2
-			class={[
-				runSheet ? 'bg-black text-white dark:bg-white dark:text-black' : 'my-3 text-lg font-bold',
-			]}
+			class={[runSheet ? 'underline [text-decoration-style:dotted]' : 'my-3 text-lg font-bold']}
 			{...htmlProps}
 		>
 			{el.text}
