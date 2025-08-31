@@ -26,12 +26,18 @@
 		{/each}
 	</p>
 {:else if el.type === 'character'}
-	<p class={[runSheet ? 'mt-1 ml-12 text-center' : 'character']} {...htmlProps}>{el.name}</p>
+	{#if !runSheet || el.name.includes('CUE')}
+		<p
+			class={[runSheet ? 'mt-1 ml-8 border-l-3 border-black/20 pl-2 text-center' : 'character']}
+			{...htmlProps}
+		>
+			{el.name}
+		</p>{/if}
 {:else if el.type === 'dialogue'}
 	{@const text = el.text.split('\n')}
 	<p
 		class={[
-			runSheet ? 'mt-1 ml-12' : 'dialogue',
+			runSheet ? 'mt-1 ml-8 border-l-3 border-black/20 pl-2' : 'dialogue',
 			!runSheet && characterMatch(characterName, el.character) && 'highlight',
 		]}
 		{...htmlProps}
@@ -45,7 +51,7 @@
 		data-actor-direction
 		class={[
 			runSheet
-				? 'ml-4 font-sans'
+				? 'ml-4 pl-4 -indent-4 font-sans'
 				: 'bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white',
 		]}
 		{...htmlProps}
@@ -56,7 +62,7 @@
 	<p
 		class={[
 			runSheet
-				? 'ml-4 font-sans'
+				? 'ml-4 pl-4 -indent-4 font-sans'
 				: 'p-2 font-sans inset-shadow-sm inset-shadow-black/20 dark:inset-shadow-white',
 		]}
 		{...htmlProps}
@@ -67,6 +73,8 @@
 	<p class="parenthetical" {...htmlProps}>{el.text}</p>
 {:else if el.type === 'transition'}
 	<p class="transition" {...htmlProps}>{el.text}</p>
+{:else if runSheet && el.type === 'actor_break'}
+	<p class="bg-black pl-1 text-white dark:bg-black dark:text-white" {...htmlProps}>BREAK</p>
 {:else if el.type === 'section'}
 	{#if el.level === 1}
 		<h1

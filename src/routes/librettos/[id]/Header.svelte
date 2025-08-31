@@ -48,7 +48,7 @@
 			style.remove();
 		};
 	}}
-	class="sticky top-0 isolate z-10 bg-gray-200 dark:bg-gray-800"
+	class="sticky top-0 isolate z-10 bg-gray-200 dark:bg-gray-800 print:hidden"
 >
 	<div class="flex justify-between gap-2 p-2">
 		<a class="btn" href="{base}/librettos/">

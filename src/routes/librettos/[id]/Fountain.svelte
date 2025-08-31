@@ -28,6 +28,7 @@
 					case 'section':
 					case 'scene_heading':
 					case 'actor_direction':
+					case 'actor_break':
 						return true;
 
 					case 'character':
@@ -147,9 +148,7 @@
 	});
 </script>
 
-<div class="fixed right-0 bottom-0">{cardStore.currentCardIndex + 1}</div>
-
-<div class="screenplay-container">
+<div class="screenplay-container print:columns-2 print:text-xs">
 	{#if screenplay}
 		{#if Object.keys(screenplay.title_page).length > 0 && !runSheet}
 			<div class="title-page">
@@ -187,18 +186,20 @@
 	{/if}
 </div>
 
-<div class="fixed bottom-0 left-0 p-4">
-	<div class="inline-flex gap-2">
-		<button
-			class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
-			onclick={() => toActorDirection('next')}>Nxt</button
-		>
-		<button
-			class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
-			onclick={() => toActorDirection('prev')}>Prv</button
-		>
+{#if !runSheet}
+	<div class="fixed bottom-0 left-0 p-4">
+		<div class="inline-flex gap-2">
+			<button
+				class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
+				onclick={() => toActorDirection('next')}>Nxt</button
+			>
+			<button
+				class="btn aspect-square rounded-full p-2 shadow-lg shadow-black/40"
+				onclick={() => toActorDirection('prev')}>Prv</button
+			>
+		</div>
 	</div>
-</div>
+{/if}
 
 <style lang="postcss">
 	.screenplay-container {
@@ -207,6 +208,14 @@
 		margin: 20px auto;
 		padding: 20px;
 		line-height: 1.6;
+
+		@media print {
+			columns: 2;
+			max-width: none;
+			margin: auto;
+			padding: 0;
+			line-height: 1.2;
+		}
 	}
 
 	.title-page {

@@ -86,10 +86,15 @@ export interface LesserActorDirection extends SceneElementBase {
 	text: string;
 }
 
+export interface ActorBreak extends SceneElementBase {
+	type: 'actor_break';
+}
+
 export type SceneElement =
 	| Action
 	| LesserActorDirection
 	| ActorDirection
+	| ActorBreak
 	| Character
 	| Dialogue
 	| Parenthetical
@@ -128,6 +133,7 @@ const REGEX = {
 	BLANK_LINE: /^\s*$/,
 	ACTOR_DIRECTION: /^>>/,
 	LESSER_ACTOR_DIRECTION: /^\/>>/,
+	ACTOR_BREAK: /^>>>/,
 };
 
 function extractActorDirection(line: string) {
@@ -324,6 +330,8 @@ export class FountainParser {
 			if (REGEX.NOTE.test(line)) {
 				match = line.match(REGEX.NOTE);
 				currentScene.elements.push(this.createNextElement('note', { text: match![1].trim() }));
+			} else if (REGEX.ACTOR_BREAK.test(line)) {
+				currentScene.elements.push(this.createNextElement('actor_break', {}));
 			} else if (REGEX.ACTOR_DIRECTION.test(line)) {
 				currentScene.elements.push(
 					this.createNextElement('actor_direction', { text: extractActorDirection(line) }),
