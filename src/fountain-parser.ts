@@ -518,7 +518,7 @@ export class FountainParser {
 			let sceneSceneNumber: string | undefined = undefined;
 
 			if ((sceneMatch = line.match(REGEX.FORCED_SCENE_HEADING))) {
-				sceneHeadingText = trimmedLine;
+				sceneHeadingText = trimmedLine.substring(1);
 				sceneLocation = sceneMatch[1].trim();
 				sceneSceneNumber = sceneMatch[2]?.trim();
 			} else if ((sceneMatch = line.match(REGEX.SCENE_HEADING))) {

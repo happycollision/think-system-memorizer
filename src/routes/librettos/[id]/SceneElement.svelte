@@ -7,14 +7,15 @@
 	interface Props extends HTMLAttributes<HTMLDivElement | HTMLParagraphElement> {
 		el: SceneElement;
 		characterName?: Libretto['characterName'];
+		runSheet?: boolean;
 	}
-	const { el, characterName, ...htmlProps }: Props = $props();
+	const { el, characterName, runSheet, ...htmlProps }: Props = $props();
 </script>
 
-<div class="text-right text-xs">{el.type}; {el.sceneIndex}; {el.id}</div>
+<!-- <div class="text-right text-xs">{el.type}; {el.sceneIndex}; {el.id}</div> -->
 
 {#if el.type === 'scene_heading'}
-	<div class="scene-heading" {...htmlProps}>
+	<div class={[runSheet ? 'underline' : 'scene-heading']} {...htmlProps}>
 		{el.text}
 	</div>
 {:else if el.type === 'action'}
@@ -25,11 +26,14 @@
 		{/each}
 	</p>
 {:else if el.type === 'character'}
-	<p class="character" {...htmlProps}>{el.name}</p>
+	<p class={[runSheet ? 'mt-1 ml-12 text-center' : 'character']} {...htmlProps}>{el.name}</p>
 {:else if el.type === 'dialogue'}
 	{@const text = el.text.split('\n')}
 	<p
-		class={['dialogue', characterMatch(characterName, el.character) && 'highlight']}
+		class={[
+			runSheet ? 'mt-1 ml-12' : 'dialogue',
+			!runSheet && characterMatch(characterName, el.character) && 'highlight',
+		]}
 		{...htmlProps}
 	>
 		{#each text as line, j (j)}
@@ -39,17 +43,25 @@
 {:else if el.type === 'actor_direction'}
 	<p
 		data-actor-direction
-		class="bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white"
+		class={[
+			runSheet
+				? 'ml-4 font-sans'
+				: 'bg-black/5 p-2 font-sans inset-shadow-sm inset-shadow-black/40 dark:bg-white/10 dark:inset-shadow-white',
+		]}
 		{...htmlProps}
 	>
-		{el.text}
+		• {el.text}
 	</p>
 {:else if el.type === 'lesser_actor_direction'}
 	<p
-		class="p-2 font-sans inset-shadow-sm inset-shadow-black/20 dark:inset-shadow-white"
+		class={[
+			runSheet
+				? 'ml-4 font-sans'
+				: 'p-2 font-sans inset-shadow-sm inset-shadow-black/20 dark:inset-shadow-white',
+		]}
 		{...htmlProps}
 	>
-		{el.text}
+		• {el.text}
 	</p>
 {:else if el.type === 'parenthetical'}
 	<p class="parenthetical" {...htmlProps}>{el.text}</p>
@@ -57,9 +69,23 @@
 	<p class="transition" {...htmlProps}>{el.text}</p>
 {:else if el.type === 'section'}
 	{#if el.level === 1}
-		<h1 class="my-4 text-xl font-bold" {...htmlProps}>{el.text}</h1>
+		<h1
+			class={[
+				runSheet ? 'bg-black text-white dark:bg-white dark:text-black' : 'my-4 text-xl font-bold',
+			]}
+			{...htmlProps}
+		>
+			{el.text}
+		</h1>
 	{:else if el.level === 2}
-		<h2 class="my-3 text-lg font-bold" {...htmlProps}>{el.text}</h2>
+		<h2
+			class={[
+				runSheet ? 'bg-black text-white dark:bg-white dark:text-black' : 'my-3 text-lg font-bold',
+			]}
+			{...htmlProps}
+		>
+			{el.text}
+		</h2>
 	{/if}
 {:else if el.type === 'note'}
 	{@const text = el.text.split('\n')}

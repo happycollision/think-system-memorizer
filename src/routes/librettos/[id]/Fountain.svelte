@@ -6,6 +6,7 @@
 	import SceneElementComponent from './SceneElement.svelte';
 	import { navState } from '$lib/nav.extension.svelte';
 	import { getHeaderHeightAndPadding } from './Header.svelte';
+	import { characterMatch } from '$lib/characterMatch';
 
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
@@ -14,6 +15,40 @@
 		cardStore: CardStore<SceneElement[]>;
 	};
 	let { parsed: screenplay, characterName, getIndexFromEl, cardStore }: Props = $props();
+
+	let runSheet = $state(true);
+
+	let elements = $derived.by(() => {
+		if (!screenplay) return [];
+		const elements = screenplay.scenes.flatMap((s) => s.elements);
+		if (!runSheet) return elements;
+		return elements
+			.filter((el, i, arr) => {
+				switch (el.type) {
+					case 'section':
+					case 'scene_heading':
+					case 'actor_direction':
+						return true;
+
+					case 'character':
+						return (
+							(characterMatch(characterName, el.name) || el.name.includes('CUE')) &&
+							arr[i + 1]?.type === 'dialogue'
+						);
+					case 'dialogue':
+						return characterMatch(characterName, el.character) || el.character?.includes('CUE');
+
+					default:
+						return false;
+				}
+			})
+			.filter((el, i, arr) => {
+				if (el.type !== 'character') return true;
+				const maybePrevChar = arr[i - 2];
+				if (maybePrevChar?.type === 'character' && maybePrevChar.name === el.name) return false;
+				return true;
+			});
+	});
 
 	let observer: IntersectionObserver | undefined = $state();
 
@@ -116,7 +151,7 @@
 
 <div class="screenplay-container">
 	{#if screenplay}
-		{#if Object.keys(screenplay.title_page).length > 0}
+		{#if Object.keys(screenplay.title_page).length > 0 && !runSheet}
 			<div class="title-page">
 				{#each Object.entries(screenplay.title_page) as [key, values] (key)}
 					{#if values && values.length > 0}
@@ -132,20 +167,19 @@
 		{/if}
 
 		<div class="@container">
-			{#each screenplay.scenes as scene, i (i)}
-				{#each scene.elements as sceneElement, i (i)}
-					<SceneElementComponent
-						data-el-index={getIndexFromEl(sceneElement)}
-						id={`card-${getIndexFromEl(sceneElement)}`}
-						{@attach (divEl) => {
-							if (!observer) return;
-							observer.observe(divEl);
-							return () => observer?.unobserve(divEl);
-						}}
-						el={sceneElement}
-						{characterName}
-					/>
-				{/each}
+			{#each elements as sceneElement, i (i)}
+				<SceneElementComponent
+					{runSheet}
+					data-el-index={getIndexFromEl(sceneElement)}
+					id={`card-${getIndexFromEl(sceneElement)}`}
+					{@attach (divEl) => {
+						if (!observer) return;
+						observer.observe(divEl);
+						return () => observer?.unobserve(divEl);
+					}}
+					el={sceneElement}
+					{characterName}
+				/>
 			{/each}
 		</div>
 	{:else}
