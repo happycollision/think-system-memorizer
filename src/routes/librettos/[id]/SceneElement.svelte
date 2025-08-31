@@ -55,6 +55,12 @@
 	<p class="parenthetical" {...htmlProps}>{el.text}</p>
 {:else if el.type === 'transition'}
 	<p class="transition" {...htmlProps}>{el.text}</p>
+{:else if el.type === 'section'}
+	{#if el.level === 1}
+		<h1 class="my-4 text-xl font-bold" {...htmlProps}>{el.text}</h1>
+	{:else if el.level === 2}
+		<h2 class="my-3 text-lg font-bold" {...htmlProps}>{el.text}</h2>
+	{/if}
 {:else if el.type === 'note'}
 	{@const text = el.text.split('\n')}
 	<p class="note" {...htmlProps}>
