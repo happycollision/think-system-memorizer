@@ -221,7 +221,7 @@
 	const isIOS =
 		typeof navigator !== 'undefined' &&
 		(/iP(hone|od|ad)/.test(navigator.userAgent) ||
-			(navigator.platform === 'MacIntel' && (navigator as any).maxTouchPoints > 1));
+			(navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
 
 	// Track element-based loop (for iOS background playback)
 	let elementLoopTimer: number | null = $state(null);
@@ -233,7 +233,6 @@
 			elementLoopTimer = null;
 		}
 		elementLoopId = null;
-		// do not pause audioElement here; let user pause explicitly
 	}
 
 	function playElementLoop(loopId: number, start: number, end: number, rate = 1) {
@@ -274,14 +273,13 @@
 	function stopLoop(loopId: number) {
 		stopPreciseLoop(loopId);
 		if (elementLoopId === loopId) stopElementLoop();
+		audioElement?.pause();
 	}
 
 	// Media Session API for lock-screen/background controls
 	$effect(() => {
 		if (!$data || !audioElement) return;
 		// guard for browsers without the API
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		const anyNav = navigator as any;
 		if (!('mediaSession' in navigator)) return;
 
 		navigator.mediaSession.metadata = new MediaMetadata({
