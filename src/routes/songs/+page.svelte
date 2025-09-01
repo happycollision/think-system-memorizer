@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { getSongs } from './db';
 
@@ -11,6 +12,8 @@
 <svelte:head>
 	<title>Songs - Think System Memorizer</title>
 </svelte:head>
+
+<a href="{base}/librettos" class="mb-6 inline-block text-blue-600 hover:underline">Librettos</a>
 
 <div class="mx-auto max-w-6xl p-8">
 	<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

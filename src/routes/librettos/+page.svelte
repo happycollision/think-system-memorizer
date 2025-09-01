@@ -29,6 +29,8 @@
 	<title>Librettos - Think System Memorizer</title>
 </svelte:head>
 
+<a href="{base}/songs" class="mb-6 inline-block text-blue-600 hover:underline">Songs</a>
+
 <div class="mx-auto max-w-6xl p-8">
 	<div class="mb-8 flex items-center justify-between">
 		<h1 class="text-3xl font-bold text-gray-800 dark:text-gray-200">Libretto Collection</h1>
