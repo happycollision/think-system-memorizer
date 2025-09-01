@@ -240,26 +240,28 @@
 		{#each $data.songLoops as loop (loop.id)}
 			{@const isPlaying = playersByLoop.has(loop.id)}
 			<div class="mb-4 rounded border p-4">
-				<h2 id="loop_{loop.id}_title" class="text-2xl font-semibold" contenteditable>
-					{loop.name}
-				</h2>
-				<button
-					type="button"
-					class="btn"
-					onclick={() => {
-						const newName = document
-							.querySelector<HTMLElement>(`#loop_${loop.id}_title`)
-							?.innerText.trim();
-						updateLoop(loop.id, { name: newName || `Loop ${loop.id}` });
-					}}>update name</button
-				>
+				<div class="grid grid-cols-[1fr_auto] items-center gap-4">
+					<h2 id="loop_{loop.id}_title" class="text-2xl font-semibold" contenteditable>
+						{loop.name}
+					</h2>
+					<button
+						type="button"
+						class="btn"
+						onclick={() => {
+							const newName = document
+								.querySelector<HTMLElement>(`#loop_${loop.id}_title`)
+								?.innerText.trim();
+							updateLoop(loop.id, { name: newName || `Loop ${loop.id}` });
+						}}>update name</button
+					>
+				</div>
 
 				<p>Start: {loop.start} End: {loop.end}</p>
 
 				<div class="flex gap-2">
 					<button
 						type="button"
-						class="w-xs rounded bg-emerald-600 px-3 py-2 text-white hover:bg-emerald-700"
+						class="btn w-xs border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700"
 						onclick={() =>
 							isPlaying
 								? stopPreciseLoop(loop.id)
@@ -267,18 +269,19 @@
 					>
 						{isPlaying ? 'Stop' : 'Play'}
 					</button>
+					<button
+						type="button"
+						class="btn border-red-400 bg-red-500 text-white hover:bg-red-600"
+						onclick={() => {
+							stopPreciseLoop(loop.id);
+							if (confirm(`Are you sure you want to delete loop "${loop.name}"?`)) {
+								deleteLoop(loop.id);
+							}
+						}}
+					>
+						Delete
+					</button>
 				</div>
-
-				<button
-					type="button"
-					class="mt-2 rounded bg-red-500 px-4 py-2 font-semibold text-white hover:bg-red-600"
-					onclick={() => {
-						stopPreciseLoop(loop.id);
-						if (confirm(`Are you sure you want to delete loop "${loop.name}"?`)) {
-							deleteLoop(loop.id);
-						}
-					}}>Delete</button
-				>
 			</div>
 		{/each}
 	{/if}
