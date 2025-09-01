@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import { addLoopToSong, getSong } from '../db';
+	import { addLoopToSong, deleteLoop, getSong, updateLoop } from '../db';
 
 	const songId = $derived(page.params.id);
 	const listingUrl = $derived(page.url.pathname.replace(songId, ''));
@@ -101,9 +101,19 @@ Hi. This is song {songId}.
 		</div>
 	</form>
 
-	{#each $data.songLoops as loop (loop.name)}
+	{#each $data.songLoops as loop (loop.id)}
 		<div class="mb-4 rounded border p-4">
-			<h2 class="text-2xl font-semibold">{loop.name}</h2>
+			<h2 id="loop_{loop.id}_title" class="text-2xl font-semibold" contenteditable>{loop.name}</h2>
+			<button
+				type="button"
+				class="btn"
+				onclick={() => {
+					const newName = document
+						.querySelector<HTMLElement>(`#loop_${loop.id}_title`)
+						?.innerText.trim();
+					updateLoop(loop.id, { name: newName || `Loop ${loop.id}` });
+				}}>update name</button
+			>
 			<audio
 				controls
 				class="my-2 w-full"
@@ -134,6 +144,15 @@ Hi. This is song {songId}.
 				Your browser does not support the audio element.
 			</audio>
 			<p>Start: {loop.start} End: {loop.end}</p>
+			<button
+				type="button"
+				class="mt-2 rounded bg-red-500 px-4 py-2 font-semibold text-white hover:bg-red-600"
+				onclick={() => {
+					if (confirm(`Are you sure you want to delete loop "${loop.name}"?`)) {
+						deleteLoop(loop.id);
+					}
+				}}>Delete</button
+			>
 		</div>
 	{/each}
 {/if}

@@ -91,3 +91,11 @@ export function addLoopToSong(
 		name: details.name || `Loop at ${details.start.toFixed(2)}s`,
 	});
 }
+
+export function deleteLoop(id: number) {
+	return db.songLoops.delete(id);
+}
+
+export function updateLoop(id: number, updates: { start?: number; end?: number; name?: string }) {
+	return db.songLoops.update(id, updates);
+}
