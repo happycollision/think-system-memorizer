@@ -12,6 +12,86 @@
 
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
+
+	// Precise segment looper action for an <audio> element
+	function segmentLoop(node: HTMLAudioElement, params: { start: number; end: number }) {
+		let loop = { ...params };
+		let timer: number | null = null;
+		let rafId: number | null = null;
+
+		const clearTimers = () => {
+			if (timer !== null) {
+				clearTimeout(timer);
+				timer = null;
+			}
+			if (rafId !== null) {
+				cancelAnimationFrame(rafId);
+				rafId = null;
+			}
+		};
+
+		const clampToLoop = () => {
+			if (node.currentTime < loop.start) node.currentTime = loop.start;
+			if (node.currentTime > loop.end) node.currentTime = loop.end;
+		};
+
+		const schedule = () => {
+			clearTimers();
+			if (node.paused) return;
+
+			const rate = Math.max(0.001, node.playbackRate || 1);
+			const remainingMs = Math.max(0, ((loop.end - node.currentTime) * 1000) / rate);
+
+			// Wake up slightly early, then finish with RAF for sub-frame precision
+			const earlyMs = Math.max(0, remainingMs - 60);
+			timer = window.setTimeout(() => {
+				const check = () => {
+					if (node.paused) return;
+					// Small epsilon to avoid float errors
+					if (node.currentTime >= loop.end - 0.002) {
+						node.currentTime = loop.start;
+						// Ensure playback continues after seek
+						void node.play();
+						schedule();
+					} else {
+						rafId = requestAnimationFrame(check);
+					}
+				};
+				check();
+			}, earlyMs);
+		};
+
+		const onPlay = () => {
+			clampToLoop();
+			schedule();
+		};
+		const onPause = () => clearTimers();
+		const onSeeking = () => {
+			clampToLoop();
+			if (!node.paused) schedule();
+		};
+		const onRateChange = () => {
+			if (!node.paused) schedule();
+		};
+		const onLoaded = () => {
+			node.currentTime = loop.start;
+		};
+
+		node.addEventListener('play', onPlay);
+		node.addEventListener('pause', onPause);
+		node.addEventListener('seeking', onSeeking);
+		node.addEventListener('ratechange', onRateChange);
+		node.addEventListener('loadedmetadata', onLoaded);
+
+		return () => {
+			clearTimers();
+			node.removeEventListener('play', onPlay);
+			node.removeEventListener('pause', onPause);
+			node.removeEventListener('seeking', onSeeking);
+			node.removeEventListener('ratechange', onRateChange);
+			node.removeEventListener('loadedmetadata', onLoaded);
+		};
+	}
 </script>
 
 <nav>
@@ -24,7 +104,7 @@ Hi. This is song {songId}.
 	<h1 class="text-3xl font-bold">{$data.song.name}</h1>
 	<p>From disk: {$data.song.diskName}</p>
 
-	<audio bind:this={audioElement} controls class="my-4 w-full" preload="metadata">
+	<audio bind:this={audioElement} controls class="my-4 w-full" preload="auto">
 		<source src={diskLocation} type="audio/wav" />
 		Your browser does not support the audio element.
 	</audio>
@@ -117,27 +197,9 @@ Hi. This is song {songId}.
 			<audio
 				controls
 				class="my-2 w-full"
-				preload="metadata"
-				onloadedmetadata={(e) => {
-					const a = e.currentTarget as HTMLAudioElement;
-					a.currentTime = loop.start;
-				}}
-				onplay={(e) => {
-					const a = e.currentTarget as HTMLAudioElement;
-					if (a.currentTime < loop.start || a.currentTime > loop.end) {
-						a.currentTime = loop.start;
-					}
-				}}
-				ontimeupdate={(e) => {
-					const a = e.currentTarget as HTMLAudioElement;
-					if (a.currentTime >= loop.end) {
-						a.currentTime = loop.start; // or loop.end if you prefer
-					}
-				}}
-				onseeking={(e) => {
-					const a = e.currentTarget as HTMLAudioElement;
-					if (a.currentTime < loop.start) a.currentTime = loop.start;
-					if (a.currentTime > loop.end) a.currentTime = loop.end;
+				preload="auto"
+				{@attach (el) => {
+					segmentLoop(el, { start: loop.start, end: loop.end });
 				}}
 			>
 				<source src={diskLocation} type="audio/wav" />
