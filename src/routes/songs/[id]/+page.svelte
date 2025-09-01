@@ -29,6 +29,9 @@
 	const playersByLoop = new SvelteMap<number, AudioBufferSourceNode>();
 	const SNAP_TO_ZERO = true; // set false to use exact times
 
+	// good enough for adjustments
+	const sampleStep = 1 / 1000;
+
 	function getCtx() {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		return (audioCtx ??= new (window.AudioContext || (window as any).webkitAudioContext)());
@@ -164,6 +167,7 @@
 					id="start"
 					class="w-full rounded border border-gray-300 p-2"
 					placeholder="e.g., 30.5"
+					step={sampleStep}
 				/>
 				<button
 					type="button"
@@ -187,6 +191,7 @@
 					id="end"
 					class="w-full rounded border border-gray-300 p-2"
 					placeholder="e.g., 45.0"
+					step={sampleStep}
 				/>
 				<button
 					type="button"
