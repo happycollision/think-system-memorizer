@@ -26,7 +26,7 @@
 	// Precise Web Audio loop playback (sample-accurate)
 	let audioCtx: AudioContext | null = $state(null);
 	let decodedBuffer: AudioBuffer | null = $state(null);
-	const playersByLoop = new SvelteMap<number, AudioBufferSourceNode>();
+	const playersByLoop = new SvelteMap<number, AudioScheduledSourceNode[]>();
 	const SNAP_TO_ZERO = true; // set false to use exact times
 
 	// good enough for adjustments
@@ -72,20 +72,36 @@
 	}
 
 	function stopAllPrecise() {
-		playersByLoop.forEach((src) => {
-			try {
-				src.stop();
-			} catch {
-				//noop
-			}
-			try {
-				src.disconnect();
-			} catch {
-				//noop
+		playersByLoop.forEach((arr) => {
+			for (const src of arr) {
+				try {
+					src.stop();
+				} catch {
+					/* noop */
+				}
+				try {
+					src.disconnect();
+				} catch {
+					/* noop */
+				}
 			}
 		});
 		playersByLoop.clear();
 		// keep context alive; user may start again
+	}
+
+	// Track a source under a loopId and auto-clean when it ends
+	function trackSource(loopId: number, src: AudioBufferSourceNode) {
+		const arr = playersByLoop.get(loopId) ?? [];
+		arr.push(src);
+		playersByLoop.set(loopId, arr);
+		src.onended = () => {
+			const a = playersByLoop.get(loopId);
+			if (!a) return;
+			const i = a.indexOf(src);
+			if (i >= 0) a.splice(i, 1);
+			if (a.length === 0) playersByLoop.delete(loopId);
+		};
 	}
 
 	async function playPreciseLoop(loopId: number, start: number, end: number, rate = 1) {
@@ -120,23 +136,84 @@
 
 		const when = ctx.currentTime + 0.005;
 		src.start(when, s);
-		playersByLoop.set(loopId, src);
+		trackSource(loopId, src);
 	}
 
 	function stopPreciseLoop(loopId: number) {
-		const src = playersByLoop.get(loopId);
-		if (!src) return;
-		try {
-			src.stop();
-		} catch {
-			// noop
-		}
-		try {
-			src.disconnect();
-		} catch {
-			// noop
+		const arr = playersByLoop.get(loopId);
+		if (!arr) return;
+		for (const src of arr) {
+			try {
+				src.stop();
+			} catch {
+				/* noop */
+			}
+			try {
+				src.disconnect();
+			} catch {
+				/* noop */
+			}
 		}
 		playersByLoop.delete(loopId);
+	}
+
+	// Plays only the first second and last second of the loop (preview of edges)
+	async function playPreciseLoopEdges(loopId: number, start: number, end: number, rate = 1) {
+		const ctx = getCtx();
+		if (ctx.state === 'suspended') await ctx.resume();
+		const buffer = await ensureDecodedBuffer();
+
+		// Validate and snap boundaries
+		if (end <= start) return;
+		let s = start;
+		let e = end;
+		if (SNAP_TO_ZERO) {
+			s = snapToZeroCrossing(buffer, start, -1);
+			e = snapToZeroCrossing(buffer, end, 1);
+			if (e <= s) e = Math.min(buffer.duration, s + 0.005);
+		}
+		const span = Math.max(0, e - s);
+		if (span <= 0) return;
+
+		// Compute segments in buffer time
+		const firstDurBuf = Math.min(1, span);
+		const lastStartBase = Math.max(s, e - 1);
+		const lastStart = SNAP_TO_ZERO ? snapToZeroCrossing(buffer, lastStartBase, -1) : lastStartBase;
+		const lastDurBuf = Math.min(1, Math.max(0, e - lastStart));
+
+		// Real-time scheduling (account for playbackRate)
+		const fadeIn = 0.005;
+		const fadeOut = 0.01;
+		const gapRT = 0.075; // small silence between segments
+		const now = ctx.currentTime;
+		const t0 = now + 0.02; // slight safety lead
+
+		stopOtherAudio();
+
+		function scheduleSegment(offsetBuf: number, durationBuf: number, when: number) {
+			const src = ctx.createBufferSource();
+			src.buffer = buffer;
+			src.loop = false;
+			src.playbackRate.setValueAtTime(Math.max(0.01, rate), now);
+
+			const segGain = ctx.createGain();
+			segGain.gain.setValueAtTime(0, when);
+			segGain.gain.linearRampToValueAtTime(1, when + fadeIn);
+
+			const realDur = durationBuf / Math.max(0.01, rate);
+			// Fade out just before the end
+			segGain.gain.setValueAtTime(1, when + Math.max(0, realDur - fadeOut));
+			segGain.gain.linearRampToValueAtTime(0, when + realDur);
+
+			src.connect(segGain).connect(ctx.destination);
+			src.start(when, offsetBuf, durationBuf);
+
+			trackSource(loopId, src);
+			return realDur;
+		}
+
+		const d1RT = scheduleSegment(s, firstDurBuf, t0);
+		scheduleSegment(lastStart, lastDurBuf, t0 + d1RT + gapRT);
 	}
 </script>
 
@@ -268,6 +345,14 @@
 								: playPreciseLoop(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
 					>
 						{isPlaying ? 'Stop' : 'Play'}
+					</button>
+					<button
+						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() =>
+							playPreciseLoopEdges(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
+					>
+						Preview start+end
 					</button>
 					<button
 						type="button"
