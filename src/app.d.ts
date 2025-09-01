@@ -10,4 +10,12 @@ declare global {
 	}
 }
 
+declare module 'dexie' {
+	import { Subscriber, Unsubscriber } from 'svelte/store';
+	import { Subscription } from 'dexie';
+	interface Observable<T> {
+		subscribe(run: Subscriber<T>): Unsubscriber | Subscription;
+	}
+}
+
 export {};
