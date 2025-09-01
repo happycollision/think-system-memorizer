@@ -136,10 +136,11 @@ Hi. This is song {songId}.
 			<button
 				type="button"
 				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-				onclick={() => {
+				onmousedown={() => {
 					if (audioElement && formElement) {
+						const currentTime = audioElement.currentTime.toString();
 						const input = formElement.querySelector<HTMLInputElement>("input[id='start']");
-						if (input) input.value = audioElement.currentTime.toString();
+						if (input) input.value = currentTime;
 					}
 				}}
 			>
@@ -158,10 +159,11 @@ Hi. This is song {songId}.
 			<button
 				type="button"
 				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-				onclick={() => {
+				onmousedown={() => {
 					if (audioElement && formElement) {
+						const currentTime = audioElement.currentTime.toString();
 						const input = formElement.querySelector<HTMLInputElement>("input[id='end']");
-						if (input) input.value = audioElement.currentTime.toString();
+						if (input) input.value = currentTime;
 					}
 				}}
 			>
