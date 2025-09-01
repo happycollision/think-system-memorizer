@@ -8,10 +8,10 @@
 
 	const data = $derived(getSong(parseInt(songId)));
 
-	const diskLocation = $derived(data ? `${base}/${$data.song.diskName}` : null);
+	const diskLocation = $derived($data ? `${base}/${$data.song.diskName}` : null);
 
-	let audioElement: HTMLAudioElement;
-	let formElement: HTMLFormElement;
+	let audioElement: HTMLAudioElement | undefined = $state();
+	let formElement: HTMLFormElement | undefined = $state();
 </script>
 
 <nav>
@@ -42,7 +42,7 @@ Hi. This is song {songId}.
 				type="button"
 				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
 				onclick={() => {
-					if (audioElement) {
+					if (audioElement && formElement) {
 						const input = formElement.querySelector<HTMLInputElement>("input[id='start']");
 						if (input) input.value = audioElement.currentTime.toString();
 					}
@@ -64,7 +64,7 @@ Hi. This is song {songId}.
 				type="button"
 				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
 				onclick={() => {
-					if (audioElement) {
+					if (audioElement && formElement) {
 						const input = formElement.querySelector<HTMLInputElement>("input[id='end']");
 						if (input) input.value = audioElement.currentTime.toString();
 					}
@@ -121,7 +121,6 @@ Hi. This is song {songId}.
 				ontimeupdate={(e) => {
 					const a = e.currentTarget as HTMLAudioElement;
 					if (a.currentTime >= loop.end) {
-						a.pause();
 						a.currentTime = loop.start; // or loop.end if you prefer
 					}
 				}}
