@@ -216,6 +216,117 @@
 		const d1RT = scheduleSegment(lastStart, lastDurBuf, t0);
 		scheduleSegment(s, firstDurBuf, t0 + d1RT);
 	}
+
+	// iOS detection (includes iPadOS on M-series with touch)
+	const isIOS =
+		typeof navigator !== 'undefined' &&
+		(/iP(hone|od|ad)/.test(navigator.userAgent) ||
+			(navigator.platform === 'MacIntel' && (navigator as any).maxTouchPoints > 1));
+
+	// Track element-based loop (for iOS background playback)
+	let elementLoopTimer: number | null = $state(null);
+	let elementLoopId: number | null = $state(null);
+
+	function stopElementLoop() {
+		if (elementLoopTimer != null) {
+			clearInterval(elementLoopTimer);
+			elementLoopTimer = null;
+		}
+		elementLoopId = null;
+		// do not pause audioElement here; let user pause explicitly
+	}
+
+	function playElementLoop(loopId: number, start: number, end: number, rate = 1) {
+		if (!audioElement) return;
+		// stop other audio and precise players
+		stopOtherAudio(audioElement);
+
+		// configure and start element playback
+		audioElement.loop = false; // manual loop between start/end
+		audioElement.playbackRate = Math.max(0.01, rate);
+		audioElement.currentTime = Math.max(0, start);
+		void audioElement.play();
+
+		elementLoopId = loopId;
+
+		// re-enforce boundaries in background
+		if (elementLoopTimer != null) clearInterval(elementLoopTimer);
+		elementLoopTimer = window.setInterval(() => {
+			if (!audioElement) return;
+			if (audioElement.currentTime >= end) {
+				audioElement.currentTime = start;
+			}
+		}, 50);
+	}
+
+	function isLoopPlaying(loopId: number) {
+		return playersByLoop.has(loopId) || elementLoopId === loopId;
+	}
+
+	function playLoop(loopId: number, start: number, end: number, rate = 1) {
+		if (isIOS) {
+			playElementLoop(loopId, start, end, rate);
+		} else {
+			void playPreciseLoop(loopId, start, end, rate);
+		}
+	}
+
+	function stopLoop(loopId: number) {
+		stopPreciseLoop(loopId);
+		if (elementLoopId === loopId) stopElementLoop();
+	}
+
+	// Media Session API for lock-screen/background controls
+	$effect(() => {
+		if (!$data || !audioElement) return;
+		// guard for browsers without the API
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		const anyNav = navigator as any;
+		if (!('mediaSession' in navigator)) return;
+
+		navigator.mediaSession.metadata = new MediaMetadata({
+			title: $data.song.name,
+			artist: '',
+			album: 'Think System Memorizer',
+			artwork: [],
+		});
+
+		navigator.mediaSession.setActionHandler('play', async () => {
+			try {
+				await audioElement!.play();
+			} catch {
+				/* noop */
+			}
+		});
+		navigator.mediaSession.setActionHandler('pause', () => {
+			audioElement!.pause();
+			stopElementLoop();
+		});
+		navigator.mediaSession.setActionHandler('seekto', (e) => {
+			if (!e || e.seekTime == null) return;
+			audioElement!.currentTime = e.seekTime;
+		});
+		navigator.mediaSession.setActionHandler('seekbackward', (e) => {
+			const off = e?.seekOffset ?? 10;
+			audioElement!.currentTime = Math.max(0, audioElement!.currentTime - off);
+		});
+		navigator.mediaSession.setActionHandler('seekforward', (e) => {
+			const off = e?.seekOffset ?? 30;
+			const dur = audioElement!.duration || Number.POSITIVE_INFINITY;
+			audioElement!.currentTime = Math.min(dur, audioElement!.currentTime + off);
+		});
+	});
+
+	// const { subscribe } = writable(0, (set) => {
+	//   let lastId = 0;
+	//   function check() {
+	//     if (lastId === playersByLoop.size) return;
+	//     lastId = playersByLoop.size;
+	//     set(lastId);
+	//   }
+	//   const id = setInterval(check, 250);
+	//   return () => clearInterval(id);
+	// });
 </script>
 
 <div class="p-2">
@@ -229,6 +340,7 @@
 		<audio
 			bind:this={audioElement}
 			controls
+			playsinline
 			class="my-4 w-full"
 			preload="auto"
 			onplay={(evt) => stopOtherAudio(evt.currentTarget)}
@@ -316,7 +428,7 @@
 		<hr />
 
 		{#each $data.songLoops as loop (loop.id)}
-			{@const isPlaying = playersByLoop.has(loop.id)}
+			{@const isPlaying = isLoopPlaying(loop.id)}
 			<div class="mb-4 rounded border p-4">
 				<div class="grid grid-cols-[1fr_auto] items-center gap-4">
 					<h2 id="loop_{loop.id}_title" class="text-2xl font-semibold" contenteditable>
@@ -410,8 +522,8 @@
 						class="btn w-xs border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700"
 						onclick={() =>
 							isPlaying
-								? stopPreciseLoop(loop.id)
-								: playPreciseLoop(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
+								? stopLoop(loop.id)
+								: playLoop(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
 					>
 						{isPlaying ? 'Stop' : 'Play'}
 					</button>
@@ -420,7 +532,7 @@
 						type="button"
 						class="btn border-red-400 bg-red-500 text-white hover:bg-red-600"
 						onclick={() => {
-							stopPreciseLoop(loop.id);
+							stopLoop(loop.id);
 							if (confirm(`Are you sure you want to delete loop "${loop.name}"?`)) {
 								deleteLoop(loop.id);
 							}
