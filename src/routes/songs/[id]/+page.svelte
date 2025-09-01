@@ -184,7 +184,6 @@
 		// Real-time scheduling (account for playbackRate)
 		const fadeIn = 0.005;
 		const fadeOut = 0.01;
-		const gapRT = 0.075; // small silence between segments
 		const now = ctx.currentTime;
 		const t0 = now + 0.02; // slight safety lead
 
@@ -215,7 +214,7 @@
 		// const d1RT = scheduleSegment(s, firstDurBuf, t0);
 		// scheduleSegment(lastStart, lastDurBuf, t0 + d1RT + gapRT);
 		const d1RT = scheduleSegment(lastStart, lastDurBuf, t0);
-		scheduleSegment(s, firstDurBuf, t0 + d1RT + gapRT);
+		scheduleSegment(s, firstDurBuf, t0 + d1RT);
 	}
 </script>
 
@@ -253,7 +252,7 @@
 					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
 					onmousedown={() => {
 						if (audioElement && formElement) {
-							const currentTime = audioElement.currentTime.toString();
+							const currentTime = audioElement.currentTime.toFixed(1);
 							const input = formElement.querySelector<HTMLInputElement>("input[id='start']");
 							if (input) input.value = currentTime;
 						}
@@ -277,7 +276,7 @@
 					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
 					onmousedown={() => {
 						if (audioElement && formElement) {
-							const currentTime = audioElement.currentTime.toString();
+							const currentTime = audioElement.currentTime.toFixed(1);
 							const input = formElement.querySelector<HTMLInputElement>("input[id='end']");
 							if (input) input.value = currentTime;
 						}
@@ -340,6 +339,74 @@
 				<div class="flex gap-2">
 					<button
 						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() => {
+							playPreciseLoopEdges(
+								loop.id,
+								loop.start - 0.1,
+								loop.end,
+								audioElement?.playbackRate ?? 1,
+							);
+
+							updateLoop(loop.id, { start: loop.start - 0.1 });
+						}}
+					>
+						Pull Start
+					</button>
+
+					<button
+						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() => {
+							playPreciseLoopEdges(
+								loop.id,
+								loop.start + 0.1,
+								loop.end,
+								audioElement?.playbackRate ?? 1,
+							);
+
+							updateLoop(loop.id, { start: loop.start + 0.1 });
+						}}
+					>
+						Push Start
+					</button>
+					<button
+						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() => {
+							playPreciseLoopEdges(
+								loop.id,
+								loop.start,
+								loop.end - 0.1,
+								audioElement?.playbackRate ?? 1,
+							);
+
+							updateLoop(loop.id, { end: loop.end - 0.1 });
+						}}
+					>
+						Pull End
+					</button>
+					<button
+						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() => {
+							playPreciseLoopEdges(
+								loop.id,
+								loop.start,
+								loop.end + 0.1,
+								audioElement?.playbackRate ?? 1,
+							);
+
+							updateLoop(loop.id, { end: loop.end + 0.1 });
+						}}
+					>
+						Push End
+					</button>
+				</div>
+
+				<div class="mt-4 flex h-16 gap-2">
+					<button
+						type="button"
 						class="btn w-xs border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700"
 						onclick={() =>
 							isPlaying
@@ -348,14 +415,7 @@
 					>
 						{isPlaying ? 'Stop' : 'Play'}
 					</button>
-					<button
-						type="button"
-						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
-						onclick={() =>
-							playPreciseLoopEdges(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
-					>
-						Preview start+end
-					</button>
+
 					<button
 						type="button"
 						class="btn border-red-400 bg-red-500 text-white hover:bg-red-600"
