@@ -212,8 +212,10 @@
 			return realDur;
 		}
 
-		const d1RT = scheduleSegment(s, firstDurBuf, t0);
-		scheduleSegment(lastStart, lastDurBuf, t0 + d1RT + gapRT);
+		// const d1RT = scheduleSegment(s, firstDurBuf, t0);
+		// scheduleSegment(lastStart, lastDurBuf, t0 + d1RT + gapRT);
+		const d1RT = scheduleSegment(lastStart, lastDurBuf, t0);
+		scheduleSegment(s, firstDurBuf, t0 + d1RT + gapRT);
 	}
 </script>
 
