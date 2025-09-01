@@ -13,7 +13,15 @@
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
 
-	// Precise segment looper action for an <audio> element
+	function stopOtherAudio(thisAudio: HTMLAudioElement) {
+		document.querySelectorAll('audio').forEach((audio) => {
+			if (audio !== thisAudio) {
+				if (!audio.paused) audio.pause();
+			}
+		});
+	}
+
+	// Precise (?) segment looper action for an <audio> element
 	function segmentLoop(node: HTMLAudioElement, params: { start: number; end: number }) {
 		let loop = { ...params };
 		let timer: number | null = null;
@@ -62,6 +70,7 @@
 		};
 
 		const onPlay = () => {
+			stopOtherAudio(node);
 			clampToLoop();
 			schedule();
 		};
@@ -104,7 +113,13 @@ Hi. This is song {songId}.
 	<h1 class="text-3xl font-bold">{$data.song.name}</h1>
 	<p>From disk: {$data.song.diskName}</p>
 
-	<audio bind:this={audioElement} controls class="my-4 w-full" preload="auto">
+	<audio
+		bind:this={audioElement}
+		controls
+		class="my-4 w-full"
+		preload="auto"
+		onplay={(evt) => stopOtherAudio(evt.currentTarget)}
+	>
 		<source src={diskLocation} type="audio/wav" />
 		Your browser does not support the audio element.
 	</audio>
