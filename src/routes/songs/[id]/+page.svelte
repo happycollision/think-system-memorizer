@@ -29,45 +29,50 @@ Hi. This is song {songId}.
 		Your browser does not support the audio element.
 	</audio>
 
-	<form bind:this={formElement}>
+	<form bind:this={formElement} onsubmit={(e) => e.preventDefault()} class="mb-8">
 		<label for="start" class="mb-1 block font-medium">Default Loop Start (seconds)</label>
-		<input
-			type="number"
-			id="start"
-			class="w-full rounded border border-gray-300 p-2"
-			placeholder="e.g., 30.5"
-		/>
-		<button
-			type="button"
-			class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-			onclick={() => {
-				if (audioElement) {
-					const input = formElement.querySelector<HTMLInputElement>("input[id='start']");
-					if (input) input.value = audioElement.currentTime.toString();
-				}
-			}}
-		>
-			Set to Current Time
-		</button>
+		<div class="grid grid-cols-2 gap-2">
+			<input
+				type="number"
+				id="start"
+				class="w-full rounded border border-gray-300 p-2"
+				placeholder="e.g., 30.5"
+			/>
+			<button
+				type="button"
+				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+				onclick={() => {
+					if (audioElement) {
+						const input = formElement.querySelector<HTMLInputElement>("input[id='start']");
+						if (input) input.value = audioElement.currentTime.toString();
+					}
+				}}
+			>
+				Set to Current Time
+			</button>
+		</div>
+
 		<label for="end" class="mt-4 mb-1 block font-medium">Default Loop End (seconds)</label>
-		<input
-			type="number"
-			id="end"
-			class="w-full rounded border border-gray-300 p-2"
-			placeholder="e.g., 45.0"
-		/>
-		<button
-			type="button"
-			class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
-			onclick={() => {
-				if (audioElement) {
-					const input = formElement.querySelector<HTMLInputElement>("input[id='end']");
-					if (input) input.value = audioElement.currentTime.toString();
-				}
-			}}
-		>
-			Set to Current Time
-		</button>
+		<div class="grid grid-cols-2 gap-2">
+			<input
+				type="number"
+				id="end"
+				class="w-full rounded border border-gray-300 p-2"
+				placeholder="e.g., 45.0"
+			/>
+			<button
+				type="button"
+				class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+				onclick={() => {
+					if (audioElement) {
+						const input = formElement.querySelector<HTMLInputElement>("input[id='end']");
+						if (input) input.value = audioElement.currentTime.toString();
+					}
+				}}
+			>
+				Set to Current Time
+			</button>
+		</div>
 
 		<div>
 			<button
