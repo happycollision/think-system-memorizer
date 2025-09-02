@@ -158,7 +158,13 @@
 	}
 
 	// Plays only the first second and last second of the loop (preview of edges)
-	async function playPreciseLoopEdges(loopId: number, start: number, end: number, rate = 1) {
+	async function playPreciseLoopEdges(
+		loopId: number,
+		start: number,
+		end: number,
+		opts: { which?: 'start' | 'end' | 'both'; rate?: number },
+	) {
+		const o = { which: 'both', rate: 1, ...opts };
 		const ctx = getCtx();
 		if (ctx.state === 'suspended') await ctx.resume();
 		const buffer = await ensureDecodedBuffer();
@@ -193,13 +199,13 @@
 			const src = ctx.createBufferSource();
 			src.buffer = buffer;
 			src.loop = false;
-			src.playbackRate.setValueAtTime(Math.max(0.01, rate), now);
+			src.playbackRate.setValueAtTime(Math.max(0.01, o.rate), now);
 
 			const segGain = ctx.createGain();
 			segGain.gain.setValueAtTime(0, when);
 			segGain.gain.linearRampToValueAtTime(1, when + fadeIn);
 
-			const realDur = durationBuf / Math.max(0.01, rate);
+			const realDur = durationBuf / Math.max(0.01, o.rate);
 			// Fade out just before the end
 			segGain.gain.setValueAtTime(1, when + Math.max(0, realDur - fadeOut));
 			segGain.gain.linearRampToValueAtTime(0, when + realDur);
@@ -211,10 +217,14 @@
 			return realDur;
 		}
 
-		// const d1RT = scheduleSegment(s, firstDurBuf, t0);
-		// scheduleSegment(lastStart, lastDurBuf, t0 + d1RT + gapRT);
-		const d1RT = scheduleSegment(lastStart, lastDurBuf, t0);
-		scheduleSegment(s, firstDurBuf, t0 + d1RT);
+		if (o.which === 'both') {
+			const d1RT = scheduleSegment(lastStart, lastDurBuf, t0);
+			scheduleSegment(s, firstDurBuf, t0 + d1RT);
+		} else if (o.which === 'start') {
+			scheduleSegment(s, firstDurBuf, t0);
+		} else if (o.which === 'end') {
+			scheduleSegment(lastStart, lastDurBuf, t0);
+		}
 	}
 
 	// iOS detection (includes iPadOS on M-series with touch)
@@ -262,11 +272,12 @@
 		return playersByLoop.has(loopId) || elementLoopId === loopId;
 	}
 
-	function playLoop(loopId: number, start: number, end: number, rate = 1) {
+	function playLoop(loopId: number, start: number, end: number, opts: { rate?: number } = {}) {
+		const o = { rate: 1, ...opts };
 		if (isIOS) {
-			playElementLoop(loopId, start, end, rate);
+			playElementLoop(loopId, start, end, o.rate);
 		} else {
-			void playPreciseLoop(loopId, start, end, rate);
+			void playPreciseLoop(loopId, start, end, o.rate);
 		}
 	}
 
@@ -314,17 +325,6 @@
 			audioElement!.currentTime = Math.min(dur, audioElement!.currentTime + off);
 		});
 	});
-
-	// const { subscribe } = writable(0, (set) => {
-	//   let lastId = 0;
-	//   function check() {
-	//     if (lastId === playersByLoop.size) return;
-	//     lastId = playersByLoop.size;
-	//     set(lastId);
-	//   }
-	//   const id = setInterval(check, 250);
-	//   return () => clearInterval(id);
-	// });
 </script>
 
 <div class="p-2">
@@ -451,12 +451,10 @@
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 						onclick={() => {
-							playPreciseLoopEdges(
-								loop.id,
-								loop.start - 0.1,
-								loop.end,
-								audioElement?.playbackRate ?? 1,
-							);
+							playPreciseLoopEdges(loop.id, loop.start - 0.1, loop.end, {
+								rate: audioElement?.playbackRate ?? 1,
+								which: 'start',
+							});
 
 							updateLoop(loop.id, { start: loop.start - 0.1 });
 						}}
@@ -468,12 +466,10 @@
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 						onclick={() => {
-							playPreciseLoopEdges(
-								loop.id,
-								loop.start + 0.1,
-								loop.end,
-								audioElement?.playbackRate ?? 1,
-							);
+							playPreciseLoopEdges(loop.id, loop.start + 0.1, loop.end, {
+								rate: audioElement?.playbackRate ?? 1,
+								which: 'start',
+							});
 
 							updateLoop(loop.id, { start: loop.start + 0.1 });
 						}}
@@ -484,12 +480,10 @@
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 						onclick={() => {
-							playPreciseLoopEdges(
-								loop.id,
-								loop.start,
-								loop.end - 0.1,
-								audioElement?.playbackRate ?? 1,
-							);
+							playPreciseLoopEdges(loop.id, loop.start, loop.end - 0.1, {
+								rate: audioElement?.playbackRate ?? 1,
+								which: 'end',
+							});
 
 							updateLoop(loop.id, { end: loop.end - 0.1 });
 						}}
@@ -500,18 +494,25 @@
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 						onclick={() => {
-							playPreciseLoopEdges(
-								loop.id,
-								loop.start,
-								loop.end + 0.1,
-								audioElement?.playbackRate ?? 1,
-							);
+							playPreciseLoopEdges(loop.id, loop.start, loop.end + 0.1, {
+								rate: audioElement?.playbackRate ?? 1,
+								which: 'end',
+							});
 
 							updateLoop(loop.id, { end: loop.end + 0.1 });
 						}}
 					>
 						Push End
 					</button>
+					<button
+						type="button"
+						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+						onclick={() => {
+							playPreciseLoopEdges(loop.id, loop.start, loop.end, {
+								rate: audioElement?.playbackRate ?? 1,
+							});
+						}}>hear loop</button
+					>
 				</div>
 
 				<div class="mt-4 flex h-16 gap-2">
@@ -521,7 +522,9 @@
 						onclick={() =>
 							isPlaying
 								? stopLoop(loop.id)
-								: playLoop(loop.id, loop.start, loop.end, audioElement?.playbackRate ?? 1)}
+								: playLoop(loop.id, loop.start, loop.end, {
+										rate: audioElement?.playbackRate ?? 1,
+									})}
 					>
 						{isPlaying ? 'Stop' : 'Play'}
 					</button>
