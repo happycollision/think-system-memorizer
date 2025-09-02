@@ -395,12 +395,12 @@
 		</audio>
 
 		<form bind:this={formElement} onsubmit={(e) => e.preventDefault()} class="mb-8">
-			<div class="grid grid-cols-[auto_auto] gap-2">
+			<div class="grid grid-cols-2 gap-2">
 				<input type="number" id="start" disabled placeholder="0.0" step={sampleStep} />
 				<input type="number" id="end" disabled placeholder="0.0" step={sampleStep} />
 				<button
 					type="button"
-					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+					class="btn mt-2 bg-blue-500 text-white hover:bg-blue-600"
 					onmousedown={() => {
 						if (audioElement && formElement) {
 							const currentTime = audioElement.currentTime.toFixed(1);
@@ -414,7 +414,7 @@
 
 				<button
 					type="button"
-					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
+					class="btn mt-2 bg-blue-500 text-white hover:bg-blue-600"
 					onmousedown={() => {
 						if (audioElement && formElement) {
 							const currentTime = audioElement.currentTime.toFixed(1);
@@ -430,7 +430,7 @@
 			<div>
 				<button
 					type="button"
-					class="mt-4 rounded bg-green-500 px-4 py-2 font-semibold text-white hover:bg-green-600"
+					class="btn mt-4 border-green-400 bg-green-500 text-white hover:bg-green-600"
 					onclick={async () => {
 						if (formElement) {
 							const startInput = formElement.querySelector<HTMLInputElement>("input[id='start']");
@@ -473,66 +473,67 @@
 					>
 				</div>
 
-				<p>Start: {loop.start} End: {loop.end}</p>
+				<div class="grid grid-cols-2 gap-2">
+					<span>Start: {loop.start.toFixed(1)} sec</span>
+					<span>End: {loop.end.toFixed(1)} sec</span>
 
-				<div class="flex gap-2">
-					<button
-						type="button"
-						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
-						onclick={() => {
-							playPreciseLoopEdges(loop.id, loop.start - 0.1, loop.end, {
-								rate: audioElement?.playbackRate ?? 1,
-								which: 'start',
-							});
+					<div class="flex gap-2">
+						<button
+							type="button"
+							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+							onclick={() => {
+								playPreciseLoopEdges(loop.id, loop.start - 0.1, loop.end, {
+									rate: audioElement?.playbackRate ?? 1,
+									which: 'start',
+								});
+								updateLoop(loop.id, { start: loop.start - 0.1 });
+							}}
+						>
+							-
+						</button>
+						<button
+							type="button"
+							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+							onclick={() => {
+								playPreciseLoopEdges(loop.id, loop.start + 0.1, loop.end, {
+									rate: audioElement?.playbackRate ?? 1,
+									which: 'start',
+								});
+								updateLoop(loop.id, { start: loop.start + 0.1 });
+							}}
+						>
+							+
+						</button>
+					</div>
 
-							updateLoop(loop.id, { start: loop.start - 0.1 });
-						}}
-					>
-						Pull Start
-					</button>
-
-					<button
-						type="button"
-						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
-						onclick={() => {
-							playPreciseLoopEdges(loop.id, loop.start + 0.1, loop.end, {
-								rate: audioElement?.playbackRate ?? 1,
-								which: 'start',
-							});
-
-							updateLoop(loop.id, { start: loop.start + 0.1 });
-						}}
-					>
-						Push Start
-					</button>
-					<button
-						type="button"
-						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
-						onclick={() => {
-							playPreciseLoopEdges(loop.id, loop.start, loop.end - 0.1, {
-								rate: audioElement?.playbackRate ?? 1,
-								which: 'end',
-							});
-
-							updateLoop(loop.id, { end: loop.end - 0.1 });
-						}}
-					>
-						Pull End
-					</button>
-					<button
-						type="button"
-						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
-						onclick={() => {
-							playPreciseLoopEdges(loop.id, loop.start, loop.end + 0.1, {
-								rate: audioElement?.playbackRate ?? 1,
-								which: 'end',
-							});
-
-							updateLoop(loop.id, { end: loop.end + 0.1 });
-						}}
-					>
-						Push End
-					</button>
+					<div class="flex gap-2">
+						<button
+							type="button"
+							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+							onclick={() => {
+								playPreciseLoopEdges(loop.id, loop.start, loop.end - 0.1, {
+									rate: audioElement?.playbackRate ?? 1,
+									which: 'end',
+								});
+								updateLoop(loop.id, { end: loop.end - 0.1 });
+							}}
+						>
+							-
+						</button>
+						<button
+							type="button"
+							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
+							onclick={() => {
+								playPreciseLoopEdges(loop.id, loop.start, loop.end + 0.1, {
+									rate: audioElement?.playbackRate ?? 1,
+									which: 'end',
+								});
+								updateLoop(loop.id, { end: loop.end + 0.1 });
+							}}
+						>
+							+
+						</button>
+					</div>
 					<button
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
