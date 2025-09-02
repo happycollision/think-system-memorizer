@@ -71,6 +71,59 @@
 		return idx / sr;
 	}
 
+	// UI playhead sync for precise playback (keeps <audio> slider updated while WebAudio plays)
+	let uiRaf: number | null = $state(null);
+	let uiSyncLoopId: number | null = $state(null);
+
+	function stopUiPlayheadSync() {
+		if (uiRaf != null) cancelAnimationFrame(uiRaf);
+		uiRaf = null;
+		uiSyncLoopId = null;
+	}
+
+	function startUiPlayheadSync(
+		loopId: number,
+		loopStart: number,
+		loopEnd: number,
+		rate: number,
+		whenCtx: number,
+	) {
+		stopUiPlayheadSync();
+		if (!audioElement) return;
+		const ctx = getCtx();
+		const span = Math.max(0.001, loopEnd - loopStart);
+
+		uiSyncLoopId = loopId;
+		try {
+			// prime the UI to the loop start
+			audioElement.currentTime = loopStart;
+		} catch {
+			/* noop */
+		}
+
+		const tick = () => {
+			if (!audioElement) return stopUiPlayheadSync();
+			// if the underlying precise players for this loop stopped, end sync
+			if (!playersByLoop.has(loopId)) return stopUiPlayheadSync();
+
+			const now = ctx.currentTime;
+			const t = Math.max(0, now - whenCtx);
+			const played = t * Math.max(0.01, rate);
+			const pos = loopStart + (played % span);
+
+			// only update if the UI is noticeably off to reduce churn
+			if (Math.abs(audioElement.currentTime - pos) > 0.033) {
+				try {
+					audioElement.currentTime = pos;
+				} catch {
+					/* noop */
+				}
+			}
+			uiRaf = requestAnimationFrame(tick);
+		};
+		uiRaf = requestAnimationFrame(tick);
+	}
+
 	function stopAllPrecise() {
 		playersByLoop.forEach((arr) => {
 			for (const src of arr) {
@@ -88,6 +141,7 @@
 		});
 		playersByLoop.clear();
 		// keep context alive; user may start again
+		stopUiPlayheadSync();
 	}
 
 	// Track a source under a loopId and auto-clean when it ends
@@ -137,6 +191,9 @@
 		const when = ctx.currentTime + 0.005;
 		src.start(when, s);
 		trackSource(loopId, src);
+
+		// Keep the <audio> element's playhead in sync for UI purposes
+		startUiPlayheadSync(loopId, s, e, rate, when);
 	}
 
 	function stopPreciseLoop(loopId: number) {
@@ -155,6 +212,7 @@
 			}
 		}
 		playersByLoop.delete(loopId);
+		if (uiSyncLoopId === loopId) stopUiPlayheadSync();
 	}
 
 	// Plays only the first second and last second of the loop (preview of edges)
