@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+		/>
 
 		<!-- Manifest -->
 		<link rel="manifest" href="./manifest.webmanifest" />
@@ -30,27 +33,35 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<!-- end Manifest -->
 
+		<style>
+			/* Prevent double-tap to zoom and reduce 300ms tap delay */
+			html,
+			body {
+				touch-action: manipulation;
+			}
+		</style>
+
 		
-		<link href="./_app/immutable/assets/0.BrZQrOwY.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.BO__aEXJ.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/C9ykQqUl.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/BjoP2QmE.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Da7KoU0l.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CXh04r7g.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.cRW4riKZ.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/b8kcOPRF.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/9Fl8GY2Y.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CpiOsVtk.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/D5pnSS6L.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/Bg1Vz6S8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/CzZR_N-_.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DYRUOLb-.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/0.Cf7NMxU_.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/GUQOcP0r.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/6.B3O5yRnR.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/v3Zy_1il.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DSrJd8Ao.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/DYFqm6nN.js">
+		<link href="./_app/immutable/assets/0.J7X5di2H.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.DCiFLp3u.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CkA7aw0l.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bwlva6uY.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D2I4sjJM.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bik8GCit.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.CX5sISLQ.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BdTKovay.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/0xYWTkK0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CXzMB8YC.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BYoixho3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dn99zI5q.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B60myxlc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/qHE_Sx-z.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DcmPw4Id.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CXImMhLJ.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/6.ChvmnGO1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DplVhWkf.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CM32ZVso.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/B758EzBt.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/DqcQed1d.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/D6-XlEtG.js"><!--[--><!--]--><title>Songs - Think System Memorizer</title>
 	</head>
@@ -59,7 +70,7 @@
 			
 			<script>
 				{
-					__sveltekit_l8t7tl = {
+					__sveltekit_1l7iad8 = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						assets: "/think-system-memorizer"
 					};
@@ -67,8 +78,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("./_app/immutable/entry/start.BO__aEXJ.js"),
-						import("./_app/immutable/entry/app.cRW4riKZ.js")
+						import("./_app/immutable/entry/start.DCiFLp3u.js"),
+						import("./_app/immutable/entry/app.CX5sISLQ.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 6],
