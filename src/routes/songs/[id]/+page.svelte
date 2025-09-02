@@ -333,7 +333,33 @@
 			audioElement!.currentTime = Math.min(dur, audioElement!.currentTime + off);
 		});
 	});
+
+	// Start fetching the audio immediately and kick the <audio> element to load
+	$effect(() => {
+		if (!diskLocation) return;
+		const ac = new AbortController();
+
+		// Warm the browser cache immediately
+		fetch(diskLocation, { cache: 'force-cache', signal: ac.signal }).catch(() => {
+			/* noop */
+		});
+
+		// Ask the media element to start loading (no playback)
+		if (audioElement) {
+			if (audioElement.preload !== 'auto') audioElement.preload = 'auto';
+			// Only call load() if it hasn't begun loading to avoid interrupting playback later
+			if (audioElement.readyState === 0) audioElement.load();
+		}
+
+		return () => ac.abort();
+	});
 </script>
+
+<svelte:head>
+	{#if diskLocation}
+		<link rel="preload" as="audio" href={diskLocation} />
+	{/if}
+</svelte:head>
 
 <div class="p-2">
 	<nav class="mb-4">
