@@ -276,10 +276,6 @@ export async function playPreciseLoopEdges(
 let elementLoopTimer: number | null = $state(null);
 let elementLoopId: number | null = $state(null);
 
-export function getElementLoopId() {
-	return elementLoopId;
-}
-
 export function stopElementLoop() {
 	if (elementLoopTimer != null) {
 		clearInterval(elementLoopTimer);
@@ -336,14 +332,14 @@ export function stopLoop(loopId: number) {
 	audioElement?.pause();
 }
 
-export function setSessionAudioData(title: string) {
+export function setSessionAudioData(getTitle: (currentLoopId: number | null) => string) {
 	if (!audioElement) return;
 	const audioElement_ = audioElement;
 	// guard for browsers without the API
 	if (!('mediaSession' in navigator)) return;
 
 	navigator.mediaSession.metadata = new MediaMetadata({
-		title,
+		title: getTitle(elementLoopId),
 		artist: '',
 		album: 'Think System Memorizer',
 		artwork: [],

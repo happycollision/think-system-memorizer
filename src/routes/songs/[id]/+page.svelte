@@ -4,7 +4,6 @@
 	import { addLoopToSong, deleteLoop, getSong, updateLoop } from '../db';
 	import BackgroundPlayToggle from '../BackgroundPlayToggle.svelte';
 	import {
-		getElementLoopId,
 		isLoopPlaying,
 		playLoop,
 		playPreciseLoopEdges,
@@ -43,7 +42,8 @@
 	$effect(() => {
 		if (!$data) return;
 		setSessionAudioData(
-			`${$data.song.name}: ${$data.songLoops.find((l) => l.id === getElementLoopId())?.name}`,
+			(currentLoopId) =>
+				`${$data.song.name}: ${$data.songLoops.find((l) => l.id === currentLoopId)?.name}`,
 		);
 	});
 
