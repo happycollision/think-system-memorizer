@@ -15,15 +15,7 @@
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
 
-	let a = $derived.by(() => {
-		if (!audioElement || !diskLocation) return;
-		return new AudioLooper(audioElement, diskLocation);
-	});
-
-	$effect(() => () => {
-		a?.stopAllPrecise();
-		a?.stopElementLoop();
-	});
+	let a: AudioLooper | undefined = $state();
 
 	// good enough for adjustments
 	const sampleStep = 1 / 1000;
@@ -39,6 +31,8 @@
 
 	// Start fetching the audio immediately and kick the <audio> element to load
 	$effect(() => {
+		if (!audioElement || !diskLocation) return;
+		a = new AudioLooper(audioElement, diskLocation);
 		return () => a?.destroy();
 	});
 </script>
