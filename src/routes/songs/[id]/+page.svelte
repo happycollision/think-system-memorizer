@@ -506,19 +506,19 @@
 			{@const isPlaying = isLoopPlaying(loop.id)}
 			<div class="mb-4 rounded border p-4">
 				<div class="grid grid-cols-[1fr_auto] items-center gap-4">
-					<h2 id="loop_{loop.id}_title" class="text-2xl font-semibold" contenteditable>
+					<h2
+						id="loop_{loop.id}_title"
+						class="text-2xl font-semibold"
+						contenteditable
+						onblur={(ev) => {
+							const newName = ev.currentTarget.innerText.trim();
+							if (newName !== loop.name) {
+								updateLoop(loop.id, { name: newName || `Loop ${loop.id}` });
+							}
+						}}
+					>
 						{loop.name}
 					</h2>
-					<button
-						type="button"
-						class="btn"
-						onclick={() => {
-							const newName = document
-								.querySelector<HTMLElement>(`#loop_${loop.id}_title`)
-								?.innerText.trim();
-							updateLoop(loop.id, { name: newName || `Loop ${loop.id}` });
-						}}>update name</button
-					>
 				</div>
 
 				<div class="grid grid-cols-2 gap-2">
