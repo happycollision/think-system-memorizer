@@ -20,20 +20,18 @@
 	// good enough for adjustments
 	const sampleStep = 1 / 1000;
 
-	// Media Session API for lock-screen/background controls
+	$effect(() => {
+		if (!audioElement || !diskLocation) return;
+		a = new AudioLooper(audioElement, diskLocation);
+		return () => a?.destroy();
+	});
+
 	$effect(() => {
 		if (!$data) return;
 		a?.setSessionAudioData(
 			(currentLoopId) =>
 				`${$data.song.name}: ${$data.songLoops.find((l) => l.id === currentLoopId)?.name}`,
 		);
-	});
-
-	// Start fetching the audio immediately and kick the <audio> element to load
-	$effect(() => {
-		if (!audioElement || !diskLocation) return;
-		a = new AudioLooper(audioElement, diskLocation);
-		return () => a?.destroy();
 	});
 </script>
 
