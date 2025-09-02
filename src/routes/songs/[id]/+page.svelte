@@ -235,12 +235,6 @@
 
 	let useElement = $state(isIOS);
 
-	$effect(() => {
-		if (useElement) {
-			stopOtherAudio();
-		}
-	});
-
 	// Track element-based loop (for iOS background playback)
 	let elementLoopTimer: number | null = $state(null);
 	let elementLoopId: number | null = $state(null);
@@ -256,13 +250,13 @@
 	function playElementLoop(loopId: number, start: number, end: number, rate = 1) {
 		if (!audioElement) return;
 		// stop other audio and precise players
-		stopOtherAudio(audioElement);
+		stopOtherAudio();
 
 		// configure and start element playback
 		audioElement.loop = false; // manual loop between start/end
 		audioElement.playbackRate = Math.max(0.01, rate);
 		audioElement.currentTime = Math.max(0, start);
-		void audioElement.play();
+		audioElement.play();
 
 		elementLoopId = loopId;
 
@@ -368,7 +362,15 @@
 
 	<div class="mb-4 rounded bg-gray-100 p-2 dark:bg-gray-800">
 		<label>
-			<input type="checkbox" bind:checked={useElement} class="mb-4" /> Allow background playback
+			<input
+				type="checkbox"
+				bind:checked={useElement}
+				class="mb-4"
+				onchange={() => {
+					stopOtherAudio();
+					stopElementLoop();
+				}}
+			/> Allow background playback
 		</label>
 		<div>
 			On iOS, playback will stop when the screen locks or when switching apps. Enable this option to
@@ -388,7 +390,7 @@
 			preload="auto"
 			onplay={(evt) => stopOtherAudio(evt.currentTarget)}
 		>
-			<source src={diskLocation} type="audio/wav" />
+			<source src={diskLocation} />
 			Your browser does not support the audio element.
 		</audio>
 
