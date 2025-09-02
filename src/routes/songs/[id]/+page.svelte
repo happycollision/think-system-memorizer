@@ -233,6 +233,14 @@
 		(/iP(hone|od|ad)/.test(navigator.userAgent) ||
 			(navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
 
+	let useElement = $state(isIOS);
+
+	$effect(() => {
+		if (useElement) {
+			stopOtherAudio();
+		}
+	});
+
 	// Track element-based loop (for iOS background playback)
 	let elementLoopTimer: number | null = $state(null);
 	let elementLoopId: number | null = $state(null);
@@ -274,10 +282,10 @@
 
 	function playLoop(loopId: number, start: number, end: number, opts: { rate?: number } = {}) {
 		const o = { rate: 1, ...opts };
-		if (isIOS) {
+		if (useElement) {
 			playElementLoop(loopId, start, end, o.rate);
 		} else {
-			void playPreciseLoop(loopId, start, end, o.rate);
+			playPreciseLoop(loopId, start, end, o.rate);
 		}
 	}
 
@@ -332,6 +340,17 @@
 		<a href={listingUrl} class="btn">Back to Songs</a>
 	</nav>
 
+	<div class="mb-4 rounded bg-gray-100 p-2 dark:bg-gray-800">
+		<label>
+			<input type="checkbox" bind:checked={useElement} class="mb-4" /> Allow background playback
+		</label>
+		<div>
+			On iOS, playback will stop when the screen locks or when switching apps. Enable this option to
+			allow playback in the background. The precision of the loop boundaries will be reduced when
+			using background playback.
+		</div>
+	</div>
+
 	{#if $data}
 		<h1 class="text-3xl font-bold">{$data.song.name}</h1>
 
@@ -348,15 +367,9 @@
 		</audio>
 
 		<form bind:this={formElement} onsubmit={(e) => e.preventDefault()} class="mb-8">
-			<label for="start" class="mb-1 block font-medium">Default Loop Start (seconds)</label>
-			<div class="grid grid-cols-2 gap-2">
-				<input
-					type="number"
-					id="start"
-					class="w-full rounded border border-gray-300 p-2"
-					placeholder="e.g., 30.5"
-					step={sampleStep}
-				/>
+			<div class="grid grid-cols-[auto_auto] gap-2">
+				<input type="number" id="start" disabled placeholder="0.0" step={sampleStep} />
+				<input type="number" id="end" disabled placeholder="0.0" step={sampleStep} />
 				<button
 					type="button"
 					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
@@ -368,19 +381,9 @@
 						}
 					}}
 				>
-					Set to Current Time
+					Set loop start
 				</button>
-			</div>
 
-			<label for="end" class="mt-4 mb-1 block font-medium">Default Loop End (seconds)</label>
-			<div class="grid grid-cols-2 gap-2">
-				<input
-					type="number"
-					id="end"
-					class="w-full rounded border border-gray-300 p-2"
-					placeholder="e.g., 45.0"
-					step={sampleStep}
-				/>
 				<button
 					type="button"
 					class="mt-2 rounded bg-blue-500 px-4 py-2 font-semibold text-white hover:bg-blue-600"
@@ -392,7 +395,7 @@
 						}
 					}}
 				>
-					Set to Current Time
+					Set loop end
 				</button>
 			</div>
 
@@ -422,8 +425,6 @@
 				</button>
 			</div>
 		</form>
-
-		<hr />
 
 		{#each $data.songLoops as loop (loop.id)}
 			{@const isPlaying = isLoopPlaying(loop.id)}
