@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
 
 		<!-- Manifest -->
 		<link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
@@ -29,6 +29,13 @@
 		<meta name="apple-mobile-web-app-title" content="Think System Memorizer" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 		<!-- end Manifest -->
+
+		<style>
+			/* Prevent double-tap to zoom and reduce 300ms tap delay */
+			html, body {
+				touch-action: manipulation;
+			}
+		</style>
 
 		%sveltekit.head%
 	</head>
