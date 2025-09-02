@@ -541,7 +541,7 @@
 							playPreciseLoopEdges(loop.id, loop.start, loop.end, {
 								rate: audioElement?.playbackRate ?? 1,
 							});
-						}}>hear loop</button
+						}}>hear loop seam</button
 					>
 				</div>
 
