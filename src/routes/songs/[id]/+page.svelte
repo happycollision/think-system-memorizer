@@ -23,6 +23,11 @@
 		});
 	}
 
+	$effect(() => () => {
+		stopAllPrecise();
+		stopElementLoop();
+	});
+
 	// Precise Web Audio loop playback (sample-accurate)
 	let audioCtx: AudioContext | null = $state(null);
 	let decodedBuffer: AudioBuffer | null = $state(null);
