@@ -355,11 +355,12 @@
 	// Media Session API for lock-screen/background controls
 	$effect(() => {
 		if (!$data || !audioElement) return;
+		const audioElement_ = audioElement;
 		// guard for browsers without the API
 		if (!('mediaSession' in navigator)) return;
 
 		navigator.mediaSession.metadata = new MediaMetadata({
-			title: $data.song.name,
+			title: `${$data.song.name}: ${$data.songLoops.find((l) => l.id === elementLoopId)?.name}`,
 			artist: '',
 			album: 'Think System Memorizer',
 			artwork: [],
@@ -367,27 +368,27 @@
 
 		navigator.mediaSession.setActionHandler('play', async () => {
 			try {
-				await audioElement!.play();
+				await audioElement_.play();
 			} catch {
 				/* noop */
 			}
 		});
 		navigator.mediaSession.setActionHandler('pause', () => {
-			audioElement!.pause();
+			audioElement_.pause();
 			stopElementLoop();
 		});
 		navigator.mediaSession.setActionHandler('seekto', (e) => {
 			if (!e || e.seekTime == null) return;
-			audioElement!.currentTime = e.seekTime;
+			audioElement_.currentTime = e.seekTime;
 		});
 		navigator.mediaSession.setActionHandler('seekbackward', (e) => {
 			const off = e?.seekOffset ?? 10;
-			audioElement!.currentTime = Math.max(0, audioElement!.currentTime - off);
+			audioElement_.currentTime = Math.max(0, audioElement_.currentTime - off);
 		});
 		navigator.mediaSession.setActionHandler('seekforward', (e) => {
 			const off = e?.seekOffset ?? 30;
-			const dur = audioElement!.duration || Number.POSITIVE_INFINITY;
-			audioElement!.currentTime = Math.min(dur, audioElement!.currentTime + off);
+			const dur = audioElement_.duration || Number.POSITIVE_INFINITY;
+			audioElement_.currentTime = Math.min(dur, audioElement_.currentTime + off);
 		});
 	});
 
