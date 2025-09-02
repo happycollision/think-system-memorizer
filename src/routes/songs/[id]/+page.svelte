@@ -3,6 +3,8 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { addLoopToSong, deleteLoop, getSong, updateLoop } from '../db';
+	import { bgPlay } from '../backgroundPlay.svelte';
+	import BackgroundPlayToggle from '../BackgroundPlayToggle.svelte';
 
 	const songId = $derived(page.params.id);
 	const listingUrl = $derived(page.url.pathname.replace(songId, ''));
@@ -290,13 +292,7 @@
 		}
 	}
 
-	// iOS detection (includes iPadOS on M-series with touch)
-	const isIOS =
-		typeof navigator !== 'undefined' &&
-		(/iP(hone|od|ad)/.test(navigator.userAgent) ||
-			(navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
-
-	let useElement = $state(isIOS);
+	let useElement = $derived(bgPlay.enabled);
 
 	// Track element-based loop (for iOS background playback)
 	let elementLoopTimer: number | null = $state(null);
@@ -424,24 +420,12 @@
 		<a href={listingUrl} class="btn">Back to Songs</a>
 	</nav>
 
-	<div class="mb-4 rounded bg-gray-100 p-2 dark:bg-gray-800">
-		<label>
-			<input
-				type="checkbox"
-				bind:checked={useElement}
-				class="mb-4"
-				onchange={() => {
-					stopOtherAudio();
-					stopElementLoop();
-				}}
-			/> Allow background playback
-		</label>
-		<div>
-			On iOS, playback will stop when the screen locks or when switching apps. Enable this option to
-			allow playback in the background. The precision of the loop boundaries will be reduced when
-			using background playback.
-		</div>
-	</div>
+	<BackgroundPlayToggle
+		onchange={() => {
+			stopElementLoop();
+			stopOtherAudio();
+		}}
+	/>
 
 	{#if $data}
 		<h1 class="text-3xl font-bold">{$data.song.name}</h1>
