@@ -3,17 +3,7 @@
 	import { page } from '$app/state';
 	import { addLoopToSong, deleteLoop, getSong, updateLoop } from '../db';
 	import BackgroundPlayToggle from '../BackgroundPlayToggle.svelte';
-	import {
-		isLoopPlaying,
-		playLoop,
-		playPreciseLoopEdges,
-		setAudioElement,
-		setSessionAudioData,
-		stopAllPrecise,
-		stopElementLoop,
-		stopLoop,
-		stopOtherAudio,
-	} from '../loops.svelte';
+	import { AudioLooper } from '../loops.svelte';
 
 	const songId = $derived(page.params.id);
 	const listingUrl = $derived(page.url.pathname.replace(songId, ''));
@@ -25,23 +15,23 @@
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
 
+	let a = $derived.by(() => {
+		if (!audioElement || !diskLocation) return;
+		return new AudioLooper(audioElement, diskLocation);
+	});
+
 	$effect(() => () => {
-		stopAllPrecise();
-		stopElementLoop();
+		a?.stopAllPrecise();
+		a?.stopElementLoop();
 	});
 
 	// good enough for adjustments
 	const sampleStep = 1 / 1000;
 
-	$effect(() => {
-		setAudioElement(audioElement);
-		return () => setAudioElement(undefined);
-	});
-
 	// Media Session API for lock-screen/background controls
 	$effect(() => {
 		if (!$data) return;
-		setSessionAudioData(
+		a?.setSessionAudioData(
 			(currentLoopId) =>
 				`${$data.song.name}: ${$data.songLoops.find((l) => l.id === currentLoopId)?.name}`,
 		);
@@ -49,30 +39,9 @@
 
 	// Start fetching the audio immediately and kick the <audio> element to load
 	$effect(() => {
-		if (!diskLocation) return;
-		const ac = new AbortController();
-
-		// Warm the browser cache immediately
-		fetch(diskLocation, { cache: 'force-cache', signal: ac.signal }).catch(() => {
-			/* noop */
-		});
-
-		// Ask the media element to start loading (no playback)
-		if (audioElement) {
-			if (audioElement.preload !== 'auto') audioElement.preload = 'auto';
-			// Only call load() if it hasn't begun loading to avoid interrupting playback later
-			if (audioElement.readyState === 0) audioElement.load();
-		}
-
-		return () => ac.abort();
+		return () => a?.destroy();
 	});
 </script>
-
-<svelte:head>
-	{#if diskLocation}
-		<link rel="preload" as="audio" href={diskLocation} />
-	{/if}
-</svelte:head>
 
 <div class="p-2">
 	<nav class="mb-4">
@@ -81,8 +50,8 @@
 
 	<BackgroundPlayToggle
 		onchange={() => {
-			stopElementLoop();
-			stopOtherAudio();
+			a?.stopElementLoop();
+			a?.stopOtherAudio();
 		}}
 	/>
 
@@ -92,12 +61,9 @@
 		<audio
 			bind:this={audioElement}
 			controls
-			playsinline
 			class="my-4 w-full"
-			preload="auto"
-			onplay={(evt) => stopOtherAudio(evt.currentTarget)}
+			onplay={(evt) => a?.stopOtherAudio(evt.currentTarget)}
 		>
-			<source src={diskLocation} />
 			Your browser does not support the audio element.
 		</audio>
 
@@ -162,7 +128,7 @@
 		</form>
 
 		{#each $data.songLoops as loop (loop.id)}
-			{@const isPlaying = isLoopPlaying(loop.id)}
+			{@const isPlaying = a?.isLoopPlaying(loop.id)}
 			<div class="mb-4 rounded border p-4">
 				<div class="grid grid-cols-[1fr_auto] items-center gap-4">
 					<h2
@@ -189,7 +155,7 @@
 							type="button"
 							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 							onclick={() => {
-								playPreciseLoopEdges(diskLocation, loop.id, loop.start - 0.1, loop.end, {
+								a?.playPreciseLoopEdges(loop.id, loop.start - 0.1, loop.end, {
 									rate: audioElement?.playbackRate ?? 1,
 									which: 'start',
 								});
@@ -202,7 +168,7 @@
 							type="button"
 							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 							onclick={() => {
-								playPreciseLoopEdges(diskLocation, loop.id, loop.start + 0.1, loop.end, {
+								a?.playPreciseLoopEdges(loop.id, loop.start + 0.1, loop.end, {
 									rate: audioElement?.playbackRate ?? 1,
 									which: 'start',
 								});
@@ -218,7 +184,7 @@
 							type="button"
 							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 							onclick={() => {
-								playPreciseLoopEdges(diskLocation, loop.id, loop.start, loop.end - 0.1, {
+								a?.playPreciseLoopEdges(loop.id, loop.start, loop.end - 0.1, {
 									rate: audioElement?.playbackRate ?? 1,
 									which: 'end',
 								});
@@ -231,7 +197,7 @@
 							type="button"
 							class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 							onclick={() => {
-								playPreciseLoopEdges(diskLocation, loop.id, loop.start, loop.end + 0.1, {
+								a?.playPreciseLoopEdges(loop.id, loop.start, loop.end + 0.1, {
 									rate: audioElement?.playbackRate ?? 1,
 									which: 'end',
 								});
@@ -245,7 +211,7 @@
 						type="button"
 						class="btn border-indigo-400 bg-indigo-500 text-white hover:bg-indigo-600"
 						onclick={() => {
-							playPreciseLoopEdges(diskLocation, loop.id, loop.start, loop.end, {
+							a?.playPreciseLoopEdges(loop.id, loop.start, loop.end, {
 								rate: audioElement?.playbackRate ?? 1,
 							});
 						}}>hear loop seam</button
@@ -258,8 +224,8 @@
 						class="btn w-xs border-emerald-500 bg-emerald-600 text-white hover:bg-emerald-700"
 						onclick={() =>
 							isPlaying
-								? stopLoop(loop.id)
-								: playLoop(diskLocation, loop.id, loop.start, loop.end, {
+								? a?.stopLoop(loop.id)
+								: a?.playLoop(loop.id, loop.start, loop.end, {
 										rate: audioElement?.playbackRate ?? 1,
 									})}
 					>
@@ -270,7 +236,7 @@
 						type="button"
 						class="btn border-red-400 bg-red-500 text-white hover:bg-red-600"
 						onclick={() => {
-							stopLoop(loop.id);
+							a?.stopLoop(loop.id);
 							if (confirm(`Are you sure you want to delete loop "${loop.name}"?`)) {
 								deleteLoop(loop.id);
 							}
