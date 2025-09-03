@@ -67,19 +67,16 @@ export function getSongs() {
 	return liveQuery(() => db.songs.toArray());
 }
 
-export function getSong(id: number) {
+export function getSongsWithLoops(ids?: number[]) {
 	return liveQuery(async () => {
-		const [song, songLoops] = await Promise.all([
-			db.songs.get(id),
-			db.songLoops.where({ songId: id }).sortBy('start'),
-		]);
-		if (!song) {
-			throw new Error('no song found');
-		}
-		return {
-			song,
-			songLoops,
-		};
+		const songs = (await (ids ? db.songs.bulkGet(ids) : db.songs.toArray())).filter((x) => !!x);
+
+		return await Promise.all(
+			songs.map(async (song) => {
+				const loops = await db.songLoops.where({ songId: song.id }).sortBy('start');
+				return { ...song, loops };
+			}),
+		);
 	});
 }
 

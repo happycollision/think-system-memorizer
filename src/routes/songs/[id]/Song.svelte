@@ -1,16 +1,16 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { addLoopToSong, deleteLoop, getSong, updateLoop, type Observed } from '../db';
+	import { addLoopToSong, deleteLoop, getSongsWithLoops, updateLoop, type Observed } from '../db';
 	import { AudioLooper } from '../loops.svelte';
 
 	interface Props {
-		songData: Observed<ReturnType<typeof getSong>>;
+		songData: Observed<ReturnType<typeof getSongsWithLoops>>[number];
 		edit?: boolean;
 	}
 
 	let { songData, edit }: Props = $props();
 
-	const url = $derived(`${base}/${songData.song.diskName}`);
+	const url = $derived(`${base}/${songData.diskName}`);
 
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
@@ -29,7 +29,7 @@
 	$effect(() => {
 		a?.setSessionAudioData(
 			(currentLoopId) =>
-				`${songData.song.name}: ${songData.songLoops.find((l) => l.id === currentLoopId)?.name}`,
+				`${songData.name}: ${songData.loops.find((l) => l.id === currentLoopId)?.name}`,
 		);
 	});
 
@@ -38,7 +38,7 @@
 	}
 </script>
 
-<h1 class="text-3xl font-bold">{songData.song.name}</h1>
+<h1 class="text-3xl font-bold">{songData.name}</h1>
 
 <audio
 	bind:this={audioElement}
@@ -95,7 +95,7 @@
 							const start = parseFloat(startInput.value);
 							const end = parseFloat(endInput.value);
 							if (!isNaN(start) && !isNaN(end) && start < end) {
-								await addLoopToSong(songData.song.id, { start, end });
+								await addLoopToSong(songData.id, { start, end });
 								startInput.value = '';
 								endInput.value = '';
 							} else {
@@ -111,7 +111,7 @@
 	</form>
 {/if}
 
-{#each songData.songLoops as loop (loop.id)}
+{#each songData.loops as loop (loop.id)}
 	{@const isPlaying = a?.isLoopPlaying(loop.id)}
 	<div class="mb-4 rounded border p-4">
 		<div class="grid grid-cols-[1fr_auto] items-center gap-4">
