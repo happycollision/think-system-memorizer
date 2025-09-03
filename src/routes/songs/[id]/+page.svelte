@@ -18,6 +18,6 @@
 	<BackgroundPlayToggle />
 
 	{#if $data}
-		<Song songData={$data} />
+		<Song songData={$data} edit />
 	{/if}
 </div>
