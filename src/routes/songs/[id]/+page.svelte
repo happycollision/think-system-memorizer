@@ -10,7 +10,7 @@
 
 	const data = $derived(getSong(parseInt(songId)));
 
-	const diskLocation = $derived($data ? `${base}/${$data.song.diskName}` : null);
+	const url = $derived($data ? `${base}/${$data.song.diskName}` : null);
 
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
@@ -21,8 +21,8 @@
 	const sampleStep = 1 / 1000;
 
 	$effect(() => {
-		if (!audioElement || !diskLocation) return;
-		a = new AudioLooper(audioElement, diskLocation);
+		if (!audioElement || !url) return;
+		a = new AudioLooper(audioElement, url);
 		return () => a?.destroy();
 	});
 
