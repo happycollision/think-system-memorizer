@@ -4,6 +4,15 @@ import { bgPlay } from './backgroundPlay.svelte';
 const SNAP_TO_ZERO = true; // set false to use exact times
 
 export class AudioLooper {
+	static instances: AudioLooper[] = [];
+	static stopOthers(instance?: AudioLooper) {
+		for (const inst of AudioLooper.instances) {
+			if (inst !== instance) {
+				inst.stopElementLoop();
+				inst.stopAllPrecise();
+			}
+		}
+	}
 	private audioElement: HTMLAudioElement;
 	private url: string;
 
@@ -20,6 +29,11 @@ export class AudioLooper {
 				this.stopOtherAudio();
 			}),
 		);
+		AudioLooper.instances.push(this);
+		this.onDestroy.push(() => {
+			const i = AudioLooper.instances.indexOf(this);
+			if (i >= 0) AudioLooper.instances.splice(i, 1);
+		});
 	}
 
 	public destroy = () => {
@@ -47,14 +61,15 @@ export class AudioLooper {
 		return () => ac.abort();
 	};
 
-	public stopOtherAudio(thisAudio?: HTMLAudioElement) {
+	public stopOtherAudio = (thisAudio?: HTMLAudioElement) => {
+		AudioLooper.stopOthers(this);
 		this.stopAllPrecise();
 		document.querySelectorAll('audio').forEach((audio) => {
 			if (audio !== thisAudio) {
 				if (!audio.paused) audio.pause();
 			}
 		});
-	}
+	};
 
 	// Precise Web Audio loop playback (sample-accurate)
 	audioCtx: AudioContext | null = $state(null);
