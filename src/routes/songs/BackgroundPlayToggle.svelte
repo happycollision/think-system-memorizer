@@ -8,7 +8,7 @@
 			type="checkbox"
 			checked={bgPlay.enabled}
 			class="mb-4"
-			onchange={(e) => {
+			onchange={() => {
 				bgPlay.toggle();
 			}}
 		/> Allow background playback
