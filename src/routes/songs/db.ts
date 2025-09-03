@@ -71,7 +71,7 @@ export function getSong(id: number) {
 	return liveQuery(async () => {
 		const [song, songLoops] = await Promise.all([
 			db.songs.get(id),
-			db.songLoops.where({ songId: id }).toArray(),
+			db.songLoops.where({ songId: id }).sortBy('start'),
 		]);
 		if (!song) {
 			throw new Error('no song found');
