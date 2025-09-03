@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import BackgroundPlayToggle from '../BackgroundPlayToggle.svelte';
 	import { addLoopToSong, deleteLoop, getSong, updateLoop, type Observed } from '../db';
 	import { AudioLooper } from '../loops.svelte';
 
@@ -37,13 +36,6 @@
 		return (audioElement?.currentTime.toFixed(1) as `${number}`) ?? '0.0';
 	}
 </script>
-
-<BackgroundPlayToggle
-	onchange={() => {
-		a?.stopElementLoop();
-		a?.stopOtherAudio();
-	}}
-/>
 
 <h1 class="text-3xl font-bold">{songData.song.name}</h1>
 

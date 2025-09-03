@@ -14,6 +14,12 @@ export class AudioLooper {
 		this.url = url;
 		this.audioElement.src = url;
 		this.onDestroy.push(this.preload());
+		this.onDestroy.push(
+			bgPlay.registerOnToggle(() => {
+				this.stopElementLoop();
+				this.stopOtherAudio();
+			}),
+		);
 	}
 
 	public destroy = () => {

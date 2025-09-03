@@ -15,6 +15,8 @@
 		<a href={listingUrl} class="btn">Back to Songs</a>
 	</nav>
 
+	<BackgroundPlayToggle />
+
 	{#if $data}
 		<Song songData={$data} />
 	{/if}

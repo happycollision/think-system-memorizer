@@ -1,11 +1,5 @@
 <script lang="ts">
-	import type { HTMLAttributes } from 'svelte/elements';
 	import { bgPlay } from './backgroundPlay.svelte';
-
-	// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-	interface Props extends HTMLAttributes<HTMLInputElement> {}
-
-	let { onchange, ...htmlProps }: Props = $props();
 </script>
 
 <div class="mb-4 rounded bg-gray-100 p-2 dark:bg-gray-800">
@@ -16,9 +10,7 @@
 			class="mb-4"
 			onchange={(e) => {
 				bgPlay.toggle();
-				onchange?.(e);
 			}}
-			{...htmlProps}
 		/> Allow background playback
 	</label>
 	<div>
