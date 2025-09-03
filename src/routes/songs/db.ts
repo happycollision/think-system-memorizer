@@ -1,4 +1,5 @@
 // db.ts
+import type { Observable } from 'dexie';
 import Dexie, { liveQuery, type EntityTable } from 'dexie';
 
 interface Song {
@@ -59,6 +60,8 @@ db.on('populate', (tx) => {
 		{ name: 'Screech Out', diskName: 's/cfa/23_screech_out.m4a' },
 	]);
 });
+
+export type Observed<T> = T extends Observable<infer U> ? U : never;
 
 export function getSongs() {
 	return liveQuery(() => db.songs.toArray());
