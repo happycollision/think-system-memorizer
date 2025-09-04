@@ -24,7 +24,7 @@
 	{editingList ? 'View Songs' : 'Edit Songs'}
 </button>
 
-<div class="mx-auto max-w-6xl p-8">
+<div class="mx-auto max-w-6xl p-2">
 	{#if editingList}
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each $songs as song (song.name)}
@@ -44,7 +44,7 @@
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each songsWithLoops as song (song.name)}
 				<div
-					class="relative isolate rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all dark:border-gray-600 dark:bg-gray-800"
+					class="relative isolate rounded-lg border border-gray-200 bg-white p-2 shadow-sm transition-all dark:border-gray-600 dark:bg-gray-800"
 				>
 					<h3 class="mb-2 text-xl font-semibold text-gray-800 dark:text-gray-200">
 						<Song songData={song} />
