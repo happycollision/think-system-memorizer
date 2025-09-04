@@ -99,3 +99,66 @@ export function deleteLoop(id: number) {
 export function updateLoop(id: number, updates: { start?: number; end?: number; name?: string }) {
 	return db.songLoops.update(id, updates);
 }
+
+export function exportDatabase() {
+	return db.transaction('r', db.tables, () => {
+		return Promise.all(
+			db.tables.map((table) => table.toArray().then((rows) => ({ table: table.name, rows: rows }))),
+		);
+	});
+}
+
+export async function importOnlyUniqueLoops(data: Awaited<ReturnType<typeof exportDatabase>>) {
+	const newData = await Promise.all(
+		data
+			.filter((t) => t.table === 'songLoops')
+			.map(async (t) => {
+				if (t.table === 'songLoops') {
+					const results = await Promise.all(
+						t.rows.map(async (newLoop) => {
+							return db.songLoops
+								.where({
+									songId: newLoop.songId,
+									start: newLoop.start,
+									end: newLoop.end,
+								})
+								.count()
+								.then((count) => count === 0);
+						}),
+					);
+					t.rows = t.rows.filter((_, index) => results[index]);
+				}
+				return t;
+			}),
+	);
+
+	return db.transaction('rw', db.tables, () => {
+		return Promise.all(
+			newData.map((t) =>
+				db
+					.table(t.table)
+					.bulkAdd(t.rows, { allKeys: true })
+					.catch((e) => {
+						if (e.name === 'BulkError') {
+							console.warn(`Some ${t.table} rows were not added due to duplicates.`);
+						} else {
+							throw e;
+						}
+					}),
+			),
+		);
+	});
+}
+
+export function importDatabaseViaReplace(data: Awaited<ReturnType<typeof exportDatabase>>) {
+	return db.transaction('rw', db.tables, () => {
+		return Promise.all(
+			data.map((t) =>
+				db
+					.table(t.table)
+					.clear()
+					.then(() => db.table(t.table).bulkAdd(t.rows)),
+			),
+		);
+	});
+}
