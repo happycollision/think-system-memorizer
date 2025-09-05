@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import Song from './[id]/Song.svelte';
-	import { exportDatabase, getSongsWithLoops } from './db';
+	import { exportDatabase, getSongsWithLoops, importOnlyUniqueLoops } from './db';
 
 	let songs = getSongsWithLoops();
 	let currentPage = $derived(page.url.pathname);
@@ -39,6 +39,30 @@
 	}}
 	type="button"
 	class="btn">Export data</button
+>
+
+<button
+	onclick={async () => {
+		// Get file from user
+		const input = document.createElement('input');
+		input.type = 'file';
+		input.accept = 'application/json';
+		input.onchange = async (e: Event) => {
+			const file = (e.target as HTMLInputElement).files?.[0];
+			if (file) {
+				const text = await file.text();
+				try {
+					const json = JSON.parse(text);
+					await importOnlyUniqueLoops(json);
+				} catch {
+					alert('Invalid JSON file');
+				}
+			}
+		};
+		input.click();
+	}}
+	type="button"
+	class="btn btn-danger">Import data</button
 >
 
 <div class="mx-auto max-w-6xl p-2">
