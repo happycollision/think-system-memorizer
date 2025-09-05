@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import Song from './[id]/Song.svelte';
-	import { getSongsWithLoops } from './db';
+	import { exportDatabase, getSongsWithLoops } from './db';
 
 	let songs = getSongsWithLoops();
 	let currentPage = $derived(page.url.pathname);
@@ -23,6 +23,23 @@
 >
 	{editingList ? 'View Songs' : 'Edit Songs'}
 </button>
+
+<button
+	onclick={async () => {
+		const data = JSON.stringify(await exportDatabase());
+		const blob = new Blob([data], { type: 'application/json' });
+		const url = URL.createObjectURL(blob);
+		const a = document.createElement('a');
+		a.href = url;
+		a.download = 'think-system-memorizer-export.json';
+		document.body.appendChild(a);
+		a.click();
+		document.body.removeChild(a);
+		URL.revokeObjectURL(url);
+	}}
+	type="button"
+	class="btn">Export data</button
+>
 
 <div class="mx-auto max-w-6xl p-2">
 	{#if editingList}
