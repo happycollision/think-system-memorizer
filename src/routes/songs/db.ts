@@ -137,7 +137,7 @@ export async function importOnlyUniqueLoops(data: Awaited<ReturnType<typeof expo
 			newData.map((t) =>
 				db
 					.table(t.table)
-					.bulkAdd(t.rows, { allKeys: true })
+					.bulkAdd(t.rows.map(({ id, ...r }) => r))
 					.catch((e) => {
 						if (e.name === 'BulkError') {
 							console.warn(`Some ${t.table} rows were not added due to duplicates.`);
