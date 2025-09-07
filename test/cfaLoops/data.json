@@ -1,0 +1,88 @@
+[
+	{
+		"table": "songs",
+		"rows": [
+			{ "name": "Welcome to the Rock", "diskName": "s/cfa/01_welcome_to_the_rock.m4a", "id": 1 },
+			{ "name": "38 Planes", "diskName": "s/cfa/02_38_planes.m4a", "id": 2 },
+			{ "name": "Blankets and Bedding", "diskName": "s/cfa/03_blankets_and_bedding.m4a", "id": 3 },
+			{
+				"name": "28 Hours/Wherever We Are",
+				"diskName": "s/cfa/04_28_hours_wherever_we_are.m4a",
+				"id": 4
+			},
+			{ "name": "Darkness and Trees", "diskName": "s/cfa/05_darkness_and_trees.m4a", "id": 5 },
+			{ "name": "On the Bus", "diskName": "s/cfa/06_on_the_bus.m4a", "id": 6 },
+			{
+				"name": "Darkness and Trees (reprise)",
+				"diskName": "s/cfa/07_darkness_and_trees_reprise.m4a",
+				"id": 7
+			},
+			{
+				"name": "Lead Us Out of the Night",
+				"diskName": "s/cfa/08_lead_us_out_of_the_night.m4a",
+				"id": 8
+			},
+			{ "name": "Phoning Home", "diskName": "s/cfa/09_phoning_home.m4a", "id": 9 },
+			{ "name": "Costume Party", "diskName": "s/cfa/10_costume_party.m4a", "id": 10 },
+			{ "name": "I Am Here", "diskName": "s/cfa/11_i_am_here.m4a", "id": 11 },
+			{ "name": "Prayer", "diskName": "s/cfa/12_prayer.m4a", "id": 12 },
+			{ "name": "On the Edge", "diskName": "s/cfa/13_on_the_edge.m4a", "id": 13 },
+			{
+				"name": "In the Bar/Heave Away",
+				"diskName": "s/cfa/14_in_the_bar_heave_away.m4a",
+				"id": 14
+			},
+			{ "name": "Screech In", "diskName": "s/cfa/15_screech_in.m4a", "id": 15 },
+			{ "name": "Me and the Sky", "diskName": "s/cfa/16_me_and_the_sky.m4a", "id": 16 },
+			{ "name": "The Dover Fault", "diskName": "s/cfa/17_the_dover_fault.m4a", "id": 17 },
+			{ "name": "Stop the World", "diskName": "s/cfa/18_stop_the_world.m4a", "id": 18 },
+			{
+				"name": "38 Planes (reprise)/Somewhere in the Middle of Nowhere",
+				"diskName": "s/cfa/19_38_planes_reprise_somewhere_in_the_middle_of_nowhere.m4a",
+				"id": 19
+			},
+			{ "name": "Something's Missing", "diskName": "s/cfa/20_something's_missing.m4a", "id": 20 },
+			{ "name": "10 Years Later", "diskName": "s/cfa/21_10_years_later.m4a", "id": 21 },
+			{ "name": "Finale", "diskName": "s/cfa/22_finale.m4a", "id": 22 },
+			{ "name": "Screech Out", "diskName": "s/cfa/23_screech_out.m4a", "id": 23 }
+		]
+	},
+	{
+		"table": "songLoops",
+		"rows": [
+			{ "songId": 4, "start": 53.2, "end": 63.5, "name": "Mom", "id": 1 },
+			{ "songId": 4, "start": 89.1, "end": 95.2, "name": "Fine", "id": 2 },
+			{
+				"songId": 20,
+				"start": 10.300000000000008,
+				"end": 18.4,
+				"name": "Simple and plain",
+				"id": 3
+			},
+			{ "songId": 20, "start": 40, "end": 47.7, "name": "Normal", "id": 4 },
+			{ "songId": 20, "start": 229.4, "end": 239.1, "name": "Missing harmony", "id": 5 },
+			{ "songId": 20, "start": 312.5, "end": 315.3, "name": "Car", "id": 6 },
+			{ "songId": 20, "start": 314.2, "end": 334.5, "name": "End", "id": 7 },
+			{ "songId": 22, "start": 165.4, "end": 174.1, "name": "Loop at 165.40s", "id": 8 },
+			{ "songId": 22, "start": 181, "end": 191.6, "name": "Loop at 181.00s", "id": 9 },
+			{ "songId": 22, "start": 184.4, "end": 207.7, "name": "End", "id": 10 },
+			{
+				"songId": 10,
+				"start": 273.1000000000005,
+				"end": 280.1,
+				"name": "Loop at 270.90s",
+				"id": 11
+			},
+			{ "songId": 19, "start": 84.1, "end": 117.3, "name": "Scholarship", "id": 12 },
+			{ "songId": 19, "start": 140.7, "end": 172.8, "name": "Texas", "id": 13 },
+			{ "songId": 19, "start": 183.8, "end": 223, "name": "Cold towel", "id": 14 },
+			{
+				"songId": 19,
+				"start": 162.80000000000013,
+				"end": 171.7,
+				"name": "Loop at 165.20s",
+				"id": 15
+			}
+		]
+	}
+]
