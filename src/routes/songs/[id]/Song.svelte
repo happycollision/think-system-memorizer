@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { addLoopToSong, deleteLoop, getSongsWithLoops, updateLoop, type Observed } from '../db';
-	import { AudioLooper } from '../loops.svelte';
+	import { createAudioLooper } from '../loops.svelte';
 
 	interface Props {
 		songData: Observed<ReturnType<typeof getSongsWithLoops>>[number];
@@ -15,14 +15,14 @@
 	let audioElement: HTMLAudioElement | undefined = $state();
 	let formElement: HTMLFormElement | undefined = $state();
 
-	let a: AudioLooper | undefined = $state();
+	let a: Awaited<ReturnType<typeof createAudioLooper>> | undefined = $state();
 
 	// good enough for adjustments
 	const sampleStep = 1 / 1000;
 
 	$effect(() => {
 		if (!audioElement) return;
-		a = new AudioLooper(audioElement, url);
+		createAudioLooper(audioElement, url).then((looper) => (a = looper));
 		return () => a?.destroy();
 	});
 

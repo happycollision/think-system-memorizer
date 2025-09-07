@@ -1,9 +1,30 @@
 import { SvelteMap } from 'svelte/reactivity';
 import { bgPlay } from './backgroundPlay.svelte';
+import { getAudio, putAudio } from './songStore';
 
 const SNAP_TO_ZERO = true; // set false to use exact times
 
-export class AudioLooper {
+async function getCacheOrFetch(url: string) {
+	const audio = await getAudio(url);
+	if (audio) {
+		return URL.createObjectURL(audio.file);
+	} else {
+		const res = await fetch(url, { cache: 'force-cache' });
+		if (!res.ok) throw new Error(`Failed to fetch audio ${url}: ${res.status}`);
+		const blob = await res.blob();
+		putAudio(url, blob);
+		return URL.createObjectURL(blob);
+	}
+}
+
+export async function createAudioLooper(
+	...[audioElement, url, ...rest]: ConstructorParameters<typeof AudioLooper>
+) {
+	const u = await getCacheOrFetch(url);
+	return new AudioLooper(audioElement, u, ...rest);
+}
+
+class AudioLooper {
 	static instances: AudioLooper[] = [];
 	static stopOthers(instance?: AudioLooper) {
 		for (const inst of AudioLooper.instances) {
