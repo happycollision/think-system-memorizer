@@ -7,21 +7,23 @@ const SNAP_TO_ZERO = true; // set false to use exact times
 async function getCacheOrFetch(url: string) {
 	const audio = await getAudio(url);
 	if (audio) {
-		return URL.createObjectURL(audio.file);
+		const finalUrl = URL.createObjectURL(audio.file);
+		return [finalUrl, () => URL.revokeObjectURL(finalUrl)] as const;
 	} else {
 		const res = await fetch(url, { cache: 'force-cache' });
 		if (!res.ok) throw new Error(`Failed to fetch audio ${url}: ${res.status}`);
 		const blob = await res.blob();
 		putAudio(url, blob);
-		return URL.createObjectURL(blob);
+		const finalUrl = URL.createObjectURL(blob);
+		return [finalUrl, () => URL.revokeObjectURL(finalUrl)] as const;
 	}
 }
 
 export async function createAudioLooper(
-	...[audioElement, url, ...rest]: ConstructorParameters<typeof AudioLooper>
+	...[audioElement, url, onDestroy, ...rest]: ConstructorParameters<typeof AudioLooper>
 ) {
-	const u = await getCacheOrFetch(url);
-	return new AudioLooper(audioElement, u, ...rest);
+	const [finalUrl, destroy] = await getCacheOrFetch(url);
+	return new AudioLooper(audioElement, finalUrl, [...(onDestroy || []), destroy], ...rest);
 }
 
 class AudioLooper {
@@ -39,7 +41,7 @@ class AudioLooper {
 
 	private onDestroy: (() => void)[] = [];
 
-	constructor(audioElement: HTMLAudioElement, url: string) {
+	constructor(audioElement: HTMLAudioElement, url: string, onDestroy: (() => void)[] = []) {
 		this.audioElement = audioElement;
 		this.url = url;
 		this.audioElement.src = url;
@@ -55,6 +57,8 @@ class AudioLooper {
 			const i = AudioLooper.instances.indexOf(this);
 			if (i >= 0) AudioLooper.instances.splice(i, 1);
 		});
+
+		this.onDestroy.push(...onDestroy);
 	}
 
 	public destroy = () => {
