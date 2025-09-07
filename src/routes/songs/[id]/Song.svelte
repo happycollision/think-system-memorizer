@@ -38,7 +38,13 @@
 	}
 </script>
 
-<h1 class="text-3xl font-bold">{songData.name}</h1>
+<h1 class="flex items-baseline justify-between text-3xl font-bold">
+	{songData.name}
+
+	{#if !edit}
+		<a href="{base}/songs/{songData.id}" class="text-base text-blue-500 hover:underline">Edit</a>
+	{/if}
+</h1>
 
 <audio
 	bind:this={audioElement}
@@ -118,7 +124,7 @@
 			<h2
 				id="loop_{loop.id}_title"
 				class="text-2xl font-semibold"
-				contenteditable
+				contenteditable={edit}
 				onblur={(ev) => {
 					const newName = ev.currentTarget.innerText.trim();
 					if (newName !== loop.name) {
