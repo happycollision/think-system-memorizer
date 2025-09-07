@@ -1,8 +1,14 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import Song from './[id]/Song.svelte';
-	import { exportDatabase, getSongsWithLoops, importOnlyUniqueLoops } from './db';
+	import {
+		exportDatabase,
+		getSongsWithLoops,
+		importDatabaseViaReplace,
+		importOnlyUniqueLoops,
+	} from './db';
 
 	let songs = getSongsWithLoops();
 	let currentPage = $derived(page.url.pathname);
@@ -17,10 +23,7 @@
 <a href="{base}/librettos" class="mb-6 inline-block text-blue-600 hover:underline">Librettos</a>
 
 <!-- add a switch here for the editingList boolean -->
-<button
-	class="mb-6 ml-4 rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-	onclick={() => (editingList = !editingList)}
->
+<button class="btn mb-6 ml-4" onclick={() => (editingList = !editingList)}>
 	{editingList ? 'View Songs' : 'Edit Songs'}
 </button>
 
@@ -64,6 +67,22 @@
 	type="button"
 	class="btn btn-danger">Import data</button
 >
+
+{#if dev}
+	<button
+		type="button"
+		class="btn"
+		onclick={() => {
+			// get file from server
+			fetch(`${base}/test/cfaLoops/data.json`).then((x) => {
+				x.json().then(async (data) => {
+					await importDatabaseViaReplace(data);
+					location.reload();
+				});
+			});
+		}}>Reset to all dev data</button
+	>
+{/if}
 
 <div class="mx-auto max-w-6xl p-2">
 	{#if editingList}
