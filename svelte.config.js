@@ -18,6 +18,10 @@ const config = {
 			base: process.argv.includes('dev') ? '' : '/think-system-memorizer',
 		},
 	},
+
+	compilerOptions: {
+		experimental: { async: true },
+	},
 };
 
 export default config;
