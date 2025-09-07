@@ -4,7 +4,10 @@
 	import BackgroundPlayToggle from '../BackgroundPlayToggle.svelte';
 	import Song from './Song.svelte';
 
-	const songId = $derived(page.params.id);
+	const songId = $derived.by(() => {
+		if (page.params.id === undefined) throw new Error('No song ID provided');
+		return page.params.id;
+	});
 	const listingUrl = $derived(page.url.pathname.replace(songId, ''));
 
 	const data = $derived(getSongsWithLoops([parseInt(songId)]));
