@@ -40,6 +40,9 @@ const characterHighlightDict: Record<string, Libretto['characterName']> = {
 	Tosha: {
 		approximate: ['TOSHA'],
 	},
+	KillersOfTheFlowerMoon: {
+		approximate: ['ERNEST'],
+	},
 };
 
 const localLibs = Object.entries(imports).map(([local, fromSrc]) => {
