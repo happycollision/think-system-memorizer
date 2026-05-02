@@ -201,6 +201,15 @@
 	</div>
 {/if}
 
+<div class="fixed right-0 bottom-0 p-4 print:hidden">
+	<button
+		class="btn rounded-full px-4 py-2 shadow-lg shadow-black/40"
+		onclick={() => (runSheet = !runSheet)}
+	>
+		{runSheet ? 'Full script' : 'Run sheet'}
+	</button>
+</div>
+
 <style lang="postcss">
 	.screenplay-container {
 		font-family: 'Courier New', Courier, monospace;
