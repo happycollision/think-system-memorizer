@@ -7,6 +7,9 @@
 	import { navState } from '$lib/nav.extension.svelte';
 	import { getHeaderHeightAndPadding } from './Header.svelte';
 	import { characterMatch } from '$lib/characterMatch';
+	import { browser } from '$app/environment';
+	import { replaceState } from '$app/navigation';
+	import { page } from '$app/state';
 
 	type Props = {
 		parsed: ReturnType<FountainParser['parse']>;
@@ -16,7 +19,21 @@
 	};
 	let { parsed: screenplay, characterName, getIndexFromEl, cardStore }: Props = $props();
 
-	let runSheet = $state(true);
+	let runSheet = $derived(
+		page.state.runSheet ?? (browser && page.url.searchParams.get('runSheet') === 'true'),
+	);
+
+	function toggleRunSheet() {
+		if (!browser) return;
+		const next = !runSheet;
+		const newUrl = new URL(page.url);
+		if (next) {
+			newUrl.searchParams.set('runSheet', 'true');
+		} else {
+			newUrl.searchParams.delete('runSheet');
+		}
+		replaceState(newUrl, { ...page.state, runSheet: next });
+	}
 
 	let elements = $derived.by(() => {
 		if (!screenplay) return [];
@@ -204,7 +221,7 @@
 <div class="fixed right-0 bottom-0 p-4 print:hidden">
 	<button
 		class="btn rounded-full px-4 py-2 shadow-lg shadow-black/40"
-		onclick={() => (runSheet = !runSheet)}
+		onclick={toggleRunSheet}
 	>
 		{runSheet ? 'Full script' : 'Run sheet'}
 	</button>

@@ -5,7 +5,10 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		// interface PageData {}
-		// interface PageState {}
+		interface PageState {
+			card?: number;
+			runSheet?: boolean;
+		}
 		// interface Platform {}
 	}
 }
