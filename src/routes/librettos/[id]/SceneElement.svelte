@@ -28,7 +28,11 @@
 {:else if el.type === 'character'}
 	{#if !runSheet || el.name.includes('CUE')}
 		<p
-			class={[runSheet ? 'mt-1 ml-8 border-l-3 border-black/20 pl-2 text-center' : 'character']}
+			class={[
+				runSheet
+					? 'mt-1 ml-8 border-l-3 border-black/20 pl-2 text-center dark:border-white/30'
+					: 'character',
+			]}
 			{...htmlProps}
 		>
 			{el.name}
@@ -37,7 +41,7 @@
 	{@const text = el.text.split('\n')}
 	<p
 		class={[
-			runSheet ? 'mt-1 ml-8 border-l-3 border-black/20 pl-2' : 'dialogue',
+			runSheet ? 'mt-1 ml-8 border-l-3 border-black/20 pl-2 dark:border-white/30' : 'dialogue',
 			!runSheet && characterMatch(characterName, el.character) && 'highlight',
 		]}
 		{...htmlProps}
